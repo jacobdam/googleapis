@@ -181,8 +181,10 @@ class WebfontList {
 
   WebfontList.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Webfont.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Webfont.fromJson(value))
+          .toList()
+          .cast<Webfont>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];

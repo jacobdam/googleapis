@@ -2406,7 +2406,10 @@ class LeaseTasksResponse {
 
   LeaseTasksResponse.fromJson(core.Map _json) {
     if (_json.containsKey("tasks")) {
-      tasks = _json["tasks"].map((value) => new Task.fromJson(value)).toList();
+      tasks = _json["tasks"]
+          .map((value) => new Task.fromJson(value))
+          .toList()
+          .cast<Task>();
     }
   }
 
@@ -2434,7 +2437,8 @@ class ListLocationsResponse {
     if (_json.containsKey("locations")) {
       locations = _json["locations"]
           .map((value) => new Location.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Location>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -2477,8 +2481,10 @@ class ListQueuesResponse {
       nextPageToken = _json["nextPageToken"];
     }
     if (_json.containsKey("queues")) {
-      queues =
-          _json["queues"].map((value) => new Queue.fromJson(value)).toList();
+      queues = _json["queues"]
+          .map((value) => new Queue.fromJson(value))
+          .toList()
+          .cast<Queue>();
     }
   }
 
@@ -2516,7 +2522,10 @@ class ListTasksResponse {
       nextPageToken = _json["nextPageToken"];
     }
     if (_json.containsKey("tasks")) {
-      tasks = _json["tasks"].map((value) => new Task.fromJson(value)).toList();
+      tasks = _json["tasks"]
+          .map((value) => new Task.fromJson(value))
+          .toList()
+          .cast<Task>();
     }
   }
 
@@ -2671,7 +2680,8 @@ class Policy {
     if (_json.containsKey("bindings")) {
       bindings = _json["bindings"]
           .map((value) => new Binding.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Binding>();
     }
     if (_json.containsKey("etag")) {
       etag = _json["etag"];

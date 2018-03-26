@@ -250,13 +250,15 @@ class PagespeedApiFormatStringV2Args {
       rects = _json["rects"]
           .map((value) =>
               new PagespeedApiFormatStringV2ArgsRects.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PagespeedApiFormatStringV2ArgsRects>();
     }
     if (_json.containsKey("secondary_rects")) {
       secondaryRects = _json["secondary_rects"]
           .map((value) =>
               new PagespeedApiFormatStringV2ArgsSecondaryRects.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PagespeedApiFormatStringV2ArgsSecondaryRects>();
     }
     if (_json.containsKey("type")) {
       type = _json["type"];
@@ -305,7 +307,8 @@ class PagespeedApiFormatStringV2 {
     if (_json.containsKey("args")) {
       args = _json["args"]
           .map((value) => new PagespeedApiFormatStringV2Args.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PagespeedApiFormatStringV2Args>();
     }
     if (_json.containsKey("format")) {
       format = _json["format"];
@@ -467,7 +470,8 @@ class ResultFormattedResultsRuleResultsValueUrlBlocksUrls {
     if (_json.containsKey("details")) {
       details = _json["details"]
           .map((value) => new PagespeedApiFormatStringV2.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PagespeedApiFormatStringV2>();
     }
     if (_json.containsKey("result")) {
       result = new PagespeedApiFormatStringV2.fromJson(_json["result"]);
@@ -506,7 +510,8 @@ class ResultFormattedResultsRuleResultsValueUrlBlocks {
           .map((value) =>
               new ResultFormattedResultsRuleResultsValueUrlBlocksUrls.fromJson(
                   value))
-          .toList();
+          .toList()
+          .cast<ResultFormattedResultsRuleResultsValueUrlBlocksUrls>();
     }
   }
 
@@ -571,7 +576,8 @@ class ResultFormattedResultsRuleResultsValue {
           .map((value) =>
               new ResultFormattedResultsRuleResultsValueUrlBlocks.fromJson(
                   value))
-          .toList();
+          .toList()
+          .cast<ResultFormattedResultsRuleResultsValueUrlBlocks>();
     }
   }
 

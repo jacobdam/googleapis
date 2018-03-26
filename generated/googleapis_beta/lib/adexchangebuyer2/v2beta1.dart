@@ -4319,7 +4319,8 @@ class Correction {
     if (_json.containsKey("contexts")) {
       contexts = _json["contexts"]
           .map((value) => new ServingContext.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ServingContext>();
     }
     if (_json.containsKey("details")) {
       details = _json["details"];
@@ -4505,7 +4506,8 @@ class Creative {
     if (_json.containsKey("corrections")) {
       corrections = _json["corrections"]
           .map((value) => new Correction.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Correction>();
     }
     if (_json.containsKey("creativeId")) {
       creativeId = _json["creativeId"];
@@ -4549,7 +4551,8 @@ class Creative {
     if (_json.containsKey("servingRestrictions")) {
       servingRestrictions = _json["servingRestrictions"]
           .map((value) => new ServingRestriction.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ServingRestriction>();
     }
     if (_json.containsKey("vendorIds")) {
       vendorIds = _json["vendorIds"];
@@ -5283,8 +5286,10 @@ class FilteringStats {
       date = new Date.fromJson(_json["date"]);
     }
     if (_json.containsKey("reasons")) {
-      reasons =
-          _json["reasons"].map((value) => new Reason.fromJson(value)).toList();
+      reasons = _json["reasons"]
+          .map((value) => new Reason.fromJson(value))
+          .toList()
+          .cast<Reason>();
     }
   }
 
@@ -5479,7 +5484,8 @@ class ListBidMetricsResponse {
     if (_json.containsKey("bidMetricsRows")) {
       bidMetricsRows = _json["bidMetricsRows"]
           .map((value) => new BidMetricsRow.fromJson(value))
-          .toList();
+          .toList()
+          .cast<BidMetricsRow>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -5519,7 +5525,8 @@ class ListBidResponseErrorsResponse {
     if (_json.containsKey("calloutStatusRows")) {
       calloutStatusRows = _json["calloutStatusRows"]
           .map((value) => new CalloutStatusRow.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CalloutStatusRow>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -5561,7 +5568,8 @@ class ListBidResponsesWithoutBidsResponse {
       bidResponseWithoutBidsStatusRows = _json[
               "bidResponseWithoutBidsStatusRows"]
           .map((value) => new BidResponseWithoutBidsStatusRow.fromJson(value))
-          .toList();
+          .toList()
+          .cast<BidResponseWithoutBidsStatusRow>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -5603,7 +5611,8 @@ class ListClientUserInvitationsResponse {
     if (_json.containsKey("invitations")) {
       invitations = _json["invitations"]
           .map((value) => new ClientUserInvitation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ClientUserInvitation>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -5646,7 +5655,8 @@ class ListClientUsersResponse {
     if (_json.containsKey("users")) {
       users = _json["users"]
           .map((value) => new ClientUser.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ClientUser>();
     }
   }
 
@@ -5679,8 +5689,10 @@ class ListClientsResponse {
 
   ListClientsResponse.fromJson(core.Map _json) {
     if (_json.containsKey("clients")) {
-      clients =
-          _json["clients"].map((value) => new Client.fromJson(value)).toList();
+      clients = _json["clients"]
+          .map((value) => new Client.fromJson(value))
+          .toList()
+          .cast<Client>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -5720,7 +5732,8 @@ class ListCreativeStatusBreakdownByCreativeResponse {
     if (_json.containsKey("filteredBidCreativeRows")) {
       filteredBidCreativeRows = _json["filteredBidCreativeRows"]
           .map((value) => new FilteredBidCreativeRow.fromJson(value))
-          .toList();
+          .toList()
+          .cast<FilteredBidCreativeRow>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -5786,7 +5799,8 @@ class ListCreativeStatusBreakdownByDetailResponse {
     if (_json.containsKey("filteredBidDetailRows")) {
       filteredBidDetailRows = _json["filteredBidDetailRows"]
           .map((value) => new FilteredBidDetailRow.fromJson(value))
-          .toList();
+          .toList()
+          .cast<FilteredBidDetailRow>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -5829,7 +5843,8 @@ class ListCreativesResponse {
     if (_json.containsKey("creatives")) {
       creatives = _json["creatives"]
           .map((value) => new Creative.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Creative>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -5867,7 +5882,8 @@ class ListDealAssociationsResponse {
     if (_json.containsKey("associations")) {
       associations = _json["associations"]
           .map((value) => new CreativeDealAssociation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CreativeDealAssociation>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -5907,7 +5923,8 @@ class ListFilterSetsResponse {
     if (_json.containsKey("filterSets")) {
       filterSets = _json["filterSets"]
           .map((value) => new FilterSet.fromJson(value))
-          .toList();
+          .toList()
+          .cast<FilterSet>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -5948,7 +5965,8 @@ class ListFilteredBidRequestsResponse {
     if (_json.containsKey("calloutStatusRows")) {
       calloutStatusRows = _json["calloutStatusRows"]
           .map((value) => new CalloutStatusRow.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CalloutStatusRow>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -5989,7 +6007,8 @@ class ListFilteredBidsResponse {
     if (_json.containsKey("creativeStatusRows")) {
       creativeStatusRows = _json["creativeStatusRows"]
           .map((value) => new CreativeStatusRow.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CreativeStatusRow>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -6029,7 +6048,8 @@ class ListImpressionMetricsResponse {
     if (_json.containsKey("impressionMetricsRows")) {
       impressionMetricsRows = _json["impressionMetricsRows"]
           .map((value) => new ImpressionMetricsRow.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ImpressionMetricsRow>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -6069,7 +6089,8 @@ class ListLosingBidsResponse {
     if (_json.containsKey("creativeStatusRows")) {
       creativeStatusRows = _json["creativeStatusRows"]
           .map((value) => new CreativeStatusRow.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CreativeStatusRow>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -6113,7 +6134,8 @@ class ListNonBillableWinningBidsResponse {
     if (_json.containsKey("nonBillableWinningBidStatusRows")) {
       nonBillableWinningBidStatusRows = _json["nonBillableWinningBidStatusRows"]
           .map((value) => new NonBillableWinningBidStatusRow.fromJson(value))
-          .toList();
+          .toList()
+          .cast<NonBillableWinningBidStatusRow>();
     }
   }
 
@@ -6675,12 +6697,14 @@ class ServingRestriction {
     if (_json.containsKey("contexts")) {
       contexts = _json["contexts"]
           .map((value) => new ServingContext.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ServingContext>();
     }
     if (_json.containsKey("disapprovalReasons")) {
       disapprovalReasons = _json["disapprovalReasons"]
           .map((value) => new Disapproval.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Disapproval>();
     }
     if (_json.containsKey("status")) {
       status = _json["status"];

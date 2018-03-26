@@ -1074,8 +1074,10 @@ class DownloadAccountResponse {
       nextPageToken = _json["nextPageToken"];
     }
     if (_json.containsKey("users")) {
-      users =
-          _json["users"].map((value) => new UserInfo.fromJson(value)).toList();
+      users = _json["users"]
+          .map((value) => new UserInfo.fromJson(value))
+          .toList()
+          .cast<UserInfo>();
     }
   }
 
@@ -1255,8 +1257,10 @@ class GetAccountInfoResponse {
       kind = _json["kind"];
     }
     if (_json.containsKey("users")) {
-      users =
-          _json["users"].map((value) => new UserInfo.fromJson(value)).toList();
+      users = _json["users"]
+          .map((value) => new UserInfo.fromJson(value))
+          .toList()
+          .cast<UserInfo>();
     }
   }
 
@@ -1766,7 +1770,8 @@ class IdentitytoolkitRelyingpartyGetProjectConfigResponse {
     if (_json.containsKey("idpConfig")) {
       idpConfig = _json["idpConfig"]
           .map((value) => new IdpConfig.fromJson(value))
-          .toList();
+          .toList()
+          .cast<IdpConfig>();
     }
     if (_json.containsKey("legacyResetPasswordTemplate")) {
       legacyResetPasswordTemplate =
@@ -2278,7 +2283,8 @@ class IdentitytoolkitRelyingpartySetProjectConfigRequest {
     if (_json.containsKey("idpConfig")) {
       idpConfig = _json["idpConfig"]
           .map((value) => new IdpConfig.fromJson(value))
-          .toList();
+          .toList()
+          .cast<IdpConfig>();
     }
     if (_json.containsKey("legacyResetPasswordTemplate")) {
       legacyResetPasswordTemplate =
@@ -2638,8 +2644,10 @@ class IdentitytoolkitRelyingpartyUploadAccountRequest {
       targetProjectId = _json["targetProjectId"];
     }
     if (_json.containsKey("users")) {
-      users =
-          _json["users"].map((value) => new UserInfo.fromJson(value)).toList();
+      users = _json["users"]
+          .map((value) => new UserInfo.fromJson(value))
+          .toList()
+          .cast<UserInfo>();
     }
   }
 
@@ -3519,7 +3527,8 @@ class SetAccountInfoResponse {
       providerUserInfo = _json["providerUserInfo"]
           .map((value) =>
               new SetAccountInfoResponseProviderUserInfo.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SetAccountInfoResponseProviderUserInfo>();
     }
     if (_json.containsKey("refreshToken")) {
       refreshToken = _json["refreshToken"];
@@ -3694,7 +3703,8 @@ class UploadAccountResponse {
     if (_json.containsKey("error")) {
       error = _json["error"]
           .map((value) => new UploadAccountResponseError.fromJson(value))
-          .toList();
+          .toList()
+          .cast<UploadAccountResponseError>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -3921,7 +3931,8 @@ class UserInfo {
     if (_json.containsKey("providerUserInfo")) {
       providerUserInfo = _json["providerUserInfo"]
           .map((value) => new UserInfoProviderUserInfo.fromJson(value))
-          .toList();
+          .toList()
+          .cast<UserInfoProviderUserInfo>();
     }
     if (_json.containsKey("rawPassword")) {
       rawPassword = _json["rawPassword"];

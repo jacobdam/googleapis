@@ -2613,7 +2613,8 @@ class Cluster {
     if (_json.containsKey("nodePools")) {
       nodePools = _json["nodePools"]
           .map((value) => new NodePool.fromJson(value))
-          .toList();
+          .toList()
+          .cast<NodePool>();
     }
     if (_json.containsKey("resourceLabels")) {
       resourceLabels = _json["resourceLabels"];
@@ -3285,7 +3286,8 @@ class ListClustersResponse {
     if (_json.containsKey("clusters")) {
       clusters = _json["clusters"]
           .map((value) => new Cluster.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Cluster>();
     }
     if (_json.containsKey("missingZones")) {
       missingZones = _json["missingZones"];
@@ -3316,7 +3318,8 @@ class ListNodePoolsResponse {
     if (_json.containsKey("nodePools")) {
       nodePools = _json["nodePools"]
           .map((value) => new NodePool.fromJson(value))
-          .toList();
+          .toList()
+          .cast<NodePool>();
     }
   }
 
@@ -3348,7 +3351,8 @@ class ListOperationsResponse {
     if (_json.containsKey("operations")) {
       operations = _json["operations"]
           .map((value) => new Operation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Operation>();
     }
   }
 
@@ -3512,7 +3516,8 @@ class MasterAuthorizedNetworksConfig {
     if (_json.containsKey("cidrBlocks")) {
       cidrBlocks = _json["cidrBlocks"]
           .map((value) => new CidrBlock.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CidrBlock>();
     }
     if (_json.containsKey("enabled")) {
       enabled = _json["enabled"];
@@ -3707,7 +3712,8 @@ class NodeConfig {
     if (_json.containsKey("accelerators")) {
       accelerators = _json["accelerators"]
           .map((value) => new AcceleratorConfig.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AcceleratorConfig>();
     }
     if (_json.containsKey("diskSizeGb")) {
       diskSizeGb = _json["diskSizeGb"];

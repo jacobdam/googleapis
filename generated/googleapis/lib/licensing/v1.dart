@@ -607,7 +607,8 @@ class LicenseAssignmentList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new LicenseAssignment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LicenseAssignment>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];

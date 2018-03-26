@@ -1041,8 +1041,10 @@ class Build {
       results = new Results.fromJson(_json["results"]);
     }
     if (_json.containsKey("secrets")) {
-      secrets =
-          _json["secrets"].map((value) => new Secret.fromJson(value)).toList();
+      secrets = _json["secrets"]
+          .map((value) => new Secret.fromJson(value))
+          .toList()
+          .cast<Secret>();
     }
     if (_json.containsKey("source")) {
       source = new Source.fromJson(_json["source"]);
@@ -1061,8 +1063,10 @@ class Build {
       statusDetail = _json["statusDetail"];
     }
     if (_json.containsKey("steps")) {
-      steps =
-          _json["steps"].map((value) => new BuildStep.fromJson(value)).toList();
+      steps = _json["steps"]
+          .map((value) => new BuildStep.fromJson(value))
+          .toList()
+          .cast<BuildStep>();
     }
     if (_json.containsKey("substitutions")) {
       substitutions = _json["substitutions"];
@@ -1383,8 +1387,10 @@ class BuildStep {
       timing = new TimeSpan.fromJson(_json["timing"]);
     }
     if (_json.containsKey("volumes")) {
-      volumes =
-          _json["volumes"].map((value) => new Volume.fromJson(value)).toList();
+      volumes = _json["volumes"]
+          .map((value) => new Volume.fromJson(value))
+          .toList()
+          .cast<Volume>();
     }
     if (_json.containsKey("waitFor")) {
       waitFor = _json["waitFor"];
@@ -1624,8 +1630,10 @@ class FileHashes {
 
   FileHashes.fromJson(core.Map _json) {
     if (_json.containsKey("fileHash")) {
-      fileHash =
-          _json["fileHash"].map((value) => new Hash.fromJson(value)).toList();
+      fileHash = _json["fileHash"]
+          .map((value) => new Hash.fromJson(value))
+          .toList()
+          .cast<Hash>();
     }
   }
 
@@ -1693,7 +1701,8 @@ class ListBuildTriggersResponse {
     if (_json.containsKey("triggers")) {
       triggers = _json["triggers"]
           .map((value) => new BuildTrigger.fromJson(value))
-          .toList();
+          .toList()
+          .cast<BuildTrigger>();
     }
   }
 
@@ -1719,8 +1728,10 @@ class ListBuildsResponse {
 
   ListBuildsResponse.fromJson(core.Map _json) {
     if (_json.containsKey("builds")) {
-      builds =
-          _json["builds"].map((value) => new Build.fromJson(value)).toList();
+      builds = _json["builds"]
+          .map((value) => new Build.fromJson(value))
+          .toList()
+          .cast<Build>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -1757,7 +1768,8 @@ class ListOperationsResponse {
     if (_json.containsKey("operations")) {
       operations = _json["operations"]
           .map((value) => new Operation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Operation>();
     }
   }
 
@@ -1947,7 +1959,8 @@ class Results {
     if (_json.containsKey("images")) {
       images = _json["images"]
           .map((value) => new BuiltImage.fromJson(value))
-          .toList();
+          .toList()
+          .cast<BuiltImage>();
     }
   }
 

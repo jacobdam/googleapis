@@ -1732,7 +1732,8 @@ class ListLogEntriesResponse {
     if (_json.containsKey("entries")) {
       entries = _json["entries"]
           .map((value) => new LogEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LogEntry>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -1768,7 +1769,8 @@ class ListLogMetricsResponse {
     if (_json.containsKey("metrics")) {
       metrics = _json["metrics"]
           .map((value) => new LogMetric.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LogMetric>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -1842,7 +1844,8 @@ class ListMonitoredResourceDescriptorsResponse {
     if (_json.containsKey("resourceDescriptors")) {
       resourceDescriptors = _json["resourceDescriptors"]
           .map((value) => new MonitoredResourceDescriptor.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MonitoredResourceDescriptor>();
     }
   }
 
@@ -1877,8 +1880,10 @@ class ListSinksResponse {
       nextPageToken = _json["nextPageToken"];
     }
     if (_json.containsKey("sinks")) {
-      sinks =
-          _json["sinks"].map((value) => new LogSink.fromJson(value)).toList();
+      sinks = _json["sinks"]
+          .map((value) => new LogSink.fromJson(value))
+          .toList()
+          .cast<LogSink>();
     }
   }
 
@@ -2668,7 +2673,8 @@ class MetricDescriptor {
     if (_json.containsKey("labels")) {
       labels = _json["labels"]
           .map((value) => new LabelDescriptor.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LabelDescriptor>();
     }
     if (_json.containsKey("metricKind")) {
       metricKind = _json["metricKind"];
@@ -2813,7 +2819,8 @@ class MonitoredResourceDescriptor {
     if (_json.containsKey("labels")) {
       labels = _json["labels"]
           .map((value) => new LabelDescriptor.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LabelDescriptor>();
     }
     if (_json.containsKey("name")) {
       name = _json["name"];
@@ -3000,7 +3007,10 @@ class RequestLog {
       latency = _json["latency"];
     }
     if (_json.containsKey("line")) {
-      line = _json["line"].map((value) => new LogLine.fromJson(value)).toList();
+      line = _json["line"]
+          .map((value) => new LogLine.fromJson(value))
+          .toList()
+          .cast<LogLine>();
     }
     if (_json.containsKey("megaCycles")) {
       megaCycles = _json["megaCycles"];
@@ -3032,7 +3042,8 @@ class RequestLog {
     if (_json.containsKey("sourceReference")) {
       sourceReference = _json["sourceReference"]
           .map((value) => new SourceReference.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SourceReference>();
     }
     if (_json.containsKey("startTime")) {
       startTime = _json["startTime"];
@@ -3315,7 +3326,8 @@ class WriteLogEntriesRequest {
     if (_json.containsKey("entries")) {
       entries = _json["entries"]
           .map((value) => new LogEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LogEntry>();
     }
     if (_json.containsKey("labels")) {
       labels = _json["labels"];

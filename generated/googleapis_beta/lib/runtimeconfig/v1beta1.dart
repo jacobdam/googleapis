@@ -1530,7 +1530,8 @@ class ListConfigsResponse {
     if (_json.containsKey("configs")) {
       configs = _json["configs"]
           .map((value) => new RuntimeConfig.fromJson(value))
-          .toList();
+          .toList()
+          .cast<RuntimeConfig>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -1573,7 +1574,8 @@ class ListVariablesResponse {
     if (_json.containsKey("variables")) {
       variables = _json["variables"]
           .map((value) => new Variable.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Variable>();
     }
   }
 
@@ -1611,8 +1613,10 @@ class ListWaitersResponse {
       nextPageToken = _json["nextPageToken"];
     }
     if (_json.containsKey("waiters")) {
-      waiters =
-          _json["waiters"].map((value) => new Waiter.fromJson(value)).toList();
+      waiters = _json["waiters"]
+          .map((value) => new Waiter.fromJson(value))
+          .toList()
+          .cast<Waiter>();
     }
   }
 
@@ -1778,7 +1782,8 @@ class Policy {
     if (_json.containsKey("bindings")) {
       bindings = _json["bindings"]
           .map((value) => new Binding.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Binding>();
     }
     if (_json.containsKey("etag")) {
       etag = _json["etag"];

@@ -912,7 +912,10 @@ class FunctionMock {
 
   FunctionMock.fromJson(core.Map _json) {
     if (_json.containsKey("args")) {
-      args = _json["args"].map((value) => new Arg.fromJson(value)).toList();
+      args = _json["args"]
+          .map((value) => new Arg.fromJson(value))
+          .toList()
+          .cast<Arg>();
     }
     if (_json.containsKey("function")) {
       function = _json["function"];
@@ -1086,7 +1089,8 @@ class ListReleasesResponse {
     if (_json.containsKey("releases")) {
       releases = _json["releases"]
           .map((value) => new Release.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Release>();
     }
   }
 
@@ -1121,7 +1125,8 @@ class ListRulesetsResponse {
     if (_json.containsKey("rulesets")) {
       rulesets = _json["rulesets"]
           .map((value) => new Ruleset.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Ruleset>();
     }
   }
 
@@ -1306,7 +1311,10 @@ class Source {
 
   Source.fromJson(core.Map _json) {
     if (_json.containsKey("files")) {
-      files = _json["files"].map((value) => new File.fromJson(value)).toList();
+      files = _json["files"]
+          .map((value) => new File.fromJson(value))
+          .toList()
+          .cast<File>();
     }
   }
 
@@ -1426,7 +1434,8 @@ class TestCase {
     if (_json.containsKey("functionMocks")) {
       functionMocks = _json["functionMocks"]
           .map((value) => new FunctionMock.fromJson(value))
-          .toList();
+          .toList()
+          .cast<FunctionMock>();
     }
     if (_json.containsKey("request")) {
       request = _json["request"];
@@ -1504,7 +1513,8 @@ class TestResult {
     if (_json.containsKey("functionCalls")) {
       functionCalls = _json["functionCalls"]
           .map((value) => new FunctionCall.fromJson(value))
-          .toList();
+          .toList()
+          .cast<FunctionCall>();
     }
     if (_json.containsKey("state")) {
       state = _json["state"];
@@ -1580,13 +1590,16 @@ class TestRulesetResponse {
 
   TestRulesetResponse.fromJson(core.Map _json) {
     if (_json.containsKey("issues")) {
-      issues =
-          _json["issues"].map((value) => new Issue.fromJson(value)).toList();
+      issues = _json["issues"]
+          .map((value) => new Issue.fromJson(value))
+          .toList()
+          .cast<Issue>();
     }
     if (_json.containsKey("testResults")) {
       testResults = _json["testResults"]
           .map((value) => new TestResult.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TestResult>();
     }
   }
 
@@ -1619,7 +1632,8 @@ class TestSuite {
     if (_json.containsKey("testCases")) {
       testCases = _json["testCases"]
           .map((value) => new TestCase.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TestCase>();
     }
   }
 

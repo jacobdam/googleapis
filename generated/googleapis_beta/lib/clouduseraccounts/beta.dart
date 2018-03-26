@@ -1412,7 +1412,10 @@ class GroupList {
       id = _json["id"];
     }
     if (_json.containsKey("items")) {
-      items = _json["items"].map((value) => new Group.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Group.fromJson(value))
+          .toList()
+          .cast<Group>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -1512,7 +1515,8 @@ class LinuxAccountViews {
     if (_json.containsKey("groupViews")) {
       groupViews = _json["groupViews"]
           .map((value) => new LinuxGroupView.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LinuxGroupView>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -1520,7 +1524,8 @@ class LinuxAccountViews {
     if (_json.containsKey("userViews")) {
       userViews = _json["userViews"]
           .map((value) => new LinuxUserView.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LinuxUserView>();
     }
   }
 
@@ -1748,7 +1753,8 @@ class OperationError {
     if (_json.containsKey("errors")) {
       errors = _json["errors"]
           .map((value) => new OperationErrorErrors.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OperationErrorErrors>();
     }
   }
 
@@ -1837,7 +1843,8 @@ class OperationWarnings {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new OperationWarningsData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OperationWarningsData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -2026,7 +2033,8 @@ class Operation {
     if (_json.containsKey("warnings")) {
       warnings = _json["warnings"]
           .map((value) => new OperationWarnings.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OperationWarnings>();
     }
     if (_json.containsKey("zone")) {
       zone = _json["zone"];
@@ -2139,8 +2147,10 @@ class OperationList {
       id = _json["id"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Operation.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Operation.fromJson(value))
+          .toList()
+          .cast<Operation>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -2298,7 +2308,8 @@ class User {
     if (_json.containsKey("publicKeys")) {
       publicKeys = _json["publicKeys"]
           .map((value) => new PublicKey.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PublicKey>();
     }
     if (_json.containsKey("selfLink")) {
       selfLink = _json["selfLink"];
@@ -2364,7 +2375,10 @@ class UserList {
       id = _json["id"];
     }
     if (_json.containsKey("items")) {
-      items = _json["items"].map((value) => new User.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new User.fromJson(value))
+          .toList()
+          .cast<User>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];

@@ -1129,7 +1129,10 @@ class Content {
 
   Content.fromJson(core.Map _json) {
     if (_json.containsKey("files")) {
-      files = _json["files"].map((value) => new File.fromJson(value)).toList();
+      files = _json["files"]
+          .map((value) => new File.fromJson(value))
+          .toList()
+          .cast<File>();
     }
     if (_json.containsKey("scriptId")) {
       scriptId = _json["scriptId"];
@@ -1216,7 +1219,8 @@ class Deployment {
     if (_json.containsKey("entryPoints")) {
       entryPoints = _json["entryPoints"]
           .map((value) => new EntryPoint.fromJson(value))
-          .toList();
+          .toList()
+          .cast<EntryPoint>();
     }
     if (_json.containsKey("functionSet")) {
       functionSet =
@@ -1418,7 +1422,8 @@ class ExecutionError {
     if (_json.containsKey("scriptStackTraceElements")) {
       scriptStackTraceElements = _json["scriptStackTraceElements"]
           .map((value) => new ScriptStackTraceElement.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ScriptStackTraceElement>();
     }
   }
 
@@ -1809,7 +1814,8 @@ class GoogleAppsScriptTypeFunctionSet {
     if (_json.containsKey("values")) {
       values = _json["values"]
           .map((value) => new GoogleAppsScriptTypeFunction.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GoogleAppsScriptTypeFunction>();
     }
   }
 
@@ -1982,7 +1988,8 @@ class GoogleAppsScriptTypeScopeSet {
     if (_json.containsKey("values")) {
       values = _json["values"]
           .map((value) => new GoogleAppsScriptTypeScope.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GoogleAppsScriptTypeScope>();
     }
   }
 
@@ -2143,7 +2150,8 @@ class ListDeploymentsResponse {
     if (_json.containsKey("deployments")) {
       deployments = _json["deployments"]
           .map((value) => new Deployment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Deployment>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -2183,7 +2191,8 @@ class ListScriptProcessesResponse {
     if (_json.containsKey("processes")) {
       processes = _json["processes"]
           .map((value) => new GoogleAppsScriptTypeProcess.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GoogleAppsScriptTypeProcess>();
     }
   }
 
@@ -2219,7 +2228,8 @@ class ListUserProcessesResponse {
     if (_json.containsKey("processes")) {
       processes = _json["processes"]
           .map((value) => new GoogleAppsScriptTypeProcess.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GoogleAppsScriptTypeProcess>();
     }
   }
 
@@ -2254,7 +2264,8 @@ class ListVersionsResponse {
     if (_json.containsKey("versions")) {
       versions = _json["versions"]
           .map((value) => new Version.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Version>();
     }
   }
 
@@ -2289,17 +2300,20 @@ class Metrics {
     if (_json.containsKey("activeUsers")) {
       activeUsers = _json["activeUsers"]
           .map((value) => new MetricsValue.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MetricsValue>();
     }
     if (_json.containsKey("failedExecutions")) {
       failedExecutions = _json["failedExecutions"]
           .map((value) => new MetricsValue.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MetricsValue>();
     }
     if (_json.containsKey("totalExecutions")) {
       totalExecutions = _json["totalExecutions"]
           .map((value) => new MetricsValue.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MetricsValue>();
     }
   }
 

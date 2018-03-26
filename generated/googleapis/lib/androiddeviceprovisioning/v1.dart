@@ -1427,7 +1427,8 @@ class ClaimDevicesRequest {
     if (_json.containsKey("claims")) {
       claims = _json["claims"]
           .map((value) => new PartnerClaim.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PartnerClaim>();
     }
   }
 
@@ -1712,7 +1713,8 @@ class CustomerListConfigurationsResponse {
     if (_json.containsKey("configurations")) {
       configurations = _json["configurations"]
           .map((value) => new Configuration.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Configuration>();
     }
   }
 
@@ -1742,7 +1744,8 @@ class CustomerListCustomersResponse {
     if (_json.containsKey("customers")) {
       customers = _json["customers"]
           .map((value) => new Company.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Company>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -1775,8 +1778,10 @@ class CustomerListDevicesResponse {
 
   CustomerListDevicesResponse.fromJson(core.Map _json) {
     if (_json.containsKey("devices")) {
-      devices =
-          _json["devices"].map((value) => new Device.fromJson(value)).toList();
+      devices = _json["devices"]
+          .map((value) => new Device.fromJson(value))
+          .toList()
+          .cast<Device>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -1806,7 +1811,10 @@ class CustomerListDpcsResponse {
 
   CustomerListDpcsResponse.fromJson(core.Map _json) {
     if (_json.containsKey("dpcs")) {
-      dpcs = _json["dpcs"].map((value) => new Dpc.fromJson(value)).toList();
+      dpcs = _json["dpcs"]
+          .map((value) => new Dpc.fromJson(value))
+          .toList()
+          .cast<Dpc>();
     }
   }
 
@@ -1902,7 +1910,8 @@ class Device {
     if (_json.containsKey("claims")) {
       claims = _json["claims"]
           .map((value) => new DeviceClaim.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DeviceClaim>();
     }
     if (_json.containsKey("configuration")) {
       configuration = _json["configuration"];
@@ -2170,7 +2179,8 @@ class DevicesLongRunningOperationResponse {
     if (_json.containsKey("perDeviceStatus")) {
       perDeviceStatus = _json["perDeviceStatus"]
           .map((value) => new OperationPerDevice.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OperationPerDevice>();
     }
     if (_json.containsKey("successCount")) {
       successCount = _json["successCount"];
@@ -2317,8 +2327,10 @@ class FindDevicesByDeviceIdentifierResponse {
 
   FindDevicesByDeviceIdentifierResponse.fromJson(core.Map _json) {
     if (_json.containsKey("devices")) {
-      devices =
-          _json["devices"].map((value) => new Device.fromJson(value)).toList();
+      devices = _json["devices"]
+          .map((value) => new Device.fromJson(value))
+          .toList()
+          .cast<Device>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -2403,8 +2415,10 @@ class FindDevicesByOwnerResponse {
 
   FindDevicesByOwnerResponse.fromJson(core.Map _json) {
     if (_json.containsKey("devices")) {
-      devices =
-          _json["devices"].map((value) => new Device.fromJson(value)).toList();
+      devices = _json["devices"]
+          .map((value) => new Device.fromJson(value))
+          .toList()
+          .cast<Device>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -2435,7 +2449,8 @@ class ListCustomersResponse {
     if (_json.containsKey("customers")) {
       customers = _json["customers"]
           .map((value) => new Company.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Company>();
     }
   }
 
@@ -2899,7 +2914,8 @@ class UnclaimDevicesRequest {
     if (_json.containsKey("unclaims")) {
       unclaims = _json["unclaims"]
           .map((value) => new PartnerUnclaim.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PartnerUnclaim>();
     }
   }
 
@@ -2924,7 +2940,8 @@ class UpdateDeviceMetadataInBatchRequest {
     if (_json.containsKey("updates")) {
       updates = _json["updates"]
           .map((value) => new UpdateMetadataArguments.fromJson(value))
-          .toList();
+          .toList()
+          .cast<UpdateMetadataArguments>();
     }
   }
 

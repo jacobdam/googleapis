@@ -1733,7 +1733,8 @@ class BeaconInfo {
     if (_json.containsKey("attachments")) {
       attachments = _json["attachments"]
           .map((value) => new AttachmentInfo.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AttachmentInfo>();
     }
     if (_json.containsKey("beaconName")) {
       beaconName = _json["beaconName"];
@@ -2119,7 +2120,8 @@ class GetInfoForObservedBeaconsRequest {
     if (_json.containsKey("observations")) {
       observations = _json["observations"]
           .map((value) => new Observation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Observation>();
     }
   }
 
@@ -2150,7 +2152,8 @@ class GetInfoForObservedBeaconsResponse {
     if (_json.containsKey("beacons")) {
       beacons = _json["beacons"]
           .map((value) => new BeaconInfo.fromJson(value))
-          .toList();
+          .toList()
+          .cast<BeaconInfo>();
     }
   }
 
@@ -2236,7 +2239,8 @@ class ListBeaconAttachmentsResponse {
     if (_json.containsKey("attachments")) {
       attachments = _json["attachments"]
           .map((value) => new BeaconAttachment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<BeaconAttachment>();
     }
   }
 
@@ -2268,8 +2272,10 @@ class ListBeaconsResponse {
 
   ListBeaconsResponse.fromJson(core.Map _json) {
     if (_json.containsKey("beacons")) {
-      beacons =
-          _json["beacons"].map((value) => new Beacon.fromJson(value)).toList();
+      beacons = _json["beacons"]
+          .map((value) => new Beacon.fromJson(value))
+          .toList()
+          .cast<Beacon>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -2310,7 +2316,8 @@ class ListDiagnosticsResponse {
     if (_json.containsKey("diagnostics")) {
       diagnostics = _json["diagnostics"]
           .map((value) => new Diagnostics.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Diagnostics>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -2343,7 +2350,8 @@ class ListNamespacesResponse {
     if (_json.containsKey("namespaces")) {
       namespaces = _json["namespaces"]
           .map((value) => new Namespace.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Namespace>();
     }
   }
 

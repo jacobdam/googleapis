@@ -352,7 +352,8 @@ class ListResponse {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new GetResponse.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GetResponse>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];

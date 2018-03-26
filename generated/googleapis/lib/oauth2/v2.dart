@@ -284,7 +284,10 @@ class Jwk {
 
   Jwk.fromJson(core.Map _json) {
     if (_json.containsKey("keys")) {
-      keys = _json["keys"].map((value) => new JwkKeys.fromJson(value)).toList();
+      keys = _json["keys"]
+          .map((value) => new JwkKeys.fromJson(value))
+          .toList()
+          .cast<JwkKeys>();
     }
   }
 

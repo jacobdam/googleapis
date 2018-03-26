@@ -212,12 +212,14 @@ class AnalyticsSnapshot {
     if (_json.containsKey("browsers")) {
       browsers = _json["browsers"]
           .map((value) => new StringCount.fromJson(value))
-          .toList();
+          .toList()
+          .cast<StringCount>();
     }
     if (_json.containsKey("countries")) {
       countries = _json["countries"]
           .map((value) => new StringCount.fromJson(value))
-          .toList();
+          .toList()
+          .cast<StringCount>();
     }
     if (_json.containsKey("longUrlClicks")) {
       longUrlClicks = _json["longUrlClicks"];
@@ -225,12 +227,14 @@ class AnalyticsSnapshot {
     if (_json.containsKey("platforms")) {
       platforms = _json["platforms"]
           .map((value) => new StringCount.fromJson(value))
-          .toList();
+          .toList()
+          .cast<StringCount>();
     }
     if (_json.containsKey("referrers")) {
       referrers = _json["referrers"]
           .map((value) => new StringCount.fromJson(value))
-          .toList();
+          .toList()
+          .cast<StringCount>();
     }
     if (_json.containsKey("shortUrlClicks")) {
       shortUrlClicks = _json["shortUrlClicks"];
@@ -445,7 +449,10 @@ class UrlHistory {
 
   UrlHistory.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items = _json["items"].map((value) => new Url.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Url.fromJson(value))
+          .toList()
+          .cast<Url>();
     }
     if (_json.containsKey("itemsPerPage")) {
       itemsPerPage = _json["itemsPerPage"];

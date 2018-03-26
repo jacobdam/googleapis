@@ -463,7 +463,8 @@ class AndroidDeviceCatalog {
     if (_json.containsKey("models")) {
       models = _json["models"]
           .map((value) => new AndroidModel.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AndroidModel>();
     }
     if (_json.containsKey("runtimeConfiguration")) {
       runtimeConfiguration = new AndroidRuntimeConfiguration.fromJson(
@@ -472,7 +473,8 @@ class AndroidDeviceCatalog {
     if (_json.containsKey("versions")) {
       versions = _json["versions"]
           .map((value) => new AndroidVersion.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AndroidVersion>();
     }
   }
 
@@ -504,7 +506,8 @@ class AndroidDeviceList {
     if (_json.containsKey("androidDevices")) {
       androidDevices = _json["androidDevices"]
           .map((value) => new AndroidDevice.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AndroidDevice>();
     }
   }
 
@@ -912,12 +915,14 @@ class AndroidRoboTest {
     if (_json.containsKey("roboDirectives")) {
       roboDirectives = _json["roboDirectives"]
           .map((value) => new RoboDirective.fromJson(value))
-          .toList();
+          .toList()
+          .cast<RoboDirective>();
     }
     if (_json.containsKey("startingIntents")) {
       startingIntents = _json["startingIntents"]
           .map((value) => new RoboStartingIntent.fromJson(value))
-          .toList();
+          .toList()
+          .cast<RoboStartingIntent>();
     }
   }
 
@@ -965,13 +970,16 @@ class AndroidRuntimeConfiguration {
 
   AndroidRuntimeConfiguration.fromJson(core.Map _json) {
     if (_json.containsKey("locales")) {
-      locales =
-          _json["locales"].map((value) => new Locale.fromJson(value)).toList();
+      locales = _json["locales"]
+          .map((value) => new Locale.fromJson(value))
+          .toList()
+          .cast<Locale>();
     }
     if (_json.containsKey("orientations")) {
       orientations = _json["orientations"]
           .map((value) => new Orientation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Orientation>();
     }
   }
 
@@ -1189,7 +1197,8 @@ class ApkManifest {
     if (_json.containsKey("intentFilters")) {
       intentFilters = _json["intentFilters"]
           .map((value) => new IntentFilter.fromJson(value))
-          .toList();
+          .toList()
+          .cast<IntentFilter>();
     }
     if (_json.containsKey("maxSdkVersion")) {
       maxSdkVersion = _json["maxSdkVersion"];
@@ -1309,7 +1318,8 @@ class ClientInfo {
     if (_json.containsKey("clientInfoDetails")) {
       clientInfoDetails = _json["clientInfoDetails"]
           .map((value) => new ClientInfoDetail.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ClientInfoDetail>();
     }
     if (_json.containsKey("name")) {
       name = _json["name"];
@@ -1820,7 +1830,8 @@ class NetworkConfigurationCatalog {
     if (_json.containsKey("configurations")) {
       configurations = _json["configurations"]
           .map((value) => new NetworkConfiguration.fromJson(value))
-          .toList();
+          .toList()
+          .cast<NetworkConfiguration>();
     }
   }
 
@@ -2488,7 +2499,8 @@ class TestMatrix {
     if (_json.containsKey("testExecutions")) {
       testExecutions = _json["testExecutions"]
           .map((value) => new TestExecution.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TestExecution>();
     }
     if (_json.containsKey("testMatrixId")) {
       testMatrixId = _json["testMatrixId"];
@@ -2583,12 +2595,14 @@ class TestSetup {
     if (_json.containsKey("environmentVariables")) {
       environmentVariables = _json["environmentVariables"]
           .map((value) => new EnvironmentVariable.fromJson(value))
-          .toList();
+          .toList()
+          .cast<EnvironmentVariable>();
     }
     if (_json.containsKey("filesToPush")) {
       filesToPush = _json["filesToPush"]
           .map((value) => new DeviceFile.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DeviceFile>();
     }
     if (_json.containsKey("networkProfile")) {
       networkProfile = _json["networkProfile"];

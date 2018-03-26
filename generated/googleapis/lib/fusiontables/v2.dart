@@ -2311,8 +2311,10 @@ class ColumnList {
 
   ColumnList.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Column.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Column.fromJson(value))
+          .toList()
+          .cast<Column>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -2804,7 +2806,8 @@ class StyleFunctionGradient {
     if (_json.containsKey("colors")) {
       colors = _json["colors"]
           .map((value) => new StyleFunctionGradientColors.fromJson(value))
-          .toList();
+          .toList()
+          .cast<StyleFunctionGradientColors>();
     }
     if (_json.containsKey("max")) {
       max = _json["max"];
@@ -2855,8 +2858,10 @@ class StyleFunction {
 
   StyleFunction.fromJson(core.Map _json) {
     if (_json.containsKey("buckets")) {
-      buckets =
-          _json["buckets"].map((value) => new Bucket.fromJson(value)).toList();
+      buckets = _json["buckets"]
+          .map((value) => new Bucket.fromJson(value))
+          .toList()
+          .cast<Bucket>();
     }
     if (_json.containsKey("columnName")) {
       columnName = _json["columnName"];
@@ -2991,7 +2996,8 @@ class StyleSettingList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new StyleSetting.fromJson(value))
-          .toList();
+          .toList()
+          .cast<StyleSetting>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -3080,8 +3086,10 @@ class Table {
       columnPropertiesJsonSchema = _json["columnPropertiesJsonSchema"];
     }
     if (_json.containsKey("columns")) {
-      columns =
-          _json["columns"].map((value) => new Column.fromJson(value)).toList();
+      columns = _json["columns"]
+          .map((value) => new Column.fromJson(value))
+          .toList()
+          .cast<Column>();
     }
     if (_json.containsKey("description")) {
       description = _json["description"];
@@ -3172,7 +3180,10 @@ class TableList {
 
   TableList.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items = _json["items"].map((value) => new Table.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Table.fromJson(value))
+          .toList()
+          .cast<Table>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -3278,7 +3289,10 @@ class TaskList {
 
   TaskList.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items = _json["items"].map((value) => new Task.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Task.fromJson(value))
+          .toList()
+          .cast<Task>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -3403,8 +3417,10 @@ class TemplateList {
 
   TemplateList.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Template.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Template.fromJson(value))
+          .toList()
+          .cast<Template>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];

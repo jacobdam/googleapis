@@ -2032,7 +2032,8 @@ class DataSource {
     if (_json.containsKey("parameters")) {
       parameters = _json["parameters"]
           .map((value) => new DataSourceParameter.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DataSourceParameter>();
     }
     if (_json.containsKey("scopes")) {
       scopes = _json["scopes"];
@@ -2192,7 +2193,8 @@ class DataSourceParameter {
     if (_json.containsKey("fields")) {
       fields = _json["fields"]
           .map((value) => new DataSourceParameter.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DataSourceParameter>();
     }
     if (_json.containsKey("immutable")) {
       immutable = _json["immutable"];
@@ -2319,7 +2321,8 @@ class ListDataSourcesResponse {
     if (_json.containsKey("dataSources")) {
       dataSources = _json["dataSources"]
           .map((value) => new DataSource.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DataSource>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -2354,7 +2357,8 @@ class ListLocationsResponse {
     if (_json.containsKey("locations")) {
       locations = _json["locations"]
           .map((value) => new Location.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Location>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -2394,7 +2398,8 @@ class ListTransferConfigsResponse {
     if (_json.containsKey("transferConfigs")) {
       transferConfigs = _json["transferConfigs"]
           .map((value) => new TransferConfig.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TransferConfig>();
     }
   }
 
@@ -2432,7 +2437,8 @@ class ListTransferLogsResponse {
     if (_json.containsKey("transferMessages")) {
       transferMessages = _json["transferMessages"]
           .map((value) => new TransferMessage.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TransferMessage>();
     }
   }
 
@@ -2470,7 +2476,8 @@ class ListTransferRunsResponse {
     if (_json.containsKey("transferRuns")) {
       transferRuns = _json["transferRuns"]
           .map((value) => new TransferRun.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TransferRun>();
     }
   }
 
@@ -2590,7 +2597,8 @@ class ScheduleTransferRunsResponse {
     if (_json.containsKey("runs")) {
       runs = _json["runs"]
           .map((value) => new TransferRun.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TransferRun>();
     }
   }
 

@@ -2476,7 +2476,8 @@ class BatchCreatePerfSamplesRequest {
     if (_json.containsKey("perfSamples")) {
       perfSamples = _json["perfSamples"]
           .map((value) => new PerfSample.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PerfSample>();
     }
   }
 
@@ -2500,7 +2501,8 @@ class BatchCreatePerfSamplesResponse {
     if (_json.containsKey("perfSamples")) {
       perfSamples = _json["perfSamples"]
           .map((value) => new PerfSample.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PerfSample>();
     }
   }
 
@@ -2901,7 +2903,8 @@ class GraphicsStats {
     if (_json.containsKey("buckets")) {
       buckets = _json["buckets"]
           .map((value) => new GraphicsStatsBucket.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GraphicsStatsBucket>();
     }
     if (_json.containsKey("highInputLatencyCount")) {
       highInputLatencyCount = _json["highInputLatencyCount"];
@@ -3180,7 +3183,8 @@ class ListExecutionsResponse {
     if (_json.containsKey("executions")) {
       executions = _json["executions"]
           .map((value) => new Execution.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Execution>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -3222,7 +3226,8 @@ class ListHistoriesResponse {
     if (_json.containsKey("histories")) {
       histories = _json["histories"]
           .map((value) => new History.fromJson(value))
-          .toList();
+          .toList()
+          .cast<History>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -3252,7 +3257,8 @@ class ListPerfSampleSeriesResponse {
     if (_json.containsKey("perfSampleSeries")) {
       perfSampleSeries = _json["perfSampleSeries"]
           .map((value) => new PerfSampleSeries.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PerfSampleSeries>();
     }
   }
 
@@ -3283,7 +3289,8 @@ class ListPerfSamplesResponse {
     if (_json.containsKey("perfSamples")) {
       perfSamples = _json["perfSamples"]
           .map((value) => new PerfSample.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PerfSample>();
     }
   }
 
@@ -3311,7 +3318,8 @@ class ListScreenshotClustersResponse {
     if (_json.containsKey("clusters")) {
       clusters = _json["clusters"]
           .map((value) => new ScreenshotCluster.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ScreenshotCluster>();
     }
   }
 
@@ -3352,7 +3360,8 @@ class ListStepThumbnailsResponse {
     if (_json.containsKey("thumbnails")) {
       thumbnails = _json["thumbnails"]
           .map((value) => new Image.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Image>();
     }
   }
 
@@ -3388,7 +3397,10 @@ class ListStepsResponse {
       nextPageToken = _json["nextPageToken"];
     }
     if (_json.containsKey("steps")) {
-      steps = _json["steps"].map((value) => new Step.fromJson(value)).toList();
+      steps = _json["steps"]
+          .map((value) => new Step.fromJson(value))
+          .toList()
+          .cast<Step>();
     }
   }
 
@@ -3798,7 +3810,8 @@ class PublishXunitXmlFilesRequest {
     if (_json.containsKey("xunitXmlFiles")) {
       xunitXmlFiles = _json["xunitXmlFiles"]
           .map((value) => new FileReference.fromJson(value))
-          .toList();
+          .toList()
+          .cast<FileReference>();
     }
   }
 
@@ -3891,8 +3904,10 @@ class ScreenshotCluster {
       keyScreen = new Screen.fromJson(_json["keyScreen"]);
     }
     if (_json.containsKey("screens")) {
-      screens =
-          _json["screens"].map((value) => new Screen.fromJson(value)).toList();
+      screens = _json["screens"]
+          .map((value) => new Screen.fromJson(value))
+          .toList()
+          .cast<Screen>();
     }
   }
 
@@ -4093,8 +4108,10 @@ class Status {
       code = _json["code"];
     }
     if (_json.containsKey("details")) {
-      details =
-          _json["details"].map((value) => new Any.fromJson(value)).toList();
+      details = _json["details"]
+          .map((value) => new Any.fromJson(value))
+          .toList()
+          .cast<Any>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -4304,7 +4321,8 @@ class Step {
     if (_json.containsKey("dimensionValue")) {
       dimensionValue = _json["dimensionValue"]
           .map((value) => new StepDimensionValueEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<StepDimensionValueEntry>();
     }
     if (_json.containsKey("hasImages")) {
       hasImages = _json["hasImages"];
@@ -4312,7 +4330,8 @@ class Step {
     if (_json.containsKey("labels")) {
       labels = _json["labels"]
           .map((value) => new StepLabelsEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<StepLabelsEntry>();
     }
     if (_json.containsKey("name")) {
       name = _json["name"];
@@ -4561,12 +4580,14 @@ class TestExecutionStep {
     if (_json.containsKey("testIssues")) {
       testIssues = _json["testIssues"]
           .map((value) => new TestIssue.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TestIssue>();
     }
     if (_json.containsKey("testSuiteOverviews")) {
       testSuiteOverviews = _json["testSuiteOverviews"]
           .map((value) => new TestSuiteOverview.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TestSuiteOverview>();
     }
     if (_json.containsKey("testTiming")) {
       testTiming = new TestTiming.fromJson(_json["testTiming"]);
@@ -5017,12 +5038,14 @@ class ToolExecution {
     if (_json.containsKey("toolLogs")) {
       toolLogs = _json["toolLogs"]
           .map((value) => new FileReference.fromJson(value))
-          .toList();
+          .toList()
+          .cast<FileReference>();
     }
     if (_json.containsKey("toolOutputs")) {
       toolOutputs = _json["toolOutputs"]
           .map((value) => new ToolOutputReference.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ToolOutputReference>();
     }
   }
 

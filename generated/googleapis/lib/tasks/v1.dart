@@ -943,8 +943,10 @@ class Task {
       kind = _json["kind"];
     }
     if (_json.containsKey("links")) {
-      links =
-          _json["links"].map((value) => new TaskLinks.fromJson(value)).toList();
+      links = _json["links"]
+          .map((value) => new TaskLinks.fromJson(value))
+          .toList()
+          .cast<TaskLinks>();
     }
     if (_json.containsKey("notes")) {
       notes = _json["notes"];
@@ -1109,8 +1111,10 @@ class TaskLists {
       etag = _json["etag"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new TaskList.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new TaskList.fromJson(value))
+          .toList()
+          .cast<TaskList>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -1159,7 +1163,10 @@ class Tasks {
       etag = _json["etag"];
     }
     if (_json.containsKey("items")) {
-      items = _json["items"].map((value) => new Task.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Task.fromJson(value))
+          .toList()
+          .cast<Task>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];

@@ -305,7 +305,10 @@ class BatchWriteSpansRequest {
 
   BatchWriteSpansRequest.fromJson(core.Map _json) {
     if (_json.containsKey("spans")) {
-      spans = _json["spans"].map((value) => new Span.fromJson(value)).toList();
+      spans = _json["spans"]
+          .map((value) => new Span.fromJson(value))
+          .toList()
+          .cast<Span>();
     }
   }
 
@@ -415,7 +418,10 @@ class Links {
       droppedLinksCount = _json["droppedLinksCount"];
     }
     if (_json.containsKey("link")) {
-      link = _json["link"].map((value) => new Link.fromJson(value)).toList();
+      link = _json["link"]
+          .map((value) => new Link.fromJson(value))
+          .toList()
+          .cast<Link>();
     }
   }
 
@@ -788,7 +794,8 @@ class StackFrames {
     if (_json.containsKey("frame")) {
       frame = _json["frame"]
           .map((value) => new StackFrame.fromJson(value))
-          .toList();
+          .toList()
+          .cast<StackFrame>();
     }
   }
 
@@ -1015,7 +1022,8 @@ class TimeEvents {
     if (_json.containsKey("timeEvent")) {
       timeEvent = _json["timeEvent"]
           .map((value) => new TimeEvent.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TimeEvent>();
     }
   }
 

@@ -703,8 +703,10 @@ class BatchDeletePhotosResponse {
 
   BatchDeletePhotosResponse.fromJson(core.Map _json) {
     if (_json.containsKey("status")) {
-      status =
-          _json["status"].map((value) => new Status.fromJson(value)).toList();
+      status = _json["status"]
+          .map((value) => new Status.fromJson(value))
+          .toList()
+          .cast<Status>();
     }
   }
 
@@ -732,7 +734,8 @@ class BatchGetPhotosResponse {
     if (_json.containsKey("results")) {
       results = _json["results"]
           .map((value) => new PhotoResponse.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PhotoResponse>();
     }
   }
 
@@ -759,7 +762,8 @@ class BatchUpdatePhotosRequest {
     if (_json.containsKey("updatePhotoRequests")) {
       updatePhotoRequests = _json["updatePhotoRequests"]
           .map((value) => new UpdatePhotoRequest.fromJson(value))
-          .toList();
+          .toList()
+          .cast<UpdatePhotoRequest>();
     }
   }
 
@@ -788,7 +792,8 @@ class BatchUpdatePhotosResponse {
     if (_json.containsKey("results")) {
       results = _json["results"]
           .map((value) => new PhotoResponse.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PhotoResponse>();
     }
   }
 
@@ -938,8 +943,10 @@ class ListPhotosResponse {
       nextPageToken = _json["nextPageToken"];
     }
     if (_json.containsKey("photos")) {
-      photos =
-          _json["photos"].map((value) => new Photo.fromJson(value)).toList();
+      photos = _json["photos"]
+          .map((value) => new Photo.fromJson(value))
+          .toList()
+          .cast<Photo>();
     }
   }
 
@@ -1088,7 +1095,8 @@ class Photo {
     if (_json.containsKey("connections")) {
       connections = _json["connections"]
           .map((value) => new Connection.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Connection>();
     }
     if (_json.containsKey("downloadUrl")) {
       downloadUrl = _json["downloadUrl"];
@@ -1097,8 +1105,10 @@ class Photo {
       photoId = new PhotoId.fromJson(_json["photoId"]);
     }
     if (_json.containsKey("places")) {
-      places =
-          _json["places"].map((value) => new Place.fromJson(value)).toList();
+      places = _json["places"]
+          .map((value) => new Place.fromJson(value))
+          .toList()
+          .cast<Place>();
     }
     if (_json.containsKey("pose")) {
       pose = new Pose.fromJson(_json["pose"]);

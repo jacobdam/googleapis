@@ -931,7 +931,8 @@ class ApiDimensionFilterGroup {
     if (_json.containsKey("filters")) {
       filters = _json["filters"]
           .map((value) => new ApiDimensionFilter.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ApiDimensionFilter>();
     }
     if (_json.containsKey("groupType")) {
       groupType = _json["groupType"];
@@ -1010,7 +1011,8 @@ class SearchAnalyticsQueryRequest {
     if (_json.containsKey("dimensionFilterGroups")) {
       dimensionFilterGroups = _json["dimensionFilterGroups"]
           .map((value) => new ApiDimensionFilterGroup.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ApiDimensionFilterGroup>();
     }
     if (_json.containsKey("dimensions")) {
       dimensions = _json["dimensions"];
@@ -1081,8 +1083,10 @@ class SearchAnalyticsQueryResponse {
       responseAggregationType = _json["responseAggregationType"];
     }
     if (_json.containsKey("rows")) {
-      rows =
-          _json["rows"].map((value) => new ApiDataRow.fromJson(value)).toList();
+      rows = _json["rows"]
+          .map((value) => new ApiDataRow.fromJson(value))
+          .toList()
+          .cast<ApiDataRow>();
     }
   }
 
@@ -1110,7 +1114,8 @@ class SitemapsListResponse {
     if (_json.containsKey("sitemap")) {
       sitemap = _json["sitemap"]
           .map((value) => new WmxSitemap.fromJson(value))
-          .toList();
+          .toList()
+          .cast<WmxSitemap>();
     }
   }
 
@@ -1136,7 +1141,8 @@ class SitesListResponse {
     if (_json.containsKey("siteEntry")) {
       siteEntry = _json["siteEntry"]
           .map((value) => new WmxSite.fromJson(value))
-          .toList();
+          .toList()
+          .cast<WmxSite>();
     }
   }
 
@@ -1204,7 +1210,8 @@ class UrlCrawlErrorCountsPerType {
     if (_json.containsKey("entries")) {
       entries = _json["entries"]
           .map((value) => new UrlCrawlErrorCount.fromJson(value))
-          .toList();
+          .toList()
+          .cast<UrlCrawlErrorCount>();
     }
     if (_json.containsKey("platform")) {
       platform = _json["platform"];
@@ -1240,7 +1247,8 @@ class UrlCrawlErrorsCountsQueryResponse {
     if (_json.containsKey("countPerTypes")) {
       countPerTypes = _json["countPerTypes"]
           .map((value) => new UrlCrawlErrorCountsPerType.fromJson(value))
-          .toList();
+          .toList()
+          .cast<UrlCrawlErrorCountsPerType>();
     }
   }
 
@@ -1325,7 +1333,8 @@ class UrlCrawlErrorsSamplesListResponse {
     if (_json.containsKey("urlCrawlErrorSample")) {
       urlCrawlErrorSample = _json["urlCrawlErrorSample"]
           .map((value) => new UrlCrawlErrorsSample.fromJson(value))
-          .toList();
+          .toList()
+          .cast<UrlCrawlErrorsSample>();
     }
   }
 
@@ -1444,7 +1453,8 @@ class WmxSitemap {
     if (_json.containsKey("contents")) {
       contents = _json["contents"]
           .map((value) => new WmxSitemapContent.fromJson(value))
-          .toList();
+          .toList()
+          .cast<WmxSitemapContent>();
     }
     if (_json.containsKey("errors")) {
       errors = _json["errors"];

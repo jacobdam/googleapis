@@ -534,7 +534,8 @@ class SpeechRecognitionResult {
     if (_json.containsKey("alternatives")) {
       alternatives = _json["alternatives"]
           .map((value) => new SpeechRecognitionAlternative.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SpeechRecognitionAlternative>();
     }
   }
 
@@ -698,7 +699,8 @@ class SyncRecognizeResponse {
     if (_json.containsKey("results")) {
       results = _json["results"]
           .map((value) => new SpeechRecognitionResult.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SpeechRecognitionResult>();
     }
   }
 

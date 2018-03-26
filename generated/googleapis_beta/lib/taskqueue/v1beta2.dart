@@ -794,7 +794,10 @@ class Tasks {
 
   Tasks.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items = _json["items"].map((value) => new Task.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Task.fromJson(value))
+          .toList()
+          .cast<Task>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -825,7 +828,10 @@ class Tasks2 {
 
   Tasks2.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items = _json["items"].map((value) => new Task.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Task.fromJson(value))
+          .toList()
+          .cast<Task>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];

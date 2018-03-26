@@ -619,7 +619,8 @@ class FieldMask {
     if (_json.containsKey("fields")) {
       fields = _json["fields"]
           .map((value) => new FieldMask.fromJson(value))
-          .toList();
+          .toList()
+          .cast<FieldMask>();
     }
     if (_json.containsKey("id")) {
       id = _json["id"];
@@ -739,7 +740,8 @@ class MobileAppPanelsListResponse {
     if (_json.containsKey("resources")) {
       resources = _json["resources"]
           .map((value) => new MobileAppPanel.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MobileAppPanel>();
     }
     if (_json.containsKey("tokenPagination")) {
       tokenPagination = new TokenPagination.fromJson(_json["tokenPagination"]);
@@ -831,7 +833,8 @@ class ResultsMask {
     if (_json.containsKey("fields")) {
       fields = _json["fields"]
           .map((value) => new FieldMask.fromJson(value))
-          .toList();
+          .toList()
+          .cast<FieldMask>();
     }
     if (_json.containsKey("projection")) {
       projection = _json["projection"];
@@ -919,7 +922,8 @@ class Survey {
     if (_json.containsKey("questions")) {
       questions = _json["questions"]
           .map((value) => new SurveyQuestion.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SurveyQuestion>();
     }
     if (_json.containsKey("rejectionReason")) {
       rejectionReason = new SurveyRejection.fromJson(_json["rejectionReason"]);
@@ -1225,7 +1229,8 @@ class SurveyQuestion {
     if (_json.containsKey("images")) {
       images = _json["images"]
           .map((value) => new SurveyQuestionImage.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SurveyQuestionImage>();
     }
     if (_json.containsKey("lastAnswerPositionPinned")) {
       lastAnswerPositionPinned = _json["lastAnswerPositionPinned"];
@@ -1490,7 +1495,8 @@ class SurveysListResponse {
     if (_json.containsKey("resources")) {
       resources = _json["resources"]
           .map((value) => new Survey.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Survey>();
     }
     if (_json.containsKey("tokenPagination")) {
       tokenPagination = new TokenPagination.fromJson(_json["tokenPagination"]);

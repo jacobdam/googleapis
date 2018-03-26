@@ -305,7 +305,8 @@ class DirectoryList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new DirectoryListItems.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DirectoryListItems>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -398,7 +399,8 @@ class JsonSchemaVariant {
     if (_json.containsKey("map")) {
       map = _json["map"]
           .map((value) => new JsonSchemaVariantMap.fromJson(value))
-          .toList();
+          .toList()
+          .cast<JsonSchemaVariantMap>();
     }
   }
 

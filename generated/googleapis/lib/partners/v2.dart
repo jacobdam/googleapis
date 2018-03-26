@@ -2107,7 +2107,8 @@ class AnalyticsDataPoint {
     if (_json.containsKey("eventLocations")) {
       eventLocations = _json["eventLocations"]
           .map((value) => new LatLng.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LatLng>();
     }
   }
 
@@ -2234,7 +2235,8 @@ class AvailableOffer {
     if (_json.containsKey("countryOfferInfos")) {
       countryOfferInfos = _json["countryOfferInfos"]
           .map((value) => new CountryOfferInfo.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CountryOfferInfo>();
     }
     if (_json.containsKey("description")) {
       description = _json["description"];
@@ -2257,7 +2259,8 @@ class AvailableOffer {
     if (_json.containsKey("qualifiedCustomer")) {
       qualifiedCustomer = _json["qualifiedCustomer"]
           .map((value) => new OfferCustomer.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OfferCustomer>();
     }
     if (_json.containsKey("qualifiedCustomersComplete")) {
       qualifiedCustomersComplete = _json["qualifiedCustomersComplete"];
@@ -2464,7 +2467,8 @@ class CertificationStatus {
     if (_json.containsKey("examStatuses")) {
       examStatuses = _json["examStatuses"]
           .map((value) => new CertificationExamStatus.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CertificationExamStatus>();
     }
     if (_json.containsKey("isCertified")) {
       isCertified = _json["isCertified"];
@@ -2603,7 +2607,8 @@ class Company {
     if (_json.containsKey("certificationStatuses")) {
       certificationStatuses = _json["certificationStatuses"]
           .map((value) => new CertificationStatus.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CertificationStatus>();
     }
     if (_json.containsKey("companyTypes")) {
       companyTypes = _json["companyTypes"];
@@ -2621,12 +2626,14 @@ class Company {
     if (_json.containsKey("localizedInfos")) {
       localizedInfos = _json["localizedInfos"]
           .map((value) => new LocalizedCompanyInfo.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LocalizedCompanyInfo>();
     }
     if (_json.containsKey("locations")) {
       locations = _json["locations"]
           .map((value) => new Location.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Location>();
     }
     if (_json.containsKey("name")) {
       name = _json["name"];
@@ -2651,7 +2658,10 @@ class Company {
       publicProfile = new PublicProfile.fromJson(_json["publicProfile"]);
     }
     if (_json.containsKey("ranks")) {
-      ranks = _json["ranks"].map((value) => new Rank.fromJson(value)).toList();
+      ranks = _json["ranks"]
+          .map((value) => new Rank.fromJson(value))
+          .toList()
+          .cast<Rank>();
     }
     if (_json.containsKey("services")) {
       services = _json["services"];
@@ -2659,7 +2669,8 @@ class Company {
     if (_json.containsKey("specializationStatus")) {
       specializationStatus = _json["specializationStatus"]
           .map((value) => new SpecializationStatus.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SpecializationStatus>();
     }
     if (_json.containsKey("websiteUrl")) {
       websiteUrl = _json["websiteUrl"];
@@ -2870,7 +2881,8 @@ class CompanyRelation {
     if (_json.containsKey("specializationStatus")) {
       specializationStatus = _json["specializationStatus"]
           .map((value) => new SpecializationStatus.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SpecializationStatus>();
     }
     if (_json.containsKey("state")) {
       state = _json["state"];
@@ -3773,7 +3785,8 @@ class ListAnalyticsResponse {
     if (_json.containsKey("analytics")) {
       analytics = _json["analytics"]
           .map((value) => new Analytics.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Analytics>();
     }
     if (_json.containsKey("analyticsSummary")) {
       analyticsSummary =
@@ -3829,7 +3842,8 @@ class ListCompaniesResponse {
     if (_json.containsKey("companies")) {
       companies = _json["companies"]
           .map((value) => new Company.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Company>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -3878,7 +3892,10 @@ class ListLeadsResponse {
 
   ListLeadsResponse.fromJson(core.Map _json) {
     if (_json.containsKey("leads")) {
-      leads = _json["leads"].map((value) => new Lead.fromJson(value)).toList();
+      leads = _json["leads"]
+          .map((value) => new Lead.fromJson(value))
+          .toList()
+          .cast<Lead>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -3943,7 +3960,8 @@ class ListOffersHistoryResponse {
     if (_json.containsKey("offers")) {
       offers = _json["offers"]
           .map((value) => new HistoricalOffer.fromJson(value))
-          .toList();
+          .toList()
+          .cast<HistoricalOffer>();
     }
     if (_json.containsKey("responseMetadata")) {
       responseMetadata =
@@ -4004,7 +4022,8 @@ class ListOffersResponse {
     if (_json.containsKey("availableOffers")) {
       availableOffers = _json["availableOffers"]
           .map((value) => new AvailableOffer.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AvailableOffer>();
     }
     if (_json.containsKey("noOfferReason")) {
       noOfferReason = _json["noOfferReason"];
@@ -4672,7 +4691,8 @@ class LogUserEventRequest {
     if (_json.containsKey("eventDatas")) {
       eventDatas = _json["eventDatas"]
           .map((value) => new EventData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<EventData>();
     }
     if (_json.containsKey("eventScope")) {
       eventScope = _json["eventScope"];
@@ -5297,12 +5317,14 @@ class User {
     if (_json.containsKey("availableAdwordsManagerAccounts")) {
       availableAdwordsManagerAccounts = _json["availableAdwordsManagerAccounts"]
           .map((value) => new AdWordsManagerAccountInfo.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AdWordsManagerAccountInfo>();
     }
     if (_json.containsKey("certificationStatus")) {
       certificationStatus = _json["certificationStatus"]
           .map((value) => new Certification.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Certification>();
     }
     if (_json.containsKey("company")) {
       company = new CompanyRelation.fromJson(_json["company"]);
@@ -5313,7 +5335,8 @@ class User {
     if (_json.containsKey("examStatus")) {
       examStatus = _json["examStatus"]
           .map((value) => new ExamStatus.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ExamStatus>();
     }
     if (_json.containsKey("id")) {
       id = _json["id"];

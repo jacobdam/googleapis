@@ -241,13 +241,16 @@ class BatchGetAmpUrlsResponse {
 
   BatchGetAmpUrlsResponse.fromJson(core.Map _json) {
     if (_json.containsKey("ampUrls")) {
-      ampUrls =
-          _json["ampUrls"].map((value) => new AmpUrl.fromJson(value)).toList();
+      ampUrls = _json["ampUrls"]
+          .map((value) => new AmpUrl.fromJson(value))
+          .toList()
+          .cast<AmpUrl>();
     }
     if (_json.containsKey("urlErrors")) {
       urlErrors = _json["urlErrors"]
           .map((value) => new AmpUrlError.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AmpUrlError>();
     }
   }
 

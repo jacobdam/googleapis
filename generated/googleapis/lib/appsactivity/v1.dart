@@ -148,7 +148,8 @@ class Activity {
     if (_json.containsKey("singleEvents")) {
       singleEvents = _json["singleEvents"]
           .map((value) => new Event.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Event>();
     }
   }
 
@@ -230,7 +231,8 @@ class Event {
     if (_json.containsKey("permissionChanges")) {
       permissionChanges = _json["permissionChanges"]
           .map((value) => new PermissionChange.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PermissionChange>();
     }
     if (_json.containsKey("primaryEventType")) {
       primaryEventType = _json["primaryEventType"];
@@ -296,7 +298,8 @@ class ListActivitiesResponse {
     if (_json.containsKey("activities")) {
       activities = _json["activities"]
           .map((value) => new Activity.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Activity>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -332,12 +335,14 @@ class Move {
     if (_json.containsKey("addedParents")) {
       addedParents = _json["addedParents"]
           .map((value) => new Parent.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Parent>();
     }
     if (_json.containsKey("removedParents")) {
       removedParents = _json["removedParents"]
           .map((value) => new Parent.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Parent>();
     }
   }
 
@@ -496,12 +501,14 @@ class PermissionChange {
     if (_json.containsKey("addedPermissions")) {
       addedPermissions = _json["addedPermissions"]
           .map((value) => new Permission.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Permission>();
     }
     if (_json.containsKey("removedPermissions")) {
       removedPermissions = _json["removedPermissions"]
           .map((value) => new Permission.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Permission>();
     }
   }
 

@@ -365,7 +365,8 @@ class DetectionsListResponse {
     if (_json.containsKey("detections")) {
       detections = _json["detections"]
           .map((value) => new DetectionsResource.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DetectionsResource>();
     }
   }
 
@@ -488,7 +489,8 @@ class LanguagesListResponse {
     if (_json.containsKey("languages")) {
       languages = _json["languages"]
           .map((value) => new LanguagesResource.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LanguagesResource>();
     }
   }
 
@@ -613,7 +615,8 @@ class TranslationsListResponse {
     if (_json.containsKey("translations")) {
       translations = _json["translations"]
           .map((value) => new TranslationsResource.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TranslationsResource>();
     }
   }
 

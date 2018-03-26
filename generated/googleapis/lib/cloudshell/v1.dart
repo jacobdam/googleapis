@@ -363,7 +363,8 @@ class Environment {
     if (_json.containsKey("publicKeys")) {
       publicKeys = _json["publicKeys"]
           .map((value) => new PublicKey.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PublicKey>();
     }
     if (_json.containsKey("sshHost")) {
       sshHost = _json["sshHost"];
@@ -428,7 +429,8 @@ class ListOperationsResponse {
     if (_json.containsKey("operations")) {
       operations = _json["operations"]
           .map((value) => new Operation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Operation>();
     }
   }
 

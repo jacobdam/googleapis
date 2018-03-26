@@ -850,8 +850,10 @@ class GroupItemListResponse {
       etag = _json["etag"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new GroupItem.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new GroupItem.fromJson(value))
+          .toList()
+          .cast<GroupItem>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -889,7 +891,10 @@ class GroupListResponse {
       etag = _json["etag"];
     }
     if (_json.containsKey("items")) {
-      items = _json["items"].map((value) => new Group.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Group.fromJson(value))
+          .toList()
+          .cast<Group>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -998,7 +1003,8 @@ class ResultTable {
     if (_json.containsKey("columnHeaders")) {
       columnHeaders = _json["columnHeaders"]
           .map((value) => new ResultTableColumnHeaders.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ResultTableColumnHeaders>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];

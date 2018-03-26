@@ -435,7 +435,8 @@ class LoginProfile {
     if (_json.containsKey("posixAccounts")) {
       posixAccounts = _json["posixAccounts"]
           .map((value) => new PosixAccount.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PosixAccount>();
     }
     if (_json.containsKey("sshPublicKeys")) {
       sshPublicKeys =

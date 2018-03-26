@@ -395,9 +395,12 @@ class Context {
   Context.fromJson(core.Map _json) {
     if (_json.containsKey("facets")) {
       facets = _json["facets"]
-          .map((value) =>
-              value.map((value) => new ContextFacets.fromJson(value)).toList())
-          .toList();
+          .map((value) => value
+              .map((value) => new ContextFacets.fromJson(value))
+              .toList()
+              .cast<ContextFacets>())
+          .toList()
+          .cast<core.List<ContextFacets>>();
     }
     if (_json.containsKey("title")) {
       title = _json["title"];
@@ -510,7 +513,8 @@ class Promotion {
     if (_json.containsKey("bodyLines")) {
       bodyLines = _json["bodyLines"]
           .map((value) => new PromotionBodyLines.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PromotionBodyLines>();
     }
     if (_json.containsKey("displayLink")) {
       displayLink = _json["displayLink"];
@@ -973,7 +977,8 @@ class Result {
     if (_json.containsKey("labels")) {
       labels = _json["labels"]
           .map((value) => new ResultLabels.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ResultLabels>();
     }
     if (_json.containsKey("link")) {
       link = _json["link"];
@@ -1159,8 +1164,10 @@ class Search {
       context = new Context.fromJson(_json["context"]);
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Result.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Result.fromJson(value))
+          .toList()
+          .cast<Result>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -1168,14 +1175,17 @@ class Search {
     if (_json.containsKey("promotions")) {
       promotions = _json["promotions"]
           .map((value) => new Promotion.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Promotion>();
     }
     if (_json.containsKey("queries")) {
       queries = commons.mapMap<core.List<core.Map<core.String, core.Object>>,
               core.List<Query>>(
           _json["queries"],
-          (core.List<core.Map<core.String, core.Object>> item) =>
-              item.map((value) => new Query.fromJson(value)).toList());
+          (core.List<core.Map<core.String, core.Object>> item) => item
+              .map((value) => new Query.fromJson(value))
+              .toList()
+              .cast<Query>());
     }
     if (_json.containsKey("searchInformation")) {
       searchInformation =

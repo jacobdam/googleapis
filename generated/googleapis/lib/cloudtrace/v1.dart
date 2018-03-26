@@ -346,8 +346,10 @@ class ListTracesResponse {
       nextPageToken = _json["nextPageToken"];
     }
     if (_json.containsKey("traces")) {
-      traces =
-          _json["traces"].map((value) => new Trace.fromJson(value)).toList();
+      traces = _json["traces"]
+          .map((value) => new Trace.fromJson(value))
+          .toList()
+          .cast<Trace>();
     }
   }
 
@@ -385,8 +387,10 @@ class Trace {
       projectId = _json["projectId"];
     }
     if (_json.containsKey("spans")) {
-      spans =
-          _json["spans"].map((value) => new TraceSpan.fromJson(value)).toList();
+      spans = _json["spans"]
+          .map((value) => new TraceSpan.fromJson(value))
+          .toList()
+          .cast<TraceSpan>();
     }
     if (_json.containsKey("traceId")) {
       traceId = _json["traceId"];
@@ -552,8 +556,10 @@ class Traces {
 
   Traces.fromJson(core.Map _json) {
     if (_json.containsKey("traces")) {
-      traces =
-          _json["traces"].map((value) => new Trace.fromJson(value)).toList();
+      traces = _json["traces"]
+          .map((value) => new Trace.fromJson(value))
+          .toList()
+          .cast<Trace>();
     }
   }
 

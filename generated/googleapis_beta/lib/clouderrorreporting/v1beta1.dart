@@ -596,7 +596,8 @@ class ErrorContext {
     if (_json.containsKey("sourceReferences")) {
       sourceReferences = _json["sourceReferences"]
           .map((value) => new SourceReference.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SourceReference>();
     }
     if (_json.containsKey("user")) {
       user = _json["user"];
@@ -700,7 +701,8 @@ class ErrorGroup {
     if (_json.containsKey("trackingIssues")) {
       trackingIssues = _json["trackingIssues"]
           .map((value) => new TrackingIssue.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TrackingIssue>();
     }
   }
 
@@ -785,7 +787,8 @@ class ErrorGroupStats {
     if (_json.containsKey("affectedServices")) {
       affectedServices = _json["affectedServices"]
           .map((value) => new ServiceContext.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ServiceContext>();
     }
     if (_json.containsKey("affectedUsersCount")) {
       affectedUsersCount = _json["affectedUsersCount"];
@@ -811,7 +814,8 @@ class ErrorGroupStats {
     if (_json.containsKey("timedCounts")) {
       timedCounts = _json["timedCounts"]
           .map((value) => new TimedCount.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TimedCount>();
     }
   }
 
@@ -945,7 +949,8 @@ class ListEventsResponse {
     if (_json.containsKey("errorEvents")) {
       errorEvents = _json["errorEvents"]
           .map((value) => new ErrorEvent.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ErrorEvent>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -996,7 +1001,8 @@ class ListGroupStatsResponse {
     if (_json.containsKey("errorGroupStats")) {
       errorGroupStats = _json["errorGroupStats"]
           .map((value) => new ErrorGroupStats.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ErrorGroupStats>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];

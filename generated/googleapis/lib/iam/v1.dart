@@ -1895,7 +1895,8 @@ class AuditConfig {
     if (_json.containsKey("auditLogConfigs")) {
       auditLogConfigs = _json["auditLogConfigs"]
           .map((value) => new AuditLogConfig.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AuditLogConfig>();
     }
     if (_json.containsKey("service")) {
       service = _json["service"];
@@ -2281,7 +2282,10 @@ class ListRolesResponse {
       nextPageToken = _json["nextPageToken"];
     }
     if (_json.containsKey("roles")) {
-      roles = _json["roles"].map((value) => new Role.fromJson(value)).toList();
+      roles = _json["roles"]
+          .map((value) => new Role.fromJson(value))
+          .toList()
+          .cast<Role>();
     }
   }
 
@@ -2309,7 +2313,8 @@ class ListServiceAccountKeysResponse {
     if (_json.containsKey("keys")) {
       keys = _json["keys"]
           .map((value) => new ServiceAccountKey.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ServiceAccountKey>();
     }
   }
 
@@ -2339,7 +2344,8 @@ class ListServiceAccountsResponse {
     if (_json.containsKey("accounts")) {
       accounts = _json["accounts"]
           .map((value) => new ServiceAccount.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ServiceAccount>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -2517,12 +2523,14 @@ class Policy {
     if (_json.containsKey("auditConfigs")) {
       auditConfigs = _json["auditConfigs"]
           .map((value) => new AuditConfig.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AuditConfig>();
     }
     if (_json.containsKey("bindings")) {
       bindings = _json["bindings"]
           .map((value) => new Binding.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Binding>();
     }
     if (_json.containsKey("etag")) {
       etag = _json["etag"];
@@ -2563,7 +2571,8 @@ class PolicyDelta {
     if (_json.containsKey("bindingDeltas")) {
       bindingDeltas = _json["bindingDeltas"]
           .map((value) => new BindingDelta.fromJson(value))
-          .toList();
+          .toList()
+          .cast<BindingDelta>();
     }
   }
 
@@ -2617,7 +2626,8 @@ class QueryAuditableServicesResponse {
     if (_json.containsKey("services")) {
       services = _json["services"]
           .map((value) => new AuditableService.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AuditableService>();
     }
   }
 
@@ -2707,7 +2717,10 @@ class QueryGrantableRolesResponse {
       nextPageToken = _json["nextPageToken"];
     }
     if (_json.containsKey("roles")) {
-      roles = _json["roles"].map((value) => new Role.fromJson(value)).toList();
+      roles = _json["roles"]
+          .map((value) => new Role.fromJson(value))
+          .toList()
+          .cast<Role>();
     }
   }
 
@@ -2789,7 +2802,8 @@ class QueryTestablePermissionsResponse {
     if (_json.containsKey("permissions")) {
       permissions = _json["permissions"]
           .map((value) => new Permission.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Permission>();
     }
   }
 

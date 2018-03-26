@@ -534,7 +534,8 @@ class AnalyzeDataDescriptionFeaturesCategorical {
           .map((value) =>
               new AnalyzeDataDescriptionFeaturesCategoricalValues.fromJson(
                   value))
-          .toList();
+          .toList()
+          .cast<AnalyzeDataDescriptionFeaturesCategoricalValues>();
     }
   }
 
@@ -757,7 +758,8 @@ class AnalyzeDataDescriptionOutputFeature {
       text = _json["text"]
           .map((value) =>
               new AnalyzeDataDescriptionOutputFeatureText.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AnalyzeDataDescriptionOutputFeatureText>();
     }
   }
 
@@ -788,7 +790,8 @@ class AnalyzeDataDescription {
     if (_json.containsKey("features")) {
       features = _json["features"]
           .map((value) => new AnalyzeDataDescriptionFeatures.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AnalyzeDataDescriptionFeatures>();
     }
     if (_json.containsKey("outputFeature")) {
       outputFeature = new AnalyzeDataDescriptionOutputFeature.fromJson(
@@ -1056,7 +1059,8 @@ class Insert {
     if (_json.containsKey("trainingInstances")) {
       trainingInstances = _json["trainingInstances"]
           .map((value) => new InsertTrainingInstances.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InsertTrainingInstances>();
     }
     if (_json.containsKey("utility")) {
       utility = _json["utility"];
@@ -1300,8 +1304,10 @@ class List {
 
   List.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Insert2.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Insert2.fromJson(value))
+          .toList()
+          .cast<Insert2>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -1399,7 +1405,8 @@ class Output {
     if (_json.containsKey("outputMulti")) {
       outputMulti = _json["outputMulti"]
           .map((value) => new OutputOutputMulti.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OutputOutputMulti>();
     }
     if (_json.containsKey("outputValue")) {
       outputValue = _json["outputValue"];

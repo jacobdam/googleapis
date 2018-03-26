@@ -4130,27 +4130,32 @@ class History {
     if (_json.containsKey("labelsAdded")) {
       labelsAdded = _json["labelsAdded"]
           .map((value) => new HistoryLabelAdded.fromJson(value))
-          .toList();
+          .toList()
+          .cast<HistoryLabelAdded>();
     }
     if (_json.containsKey("labelsRemoved")) {
       labelsRemoved = _json["labelsRemoved"]
           .map((value) => new HistoryLabelRemoved.fromJson(value))
-          .toList();
+          .toList()
+          .cast<HistoryLabelRemoved>();
     }
     if (_json.containsKey("messages")) {
       messages = _json["messages"]
           .map((value) => new Message.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Message>();
     }
     if (_json.containsKey("messagesAdded")) {
       messagesAdded = _json["messagesAdded"]
           .map((value) => new HistoryMessageAdded.fromJson(value))
-          .toList();
+          .toList()
+          .cast<HistoryMessageAdded>();
     }
     if (_json.containsKey("messagesDeleted")) {
       messagesDeleted = _json["messagesDeleted"]
           .map((value) => new HistoryMessageDeleted.fromJson(value))
-          .toList();
+          .toList()
+          .cast<HistoryMessageDeleted>();
     }
   }
 
@@ -4532,8 +4537,10 @@ class ListDraftsResponse {
 
   ListDraftsResponse.fromJson(core.Map _json) {
     if (_json.containsKey("drafts")) {
-      drafts =
-          _json["drafts"].map((value) => new Draft.fromJson(value)).toList();
+      drafts = _json["drafts"]
+          .map((value) => new Draft.fromJson(value))
+          .toList()
+          .cast<Draft>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -4568,8 +4575,10 @@ class ListFiltersResponse {
 
   ListFiltersResponse.fromJson(core.Map _json) {
     if (_json.containsKey("filter")) {
-      filter =
-          _json["filter"].map((value) => new Filter.fromJson(value)).toList();
+      filter = _json["filter"]
+          .map((value) => new Filter.fromJson(value))
+          .toList()
+          .cast<Filter>();
     }
   }
 
@@ -4594,7 +4603,8 @@ class ListForwardingAddressesResponse {
     if (_json.containsKey("forwardingAddresses")) {
       forwardingAddresses = _json["forwardingAddresses"]
           .map((value) => new ForwardingAddress.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ForwardingAddress>();
     }
   }
 
@@ -4624,8 +4634,10 @@ class ListHistoryResponse {
 
   ListHistoryResponse.fromJson(core.Map _json) {
     if (_json.containsKey("history")) {
-      history =
-          _json["history"].map((value) => new History.fromJson(value)).toList();
+      history = _json["history"]
+          .map((value) => new History.fromJson(value))
+          .toList()
+          .cast<History>();
     }
     if (_json.containsKey("historyId")) {
       historyId = _json["historyId"];
@@ -4659,8 +4671,10 @@ class ListLabelsResponse {
 
   ListLabelsResponse.fromJson(core.Map _json) {
     if (_json.containsKey("labels")) {
-      labels =
-          _json["labels"].map((value) => new Label.fromJson(value)).toList();
+      labels = _json["labels"]
+          .map((value) => new Label.fromJson(value))
+          .toList()
+          .cast<Label>();
     }
   }
 
@@ -4690,7 +4704,8 @@ class ListMessagesResponse {
     if (_json.containsKey("messages")) {
       messages = _json["messages"]
           .map((value) => new Message.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Message>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -4725,8 +4740,10 @@ class ListSendAsResponse {
 
   ListSendAsResponse.fromJson(core.Map _json) {
     if (_json.containsKey("sendAs")) {
-      sendAs =
-          _json["sendAs"].map((value) => new SendAs.fromJson(value)).toList();
+      sendAs = _json["sendAs"]
+          .map((value) => new SendAs.fromJson(value))
+          .toList()
+          .cast<SendAs>();
     }
   }
 
@@ -4750,7 +4767,8 @@ class ListSmimeInfoResponse {
     if (_json.containsKey("smimeInfo")) {
       smimeInfo = _json["smimeInfo"]
           .map((value) => new SmimeInfo.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SmimeInfo>();
     }
   }
 
@@ -4784,8 +4802,10 @@ class ListThreadsResponse {
       resultSizeEstimate = _json["resultSizeEstimate"];
     }
     if (_json.containsKey("threads")) {
-      threads =
-          _json["threads"].map((value) => new Thread.fromJson(value)).toList();
+      threads = _json["threads"]
+          .map((value) => new Thread.fromJson(value))
+          .toList()
+          .cast<Thread>();
     }
   }
 
@@ -4959,7 +4979,8 @@ class MessagePart {
     if (_json.containsKey("headers")) {
       headers = _json["headers"]
           .map((value) => new MessagePartHeader.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MessagePartHeader>();
     }
     if (_json.containsKey("mimeType")) {
       mimeType = _json["mimeType"];
@@ -4970,7 +4991,8 @@ class MessagePart {
     if (_json.containsKey("parts")) {
       parts = _json["parts"]
           .map((value) => new MessagePart.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MessagePart>();
     }
   }
 
@@ -5549,7 +5571,8 @@ class Thread {
     if (_json.containsKey("messages")) {
       messages = _json["messages"]
           .map((value) => new Message.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Message>();
     }
     if (_json.containsKey("snippet")) {
       snippet = _json["snippet"];

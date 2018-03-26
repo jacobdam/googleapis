@@ -1229,7 +1229,8 @@ class Account {
     if (_json.containsKey("bidderLocation")) {
       bidderLocation = _json["bidderLocation"]
           .map((value) => new AccountBidderLocation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AccountBidderLocation>();
     }
     if (_json.containsKey("cookieMatchingNid")) {
       cookieMatchingNid = _json["cookieMatchingNid"];
@@ -1299,8 +1300,10 @@ class AccountsList {
 
   AccountsList.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Account.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Account.fromJson(value))
+          .toList()
+          .cast<Account>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -1387,7 +1390,8 @@ class BillingInfoList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new BillingInfo.fromJson(value))
-          .toList();
+          .toList()
+          .cast<BillingInfo>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -1591,7 +1595,8 @@ class CreativeFilteringReasons {
     if (_json.containsKey("reasons")) {
       reasons = _json["reasons"]
           .map((value) => new CreativeFilteringReasonsReasons.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CreativeFilteringReasonsReasons>();
     }
   }
 
@@ -1959,12 +1964,14 @@ class Creative {
     if (_json.containsKey("corrections")) {
       corrections = _json["corrections"]
           .map((value) => new CreativeCorrections.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CreativeCorrections>();
     }
     if (_json.containsKey("disapprovalReasons")) {
       disapprovalReasons = _json["disapprovalReasons"]
           .map((value) => new CreativeDisapprovalReasons.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CreativeDisapprovalReasons>();
     }
     if (_json.containsKey("filteringReasons")) {
       filteringReasons =
@@ -2107,8 +2114,10 @@ class CreativesList {
 
   CreativesList.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Creative.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Creative.fromJson(value))
+          .toList()
+          .cast<Creative>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -2310,7 +2319,8 @@ class DirectDealsList {
     if (_json.containsKey("directDeals")) {
       directDeals = _json["directDeals"]
           .map((value) => new DirectDeal.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DirectDeal>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -2580,7 +2590,8 @@ class PerformanceReportList {
     if (_json.containsKey("performanceReport")) {
       performanceReport = _json["performanceReport"]
           .map((value) => new PerformanceReport.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PerformanceReport>();
     }
   }
 
@@ -2798,7 +2809,8 @@ class PretargetingConfig {
     if (_json.containsKey("dimensions")) {
       dimensions = _json["dimensions"]
           .map((value) => new PretargetingConfigDimensions.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PretargetingConfigDimensions>();
     }
     if (_json.containsKey("excludedContentLabels")) {
       excludedContentLabels = _json["excludedContentLabels"];
@@ -2810,7 +2822,8 @@ class PretargetingConfig {
       excludedPlacements = _json["excludedPlacements"]
           .map((value) =>
               new PretargetingConfigExcludedPlacements.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PretargetingConfigExcludedPlacements>();
     }
     if (_json.containsKey("excludedUserLists")) {
       excludedUserLists = _json["excludedUserLists"];
@@ -2842,7 +2855,8 @@ class PretargetingConfig {
     if (_json.containsKey("placements")) {
       placements = _json["placements"]
           .map((value) => new PretargetingConfigPlacements.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PretargetingConfigPlacements>();
     }
     if (_json.containsKey("platforms")) {
       platforms = _json["platforms"];
@@ -2953,7 +2967,8 @@ class PretargetingConfigList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new PretargetingConfig.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PretargetingConfig>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];

@@ -25834,7 +25834,8 @@ class AcceleratorTypeAggregatedListWarning {
       data = _json["data"]
           .map((value) =>
               new AcceleratorTypeAggregatedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AcceleratorTypeAggregatedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -26021,7 +26022,8 @@ class AcceleratorTypeListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new AcceleratorTypeListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AcceleratorTypeListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -26078,7 +26080,8 @@ class AcceleratorTypeList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new AcceleratorType.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AcceleratorType>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -26205,7 +26208,8 @@ class AcceleratorTypesScopedListWarning {
       data = _json["data"]
           .map((value) =>
               new AcceleratorTypesScopedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AcceleratorTypesScopedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -26242,7 +26246,8 @@ class AcceleratorTypesScopedList {
     if (_json.containsKey("acceleratorTypes")) {
       acceleratorTypes = _json["acceleratorTypes"]
           .map((value) => new AcceleratorType.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AcceleratorType>();
     }
     if (_json.containsKey("warning")) {
       warning =
@@ -26592,7 +26597,8 @@ class AddressAggregatedListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new AddressAggregatedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AddressAggregatedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -26777,7 +26783,8 @@ class AddressListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new AddressListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AddressListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -26832,8 +26839,10 @@ class AddressList {
       id = _json["id"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Address.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Address.fromJson(value))
+          .toList()
+          .cast<Address>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -26959,7 +26968,8 @@ class AddressesScopedListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new AddressesScopedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AddressesScopedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -26996,7 +27006,8 @@ class AddressesScopedList {
     if (_json.containsKey("addresses")) {
       addresses = _json["addresses"]
           .map((value) => new Address.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Address>();
     }
     if (_json.containsKey("warning")) {
       warning = new AddressesScopedListWarning.fromJson(_json["warning"]);
@@ -27455,7 +27466,8 @@ class Autoscaler {
     if (_json.containsKey("statusDetails")) {
       statusDetails = _json["statusDetails"]
           .map((value) => new AutoscalerStatusDetails.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AutoscalerStatusDetails>();
     }
     if (_json.containsKey("target")) {
       target = _json["target"];
@@ -27594,7 +27606,8 @@ class AutoscalerAggregatedListWarning {
       data = _json["data"]
           .map((value) =>
               new AutoscalerAggregatedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AutoscalerAggregatedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -27779,7 +27792,8 @@ class AutoscalerListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new AutoscalerListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AutoscalerListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -27836,7 +27850,8 @@ class AutoscalerList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new Autoscaler.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Autoscaler>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -28009,7 +28024,8 @@ class AutoscalersScopedListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new AutoscalersScopedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AutoscalersScopedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -28046,7 +28062,8 @@ class AutoscalersScopedList {
     if (_json.containsKey("autoscalers")) {
       autoscalers = _json["autoscalers"]
           .map((value) => new Autoscaler.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Autoscaler>();
     }
     if (_json.containsKey("warning")) {
       warning = new AutoscalersScopedListWarning.fromJson(_json["warning"]);
@@ -28114,7 +28131,8 @@ class AutoscalingPolicy {
       customMetricUtilizations = _json["customMetricUtilizations"]
           .map((value) =>
               new AutoscalingPolicyCustomMetricUtilization.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AutoscalingPolicyCustomMetricUtilization>();
     }
     if (_json.containsKey("loadBalancingUtilization")) {
       loadBalancingUtilization =
@@ -28591,7 +28609,8 @@ class BackendBucketListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new BackendBucketListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<BackendBucketListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -28647,7 +28666,8 @@ class BackendBucketList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new BackendBucket.fromJson(value))
-          .toList();
+          .toList()
+          .cast<BackendBucket>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -28837,7 +28857,8 @@ class BackendService {
     if (_json.containsKey("backends")) {
       backends = _json["backends"]
           .map((value) => new Backend.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Backend>();
     }
     if (_json.containsKey("cdnPolicy")) {
       cdnPolicy = new BackendServiceCdnPolicy.fromJson(_json["cdnPolicy"]);
@@ -29054,7 +29075,8 @@ class BackendServiceAggregatedListWarning {
       data = _json["data"]
           .map((value) =>
               new BackendServiceAggregatedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<BackendServiceAggregatedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -29192,7 +29214,8 @@ class BackendServiceGroupHealth {
     if (_json.containsKey("healthStatus")) {
       healthStatus = _json["healthStatus"]
           .map((value) => new HealthStatus.fromJson(value))
-          .toList();
+          .toList()
+          .cast<HealthStatus>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -29342,7 +29365,8 @@ class BackendServiceListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new BackendServiceListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<BackendServiceListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -29399,7 +29423,8 @@ class BackendServiceList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new BackendService.fromJson(value))
-          .toList();
+          .toList()
+          .cast<BackendService>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -29526,7 +29551,8 @@ class BackendServicesScopedListWarning {
       data = _json["data"]
           .map((value) =>
               new BackendServicesScopedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<BackendServicesScopedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -29563,7 +29589,8 @@ class BackendServicesScopedList {
     if (_json.containsKey("backendServices")) {
       backendServices = _json["backendServices"]
           .map((value) => new BackendService.fromJson(value))
-          .toList();
+          .toList()
+          .cast<BackendService>();
     }
     if (_json.containsKey("warning")) {
       warning = new BackendServicesScopedListWarning.fromJson(_json["warning"]);
@@ -29787,7 +29814,8 @@ class Commitment {
     if (_json.containsKey("resources")) {
       resources = _json["resources"]
           .map((value) => new ResourceCommitment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ResourceCommitment>();
     }
     if (_json.containsKey("selfLink")) {
       selfLink = _json["selfLink"];
@@ -29934,7 +29962,8 @@ class CommitmentAggregatedListWarning {
       data = _json["data"]
           .map((value) =>
               new CommitmentAggregatedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CommitmentAggregatedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -30119,7 +30148,8 @@ class CommitmentListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new CommitmentListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CommitmentListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -30176,7 +30206,8 @@ class CommitmentList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new Commitment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Commitment>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -30302,7 +30333,8 @@ class CommitmentsScopedListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new CommitmentsScopedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CommitmentsScopedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -30339,7 +30371,8 @@ class CommitmentsScopedList {
     if (_json.containsKey("commitments")) {
       commitments = _json["commitments"]
           .map((value) => new Commitment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Commitment>();
     }
     if (_json.containsKey("warning")) {
       warning = new CommitmentsScopedListWarning.fromJson(_json["warning"]);
@@ -30934,7 +30967,8 @@ class DiskAggregatedListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new DiskAggregatedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DiskAggregatedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -31119,7 +31153,8 @@ class DiskListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new DiskListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DiskListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -31174,7 +31209,10 @@ class DiskList {
       id = _json["id"];
     }
     if (_json.containsKey("items")) {
-      items = _json["items"].map((value) => new Disk.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Disk.fromJson(value))
+          .toList()
+          .cast<Disk>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -31449,7 +31487,8 @@ class DiskTypeAggregatedListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new DiskTypeAggregatedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DiskTypeAggregatedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -31633,7 +31672,8 @@ class DiskTypeListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new DiskTypeListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DiskTypeListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -31688,8 +31728,10 @@ class DiskTypeList {
       id = _json["id"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new DiskType.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new DiskType.fromJson(value))
+          .toList()
+          .cast<DiskType>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -31815,7 +31857,8 @@ class DiskTypesScopedListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new DiskTypesScopedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DiskTypesScopedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -31852,7 +31895,8 @@ class DiskTypesScopedList {
     if (_json.containsKey("diskTypes")) {
       diskTypes = _json["diskTypes"]
           .map((value) => new DiskType.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DiskType>();
     }
     if (_json.containsKey("warning")) {
       warning = new DiskTypesScopedListWarning.fromJson(_json["warning"]);
@@ -31979,7 +32023,8 @@ class DisksScopedListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new DisksScopedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DisksScopedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -32014,7 +32059,10 @@ class DisksScopedList {
 
   DisksScopedList.fromJson(core.Map _json) {
     if (_json.containsKey("disks")) {
-      disks = _json["disks"].map((value) => new Disk.fromJson(value)).toList();
+      disks = _json["disks"]
+          .map((value) => new Disk.fromJson(value))
+          .toList()
+          .cast<Disk>();
     }
     if (_json.containsKey("warning")) {
       warning = new DisksScopedListWarning.fromJson(_json["warning"]);
@@ -32237,7 +32285,8 @@ class Firewall {
     if (_json.containsKey("allowed")) {
       allowed = _json["allowed"]
           .map((value) => new FirewallAllowed.fromJson(value))
-          .toList();
+          .toList()
+          .cast<FirewallAllowed>();
     }
     if (_json.containsKey("creationTimestamp")) {
       creationTimestamp = _json["creationTimestamp"];
@@ -32245,7 +32294,8 @@ class Firewall {
     if (_json.containsKey("denied")) {
       denied = _json["denied"]
           .map((value) => new FirewallDenied.fromJson(value))
-          .toList();
+          .toList()
+          .cast<FirewallDenied>();
     }
     if (_json.containsKey("description")) {
       description = _json["description"];
@@ -32433,7 +32483,8 @@ class FirewallListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new FirewallListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<FirewallListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -32488,8 +32539,10 @@ class FirewallList {
       id = _json["id"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Firewall.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Firewall.fromJson(value))
+          .toList()
+          .cast<Firewall>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -32892,7 +32945,8 @@ class ForwardingRuleAggregatedListWarning {
       data = _json["data"]
           .map((value) =>
               new ForwardingRuleAggregatedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ForwardingRuleAggregatedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -33078,7 +33132,8 @@ class ForwardingRuleListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new ForwardingRuleListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ForwardingRuleListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -33134,7 +33189,8 @@ class ForwardingRuleList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new ForwardingRule.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ForwardingRule>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -33261,7 +33317,8 @@ class ForwardingRulesScopedListWarning {
       data = _json["data"]
           .map((value) =>
               new ForwardingRulesScopedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ForwardingRulesScopedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -33298,7 +33355,8 @@ class ForwardingRulesScopedList {
     if (_json.containsKey("forwardingRules")) {
       forwardingRules = _json["forwardingRules"]
           .map((value) => new ForwardingRule.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ForwardingRule>();
     }
     if (_json.containsKey("warning")) {
       warning = new ForwardingRulesScopedListWarning.fromJson(_json["warning"]);
@@ -33780,7 +33838,8 @@ class HealthCheckListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new HealthCheckListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<HealthCheckListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -33836,7 +33895,8 @@ class HealthCheckList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new HealthCheck.fromJson(value))
-          .toList();
+          .toList()
+          .cast<HealthCheck>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -34235,7 +34295,8 @@ class HttpHealthCheckListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new HttpHealthCheckListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<HttpHealthCheckListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -34291,7 +34352,8 @@ class HttpHealthCheckList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new HttpHealthCheck.fromJson(value))
-          .toList();
+          .toList()
+          .cast<HttpHealthCheck>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -34565,7 +34627,8 @@ class HttpsHealthCheckListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new HttpsHealthCheckListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<HttpsHealthCheckListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -34621,7 +34684,8 @@ class HttpsHealthCheckList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new HttpsHealthCheck.fromJson(value))
-          .toList();
+          .toList()
+          .cast<HttpsHealthCheck>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -34875,7 +34939,8 @@ class Image {
     if (_json.containsKey("guestOsFeatures")) {
       guestOsFeatures = _json["guestOsFeatures"]
           .map((value) => new GuestOsFeature.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GuestOsFeature>();
     }
     if (_json.containsKey("id")) {
       id = _json["id"];
@@ -35097,7 +35162,8 @@ class ImageListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new ImageListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ImageListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -35151,7 +35217,10 @@ class ImageList {
       id = _json["id"];
     }
     if (_json.containsKey("items")) {
-      items = _json["items"].map((value) => new Image.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Image.fromJson(value))
+          .toList()
+          .cast<Image>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -35361,12 +35430,14 @@ class Instance {
     if (_json.containsKey("disks")) {
       disks = _json["disks"]
           .map((value) => new AttachedDisk.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AttachedDisk>();
     }
     if (_json.containsKey("guestAccelerators")) {
       guestAccelerators = _json["guestAccelerators"]
           .map((value) => new AcceleratorConfig.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AcceleratorConfig>();
     }
     if (_json.containsKey("id")) {
       id = _json["id"];
@@ -35395,7 +35466,8 @@ class Instance {
     if (_json.containsKey("networkInterfaces")) {
       networkInterfaces = _json["networkInterfaces"]
           .map((value) => new NetworkInterface.fromJson(value))
-          .toList();
+          .toList()
+          .cast<NetworkInterface>();
     }
     if (_json.containsKey("scheduling")) {
       scheduling = new Scheduling.fromJson(_json["scheduling"]);
@@ -35406,7 +35478,8 @@ class Instance {
     if (_json.containsKey("serviceAccounts")) {
       serviceAccounts = _json["serviceAccounts"]
           .map((value) => new ServiceAccount.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ServiceAccount>();
     }
     if (_json.containsKey("startRestricted")) {
       startRestricted = _json["startRestricted"];
@@ -35591,7 +35664,8 @@ class InstanceAggregatedListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new InstanceAggregatedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InstanceAggregatedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -35785,7 +35859,8 @@ class InstanceGroup {
     if (_json.containsKey("namedPorts")) {
       namedPorts = _json["namedPorts"]
           .map((value) => new NamedPort.fromJson(value))
-          .toList();
+          .toList()
+          .cast<NamedPort>();
     }
     if (_json.containsKey("network")) {
       network = _json["network"];
@@ -35939,7 +36014,8 @@ class InstanceGroupAggregatedListWarning {
       data = _json["data"]
           .map((value) =>
               new InstanceGroupAggregatedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InstanceGroupAggregatedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -36126,7 +36202,8 @@ class InstanceGroupListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new InstanceGroupListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InstanceGroupListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -36183,7 +36260,8 @@ class InstanceGroupList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new InstanceGroup.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InstanceGroup>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -36342,7 +36420,8 @@ class InstanceGroupManager {
     if (_json.containsKey("namedPorts")) {
       namedPorts = _json["namedPorts"]
           .map((value) => new NamedPort.fromJson(value))
-          .toList();
+          .toList()
+          .cast<NamedPort>();
     }
     if (_json.containsKey("region")) {
       region = _json["region"];
@@ -36608,7 +36687,8 @@ class InstanceGroupManagerAggregatedListWarning {
       data = _json["data"]
           .map((value) =>
               new InstanceGroupManagerAggregatedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InstanceGroupManagerAggregatedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -36796,7 +36876,8 @@ class InstanceGroupManagerListWarning {
       data = _json["data"]
           .map((value) =>
               new InstanceGroupManagerListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InstanceGroupManagerListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -36853,7 +36934,8 @@ class InstanceGroupManagerList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new InstanceGroupManager.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InstanceGroupManager>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -36950,7 +37032,8 @@ class InstanceGroupManagersListManagedInstancesResponse {
     if (_json.containsKey("managedInstances")) {
       managedInstances = _json["managedInstances"]
           .map((value) => new ManagedInstance.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ManagedInstance>();
     }
   }
 
@@ -37074,7 +37157,8 @@ class InstanceGroupManagersScopedListWarning {
       data = _json["data"]
           .map((value) =>
               new InstanceGroupManagersScopedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InstanceGroupManagersScopedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -37112,7 +37196,8 @@ class InstanceGroupManagersScopedList {
     if (_json.containsKey("instanceGroupManagers")) {
       instanceGroupManagers = _json["instanceGroupManagers"]
           .map((value) => new InstanceGroupManager.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InstanceGroupManager>();
     }
     if (_json.containsKey("warning")) {
       warning =
@@ -37215,7 +37300,8 @@ class InstanceGroupsAddInstancesRequest {
     if (_json.containsKey("instances")) {
       instances = _json["instances"]
           .map((value) => new InstanceReference.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InstanceReference>();
     }
   }
 
@@ -37314,7 +37400,8 @@ class InstanceGroupsListInstancesWarning {
       data = _json["data"]
           .map((value) =>
               new InstanceGroupsListInstancesWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InstanceGroupsListInstancesWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -37371,7 +37458,8 @@ class InstanceGroupsListInstances {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new InstanceWithNamedPorts.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InstanceWithNamedPorts>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -37450,7 +37538,8 @@ class InstanceGroupsRemoveInstancesRequest {
     if (_json.containsKey("instances")) {
       instances = _json["instances"]
           .map((value) => new InstanceReference.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InstanceReference>();
     }
   }
 
@@ -37550,7 +37639,8 @@ class InstanceGroupsScopedListWarning {
       data = _json["data"]
           .map((value) =>
               new InstanceGroupsScopedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InstanceGroupsScopedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -37588,7 +37678,8 @@ class InstanceGroupsScopedList {
     if (_json.containsKey("instanceGroups")) {
       instanceGroups = _json["instanceGroups"]
           .map((value) => new InstanceGroup.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InstanceGroup>();
     }
     if (_json.containsKey("warning")) {
       warning = new InstanceGroupsScopedListWarning.fromJson(_json["warning"]);
@@ -37638,7 +37729,8 @@ class InstanceGroupsSetNamedPortsRequest {
     if (_json.containsKey("namedPorts")) {
       namedPorts = _json["namedPorts"]
           .map((value) => new NamedPort.fromJson(value))
-          .toList();
+          .toList()
+          .cast<NamedPort>();
     }
   }
 
@@ -37740,7 +37832,8 @@ class InstanceListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new InstanceListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InstanceListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -37795,8 +37888,10 @@ class InstanceList {
       id = _json["id"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Instance.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Instance.fromJson(value))
+          .toList()
+          .cast<Instance>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -37921,7 +38016,8 @@ class InstanceListReferrersWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new InstanceListReferrersWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InstanceListReferrersWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -37976,8 +38072,10 @@ class InstanceListReferrers {
       id = _json["id"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Reference.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Reference.fromJson(value))
+          .toList()
+          .cast<Reference>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -38128,12 +38226,14 @@ class InstanceProperties {
     if (_json.containsKey("disks")) {
       disks = _json["disks"]
           .map((value) => new AttachedDisk.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AttachedDisk>();
     }
     if (_json.containsKey("guestAccelerators")) {
       guestAccelerators = _json["guestAccelerators"]
           .map((value) => new AcceleratorConfig.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AcceleratorConfig>();
     }
     if (_json.containsKey("labels")) {
       labels = _json["labels"];
@@ -38150,7 +38250,8 @@ class InstanceProperties {
     if (_json.containsKey("networkInterfaces")) {
       networkInterfaces = _json["networkInterfaces"]
           .map((value) => new NetworkInterface.fromJson(value))
-          .toList();
+          .toList()
+          .cast<NetworkInterface>();
     }
     if (_json.containsKey("scheduling")) {
       scheduling = new Scheduling.fromJson(_json["scheduling"]);
@@ -38158,7 +38259,8 @@ class InstanceProperties {
     if (_json.containsKey("serviceAccounts")) {
       serviceAccounts = _json["serviceAccounts"]
           .map((value) => new ServiceAccount.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ServiceAccount>();
     }
     if (_json.containsKey("tags")) {
       tags = new Tags.fromJson(_json["tags"]);
@@ -38406,7 +38508,8 @@ class InstanceTemplateListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new InstanceTemplateListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InstanceTemplateListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -38463,7 +38566,8 @@ class InstanceTemplateList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new InstanceTemplate.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InstanceTemplate>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -38532,7 +38636,8 @@ class InstanceWithNamedPorts {
     if (_json.containsKey("namedPorts")) {
       namedPorts = _json["namedPorts"]
           .map((value) => new NamedPort.fromJson(value))
-          .toList();
+          .toList()
+          .cast<NamedPort>();
     }
     if (_json.containsKey("status")) {
       status = _json["status"];
@@ -38641,7 +38746,8 @@ class InstancesScopedListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new InstancesScopedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InstancesScopedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -38678,7 +38784,8 @@ class InstancesScopedList {
     if (_json.containsKey("instances")) {
       instances = _json["instances"]
           .map((value) => new Instance.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Instance>();
     }
     if (_json.containsKey("warning")) {
       warning = new InstancesScopedListWarning.fromJson(_json["warning"]);
@@ -38748,7 +38855,8 @@ class InstancesSetMachineResourcesRequest {
     if (_json.containsKey("guestAccelerators")) {
       guestAccelerators = _json["guestAccelerators"]
           .map((value) => new AcceleratorConfig.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AcceleratorConfig>();
     }
   }
 
@@ -38858,7 +38966,8 @@ class InstancesStartWithEncryptionKeyRequest {
       disks = _json["disks"]
           .map(
               (value) => new CustomerEncryptionKeyProtectedDisk.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CustomerEncryptionKeyProtectedDisk>();
     }
   }
 
@@ -38985,7 +39094,8 @@ class Interconnect {
     if (_json.containsKey("circuitInfos")) {
       circuitInfos = _json["circuitInfos"]
           .map((value) => new InterconnectCircuitInfo.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InterconnectCircuitInfo>();
     }
     if (_json.containsKey("creationTimestamp")) {
       creationTimestamp = _json["creationTimestamp"];
@@ -38999,7 +39109,8 @@ class Interconnect {
     if (_json.containsKey("expectedOutages")) {
       expectedOutages = _json["expectedOutages"]
           .map((value) => new InterconnectOutageNotification.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InterconnectOutageNotification>();
     }
     if (_json.containsKey("googleIpAddress")) {
       googleIpAddress = _json["googleIpAddress"];
@@ -39373,7 +39484,8 @@ class InterconnectAttachmentAggregatedListWarning {
           .map((value) =>
               new InterconnectAttachmentAggregatedListWarningData.fromJson(
                   value))
-          .toList();
+          .toList()
+          .cast<InterconnectAttachmentAggregatedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -39561,7 +39673,8 @@ class InterconnectAttachmentListWarning {
       data = _json["data"]
           .map((value) =>
               new InterconnectAttachmentListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InterconnectAttachmentListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -39619,7 +39732,8 @@ class InterconnectAttachmentList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new InterconnectAttachment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InterconnectAttachment>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -39772,7 +39886,8 @@ class InterconnectAttachmentsScopedListWarning {
       data = _json["data"]
           .map((value) =>
               new InterconnectAttachmentsScopedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InterconnectAttachmentsScopedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -39809,7 +39924,8 @@ class InterconnectAttachmentsScopedList {
     if (_json.containsKey("interconnectAttachments")) {
       interconnectAttachments = _json["interconnectAttachments"]
           .map((value) => new InterconnectAttachment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InterconnectAttachment>();
     }
     if (_json.containsKey("warning")) {
       warning = new InterconnectAttachmentsScopedListWarning.fromJson(
@@ -39959,7 +40075,8 @@ class InterconnectListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new InterconnectListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InterconnectListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -40016,7 +40133,8 @@ class InterconnectList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new Interconnect.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Interconnect>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -40167,7 +40285,8 @@ class InterconnectLocation {
     if (_json.containsKey("regionInfos")) {
       regionInfos = _json["regionInfos"]
           .map((value) => new InterconnectLocationRegionInfo.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InterconnectLocationRegionInfo>();
     }
     if (_json.containsKey("selfLink")) {
       selfLink = _json["selfLink"];
@@ -40309,7 +40428,8 @@ class InterconnectLocationListWarning {
       data = _json["data"]
           .map((value) =>
               new InterconnectLocationListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InterconnectLocationListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -40366,7 +40486,8 @@ class InterconnectLocationList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new InterconnectLocation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InterconnectLocation>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -40730,7 +40851,8 @@ class MachineType {
     if (_json.containsKey("scratchDisks")) {
       scratchDisks = _json["scratchDisks"]
           .map((value) => new MachineTypeScratchDisks.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MachineTypeScratchDisks>();
     }
     if (_json.containsKey("selfLink")) {
       selfLink = _json["selfLink"];
@@ -40878,7 +41000,8 @@ class MachineTypeAggregatedListWarning {
       data = _json["data"]
           .map((value) =>
               new MachineTypeAggregatedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MachineTypeAggregatedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -41063,7 +41186,8 @@ class MachineTypeListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new MachineTypeListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MachineTypeListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -41120,7 +41244,8 @@ class MachineTypeList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new MachineType.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MachineType>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -41246,7 +41371,8 @@ class MachineTypesScopedListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new MachineTypesScopedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MachineTypesScopedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -41283,7 +41409,8 @@ class MachineTypesScopedList {
     if (_json.containsKey("machineTypes")) {
       machineTypes = _json["machineTypes"]
           .map((value) => new MachineType.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MachineType>();
     }
     if (_json.containsKey("warning")) {
       warning = new MachineTypesScopedListWarning.fromJson(_json["warning"]);
@@ -41462,7 +41589,8 @@ class ManagedInstanceLastAttemptErrors {
       errors = _json["errors"]
           .map((value) =>
               new ManagedInstanceLastAttemptErrorsErrors.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ManagedInstanceLastAttemptErrorsErrors>();
     }
   }
 
@@ -41569,7 +41697,8 @@ class Metadata {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new MetadataItems.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MetadataItems>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -41714,7 +41843,8 @@ class Network {
     if (_json.containsKey("peerings")) {
       peerings = _json["peerings"]
           .map((value) => new NetworkPeering.fromJson(value))
-          .toList();
+          .toList()
+          .cast<NetworkPeering>();
     }
     if (_json.containsKey("routingConfig")) {
       routingConfig = new NetworkRoutingConfig.fromJson(_json["routingConfig"]);
@@ -41828,12 +41958,14 @@ class NetworkInterface {
     if (_json.containsKey("accessConfigs")) {
       accessConfigs = _json["accessConfigs"]
           .map((value) => new AccessConfig.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AccessConfig>();
     }
     if (_json.containsKey("aliasIpRanges")) {
       aliasIpRanges = _json["aliasIpRanges"]
           .map((value) => new AliasIpRange.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AliasIpRange>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -41966,7 +42098,8 @@ class NetworkListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new NetworkListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<NetworkListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -42021,8 +42154,10 @@ class NetworkList {
       id = _json["id"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Network.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Network.fromJson(value))
+          .toList()
+          .cast<Network>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -42290,7 +42425,8 @@ class OperationError {
     if (_json.containsKey("errors")) {
       errors = _json["errors"]
           .map((value) => new OperationErrorErrors.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OperationErrorErrors>();
     }
   }
 
@@ -42387,7 +42523,8 @@ class OperationWarnings {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new OperationWarningsData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OperationWarningsData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -42586,7 +42723,8 @@ class Operation {
     if (_json.containsKey("warnings")) {
       warnings = _json["warnings"]
           .map((value) => new OperationWarnings.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OperationWarnings>();
     }
     if (_json.containsKey("zone")) {
       zone = _json["zone"];
@@ -42754,7 +42892,8 @@ class OperationAggregatedListWarning {
       data = _json["data"]
           .map(
               (value) => new OperationAggregatedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OperationAggregatedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -42940,7 +43079,8 @@ class OperationListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new OperationListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OperationListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -42996,8 +43136,10 @@ class OperationList {
       id = _json["id"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Operation.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Operation.fromJson(value))
+          .toList()
+          .cast<Operation>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -43123,7 +43265,8 @@ class OperationsScopedListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new OperationsScopedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OperationsScopedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -43160,7 +43303,8 @@ class OperationsScopedList {
     if (_json.containsKey("operations")) {
       operations = _json["operations"]
           .map((value) => new Operation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Operation>();
     }
     if (_json.containsKey("warning")) {
       warning = new OperationsScopedListWarning.fromJson(_json["warning"]);
@@ -43220,7 +43364,8 @@ class PathMatcher {
     if (_json.containsKey("pathRules")) {
       pathRules = _json["pathRules"]
           .map((value) => new PathRule.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PathRule>();
     }
   }
 
@@ -43357,8 +43502,10 @@ class Project {
       name = _json["name"];
     }
     if (_json.containsKey("quotas")) {
-      quotas =
-          _json["quotas"].map((value) => new Quota.fromJson(value)).toList();
+      quotas = _json["quotas"]
+          .map((value) => new Quota.fromJson(value))
+          .toList()
+          .cast<Quota>();
     }
     if (_json.containsKey("selfLink")) {
       selfLink = _json["selfLink"];
@@ -43487,7 +43634,8 @@ class ProjectsGetXpnResources {
     if (_json.containsKey("resources")) {
       resources = _json["resources"]
           .map((value) => new XpnResourceId.fromJson(value))
-          .toList();
+          .toList()
+          .cast<XpnResourceId>();
     }
   }
 
@@ -43732,8 +43880,10 @@ class Region {
       name = _json["name"];
     }
     if (_json.containsKey("quotas")) {
-      quotas =
-          _json["quotas"].map((value) => new Quota.fromJson(value)).toList();
+      quotas = _json["quotas"]
+          .map((value) => new Quota.fromJson(value))
+          .toList()
+          .cast<Quota>();
     }
     if (_json.containsKey("selfLink")) {
       selfLink = _json["selfLink"];
@@ -43867,7 +44017,8 @@ class RegionAutoscalerListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new RegionAutoscalerListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<RegionAutoscalerListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -43923,7 +44074,8 @@ class RegionAutoscalerList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new Autoscaler.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Autoscaler>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -44049,7 +44201,8 @@ class RegionInstanceGroupListWarning {
       data = _json["data"]
           .map(
               (value) => new RegionInstanceGroupListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<RegionInstanceGroupListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -44105,7 +44258,8 @@ class RegionInstanceGroupList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new InstanceGroup.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InstanceGroup>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -44231,7 +44385,8 @@ class RegionInstanceGroupManagerListWarning {
       data = _json["data"]
           .map((value) =>
               new RegionInstanceGroupManagerListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<RegionInstanceGroupManagerListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -44289,7 +44444,8 @@ class RegionInstanceGroupManagerList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new InstanceGroupManager.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InstanceGroupManager>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -44387,7 +44543,8 @@ class RegionInstanceGroupManagersListInstancesResponse {
     if (_json.containsKey("managedInstances")) {
       managedInstances = _json["managedInstances"]
           .map((value) => new ManagedInstance.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ManagedInstance>();
     }
   }
 
@@ -44576,7 +44733,8 @@ class RegionInstanceGroupsListInstancesWarning {
       data = _json["data"]
           .map((value) =>
               new RegionInstanceGroupsListInstancesWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<RegionInstanceGroupsListInstancesWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -44631,7 +44789,8 @@ class RegionInstanceGroupsListInstances {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new InstanceWithNamedPorts.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InstanceWithNamedPorts>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -44739,7 +44898,8 @@ class RegionInstanceGroupsSetNamedPortsRequest {
     if (_json.containsKey("namedPorts")) {
       namedPorts = _json["namedPorts"]
           .map((value) => new NamedPort.fromJson(value))
-          .toList();
+          .toList()
+          .cast<NamedPort>();
     }
   }
 
@@ -44841,7 +45001,8 @@ class RegionListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new RegionListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<RegionListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -44896,8 +45057,10 @@ class RegionList {
       id = _json["id"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Region.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Region.fromJson(value))
+          .toList()
+          .cast<Region>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -45085,7 +45248,8 @@ class RouteWarnings {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new RouteWarningsData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<RouteWarningsData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -45251,7 +45415,8 @@ class Route {
     if (_json.containsKey("warnings")) {
       warnings = _json["warnings"]
           .map((value) => new RouteWarnings.fromJson(value))
-          .toList();
+          .toList()
+          .cast<RouteWarnings>();
     }
   }
 
@@ -45397,7 +45562,8 @@ class RouteListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new RouteListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<RouteListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -45451,7 +45617,10 @@ class RouteList {
       id = _json["id"];
     }
     if (_json.containsKey("items")) {
-      items = _json["items"].map((value) => new Route.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Route.fromJson(value))
+          .toList()
+          .cast<Route>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -45550,7 +45719,8 @@ class Router {
     if (_json.containsKey("bgpPeers")) {
       bgpPeers = _json["bgpPeers"]
           .map((value) => new RouterBgpPeer.fromJson(value))
-          .toList();
+          .toList()
+          .cast<RouterBgpPeer>();
     }
     if (_json.containsKey("creationTimestamp")) {
       creationTimestamp = _json["creationTimestamp"];
@@ -45564,7 +45734,8 @@ class Router {
     if (_json.containsKey("interfaces")) {
       interfaces = _json["interfaces"]
           .map((value) => new RouterInterface.fromJson(value))
-          .toList();
+          .toList()
+          .cast<RouterInterface>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -45708,7 +45879,8 @@ class RouterAggregatedListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new RouterAggregatedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<RouterAggregatedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -46047,7 +46219,8 @@ class RouterListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new RouterListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<RouterListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -46101,8 +46274,10 @@ class RouterList {
       id = _json["id"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Router.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Router.fromJson(value))
+          .toList()
+          .cast<Router>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -46160,17 +46335,20 @@ class RouterStatus {
     if (_json.containsKey("bestRoutes")) {
       bestRoutes = _json["bestRoutes"]
           .map((value) => new Route.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Route>();
     }
     if (_json.containsKey("bestRoutesForRouter")) {
       bestRoutesForRouter = _json["bestRoutesForRouter"]
           .map((value) => new Route.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Route>();
     }
     if (_json.containsKey("bgpPeerStatus")) {
       bgpPeerStatus = _json["bgpPeerStatus"]
           .map((value) => new RouterStatusBgpPeerStatus.fromJson(value))
-          .toList();
+          .toList()
+          .cast<RouterStatusBgpPeerStatus>();
     }
     if (_json.containsKey("network")) {
       network = _json["network"];
@@ -46241,7 +46419,8 @@ class RouterStatusBgpPeerStatus {
     if (_json.containsKey("advertisedRoutes")) {
       advertisedRoutes = _json["advertisedRoutes"]
           .map((value) => new Route.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Route>();
     }
     if (_json.containsKey("ipAddress")) {
       ipAddress = _json["ipAddress"];
@@ -46446,7 +46625,8 @@ class RoutersScopedListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new RoutersScopedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<RoutersScopedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -46481,8 +46661,10 @@ class RoutersScopedList {
 
   RoutersScopedList.fromJson(core.Map _json) {
     if (_json.containsKey("routers")) {
-      routers =
-          _json["routers"].map((value) => new Router.fromJson(value)).toList();
+      routers = _json["routers"]
+          .map((value) => new Router.fromJson(value))
+          .toList()
+          .cast<Router>();
     }
     if (_json.containsKey("warning")) {
       warning = new RoutersScopedListWarning.fromJson(_json["warning"]);
@@ -47033,7 +47215,8 @@ class SnapshotListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new SnapshotListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SnapshotListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -47087,8 +47270,10 @@ class SnapshotList {
       id = _json["id"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Snapshot.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Snapshot.fromJson(value))
+          .toList()
+          .cast<Snapshot>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -47314,7 +47499,8 @@ class SslCertificateListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new SslCertificateListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SslCertificateListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -47370,7 +47556,8 @@ class SslCertificateList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new SslCertificate.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SslCertificate>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -47509,7 +47696,8 @@ class Subnetwork {
     if (_json.containsKey("secondaryIpRanges")) {
       secondaryIpRanges = _json["secondaryIpRanges"]
           .map((value) => new SubnetworkSecondaryRange.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SubnetworkSecondaryRange>();
     }
     if (_json.containsKey("selfLink")) {
       selfLink = _json["selfLink"];
@@ -47645,7 +47833,8 @@ class SubnetworkAggregatedListWarning {
       data = _json["data"]
           .map((value) =>
               new SubnetworkAggregatedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SubnetworkAggregatedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -47830,7 +48019,8 @@ class SubnetworkListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new SubnetworkListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SubnetworkListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -47887,7 +48077,8 @@ class SubnetworkList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new Subnetwork.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Subnetwork>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -48074,7 +48265,8 @@ class SubnetworksScopedListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new SubnetworksScopedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SubnetworksScopedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -48110,7 +48302,8 @@ class SubnetworksScopedList {
     if (_json.containsKey("subnetworks")) {
       subnetworks = _json["subnetworks"]
           .map((value) => new Subnetwork.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Subnetwork>();
     }
     if (_json.containsKey("warning")) {
       warning = new SubnetworksScopedListWarning.fromJson(_json["warning"]);
@@ -48441,7 +48634,8 @@ class TargetHttpProxyListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new TargetHttpProxyListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TargetHttpProxyListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -48498,7 +48692,8 @@ class TargetHttpProxyList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new TargetHttpProxy.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TargetHttpProxy>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -48752,7 +48947,8 @@ class TargetHttpsProxyListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new TargetHttpsProxyListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TargetHttpsProxyListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -48809,7 +49005,8 @@ class TargetHttpsProxyList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new TargetHttpsProxy.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TargetHttpsProxy>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -49053,7 +49250,8 @@ class TargetInstanceAggregatedListWarning {
       data = _json["data"]
           .map((value) =>
               new TargetInstanceAggregatedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TargetInstanceAggregatedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -49238,7 +49436,8 @@ class TargetInstanceListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new TargetInstanceListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TargetInstanceListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -49294,7 +49493,8 @@ class TargetInstanceList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new TargetInstance.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TargetInstance>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -49421,7 +49621,8 @@ class TargetInstancesScopedListWarning {
       data = _json["data"]
           .map((value) =>
               new TargetInstancesScopedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TargetInstancesScopedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -49458,7 +49659,8 @@ class TargetInstancesScopedList {
     if (_json.containsKey("targetInstances")) {
       targetInstances = _json["targetInstances"]
           .map((value) => new TargetInstance.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TargetInstance>();
     }
     if (_json.containsKey("warning")) {
       warning = new TargetInstancesScopedListWarning.fromJson(_json["warning"]);
@@ -49739,7 +49941,8 @@ class TargetPoolAggregatedListWarning {
       data = _json["data"]
           .map((value) =>
               new TargetPoolAggregatedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TargetPoolAggregatedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -49853,7 +50056,8 @@ class TargetPoolInstanceHealth {
     if (_json.containsKey("healthStatus")) {
       healthStatus = _json["healthStatus"]
           .map((value) => new HealthStatus.fromJson(value))
-          .toList();
+          .toList()
+          .cast<HealthStatus>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -49958,7 +50162,8 @@ class TargetPoolListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new TargetPoolListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TargetPoolListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -50015,7 +50220,8 @@ class TargetPoolList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new TargetPool.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TargetPool>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -50066,7 +50272,8 @@ class TargetPoolsAddHealthCheckRequest {
     if (_json.containsKey("healthChecks")) {
       healthChecks = _json["healthChecks"]
           .map((value) => new HealthCheckReference.fromJson(value))
-          .toList();
+          .toList()
+          .cast<HealthCheckReference>();
     }
   }
 
@@ -50096,7 +50303,8 @@ class TargetPoolsAddInstanceRequest {
     if (_json.containsKey("instances")) {
       instances = _json["instances"]
           .map((value) => new InstanceReference.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InstanceReference>();
     }
   }
 
@@ -50125,7 +50333,8 @@ class TargetPoolsRemoveHealthCheckRequest {
     if (_json.containsKey("healthChecks")) {
       healthChecks = _json["healthChecks"]
           .map((value) => new HealthCheckReference.fromJson(value))
-          .toList();
+          .toList()
+          .cast<HealthCheckReference>();
     }
   }
 
@@ -50150,7 +50359,8 @@ class TargetPoolsRemoveInstanceRequest {
     if (_json.containsKey("instances")) {
       instances = _json["instances"]
           .map((value) => new InstanceReference.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InstanceReference>();
     }
   }
 
@@ -50249,7 +50459,8 @@ class TargetPoolsScopedListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new TargetPoolsScopedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TargetPoolsScopedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -50286,7 +50497,8 @@ class TargetPoolsScopedList {
     if (_json.containsKey("targetPools")) {
       targetPools = _json["targetPools"]
           .map((value) => new TargetPool.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TargetPool>();
     }
     if (_json.containsKey("warning")) {
       warning = new TargetPoolsScopedListWarning.fromJson(_json["warning"]);
@@ -50594,7 +50806,8 @@ class TargetSslProxyListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new TargetSslProxyListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TargetSslProxyListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -50650,7 +50863,8 @@ class TargetSslProxyList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new TargetSslProxy.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TargetSslProxy>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -50924,7 +51138,8 @@ class TargetTcpProxyListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new TargetTcpProxyListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TargetTcpProxyListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -50980,7 +51195,8 @@ class TargetTcpProxyList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new TargetTcpProxy.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TargetTcpProxy>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -51241,7 +51457,8 @@ class TargetVpnGatewayAggregatedListWarning {
       data = _json["data"]
           .map((value) =>
               new TargetVpnGatewayAggregatedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TargetVpnGatewayAggregatedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -51427,7 +51644,8 @@ class TargetVpnGatewayListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new TargetVpnGatewayListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TargetVpnGatewayListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -51484,7 +51702,8 @@ class TargetVpnGatewayList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new TargetVpnGateway.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TargetVpnGateway>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -51611,7 +51830,8 @@ class TargetVpnGatewaysScopedListWarning {
       data = _json["data"]
           .map((value) =>
               new TargetVpnGatewaysScopedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TargetVpnGatewaysScopedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -51648,7 +51868,8 @@ class TargetVpnGatewaysScopedList {
     if (_json.containsKey("targetVpnGateways")) {
       targetVpnGateways = _json["targetVpnGateways"]
           .map((value) => new TargetVpnGateway.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TargetVpnGateway>();
     }
     if (_json.containsKey("warning")) {
       warning =
@@ -51788,7 +52009,8 @@ class UrlMap {
     if (_json.containsKey("hostRules")) {
       hostRules = _json["hostRules"]
           .map((value) => new HostRule.fromJson(value))
-          .toList();
+          .toList()
+          .cast<HostRule>();
     }
     if (_json.containsKey("id")) {
       id = _json["id"];
@@ -51802,7 +52024,8 @@ class UrlMap {
     if (_json.containsKey("pathMatchers")) {
       pathMatchers = _json["pathMatchers"]
           .map((value) => new PathMatcher.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PathMatcher>();
     }
     if (_json.containsKey("selfLink")) {
       selfLink = _json["selfLink"];
@@ -51810,7 +52033,8 @@ class UrlMap {
     if (_json.containsKey("tests")) {
       tests = _json["tests"]
           .map((value) => new UrlMapTest.fromJson(value))
-          .toList();
+          .toList()
+          .cast<UrlMapTest>();
     }
   }
 
@@ -51939,7 +52163,8 @@ class UrlMapListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new UrlMapListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<UrlMapListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -51993,8 +52218,10 @@ class UrlMapList {
       id = _json["id"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new UrlMap.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new UrlMap.fromJson(value))
+          .toList()
+          .cast<UrlMap>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -52131,7 +52358,8 @@ class UrlMapValidationResult {
     if (_json.containsKey("testFailures")) {
       testFailures = _json["testFailures"]
           .map((value) => new TestFailure.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TestFailure>();
     }
     if (_json.containsKey("testPassed")) {
       testPassed = _json["testPassed"];
@@ -52526,7 +52754,8 @@ class VpnTunnelAggregatedListWarning {
       data = _json["data"]
           .map(
               (value) => new VpnTunnelAggregatedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<VpnTunnelAggregatedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -52710,7 +52939,8 @@ class VpnTunnelListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new VpnTunnelListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<VpnTunnelListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -52764,8 +52994,10 @@ class VpnTunnelList {
       id = _json["id"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new VpnTunnel.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new VpnTunnel.fromJson(value))
+          .toList()
+          .cast<VpnTunnel>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -52891,7 +53123,8 @@ class VpnTunnelsScopedListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new VpnTunnelsScopedListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<VpnTunnelsScopedListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -52928,7 +53161,8 @@ class VpnTunnelsScopedList {
     if (_json.containsKey("vpnTunnels")) {
       vpnTunnels = _json["vpnTunnels"]
           .map((value) => new VpnTunnel.fromJson(value))
-          .toList();
+          .toList()
+          .cast<VpnTunnel>();
     }
     if (_json.containsKey("warning")) {
       warning = new VpnTunnelsScopedListWarning.fromJson(_json["warning"]);
@@ -53033,7 +53267,8 @@ class XpnHostListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new XpnHostListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<XpnHostListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -53087,8 +53322,10 @@ class XpnHostList {
       id = _json["id"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Project.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Project.fromJson(value))
+          .toList()
+          .cast<Project>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -53359,7 +53596,8 @@ class ZoneListWarning {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new ZoneListWarningData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ZoneListWarningData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -53413,7 +53651,10 @@ class ZoneList {
       id = _json["id"];
     }
     if (_json.containsKey("items")) {
-      items = _json["items"].map((value) => new Zone.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Zone.fromJson(value))
+          .toList()
+          .cast<Zone>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];

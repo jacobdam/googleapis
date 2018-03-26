@@ -467,7 +467,8 @@ class Attributes {
     if (_json.containsKey("additionalImageLink")) {
       additionalImageLink = _json["additionalImageLink"]
           .map((value) => new Image.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Image>();
     }
     if (_json.containsKey("ageGroup")) {
       ageGroup = _json["ageGroup"];
@@ -493,7 +494,8 @@ class Attributes {
     if (_json.containsKey("featureDescription")) {
       featureDescription = _json["featureDescription"]
           .map((value) => new FeatureDescription.fromJson(value))
-          .toList();
+          .toList()
+          .cast<FeatureDescription>();
     }
     if (_json.containsKey("flavor")) {
       flavor = _json["flavor"];
@@ -525,7 +527,8 @@ class Attributes {
     if (_json.containsKey("productDetail")) {
       productDetail = _json["productDetail"]
           .map((value) => new ProductDetail.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ProductDetail>();
     }
     if (_json.containsKey("productLine")) {
       productLine = _json["productLine"];
@@ -967,7 +970,8 @@ class ListProductsResponse {
     if (_json.containsKey("products")) {
       products = _json["products"]
           .map((value) => new Product.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Product>();
     }
   }
 
@@ -1089,8 +1093,10 @@ class Product {
       finalAttributes = new Attributes.fromJson(_json["finalAttributes"]);
     }
     if (_json.containsKey("issues")) {
-      issues =
-          _json["issues"].map((value) => new Issue.fromJson(value)).toList();
+      issues = _json["issues"]
+          .map((value) => new Issue.fromJson(value))
+          .toList()
+          .cast<Issue>();
     }
     if (_json.containsKey("manuallyDeletedAttributes")) {
       manuallyDeletedAttributes = _json["manuallyDeletedAttributes"];

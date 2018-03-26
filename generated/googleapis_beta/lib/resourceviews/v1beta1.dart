@@ -1077,7 +1077,8 @@ class RegionViewsListResponse {
     if (_json.containsKey("resourceViews")) {
       resourceViews = _json["resourceViews"]
           .map((value) => new ResourceView.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ResourceView>();
     }
   }
 
@@ -1166,8 +1167,10 @@ class ResourceView {
       kind = _json["kind"];
     }
     if (_json.containsKey("labels")) {
-      labels =
-          _json["labels"].map((value) => new Label.fromJson(value)).toList();
+      labels = _json["labels"]
+          .map((value) => new Label.fromJson(value))
+          .toList()
+          .cast<Label>();
     }
     if (_json.containsKey("lastModified")) {
       lastModified = _json["lastModified"];
@@ -1318,7 +1321,8 @@ class ZoneViewsListResponse {
     if (_json.containsKey("resourceViews")) {
       resourceViews = _json["resourceViews"]
           .map((value) => new ResourceView.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ResourceView>();
     }
   }
 

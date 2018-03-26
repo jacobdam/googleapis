@@ -198,8 +198,10 @@ class CohortGroup {
 
   CohortGroup.fromJson(core.Map _json) {
     if (_json.containsKey("cohorts")) {
-      cohorts =
-          _json["cohorts"].map((value) => new Cohort.fromJson(value)).toList();
+      cohorts = _json["cohorts"]
+          .map((value) => new Cohort.fromJson(value))
+          .toList()
+          .cast<Cohort>();
     }
     if (_json.containsKey("lifetimeValue")) {
       lifetimeValue = _json["lifetimeValue"];
@@ -300,7 +302,8 @@ class DateRangeValues {
     if (_json.containsKey("pivotValueRegions")) {
       pivotValueRegions = _json["pivotValueRegions"]
           .map((value) => new PivotValueRegion.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PivotValueRegion>();
     }
     if (_json.containsKey("values")) {
       values = _json["values"];
@@ -507,7 +510,8 @@ class DimensionFilterClause {
     if (_json.containsKey("filters")) {
       filters = _json["filters"]
           .map((value) => new DimensionFilter.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DimensionFilter>();
     }
     if (_json.containsKey("operator")) {
       operator = _json["operator"];
@@ -595,7 +599,8 @@ class GetReportsRequest {
     if (_json.containsKey("reportRequests")) {
       reportRequests = _json["reportRequests"]
           .map((value) => new ReportRequest.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ReportRequest>();
     }
     if (_json.containsKey("useResourceQuotas")) {
       useResourceQuotas = _json["useResourceQuotas"];
@@ -637,8 +642,10 @@ class GetReportsResponse {
       queryCost = _json["queryCost"];
     }
     if (_json.containsKey("reports")) {
-      reports =
-          _json["reports"].map((value) => new Report.fromJson(value)).toList();
+      reports = _json["reports"]
+          .map((value) => new Report.fromJson(value))
+          .toList()
+          .cast<Report>();
     }
     if (_json.containsKey("resourceQuotasRemaining")) {
       resourceQuotasRemaining = new ResourceQuotasRemaining.fromJson(
@@ -812,7 +819,8 @@ class MetricFilterClause {
     if (_json.containsKey("filters")) {
       filters = _json["filters"]
           .map((value) => new MetricFilter.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MetricFilter>();
     }
     if (_json.containsKey("operator")) {
       operator = _json["operator"];
@@ -846,12 +854,14 @@ class MetricHeader {
     if (_json.containsKey("metricHeaderEntries")) {
       metricHeaderEntries = _json["metricHeaderEntries"]
           .map((value) => new MetricHeaderEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MetricHeaderEntry>();
     }
     if (_json.containsKey("pivotHeaders")) {
       pivotHeaders = _json["pivotHeaders"]
           .map((value) => new PivotHeader.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PivotHeader>();
     }
   }
 
@@ -921,7 +931,8 @@ class OrFiltersForSegment {
     if (_json.containsKey("segmentFilterClauses")) {
       segmentFilterClauses = _json["segmentFilterClauses"]
           .map((value) => new SegmentFilterClause.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SegmentFilterClause>();
     }
   }
 
@@ -1056,19 +1067,23 @@ class Pivot {
     if (_json.containsKey("dimensionFilterClauses")) {
       dimensionFilterClauses = _json["dimensionFilterClauses"]
           .map((value) => new DimensionFilterClause.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DimensionFilterClause>();
     }
     if (_json.containsKey("dimensions")) {
       dimensions = _json["dimensions"]
           .map((value) => new Dimension.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Dimension>();
     }
     if (_json.containsKey("maxGroupCount")) {
       maxGroupCount = _json["maxGroupCount"];
     }
     if (_json.containsKey("metrics")) {
-      metrics =
-          _json["metrics"].map((value) => new Metric.fromJson(value)).toList();
+      metrics = _json["metrics"]
+          .map((value) => new Metric.fromJson(value))
+          .toList()
+          .cast<Metric>();
     }
     if (_json.containsKey("startGroup")) {
       startGroup = _json["startGroup"];
@@ -1113,7 +1128,8 @@ class PivotHeader {
     if (_json.containsKey("pivotHeaderEntries")) {
       pivotHeaderEntries = _json["pivotHeaderEntries"]
           .map((value) => new PivotHeaderEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PivotHeaderEntry>();
     }
     if (_json.containsKey("totalPivotGroupsCount")) {
       totalPivotGroupsCount = _json["totalPivotGroupsCount"];
@@ -1306,19 +1322,23 @@ class ReportData {
     if (_json.containsKey("maximums")) {
       maximums = _json["maximums"]
           .map((value) => new DateRangeValues.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DateRangeValues>();
     }
     if (_json.containsKey("minimums")) {
       minimums = _json["minimums"]
           .map((value) => new DateRangeValues.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DateRangeValues>();
     }
     if (_json.containsKey("rowCount")) {
       rowCount = _json["rowCount"];
     }
     if (_json.containsKey("rows")) {
-      rows =
-          _json["rows"].map((value) => new ReportRow.fromJson(value)).toList();
+      rows = _json["rows"]
+          .map((value) => new ReportRow.fromJson(value))
+          .toList()
+          .cast<ReportRow>();
     }
     if (_json.containsKey("samplesReadCounts")) {
       samplesReadCounts = _json["samplesReadCounts"];
@@ -1329,7 +1349,8 @@ class ReportData {
     if (_json.containsKey("totals")) {
       totals = _json["totals"]
           .map((value) => new DateRangeValues.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DateRangeValues>();
     }
   }
 
@@ -1497,17 +1518,20 @@ class ReportRequest {
     if (_json.containsKey("dateRanges")) {
       dateRanges = _json["dateRanges"]
           .map((value) => new DateRange.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DateRange>();
     }
     if (_json.containsKey("dimensionFilterClauses")) {
       dimensionFilterClauses = _json["dimensionFilterClauses"]
           .map((value) => new DimensionFilterClause.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DimensionFilterClause>();
     }
     if (_json.containsKey("dimensions")) {
       dimensions = _json["dimensions"]
           .map((value) => new Dimension.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Dimension>();
     }
     if (_json.containsKey("filtersExpression")) {
       filtersExpression = _json["filtersExpression"];
@@ -1524,16 +1548,20 @@ class ReportRequest {
     if (_json.containsKey("metricFilterClauses")) {
       metricFilterClauses = _json["metricFilterClauses"]
           .map((value) => new MetricFilterClause.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MetricFilterClause>();
     }
     if (_json.containsKey("metrics")) {
-      metrics =
-          _json["metrics"].map((value) => new Metric.fromJson(value)).toList();
+      metrics = _json["metrics"]
+          .map((value) => new Metric.fromJson(value))
+          .toList()
+          .cast<Metric>();
     }
     if (_json.containsKey("orderBys")) {
       orderBys = _json["orderBys"]
           .map((value) => new OrderBy.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrderBy>();
     }
     if (_json.containsKey("pageSize")) {
       pageSize = _json["pageSize"];
@@ -1542,8 +1570,10 @@ class ReportRequest {
       pageToken = _json["pageToken"];
     }
     if (_json.containsKey("pivots")) {
-      pivots =
-          _json["pivots"].map((value) => new Pivot.fromJson(value)).toList();
+      pivots = _json["pivots"]
+          .map((value) => new Pivot.fromJson(value))
+          .toList()
+          .cast<Pivot>();
     }
     if (_json.containsKey("samplingLevel")) {
       samplingLevel = _json["samplingLevel"];
@@ -1551,7 +1581,8 @@ class ReportRequest {
     if (_json.containsKey("segments")) {
       segments = _json["segments"]
           .map((value) => new Segment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Segment>();
     }
     if (_json.containsKey("viewId")) {
       viewId = _json["viewId"];
@@ -1637,7 +1668,8 @@ class ReportRow {
     if (_json.containsKey("metrics")) {
       metrics = _json["metrics"]
           .map((value) => new DateRangeValues.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DateRangeValues>();
     }
   }
 
@@ -1734,7 +1766,8 @@ class SegmentDefinition {
     if (_json.containsKey("segmentFilters")) {
       segmentFilters = _json["segmentFilters"]
           .map((value) => new SegmentFilter.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SegmentFilter>();
     }
   }
 
@@ -2075,7 +2108,8 @@ class SegmentSequenceStep {
     if (_json.containsKey("orFiltersForSegment")) {
       orFiltersForSegment = _json["orFiltersForSegment"]
           .map((value) => new OrFiltersForSegment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrFiltersForSegment>();
     }
   }
 
@@ -2113,7 +2147,8 @@ class SequenceSegment {
     if (_json.containsKey("segmentSequenceSteps")) {
       segmentSequenceSteps = _json["segmentSequenceSteps"]
           .map((value) => new SegmentSequenceStep.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SegmentSequenceStep>();
     }
   }
 
@@ -2144,7 +2179,8 @@ class SimpleSegment {
     if (_json.containsKey("orFiltersForSegment")) {
       orFiltersForSegment = _json["orFiltersForSegment"]
           .map((value) => new OrFiltersForSegment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrFiltersForSegment>();
     }
   }
 

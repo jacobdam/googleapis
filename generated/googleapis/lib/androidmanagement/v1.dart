@@ -1276,7 +1276,8 @@ class Application {
     if (_json.containsKey("managedProperties")) {
       managedProperties = _json["managedProperties"]
           .map((value) => new ManagedProperty.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ManagedProperty>();
     }
     if (_json.containsKey("name")) {
       name = _json["name"];
@@ -1284,7 +1285,8 @@ class Application {
     if (_json.containsKey("permissions")) {
       permissions = _json["permissions"]
           .map((value) => new ApplicationPermission.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ApplicationPermission>();
     }
     if (_json.containsKey("title")) {
       title = _json["title"];
@@ -1443,7 +1445,8 @@ class ApplicationPolicy {
     if (_json.containsKey("permissionGrants")) {
       permissionGrants = _json["permissionGrants"]
           .map((value) => new PermissionGrant.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PermissionGrant>();
     }
   }
 
@@ -1754,7 +1757,8 @@ class Device {
     if (_json.containsKey("displays")) {
       displays = _json["displays"]
           .map((value) => new Display.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Display>();
     }
     if (_json.containsKey("enrollmentTime")) {
       enrollmentTime = _json["enrollmentTime"];
@@ -1771,7 +1775,8 @@ class Device {
     if (_json.containsKey("hardwareStatusSamples")) {
       hardwareStatusSamples = _json["hardwareStatusSamples"]
           .map((value) => new HardwareStatus.fromJson(value))
-          .toList();
+          .toList()
+          .cast<HardwareStatus>();
     }
     if (_json.containsKey("lastPolicyComplianceReportTime")) {
       lastPolicyComplianceReportTime = _json["lastPolicyComplianceReportTime"];
@@ -1785,7 +1790,8 @@ class Device {
     if (_json.containsKey("memoryEvents")) {
       memoryEvents = _json["memoryEvents"]
           .map((value) => new MemoryEvent.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MemoryEvent>();
     }
     if (_json.containsKey("memoryInfo")) {
       memoryInfo = new MemoryInfo.fromJson(_json["memoryInfo"]);
@@ -1799,7 +1805,8 @@ class Device {
     if (_json.containsKey("nonComplianceDetails")) {
       nonComplianceDetails = _json["nonComplianceDetails"]
           .map((value) => new NonComplianceDetail.fromJson(value))
-          .toList();
+          .toList()
+          .cast<NonComplianceDetail>();
     }
     if (_json.containsKey("policyCompliant")) {
       policyCompliant = _json["policyCompliant"];
@@ -1810,7 +1817,8 @@ class Device {
     if (_json.containsKey("powerManagementEvents")) {
       powerManagementEvents = _json["powerManagementEvents"]
           .map((value) => new PowerManagementEvent.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PowerManagementEvent>();
     }
     if (_json.containsKey("previousDeviceNames")) {
       previousDeviceNames = _json["previousDeviceNames"];
@@ -2573,8 +2581,10 @@ class ListDevicesResponse {
 
   ListDevicesResponse.fromJson(core.Map _json) {
     if (_json.containsKey("devices")) {
-      devices =
-          _json["devices"].map((value) => new Device.fromJson(value)).toList();
+      devices = _json["devices"]
+          .map((value) => new Device.fromJson(value))
+          .toList()
+          .cast<Device>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -2611,7 +2621,8 @@ class ListOperationsResponse {
     if (_json.containsKey("operations")) {
       operations = _json["operations"]
           .map((value) => new Operation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Operation>();
     }
   }
 
@@ -2644,8 +2655,10 @@ class ListPoliciesResponse {
       nextPageToken = _json["nextPageToken"];
     }
     if (_json.containsKey("policies")) {
-      policies =
-          _json["policies"].map((value) => new Policy.fromJson(value)).toList();
+      policies = _json["policies"]
+          .map((value) => new Policy.fromJson(value))
+          .toList()
+          .cast<Policy>();
     }
   }
 
@@ -2715,7 +2728,8 @@ class ManagedProperty {
     if (_json.containsKey("entries")) {
       entries = _json["entries"]
           .map((value) => new ManagedPropertyEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ManagedPropertyEntry>();
     }
     if (_json.containsKey("key")) {
       key = _json["key"];
@@ -2723,7 +2737,8 @@ class ManagedProperty {
     if (_json.containsKey("nestedProperties")) {
       nestedProperties = _json["nestedProperties"]
           .map((value) => new ManagedProperty.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ManagedProperty>();
     }
     if (_json.containsKey("title")) {
       title = _json["title"];
@@ -3730,7 +3745,8 @@ class Policy {
     if (_json.containsKey("applications")) {
       applications = _json["applications"]
           .map((value) => new ApplicationPolicy.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ApplicationPolicy>();
     }
     if (_json.containsKey("autoTimeRequired")) {
       autoTimeRequired = _json["autoTimeRequired"];
@@ -3757,7 +3773,8 @@ class Policy {
     if (_json.containsKey("complianceRules")) {
       complianceRules = _json["complianceRules"]
           .map((value) => new ComplianceRule.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ComplianceRule>();
     }
     if (_json.containsKey("createWindowsDisabled")) {
       createWindowsDisabled = _json["createWindowsDisabled"];
@@ -3846,7 +3863,8 @@ class Policy {
     if (_json.containsKey("persistentPreferredActivities")) {
       persistentPreferredActivities = _json["persistentPreferredActivities"]
           .map((value) => new PersistentPreferredActivity.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PersistentPreferredActivity>();
     }
     if (_json.containsKey("recommendedGlobalProxy")) {
       recommendedGlobalProxy =

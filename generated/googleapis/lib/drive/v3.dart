@@ -2904,7 +2904,8 @@ class About {
     if (_json.containsKey("teamDriveThemes")) {
       teamDriveThemes = _json["teamDriveThemes"]
           .map((value) => new AboutTeamDriveThemes.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AboutTeamDriveThemes>();
     }
     if (_json.containsKey("user")) {
       user = new User.fromJson(_json["user"]);
@@ -3067,8 +3068,10 @@ class ChangeList {
 
   ChangeList.fromJson(core.Map _json) {
     if (_json.containsKey("changes")) {
-      changes =
-          _json["changes"].map((value) => new Change.fromJson(value)).toList();
+      changes = _json["changes"]
+          .map((value) => new Change.fromJson(value))
+          .toList()
+          .cast<Change>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -3323,8 +3326,10 @@ class Comment {
           new CommentQuotedFileContent.fromJson(_json["quotedFileContent"]);
     }
     if (_json.containsKey("replies")) {
-      replies =
-          _json["replies"].map((value) => new Reply.fromJson(value)).toList();
+      replies = _json["replies"]
+          .map((value) => new Reply.fromJson(value))
+          .toList()
+          .cast<Reply>();
     }
     if (_json.containsKey("resolved")) {
       resolved = _json["resolved"];
@@ -3396,7 +3401,8 @@ class CommentList {
     if (_json.containsKey("comments")) {
       comments = _json["comments"]
           .map((value) => new Comment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Comment>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -4263,8 +4269,10 @@ class File {
       ownedByMe = _json["ownedByMe"];
     }
     if (_json.containsKey("owners")) {
-      owners =
-          _json["owners"].map((value) => new User.fromJson(value)).toList();
+      owners = _json["owners"]
+          .map((value) => new User.fromJson(value))
+          .toList()
+          .cast<User>();
     }
     if (_json.containsKey("parents")) {
       parents = _json["parents"];
@@ -4275,7 +4283,8 @@ class File {
     if (_json.containsKey("permissions")) {
       permissions = _json["permissions"]
           .map((value) => new Permission.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Permission>();
     }
     if (_json.containsKey("properties")) {
       properties = _json["properties"];
@@ -4538,7 +4547,10 @@ class FileList {
 
   FileList.fromJson(core.Map _json) {
     if (_json.containsKey("files")) {
-      files = _json["files"].map((value) => new File.fromJson(value)).toList();
+      files = _json["files"]
+          .map((value) => new File.fromJson(value))
+          .toList()
+          .cast<File>();
     }
     if (_json.containsKey("incompleteSearch")) {
       incompleteSearch = _json["incompleteSearch"];
@@ -4767,7 +4779,8 @@ class Permission {
       teamDrivePermissionDetails = _json["teamDrivePermissionDetails"]
           .map((value) =>
               new PermissionTeamDrivePermissionDetails.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PermissionTeamDrivePermissionDetails>();
     }
     if (_json.containsKey("type")) {
       type = _json["type"];
@@ -4846,7 +4859,8 @@ class PermissionList {
     if (_json.containsKey("permissions")) {
       permissions = _json["permissions"]
           .map((value) => new Permission.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Permission>();
     }
   }
 
@@ -4993,8 +5007,10 @@ class ReplyList {
       nextPageToken = _json["nextPageToken"];
     }
     if (_json.containsKey("replies")) {
-      replies =
-          _json["replies"].map((value) => new Reply.fromJson(value)).toList();
+      replies = _json["replies"]
+          .map((value) => new Reply.fromJson(value))
+          .toList()
+          .cast<Reply>();
     }
   }
 
@@ -5175,7 +5191,8 @@ class RevisionList {
     if (_json.containsKey("revisions")) {
       revisions = _json["revisions"]
           .map((value) => new Revision.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Revision>();
     }
   }
 
@@ -5573,7 +5590,8 @@ class TeamDriveList {
     if (_json.containsKey("teamDrives")) {
       teamDrives = _json["teamDrives"]
           .map((value) => new TeamDrive.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TeamDrive>();
     }
   }
 

@@ -1125,12 +1125,14 @@ class Change {
     if (_json.containsKey("additions")) {
       additions = _json["additions"]
           .map((value) => new ResourceRecordSet.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ResourceRecordSet>();
     }
     if (_json.containsKey("deletions")) {
       deletions = _json["deletions"]
           .map((value) => new ResourceRecordSet.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ResourceRecordSet>();
     }
     if (_json.containsKey("id")) {
       id = _json["id"];
@@ -1203,8 +1205,10 @@ class ChangesListResponse {
 
   ChangesListResponse.fromJson(core.Map _json) {
     if (_json.containsKey("changes")) {
-      changes =
-          _json["changes"].map((value) => new Change.fromJson(value)).toList();
+      changes = _json["changes"]
+          .map((value) => new Change.fromJson(value))
+          .toList()
+          .cast<Change>();
     }
     if (_json.containsKey("header")) {
       header = new ResponseHeader.fromJson(_json["header"]);
@@ -1312,7 +1316,8 @@ class DnsKey {
     if (_json.containsKey("digests")) {
       digests = _json["digests"]
           .map((value) => new DnsKeyDigest.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DnsKeyDigest>();
     }
     if (_json.containsKey("id")) {
       id = _json["id"];
@@ -1503,8 +1508,10 @@ class DnsKeysListResponse {
 
   DnsKeysListResponse.fromJson(core.Map _json) {
     if (_json.containsKey("dnsKeys")) {
-      dnsKeys =
-          _json["dnsKeys"].map((value) => new DnsKey.fromJson(value)).toList();
+      dnsKeys = _json["dnsKeys"]
+          .map((value) => new DnsKey.fromJson(value))
+          .toList()
+          .cast<DnsKey>();
     }
     if (_json.containsKey("header")) {
       header = new ResponseHeader.fromJson(_json["header"]);
@@ -1671,7 +1678,8 @@ class ManagedZoneDnsSecConfig {
     if (_json.containsKey("defaultKeySpecs")) {
       defaultKeySpecs = _json["defaultKeySpecs"]
           .map((value) => new DnsKeySpec.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DnsKeySpec>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -1740,7 +1748,8 @@ class ManagedZoneOperationsListResponse {
     if (_json.containsKey("operations")) {
       operations = _json["operations"]
           .map((value) => new Operation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Operation>();
     }
   }
 
@@ -1818,7 +1827,8 @@ class ManagedZonesListResponse {
     if (_json.containsKey("managedZones")) {
       managedZones = _json["managedZones"]
           .map((value) => new ManagedZone.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ManagedZone>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -2127,7 +2137,8 @@ class Quota {
     if (_json.containsKey("whitelistedKeySpecs")) {
       whitelistedKeySpecs = _json["whitelistedKeySpecs"]
           .map((value) => new DnsKeySpec.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DnsKeySpec>();
     }
   }
 
@@ -2272,7 +2283,8 @@ class ResourceRecordSetsListResponse {
     if (_json.containsKey("rrsets")) {
       rrsets = _json["rrsets"]
           .map((value) => new ResourceRecordSet.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ResourceRecordSet>();
     }
   }
 

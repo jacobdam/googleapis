@@ -3993,7 +3993,8 @@ class ApkListingsListResponse {
     if (_json.containsKey("listings")) {
       listings = _json["listings"]
           .map((value) => new ApkListing.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ApkListing>();
     }
   }
 
@@ -4067,7 +4068,10 @@ class ApksListResponse {
 
   ApksListResponse.fromJson(core.Map _json) {
     if (_json.containsKey("apks")) {
-      apks = _json["apks"].map((value) => new Apk.fromJson(value)).toList();
+      apks = _json["apks"]
+          .map((value) => new Apk.fromJson(value))
+          .toList()
+          .cast<Apk>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -4458,7 +4462,8 @@ class EntitlementsListResponse {
     if (_json.containsKey("resources")) {
       resources = _json["resources"]
           .map((value) => new Entitlement.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Entitlement>();
     }
     if (_json.containsKey("tokenPagination")) {
       tokenPagination = new TokenPagination.fromJson(_json["tokenPagination"]);
@@ -4630,7 +4635,8 @@ class ExternallyHostedApk {
     if (_json.containsKey("usesPermissions")) {
       usesPermissions = _json["usesPermissions"]
           .map((value) => new ExternallyHostedApkUsesPermission.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ExternallyHostedApkUsesPermission>();
     }
     if (_json.containsKey("versionCode")) {
       versionCode = _json["versionCode"];
@@ -4772,8 +4778,10 @@ class ImagesDeleteAllResponse {
 
   ImagesDeleteAllResponse.fromJson(core.Map _json) {
     if (_json.containsKey("deleted")) {
-      deleted =
-          _json["deleted"].map((value) => new Image.fromJson(value)).toList();
+      deleted = _json["deleted"]
+          .map((value) => new Image.fromJson(value))
+          .toList()
+          .cast<Image>();
     }
   }
 
@@ -4794,8 +4802,10 @@ class ImagesListResponse {
 
   ImagesListResponse.fromJson(core.Map _json) {
     if (_json.containsKey("images")) {
-      images =
-          _json["images"].map((value) => new Image.fromJson(value)).toList();
+      images = _json["images"]
+          .map((value) => new Image.fromJson(value))
+          .toList()
+          .cast<Image>();
     }
   }
 
@@ -5002,7 +5012,8 @@ class InappproductsListResponse {
     if (_json.containsKey("inappproduct")) {
       inappproduct = _json["inappproduct"]
           .map((value) => new InAppProduct.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InAppProduct>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -5109,7 +5120,8 @@ class ListingsListResponse {
     if (_json.containsKey("listings")) {
       listings = _json["listings"]
           .map((value) => new Listing.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Listing>();
     }
   }
 
@@ -5366,7 +5378,8 @@ class Review {
     if (_json.containsKey("comments")) {
       comments = _json["comments"]
           .map((value) => new Comment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Comment>();
     }
     if (_json.containsKey("reviewId")) {
       reviewId = _json["reviewId"];
@@ -5432,8 +5445,10 @@ class ReviewsListResponse {
       pageInfo = new PageInfo.fromJson(_json["pageInfo"]);
     }
     if (_json.containsKey("reviews")) {
-      reviews =
-          _json["reviews"].map((value) => new Review.fromJson(value)).toList();
+      reviews = _json["reviews"]
+          .map((value) => new Review.fromJson(value))
+          .toList()
+          .cast<Review>();
     }
     if (_json.containsKey("tokenPagination")) {
       tokenPagination = new TokenPagination.fromJson(_json["tokenPagination"]);
@@ -5522,7 +5537,8 @@ class Season {
     if (_json.containsKey("prorations")) {
       prorations = _json["prorations"]
           .map((value) => new Prorate.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Prorate>();
     }
     if (_json.containsKey("start")) {
       start = new MonthDay.fromJson(_json["start"]);
@@ -5938,8 +5954,10 @@ class TracksListResponse {
       kind = _json["kind"];
     }
     if (_json.containsKey("tracks")) {
-      tracks =
-          _json["tracks"].map((value) => new Track.fromJson(value)).toList();
+      tracks = _json["tracks"]
+          .map((value) => new Track.fromJson(value))
+          .toList()
+          .cast<Track>();
     }
   }
 
@@ -6157,7 +6175,8 @@ class VoidedPurchasesListResponse {
     if (_json.containsKey("voidedPurchases")) {
       voidedPurchases = _json["voidedPurchases"]
           .map((value) => new VoidedPurchase.fromJson(value))
-          .toList();
+          .toList()
+          .cast<VoidedPurchase>();
     }
   }
 

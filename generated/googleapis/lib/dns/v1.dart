@@ -641,12 +641,14 @@ class Change {
     if (_json.containsKey("additions")) {
       additions = _json["additions"]
           .map((value) => new ResourceRecordSet.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ResourceRecordSet>();
     }
     if (_json.containsKey("deletions")) {
       deletions = _json["deletions"]
           .map((value) => new ResourceRecordSet.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ResourceRecordSet>();
     }
     if (_json.containsKey("id")) {
       id = _json["id"];
@@ -712,8 +714,10 @@ class ChangesListResponse {
 
   ChangesListResponse.fromJson(core.Map _json) {
     if (_json.containsKey("changes")) {
-      changes =
-          _json["changes"].map((value) => new Change.fromJson(value)).toList();
+      changes = _json["changes"]
+          .map((value) => new Change.fromJson(value))
+          .toList()
+          .cast<Change>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -863,7 +867,8 @@ class ManagedZonesListResponse {
     if (_json.containsKey("managedZones")) {
       managedZones = _json["managedZones"]
           .map((value) => new ManagedZone.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ManagedZone>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -1114,7 +1119,8 @@ class ResourceRecordSetsListResponse {
     if (_json.containsKey("rrsets")) {
       rrsets = _json["rrsets"]
           .map((value) => new ResourceRecordSet.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ResourceRecordSet>();
     }
   }
 

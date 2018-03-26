@@ -900,12 +900,14 @@ class Conversion {
     if (_json.containsKey("customDimension")) {
       customDimension = _json["customDimension"]
           .map((value) => new CustomDimension.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CustomDimension>();
     }
     if (_json.containsKey("customMetric")) {
       customMetric = _json["customMetric"]
           .map((value) => new CustomMetric.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CustomMetric>();
     }
     if (_json.containsKey("deviceType")) {
       deviceType = _json["deviceType"];
@@ -1083,7 +1085,8 @@ class ConversionList {
     if (_json.containsKey("conversion")) {
       conversion = _json["conversion"]
           .map((value) => new Conversion.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Conversion>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -1244,7 +1247,8 @@ class Report {
     if (_json.containsKey("files")) {
       files = _json["files"]
           .map((value) => new ReportFiles.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ReportFiles>();
     }
     if (_json.containsKey("id")) {
       id = _json["id"];
@@ -1262,8 +1266,10 @@ class Report {
       rowCount = _json["rowCount"];
     }
     if (_json.containsKey("rows")) {
-      rows =
-          _json["rows"].map((value) => new ReportRow.fromJson(value)).toList();
+      rows = _json["rows"]
+          .map((value) => new ReportRow.fromJson(value))
+          .toList()
+          .cast<ReportRow>();
     }
     if (_json.containsKey("statisticsCurrencyCode")) {
       statisticsCurrencyCode = _json["statisticsCurrencyCode"];
@@ -1721,7 +1727,8 @@ class ReportRequest {
     if (_json.containsKey("columns")) {
       columns = _json["columns"]
           .map((value) => new ReportApiColumnSpec.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ReportApiColumnSpec>();
     }
     if (_json.containsKey("downloadFormat")) {
       downloadFormat = _json["downloadFormat"];
@@ -1729,7 +1736,8 @@ class ReportRequest {
     if (_json.containsKey("filters")) {
       filters = _json["filters"]
           .map((value) => new ReportRequestFilters.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ReportRequestFilters>();
     }
     if (_json.containsKey("includeDeletedEntities")) {
       includeDeletedEntities = _json["includeDeletedEntities"];
@@ -1743,7 +1751,8 @@ class ReportRequest {
     if (_json.containsKey("orderBy")) {
       orderBy = _json["orderBy"]
           .map((value) => new ReportRequestOrderBy.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ReportRequestOrderBy>();
     }
     if (_json.containsKey("reportScope")) {
       reportScope = new ReportRequestReportScope.fromJson(_json["reportScope"]);
@@ -1916,7 +1925,8 @@ class SavedColumnList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new SavedColumn.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SavedColumn>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -1947,7 +1957,8 @@ class UpdateAvailabilityRequest {
     if (_json.containsKey("availabilities")) {
       availabilities = _json["availabilities"]
           .map((value) => new Availability.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Availability>();
     }
   }
 
@@ -1973,7 +1984,8 @@ class UpdateAvailabilityResponse {
     if (_json.containsKey("availabilities")) {
       availabilities = _json["availabilities"]
           .map((value) => new Availability.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Availability>();
     }
   }
 

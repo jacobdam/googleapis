@@ -1627,7 +1627,8 @@ class BigtableColumnFamily {
     if (_json.containsKey("columns")) {
       columns = _json["columns"]
           .map((value) => new BigtableColumn.fromJson(value))
-          .toList();
+          .toList()
+          .cast<BigtableColumn>();
     }
     if (_json.containsKey("encoding")) {
       encoding = _json["encoding"];
@@ -1693,7 +1694,8 @@ class BigtableOptions {
     if (_json.containsKey("columnFamilies")) {
       columnFamilies = _json["columnFamilies"]
           .map((value) => new BigtableColumnFamily.fromJson(value))
-          .toList();
+          .toList()
+          .cast<BigtableColumnFamily>();
     }
     if (_json.containsKey("ignoreUnspecifiedColumnFamilies")) {
       ignoreUnspecifiedColumnFamilies =
@@ -1959,7 +1961,8 @@ class Dataset {
     if (_json.containsKey("access")) {
       access = _json["access"]
           .map((value) => new DatasetAccess.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DatasetAccess>();
     }
     if (_json.containsKey("creationTime")) {
       creationTime = _json["creationTime"];
@@ -2142,7 +2145,8 @@ class DatasetList {
     if (_json.containsKey("datasets")) {
       datasets = _json["datasets"]
           .map((value) => new DatasetListDatasets.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DatasetListDatasets>();
     }
     if (_json.containsKey("etag")) {
       etag = _json["etag"];
@@ -2473,7 +2477,8 @@ class ExplainQueryStage {
     if (_json.containsKey("steps")) {
       steps = _json["steps"]
           .map((value) => new ExplainQueryStep.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ExplainQueryStep>();
     }
     if (_json.containsKey("waitMsAvg")) {
       waitMsAvg = _json["waitMsAvg"];
@@ -2821,7 +2826,8 @@ class GetQueryResultsResponse {
     if (_json.containsKey("errors")) {
       errors = _json["errors"]
           .map((value) => new ErrorProto.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ErrorProto>();
     }
     if (_json.containsKey("etag")) {
       etag = _json["etag"];
@@ -2842,8 +2848,10 @@ class GetQueryResultsResponse {
       pageToken = _json["pageToken"];
     }
     if (_json.containsKey("rows")) {
-      rows =
-          _json["rows"].map((value) => new TableRow.fromJson(value)).toList();
+      rows = _json["rows"]
+          .map((value) => new TableRow.fromJson(value))
+          .toList()
+          .cast<TableRow>();
     }
     if (_json.containsKey("schema")) {
       schema = new TableSchema.fromJson(_json["schema"]);
@@ -3723,7 +3731,8 @@ class JobConfigurationQuery {
     if (_json.containsKey("queryParameters")) {
       queryParameters = _json["queryParameters"]
           .map((value) => new QueryParameter.fromJson(value))
-          .toList();
+          .toList()
+          .cast<QueryParameter>();
     }
     if (_json.containsKey("schemaUpdateOptions")) {
       schemaUpdateOptions = _json["schemaUpdateOptions"];
@@ -3748,7 +3757,8 @@ class JobConfigurationQuery {
     if (_json.containsKey("userDefinedFunctionResources")) {
       userDefinedFunctionResources = _json["userDefinedFunctionResources"]
           .map((value) => new UserDefinedFunctionResource.fromJson(value))
-          .toList();
+          .toList()
+          .cast<UserDefinedFunctionResource>();
     }
     if (_json.containsKey("writeDisposition")) {
       writeDisposition = _json["writeDisposition"];
@@ -3879,7 +3889,8 @@ class JobConfigurationTableCopy {
     if (_json.containsKey("sourceTables")) {
       sourceTables = _json["sourceTables"]
           .map((value) => new TableReference.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TableReference>();
     }
     if (_json.containsKey("writeDisposition")) {
       writeDisposition = _json["writeDisposition"];
@@ -4031,7 +4042,8 @@ class JobList {
     if (_json.containsKey("jobs")) {
       jobs = _json["jobs"]
           .map((value) => new JobListJobs.fromJson(value))
-          .toList();
+          .toList()
+          .cast<JobListJobs>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -4287,12 +4299,14 @@ class JobStatistics2 {
     if (_json.containsKey("queryPlan")) {
       queryPlan = _json["queryPlan"]
           .map((value) => new ExplainQueryStage.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ExplainQueryStage>();
     }
     if (_json.containsKey("referencedTables")) {
       referencedTables = _json["referencedTables"]
           .map((value) => new TableReference.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TableReference>();
     }
     if (_json.containsKey("schema")) {
       schema = new TableSchema.fromJson(_json["schema"]);
@@ -4303,7 +4317,8 @@ class JobStatistics2 {
     if (_json.containsKey("timeline")) {
       timeline = _json["timeline"]
           .map((value) => new QueryTimelineSample.fromJson(value))
-          .toList();
+          .toList()
+          .cast<QueryTimelineSample>();
     }
     if (_json.containsKey("totalBytesBilled")) {
       totalBytesBilled = _json["totalBytesBilled"];
@@ -4317,7 +4332,8 @@ class JobStatistics2 {
     if (_json.containsKey("undeclaredQueryParameters")) {
       undeclaredQueryParameters = _json["undeclaredQueryParameters"]
           .map((value) => new QueryParameter.fromJson(value))
-          .toList();
+          .toList()
+          .cast<QueryParameter>();
     }
   }
 
@@ -4485,7 +4501,8 @@ class JobStatus {
     if (_json.containsKey("errors")) {
       errors = _json["errors"]
           .map((value) => new ErrorProto.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ErrorProto>();
     }
     if (_json.containsKey("state")) {
       state = _json["state"];
@@ -4634,7 +4651,8 @@ class ProjectList {
     if (_json.containsKey("projects")) {
       projects = _json["projects"]
           .map((value) => new ProjectListProjects.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ProjectListProjects>();
     }
     if (_json.containsKey("totalItems")) {
       totalItems = _json["totalItems"];
@@ -4788,7 +4806,8 @@ class QueryParameterType {
     if (_json.containsKey("structTypes")) {
       structTypes = _json["structTypes"]
           .map((value) => new QueryParameterTypeStructTypes.fromJson(value))
-          .toList();
+          .toList()
+          .cast<QueryParameterTypeStructTypes>();
     }
     if (_json.containsKey("type")) {
       type = _json["type"];
@@ -4829,7 +4848,8 @@ class QueryParameterValue {
     if (_json.containsKey("arrayValues")) {
       arrayValues = _json["arrayValues"]
           .map((value) => new QueryParameterValue.fromJson(value))
-          .toList();
+          .toList()
+          .cast<QueryParameterValue>();
     }
     if (_json.containsKey("structValues")) {
       structValues = commons
@@ -4955,7 +4975,8 @@ class QueryRequest {
     if (_json.containsKey("queryParameters")) {
       queryParameters = _json["queryParameters"]
           .map((value) => new QueryParameter.fromJson(value))
-          .toList();
+          .toList()
+          .cast<QueryParameter>();
     }
     if (_json.containsKey("timeoutMs")) {
       timeoutMs = _json["timeoutMs"];
@@ -5071,7 +5092,8 @@ class QueryResponse {
     if (_json.containsKey("errors")) {
       errors = _json["errors"]
           .map((value) => new ErrorProto.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ErrorProto>();
     }
     if (_json.containsKey("jobComplete")) {
       jobComplete = _json["jobComplete"];
@@ -5089,8 +5111,10 @@ class QueryResponse {
       pageToken = _json["pageToken"];
     }
     if (_json.containsKey("rows")) {
-      rows =
-          _json["rows"].map((value) => new TableRow.fromJson(value)).toList();
+      rows = _json["rows"]
+          .map((value) => new TableRow.fromJson(value))
+          .toList()
+          .cast<TableRow>();
     }
     if (_json.containsKey("schema")) {
       schema = new TableSchema.fromJson(_json["schema"]);
@@ -5578,7 +5602,8 @@ class TableDataInsertAllRequest {
     if (_json.containsKey("rows")) {
       rows = _json["rows"]
           .map((value) => new TableDataInsertAllRequestRows.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TableDataInsertAllRequestRows>();
     }
     if (_json.containsKey("skipInvalidRows")) {
       skipInvalidRows = _json["skipInvalidRows"];
@@ -5623,7 +5648,8 @@ class TableDataInsertAllResponseInsertErrors {
     if (_json.containsKey("errors")) {
       errors = _json["errors"]
           .map((value) => new ErrorProto.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ErrorProto>();
     }
     if (_json.containsKey("index")) {
       index = _json["index"];
@@ -5657,7 +5683,8 @@ class TableDataInsertAllResponse {
       insertErrors = _json["insertErrors"]
           .map((value) =>
               new TableDataInsertAllResponseInsertErrors.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TableDataInsertAllResponseInsertErrors>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -5709,8 +5736,10 @@ class TableDataList {
       pageToken = _json["pageToken"];
     }
     if (_json.containsKey("rows")) {
-      rows =
-          _json["rows"].map((value) => new TableRow.fromJson(value)).toList();
+      rows = _json["rows"]
+          .map((value) => new TableRow.fromJson(value))
+          .toList()
+          .cast<TableRow>();
     }
     if (_json.containsKey("totalRows")) {
       totalRows = _json["totalRows"];
@@ -5772,7 +5801,8 @@ class TableFieldSchema {
     if (_json.containsKey("fields")) {
       fields = _json["fields"]
           .map((value) => new TableFieldSchema.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TableFieldSchema>();
     }
     if (_json.containsKey("mode")) {
       mode = _json["mode"];
@@ -5968,7 +5998,8 @@ class TableList {
     if (_json.containsKey("tables")) {
       tables = _json["tables"]
           .map((value) => new TableListTables.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TableListTables>();
     }
     if (_json.containsKey("totalItems")) {
       totalItems = _json["totalItems"];
@@ -6048,7 +6079,10 @@ class TableRow {
 
   TableRow.fromJson(core.Map _json) {
     if (_json.containsKey("f")) {
-      f = _json["f"].map((value) => new TableCell.fromJson(value)).toList();
+      f = _json["f"]
+          .map((value) => new TableCell.fromJson(value))
+          .toList()
+          .cast<TableCell>();
     }
   }
 
@@ -6072,7 +6106,8 @@ class TableSchema {
     if (_json.containsKey("fields")) {
       fields = _json["fields"]
           .map((value) => new TableFieldSchema.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TableFieldSchema>();
     }
   }
 
@@ -6201,7 +6236,8 @@ class ViewDefinition {
     if (_json.containsKey("userDefinedFunctionResources")) {
       userDefinedFunctionResources = _json["userDefinedFunctionResources"]
           .map((value) => new UserDefinedFunctionResource.fromJson(value))
-          .toList();
+          .toList()
+          .cast<UserDefinedFunctionResource>();
     }
   }
 

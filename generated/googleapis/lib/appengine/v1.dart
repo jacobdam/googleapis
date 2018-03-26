@@ -2666,7 +2666,8 @@ class Application {
     if (_json.containsKey("dispatchRules")) {
       dispatchRules = _json["dispatchRules"]
           .map((value) => new UrlDispatchRule.fromJson(value))
-          .toList();
+          .toList()
+          .cast<UrlDispatchRule>();
     }
     if (_json.containsKey("featureSettings")) {
       featureSettings = new FeatureSettings.fromJson(_json["featureSettings"]);
@@ -3072,7 +3073,8 @@ class BatchUpdateIngressRulesRequest {
     if (_json.containsKey("ingressRules")) {
       ingressRules = _json["ingressRules"]
           .map((value) => new FirewallRule.fromJson(value))
-          .toList();
+          .toList()
+          .cast<FirewallRule>();
     }
   }
 
@@ -3098,7 +3100,8 @@ class BatchUpdateIngressRulesResponse {
     if (_json.containsKey("ingressRules")) {
       ingressRules = _json["ingressRules"]
           .map((value) => new FirewallRule.fromJson(value))
-          .toList();
+          .toList()
+          .cast<FirewallRule>();
     }
   }
 
@@ -3420,7 +3423,8 @@ class DomainMapping {
     if (_json.containsKey("resourceRecords")) {
       resourceRecords = _json["resourceRecords"]
           .map((value) => new ResourceRecord.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ResourceRecord>();
     }
     if (_json.containsKey("sslSettings")) {
       sslSettings = new SslSettings.fromJson(_json["sslSettings"]);
@@ -4046,7 +4050,8 @@ class ListAuthorizedCertificatesResponse {
     if (_json.containsKey("certificates")) {
       certificates = _json["certificates"]
           .map((value) => new AuthorizedCertificate.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AuthorizedCertificate>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -4081,7 +4086,8 @@ class ListAuthorizedDomainsResponse {
     if (_json.containsKey("domains")) {
       domains = _json["domains"]
           .map((value) => new AuthorizedDomain.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AuthorizedDomain>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -4115,7 +4121,8 @@ class ListDomainMappingsResponse {
     if (_json.containsKey("domainMappings")) {
       domainMappings = _json["domainMappings"]
           .map((value) => new DomainMapping.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DomainMapping>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -4150,7 +4157,8 @@ class ListIngressRulesResponse {
     if (_json.containsKey("ingressRules")) {
       ingressRules = _json["ingressRules"]
           .map((value) => new FirewallRule.fromJson(value))
-          .toList();
+          .toList()
+          .cast<FirewallRule>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -4185,7 +4193,8 @@ class ListInstancesResponse {
     if (_json.containsKey("instances")) {
       instances = _json["instances"]
           .map((value) => new Instance.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Instance>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -4219,7 +4228,8 @@ class ListLocationsResponse {
     if (_json.containsKey("locations")) {
       locations = _json["locations"]
           .map((value) => new Location.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Location>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -4256,7 +4266,8 @@ class ListOperationsResponse {
     if (_json.containsKey("operations")) {
       operations = _json["operations"]
           .map((value) => new Operation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Operation>();
     }
   }
 
@@ -4291,7 +4302,8 @@ class ListServicesResponse {
     if (_json.containsKey("services")) {
       services = _json["services"]
           .map((value) => new Service.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Service>();
     }
   }
 
@@ -4325,7 +4337,8 @@ class ListVersionsResponse {
     if (_json.containsKey("versions")) {
       versions = _json["versions"]
           .map((value) => new Version.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Version>();
     }
   }
 
@@ -5331,8 +5344,10 @@ class Resources {
       memoryGb = _json["memoryGb"];
     }
     if (_json.containsKey("volumes")) {
-      volumes =
-          _json["volumes"].map((value) => new Volume.fromJson(value)).toList();
+      volumes = _json["volumes"]
+          .map((value) => new Volume.fromJson(value))
+          .toList()
+          .cast<Volume>();
     }
   }
 
@@ -6103,11 +6118,14 @@ class Version {
     if (_json.containsKey("errorHandlers")) {
       errorHandlers = _json["errorHandlers"]
           .map((value) => new ErrorHandler.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ErrorHandler>();
     }
     if (_json.containsKey("handlers")) {
-      handlers =
-          _json["handlers"].map((value) => new UrlMap.fromJson(value)).toList();
+      handlers = _json["handlers"]
+          .map((value) => new UrlMap.fromJson(value))
+          .toList()
+          .cast<UrlMap>();
     }
     if (_json.containsKey("healthCheck")) {
       healthCheck = new HealthCheck.fromJson(_json["healthCheck"]);
@@ -6124,7 +6142,8 @@ class Version {
     if (_json.containsKey("libraries")) {
       libraries = _json["libraries"]
           .map((value) => new Library.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Library>();
     }
     if (_json.containsKey("livenessCheck")) {
       livenessCheck = new LivenessCheck.fromJson(_json["livenessCheck"]);

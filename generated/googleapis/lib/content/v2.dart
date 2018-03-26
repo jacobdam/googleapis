@@ -3844,7 +3844,8 @@ class Account {
     if (_json.containsKey("adwordsLinks")) {
       adwordsLinks = _json["adwordsLinks"]
           .map((value) => new AccountAdwordsLink.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AccountAdwordsLink>();
     }
     if (_json.containsKey("googleMyBusinessLink")) {
       googleMyBusinessLink = new AccountGoogleMyBusinessLink.fromJson(
@@ -3868,7 +3869,8 @@ class Account {
     if (_json.containsKey("users")) {
       users = _json["users"]
           .map((value) => new AccountUser.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AccountUser>();
     }
     if (_json.containsKey("websiteUrl")) {
       websiteUrl = _json["websiteUrl"];
@@ -3876,7 +3878,8 @@ class Account {
     if (_json.containsKey("youtubeChannelLinks")) {
       youtubeChannelLinks = _json["youtubeChannelLinks"]
           .map((value) => new AccountYouTubeChannelLink.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AccountYouTubeChannelLink>();
     }
   }
 
@@ -4054,12 +4057,14 @@ class AccountStatus {
     if (_json.containsKey("accountLevelIssues")) {
       accountLevelIssues = _json["accountLevelIssues"]
           .map((value) => new AccountStatusAccountLevelIssue.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AccountStatusAccountLevelIssue>();
     }
     if (_json.containsKey("dataQualityIssues")) {
       dataQualityIssues = _json["dataQualityIssues"]
           .map((value) => new AccountStatusDataQualityIssue.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AccountStatusDataQualityIssue>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -4197,7 +4202,8 @@ class AccountStatusDataQualityIssue {
     if (_json.containsKey("exampleItems")) {
       exampleItems = _json["exampleItems"]
           .map((value) => new AccountStatusExampleItem.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AccountStatusExampleItem>();
     }
     if (_json.containsKey("id")) {
       id = _json["id"];
@@ -4342,7 +4348,8 @@ class AccountTax {
     if (_json.containsKey("rules")) {
       rules = _json["rules"]
           .map((value) => new AccountTaxTaxRule.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AccountTaxTaxRule>();
     }
   }
 
@@ -4513,7 +4520,8 @@ class AccountsAuthInfoResponse {
     if (_json.containsKey("accountIdentifiers")) {
       accountIdentifiers = _json["accountIdentifiers"]
           .map((value) => new AccountIdentifier.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AccountIdentifier>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -4567,7 +4575,8 @@ class AccountsCustomBatchRequest {
     if (_json.containsKey("entries")) {
       entries = _json["entries"]
           .map((value) => new AccountsCustomBatchRequestEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AccountsCustomBatchRequestEntry>();
     }
   }
 
@@ -4674,7 +4683,8 @@ class AccountsCustomBatchResponse {
     if (_json.containsKey("entries")) {
       entries = _json["entries"]
           .map((value) => new AccountsCustomBatchResponseEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AccountsCustomBatchResponseEntry>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -4767,7 +4777,8 @@ class AccountsListResponse {
     if (_json.containsKey("resources")) {
       resources = _json["resources"]
           .map((value) => new Account.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Account>();
     }
   }
 
@@ -4798,7 +4809,8 @@ class AccountstatusesCustomBatchRequest {
       entries = _json["entries"]
           .map((value) =>
               new AccountstatusesCustomBatchRequestEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AccountstatusesCustomBatchRequestEntry>();
     }
   }
 
@@ -4877,7 +4889,8 @@ class AccountstatusesCustomBatchResponse {
       entries = _json["entries"]
           .map((value) =>
               new AccountstatusesCustomBatchResponseEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AccountstatusesCustomBatchResponseEntry>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -4960,7 +4973,8 @@ class AccountstatusesListResponse {
     if (_json.containsKey("resources")) {
       resources = _json["resources"]
           .map((value) => new AccountStatus.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AccountStatus>();
     }
   }
 
@@ -4990,7 +5004,8 @@ class AccounttaxCustomBatchRequest {
     if (_json.containsKey("entries")) {
       entries = _json["entries"]
           .map((value) => new AccounttaxCustomBatchRequestEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AccounttaxCustomBatchRequestEntry>();
     }
   }
 
@@ -5076,7 +5091,8 @@ class AccounttaxCustomBatchResponse {
       entries = _json["entries"]
           .map(
               (value) => new AccounttaxCustomBatchResponseEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AccounttaxCustomBatchResponseEntry>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -5168,7 +5184,8 @@ class AccounttaxListResponse {
     if (_json.containsKey("resources")) {
       resources = _json["resources"]
           .map((value) => new AccountTax.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AccountTax>();
     }
   }
 
@@ -5390,7 +5407,8 @@ class Datafeed {
     if (_json.containsKey("targets")) {
       targets = _json["targets"]
           .map((value) => new DatafeedTarget.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DatafeedTarget>();
     }
   }
 
@@ -5629,7 +5647,8 @@ class DatafeedStatus {
     if (_json.containsKey("errors")) {
       errors = _json["errors"]
           .map((value) => new DatafeedStatusError.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DatafeedStatusError>();
     }
     if (_json.containsKey("itemsTotal")) {
       itemsTotal = _json["itemsTotal"];
@@ -5652,7 +5671,8 @@ class DatafeedStatus {
     if (_json.containsKey("warnings")) {
       warnings = _json["warnings"]
           .map((value) => new DatafeedStatusError.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DatafeedStatusError>();
     }
   }
 
@@ -5719,7 +5739,8 @@ class DatafeedStatusError {
     if (_json.containsKey("examples")) {
       examples = _json["examples"]
           .map((value) => new DatafeedStatusExample.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DatafeedStatusExample>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -5850,7 +5871,8 @@ class DatafeedsCustomBatchRequest {
     if (_json.containsKey("entries")) {
       entries = _json["entries"]
           .map((value) => new DatafeedsCustomBatchRequestEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DatafeedsCustomBatchRequestEntry>();
     }
   }
 
@@ -5935,7 +5957,8 @@ class DatafeedsCustomBatchResponse {
     if (_json.containsKey("entries")) {
       entries = _json["entries"]
           .map((value) => new DatafeedsCustomBatchResponseEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DatafeedsCustomBatchResponseEntry>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -6018,7 +6041,8 @@ class DatafeedsListResponse {
     if (_json.containsKey("resources")) {
       resources = _json["resources"]
           .map((value) => new Datafeed.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Datafeed>();
     }
   }
 
@@ -6049,7 +6073,8 @@ class DatafeedstatusesCustomBatchRequest {
       entries = _json["entries"]
           .map((value) =>
               new DatafeedstatusesCustomBatchRequestEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DatafeedstatusesCustomBatchRequestEntry>();
     }
   }
 
@@ -6148,7 +6173,8 @@ class DatafeedstatusesCustomBatchResponse {
       entries = _json["entries"]
           .map((value) =>
               new DatafeedstatusesCustomBatchResponseEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DatafeedstatusesCustomBatchResponseEntry>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -6231,7 +6257,8 @@ class DatafeedstatusesListResponse {
     if (_json.containsKey("resources")) {
       resources = _json["resources"]
           .map((value) => new DatafeedStatus.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DatafeedStatus>();
     }
   }
 
@@ -6271,7 +6298,8 @@ class DeliveryTime {
     if (_json.containsKey("holidayCutoffs")) {
       holidayCutoffs = _json["holidayCutoffs"]
           .map((value) => new HolidayCutoff.fromJson(value))
-          .toList();
+          .toList()
+          .cast<HolidayCutoff>();
     }
     if (_json.containsKey("maxTransitTimeInDays")) {
       maxTransitTimeInDays = _json["maxTransitTimeInDays"];
@@ -6357,8 +6385,10 @@ class Errors {
       code = _json["code"];
     }
     if (_json.containsKey("errors")) {
-      errors =
-          _json["errors"].map((value) => new Error.fromJson(value)).toList();
+      errors = _json["errors"]
+          .map((value) => new Error.fromJson(value))
+          .toList()
+          .cast<Error>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -6421,7 +6451,8 @@ class Headers {
     if (_json.containsKey("locations")) {
       locations = _json["locations"]
           .map((value) => new LocationIdSet.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LocationIdSet>();
     }
     if (_json.containsKey("numberOfItems")) {
       numberOfItems = _json["numberOfItems"];
@@ -6430,12 +6461,16 @@ class Headers {
       postalCodeGroupNames = _json["postalCodeGroupNames"];
     }
     if (_json.containsKey("prices")) {
-      prices =
-          _json["prices"].map((value) => new Price.fromJson(value)).toList();
+      prices = _json["prices"]
+          .map((value) => new Price.fromJson(value))
+          .toList()
+          .cast<Price>();
     }
     if (_json.containsKey("weights")) {
-      weights =
-          _json["weights"].map((value) => new Weight.fromJson(value)).toList();
+      weights = _json["weights"]
+          .map((value) => new Weight.fromJson(value))
+          .toList()
+          .cast<Weight>();
     }
   }
 
@@ -6750,7 +6785,8 @@ class InventoryCustomBatchRequest {
     if (_json.containsKey("entries")) {
       entries = _json["entries"]
           .map((value) => new InventoryCustomBatchRequestEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InventoryCustomBatchRequestEntry>();
     }
   }
 
@@ -6838,7 +6874,8 @@ class InventoryCustomBatchResponse {
     if (_json.containsKey("entries")) {
       entries = _json["entries"]
           .map((value) => new InventoryCustomBatchResponseEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InventoryCustomBatchResponseEntry>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -7214,7 +7251,8 @@ class Order {
     if (_json.containsKey("lineItems")) {
       lineItems = _json["lineItems"]
           .map((value) => new OrderLineItem.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrderLineItem>();
     }
     if (_json.containsKey("merchantId")) {
       merchantId = _json["merchantId"];
@@ -7237,17 +7275,20 @@ class Order {
     if (_json.containsKey("promotions")) {
       promotions = _json["promotions"]
           .map((value) => new OrderPromotion.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrderPromotion>();
     }
     if (_json.containsKey("refunds")) {
       refunds = _json["refunds"]
           .map((value) => new OrderRefund.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrderRefund>();
     }
     if (_json.containsKey("shipments")) {
       shipments = _json["shipments"]
           .map((value) => new OrderShipment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrderShipment>();
     }
     if (_json.containsKey("shippingCost")) {
       shippingCost = new Price.fromJson(_json["shippingCost"]);
@@ -7612,12 +7653,14 @@ class OrderLineItem {
     if (_json.containsKey("annotations")) {
       annotations = _json["annotations"]
           .map((value) => new OrderMerchantProvidedAnnotation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrderMerchantProvidedAnnotation>();
     }
     if (_json.containsKey("cancellations")) {
       cancellations = _json["cancellations"]
           .map((value) => new OrderCancellation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrderCancellation>();
     }
     if (_json.containsKey("id")) {
       id = _json["id"];
@@ -7652,7 +7695,8 @@ class OrderLineItem {
     if (_json.containsKey("returns")) {
       returns = _json["returns"]
           .map((value) => new OrderReturn.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrderReturn>();
     }
     if (_json.containsKey("shippingDetails")) {
       shippingDetails =
@@ -7814,7 +7858,8 @@ class OrderLineItemProduct {
       variantAttributes = _json["variantAttributes"]
           .map((value) =>
               new OrderLineItemProductVariantAttribute.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrderLineItemProductVariantAttribute>();
     }
   }
 
@@ -8177,7 +8222,8 @@ class OrderPromotion {
     if (_json.containsKey("benefits")) {
       benefits = _json["benefits"]
           .map((value) => new OrderPromotionBenefit.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrderPromotionBenefit>();
     }
     if (_json.containsKey("effectiveDates")) {
       effectiveDates = _json["effectiveDates"];
@@ -8463,7 +8509,8 @@ class OrderShipment {
     if (_json.containsKey("lineItems")) {
       lineItems = _json["lineItems"]
           .map((value) => new OrderShipmentLineItemShipment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrderShipmentLineItemShipment>();
     }
     if (_json.containsKey("status")) {
       status = _json["status"];
@@ -8899,7 +8946,8 @@ class OrdersCustomBatchRequest {
     if (_json.containsKey("entries")) {
       entries = _json["entries"]
           .map((value) => new OrdersCustomBatchRequestEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrdersCustomBatchRequestEntry>();
     }
   }
 
@@ -9574,7 +9622,8 @@ class OrdersCustomBatchRequestEntrySetLineItemMetadata {
     if (_json.containsKey("annotations")) {
       annotations = _json["annotations"]
           .map((value) => new OrderMerchantProvidedAnnotation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrderMerchantProvidedAnnotation>();
     }
     if (_json.containsKey("lineItemId")) {
       lineItemId = _json["lineItemId"];
@@ -9631,7 +9680,8 @@ class OrdersCustomBatchRequestEntryShipLineItems {
     if (_json.containsKey("lineItems")) {
       lineItems = _json["lineItems"]
           .map((value) => new OrderShipmentLineItemShipment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrderShipmentLineItemShipment>();
     }
     if (_json.containsKey("shipmentId")) {
       shipmentId = _json["shipmentId"];
@@ -9641,7 +9691,8 @@ class OrdersCustomBatchRequestEntryShipLineItems {
           .map((value) =>
               new OrdersCustomBatchRequestEntryShipLineItemsShipmentInfo
                   .fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrdersCustomBatchRequestEntryShipLineItemsShipmentInfo>();
     }
     if (_json.containsKey("trackingId")) {
       trackingId = _json["trackingId"];
@@ -9832,7 +9883,8 @@ class OrdersCustomBatchResponse {
     if (_json.containsKey("entries")) {
       entries = _json["entries"]
           .map((value) => new OrdersCustomBatchResponseEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrdersCustomBatchResponseEntry>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -10115,8 +10167,10 @@ class OrdersListResponse {
       nextPageToken = _json["nextPageToken"];
     }
     if (_json.containsKey("resources")) {
-      resources =
-          _json["resources"].map((value) => new Order.fromJson(value)).toList();
+      resources = _json["resources"]
+          .map((value) => new Order.fromJson(value))
+          .toList()
+          .cast<Order>();
     }
   }
 
@@ -10578,7 +10632,8 @@ class OrdersSetLineItemMetadataRequest {
     if (_json.containsKey("annotations")) {
       annotations = _json["annotations"]
           .map((value) => new OrderMerchantProvidedAnnotation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrderMerchantProvidedAnnotation>();
     }
     if (_json.containsKey("lineItemId")) {
       lineItemId = _json["lineItemId"];
@@ -10676,7 +10731,8 @@ class OrdersShipLineItemsRequest {
     if (_json.containsKey("lineItems")) {
       lineItems = _json["lineItems"]
           .map((value) => new OrderShipmentLineItemShipment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrderShipmentLineItemShipment>();
     }
     if (_json.containsKey("operationId")) {
       operationId = _json["operationId"];
@@ -10689,7 +10745,8 @@ class OrdersShipLineItemsRequest {
           .map((value) =>
               new OrdersCustomBatchRequestEntryShipLineItemsShipmentInfo
                   .fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrdersCustomBatchRequestEntryShipLineItemsShipmentInfo>();
     }
     if (_json.containsKey("trackingId")) {
       trackingId = _json["trackingId"];
@@ -11027,7 +11084,8 @@ class PostalCodeGroup {
     if (_json.containsKey("postalCodeRanges")) {
       postalCodeRanges = _json["postalCodeRanges"]
           .map((value) => new PostalCodeRange.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PostalCodeRange>();
     }
   }
 
@@ -11395,7 +11453,8 @@ class Product {
     if (_json.containsKey("aspects")) {
       aspects = _json["aspects"]
           .map((value) => new ProductAspect.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ProductAspect>();
     }
     if (_json.containsKey("availability")) {
       availability = _json["availability"];
@@ -11421,12 +11480,14 @@ class Product {
     if (_json.containsKey("customAttributes")) {
       customAttributes = _json["customAttributes"]
           .map((value) => new ProductCustomAttribute.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ProductCustomAttribute>();
     }
     if (_json.containsKey("customGroups")) {
       customGroups = _json["customGroups"]
           .map((value) => new ProductCustomGroup.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ProductCustomGroup>();
     }
     if (_json.containsKey("customLabel0")) {
       customLabel0 = _json["customLabel0"];
@@ -11449,7 +11510,8 @@ class Product {
     if (_json.containsKey("destinations")) {
       destinations = _json["destinations"]
           .map((value) => new ProductDestination.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ProductDestination>();
     }
     if (_json.containsKey("displayAdsId")) {
       displayAdsId = _json["displayAdsId"];
@@ -11556,7 +11618,8 @@ class Product {
     if (_json.containsKey("shipping")) {
       shipping = _json["shipping"]
           .map((value) => new ProductShipping.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ProductShipping>();
     }
     if (_json.containsKey("shippingHeight")) {
       shippingHeight =
@@ -11592,7 +11655,8 @@ class Product {
     if (_json.containsKey("taxes")) {
       taxes = _json["taxes"]
           .map((value) => new ProductTax.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ProductTax>();
     }
     if (_json.containsKey("title")) {
       title = _json["title"];
@@ -11609,8 +11673,10 @@ class Product {
       validatedDestinations = _json["validatedDestinations"];
     }
     if (_json.containsKey("warnings")) {
-      warnings =
-          _json["warnings"].map((value) => new Error.fromJson(value)).toList();
+      warnings = _json["warnings"]
+          .map((value) => new Error.fromJson(value))
+          .toList()
+          .cast<Error>();
     }
   }
 
@@ -11951,7 +12017,8 @@ class ProductCustomGroup {
     if (_json.containsKey("attributes")) {
       attributes = _json["attributes"]
           .map((value) => new ProductCustomAttribute.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ProductCustomAttribute>();
     }
     if (_json.containsKey("name")) {
       name = _json["name"];
@@ -12196,12 +12263,14 @@ class ProductStatus {
     if (_json.containsKey("dataQualityIssues")) {
       dataQualityIssues = _json["dataQualityIssues"]
           .map((value) => new ProductStatusDataQualityIssue.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ProductStatusDataQualityIssue>();
     }
     if (_json.containsKey("destinationStatuses")) {
       destinationStatuses = _json["destinationStatuses"]
           .map((value) => new ProductStatusDestinationStatus.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ProductStatusDestinationStatus>();
     }
     if (_json.containsKey("googleExpirationDate")) {
       googleExpirationDate = _json["googleExpirationDate"];
@@ -12209,7 +12278,8 @@ class ProductStatus {
     if (_json.containsKey("itemLevelIssues")) {
       itemLevelIssues = _json["itemLevelIssues"]
           .map((value) => new ProductStatusItemLevelIssue.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ProductStatusItemLevelIssue>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -12610,7 +12680,8 @@ class ProductsCustomBatchRequest {
     if (_json.containsKey("entries")) {
       entries = _json["entries"]
           .map((value) => new ProductsCustomBatchRequestEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ProductsCustomBatchRequestEntry>();
     }
   }
 
@@ -12696,7 +12767,8 @@ class ProductsCustomBatchResponse {
     if (_json.containsKey("entries")) {
       entries = _json["entries"]
           .map((value) => new ProductsCustomBatchResponseEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ProductsCustomBatchResponseEntry>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -12789,7 +12861,8 @@ class ProductsListResponse {
     if (_json.containsKey("resources")) {
       resources = _json["resources"]
           .map((value) => new Product.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Product>();
     }
   }
 
@@ -12820,7 +12893,8 @@ class ProductstatusesCustomBatchRequest {
       entries = _json["entries"]
           .map((value) =>
               new ProductstatusesCustomBatchRequestEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ProductstatusesCustomBatchRequestEntry>();
     }
   }
 
@@ -12904,7 +12978,8 @@ class ProductstatusesCustomBatchResponse {
       entries = _json["entries"]
           .map((value) =>
               new ProductstatusesCustomBatchResponseEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ProductstatusesCustomBatchResponseEntry>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -12996,7 +13071,8 @@ class ProductstatusesListResponse {
     if (_json.containsKey("resources")) {
       resources = _json["resources"]
           .map((value) => new ProductStatus.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ProductStatus>();
     }
   }
 
@@ -13048,7 +13124,8 @@ class RateGroup {
     if (_json.containsKey("carrierRates")) {
       carrierRates = _json["carrierRates"]
           .map((value) => new CarrierRate.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CarrierRate>();
     }
     if (_json.containsKey("mainTable")) {
       mainTable = new Table.fromJson(_json["mainTable"]);
@@ -13057,8 +13134,10 @@ class RateGroup {
       singleValue = new Value.fromJson(_json["singleValue"]);
     }
     if (_json.containsKey("subtables")) {
-      subtables =
-          _json["subtables"].map((value) => new Table.fromJson(value)).toList();
+      subtables = _json["subtables"]
+          .map((value) => new Table.fromJson(value))
+          .toList()
+          .cast<Table>();
     }
   }
 
@@ -13095,7 +13174,10 @@ class Row {
 
   Row.fromJson(core.Map _json) {
     if (_json.containsKey("cells")) {
-      cells = _json["cells"].map((value) => new Value.fromJson(value)).toList();
+      cells = _json["cells"]
+          .map((value) => new Value.fromJson(value))
+          .toList()
+          .cast<Value>();
     }
   }
 
@@ -13163,7 +13245,8 @@ class Service {
     if (_json.containsKey("rateGroups")) {
       rateGroups = _json["rateGroups"]
           .map((value) => new RateGroup.fromJson(value))
-          .toList();
+          .toList()
+          .cast<RateGroup>();
     }
   }
 
@@ -13218,12 +13301,14 @@ class ShippingSettings {
     if (_json.containsKey("postalCodeGroups")) {
       postalCodeGroups = _json["postalCodeGroups"]
           .map((value) => new PostalCodeGroup.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PostalCodeGroup>();
     }
     if (_json.containsKey("services")) {
       services = _json["services"]
           .map((value) => new Service.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Service>();
     }
   }
 
@@ -13255,7 +13340,8 @@ class ShippingsettingsCustomBatchRequest {
       entries = _json["entries"]
           .map((value) =>
               new ShippingsettingsCustomBatchRequestEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ShippingsettingsCustomBatchRequestEntry>();
     }
   }
 
@@ -13343,7 +13429,8 @@ class ShippingsettingsCustomBatchResponse {
       entries = _json["entries"]
           .map((value) =>
               new ShippingsettingsCustomBatchResponseEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ShippingsettingsCustomBatchResponseEntry>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -13429,7 +13516,8 @@ class ShippingsettingsGetSupportedCarriersResponse {
     if (_json.containsKey("carriers")) {
       carriers = _json["carriers"]
           .map((value) => new CarriersCarrier.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CarriersCarrier>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -13463,7 +13551,8 @@ class ShippingsettingsGetSupportedHolidaysResponse {
     if (_json.containsKey("holidays")) {
       holidays = _json["holidays"]
           .map((value) => new HolidaysHoliday.fromJson(value))
-          .toList();
+          .toList()
+          .cast<HolidaysHoliday>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -13504,7 +13593,8 @@ class ShippingsettingsListResponse {
     if (_json.containsKey("resources")) {
       resources = _json["resources"]
           .map((value) => new ShippingSettings.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ShippingSettings>();
     }
   }
 
@@ -13552,7 +13642,10 @@ class Table {
       rowHeaders = new Headers.fromJson(_json["rowHeaders"]);
     }
     if (_json.containsKey("rows")) {
-      rows = _json["rows"].map((value) => new Row.fromJson(value)).toList();
+      rows = _json["rows"]
+          .map((value) => new Row.fromJson(value))
+          .toList()
+          .cast<Row>();
     }
   }
 
@@ -13621,7 +13714,8 @@ class TestOrder {
     if (_json.containsKey("lineItems")) {
       lineItems = _json["lineItems"]
           .map((value) => new TestOrderLineItem.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TestOrderLineItem>();
     }
     if (_json.containsKey("notificationMode")) {
       notificationMode = _json["notificationMode"];
@@ -13636,7 +13730,8 @@ class TestOrder {
     if (_json.containsKey("promotions")) {
       promotions = _json["promotions"]
           .map((value) => new OrderPromotion.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrderPromotion>();
     }
     if (_json.containsKey("shippingCost")) {
       shippingCost = new Price.fromJson(_json["shippingCost"]);
@@ -13873,7 +13968,8 @@ class TestOrderLineItemProduct {
       variantAttributes = _json["variantAttributes"]
           .map((value) =>
               new OrderLineItemProductVariantAttribute.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrderLineItemProductVariantAttribute>();
     }
   }
 

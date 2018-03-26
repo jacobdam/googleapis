@@ -783,7 +783,8 @@ class Breakpoint {
     if (_json.containsKey("evaluatedExpressions")) {
       evaluatedExpressions = _json["evaluatedExpressions"]
           .map((value) => new Variable.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Variable>();
     }
     if (_json.containsKey("expressions")) {
       expressions = _json["expressions"];
@@ -812,7 +813,8 @@ class Breakpoint {
     if (_json.containsKey("stackFrames")) {
       stackFrames = _json["stackFrames"]
           .map((value) => new StackFrame.fromJson(value))
-          .toList();
+          .toList()
+          .cast<StackFrame>();
     }
     if (_json.containsKey("status")) {
       status = new StatusMessage.fromJson(_json["status"]);
@@ -823,7 +825,8 @@ class Breakpoint {
     if (_json.containsKey("variableTable")) {
       variableTable = _json["variableTable"]
           .map((value) => new Variable.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Variable>();
     }
   }
 
@@ -1072,7 +1075,8 @@ class Debuggee {
     if (_json.containsKey("extSourceContexts")) {
       extSourceContexts = _json["extSourceContexts"]
           .map((value) => new ExtendedSourceContext.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ExtendedSourceContext>();
     }
     if (_json.containsKey("id")) {
       id = _json["id"];
@@ -1092,7 +1096,8 @@ class Debuggee {
     if (_json.containsKey("sourceContexts")) {
       sourceContexts = _json["sourceContexts"]
           .map((value) => new SourceContext.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SourceContext>();
     }
     if (_json.containsKey("status")) {
       status = new StatusMessage.fromJson(_json["status"]);
@@ -1379,7 +1384,8 @@ class ListActiveBreakpointsResponse {
     if (_json.containsKey("breakpoints")) {
       breakpoints = _json["breakpoints"]
           .map((value) => new Breakpoint.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Breakpoint>();
     }
     if (_json.containsKey("nextWaitToken")) {
       nextWaitToken = _json["nextWaitToken"];
@@ -1426,7 +1432,8 @@ class ListBreakpointsResponse {
     if (_json.containsKey("breakpoints")) {
       breakpoints = _json["breakpoints"]
           .map((value) => new Breakpoint.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Breakpoint>();
     }
     if (_json.containsKey("nextWaitToken")) {
       nextWaitToken = _json["nextWaitToken"];
@@ -1461,7 +1468,8 @@ class ListDebuggeesResponse {
     if (_json.containsKey("debuggees")) {
       debuggees = _json["debuggees"]
           .map((value) => new Debuggee.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Debuggee>();
     }
   }
 
@@ -1722,14 +1730,17 @@ class StackFrame {
     if (_json.containsKey("arguments")) {
       arguments = _json["arguments"]
           .map((value) => new Variable.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Variable>();
     }
     if (_json.containsKey("function")) {
       function = _json["function"];
     }
     if (_json.containsKey("locals")) {
-      locals =
-          _json["locals"].map((value) => new Variable.fromJson(value)).toList();
+      locals = _json["locals"]
+          .map((value) => new Variable.fromJson(value))
+          .toList()
+          .cast<Variable>();
     }
     if (_json.containsKey("location")) {
       location = new SourceLocation.fromJson(_json["location"]);
@@ -2010,7 +2021,8 @@ class Variable {
     if (_json.containsKey("members")) {
       members = _json["members"]
           .map((value) => new Variable.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Variable>();
     }
     if (_json.containsKey("name")) {
       name = _json["name"];

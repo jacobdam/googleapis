@@ -489,7 +489,8 @@ class AuditConfig {
     if (_json.containsKey("auditLogConfigs")) {
       auditLogConfigs = _json["auditLogConfigs"]
           .map((value) => new AuditLogConfig.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AuditLogConfig>();
     }
     if (_json.containsKey("exemptedMembers")) {
       exemptedMembers = _json["exemptedMembers"];
@@ -741,7 +742,10 @@ class ListReposResponse {
       nextPageToken = _json["nextPageToken"];
     }
     if (_json.containsKey("repos")) {
-      repos = _json["repos"].map((value) => new Repo.fromJson(value)).toList();
+      repos = _json["repos"]
+          .map((value) => new Repo.fromJson(value))
+          .toList()
+          .cast<Repo>();
     }
   }
 
@@ -878,12 +882,14 @@ class Policy {
     if (_json.containsKey("auditConfigs")) {
       auditConfigs = _json["auditConfigs"]
           .map((value) => new AuditConfig.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AuditConfig>();
     }
     if (_json.containsKey("bindings")) {
       bindings = _json["bindings"]
           .map((value) => new Binding.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Binding>();
     }
     if (_json.containsKey("etag")) {
       etag = _json["etag"];

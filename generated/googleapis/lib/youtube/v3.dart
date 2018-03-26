@@ -7330,8 +7330,10 @@ class ActivityListResponse {
       eventId = _json["eventId"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Activity.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Activity.fromJson(value))
+          .toList()
+          .cast<Activity>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -7575,8 +7577,10 @@ class CaptionListResponse {
       eventId = _json["eventId"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Caption.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Caption.fromJson(value))
+          .toList()
+          .cast<Caption>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -8131,7 +8135,8 @@ class ChannelBrandingSettings {
     if (_json.containsKey("hints")) {
       hints = _json["hints"]
           .map((value) => new PropertyValue.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PropertyValue>();
     }
     if (_json.containsKey("image")) {
       image = new ImageSettings.fromJson(_json["image"]);
@@ -8343,7 +8348,8 @@ class ChannelConversionPings {
     if (_json.containsKey("pings")) {
       pings = _json["pings"]
           .map((value) => new ChannelConversionPing.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ChannelConversionPing>();
     }
   }
 
@@ -8394,8 +8400,10 @@ class ChannelListResponse {
       eventId = _json["eventId"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Channel.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Channel.fromJson(value))
+          .toList()
+          .cast<Channel>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -8681,7 +8689,8 @@ class ChannelSectionListResponse {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new ChannelSection.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ChannelSection>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -9334,8 +9343,10 @@ class CommentListResponse {
       eventId = _json["eventId"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Comment.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Comment.fromJson(value))
+          .toList()
+          .cast<Comment>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -9658,7 +9669,8 @@ class CommentThreadListResponse {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new CommentThread.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CommentThread>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -9721,7 +9733,8 @@ class CommentThreadReplies {
     if (_json.containsKey("comments")) {
       comments = _json["comments"]
           .map((value) => new Comment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Comment>();
     }
   }
 
@@ -11100,7 +11113,8 @@ class FanFundingEventListResponse {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new FanFundingEvent.fromJson(value))
-          .toList();
+          .toList()
+          .cast<FanFundingEvent>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -11368,7 +11382,8 @@ class GuideCategoryListResponse {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new GuideCategory.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GuideCategory>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -11538,7 +11553,8 @@ class I18nLanguageListResponse {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new I18nLanguage.fromJson(value))
-          .toList();
+          .toList()
+          .cast<I18nLanguage>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -11685,7 +11701,8 @@ class I18nRegionListResponse {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new I18nRegion.fromJson(value))
-          .toList();
+          .toList()
+          .cast<I18nRegion>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -12156,7 +12173,8 @@ class InvideoPromotion {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new PromotedItem.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PromotedItem>();
     }
     if (_json.containsKey("position")) {
       position = new InvideoPosition.fromJson(_json["position"]);
@@ -12587,7 +12605,8 @@ class LiveBroadcastListResponse {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new LiveBroadcast.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LiveBroadcast>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -13252,7 +13271,8 @@ class LiveChatMessageListResponse {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new LiveChatMessage.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LiveChatMessage>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -13607,7 +13627,8 @@ class LiveChatModeratorListResponse {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new LiveChatModerator.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LiveChatModerator>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -13731,7 +13752,8 @@ class LiveChatPollEditedDetails {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new LiveChatPollItem.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LiveChatPollItem>();
     }
     if (_json.containsKey("prompt")) {
       prompt = _json["prompt"];
@@ -13797,7 +13819,8 @@ class LiveChatPollOpenedDetails {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new LiveChatPollItem.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LiveChatPollItem>();
     }
     if (_json.containsKey("prompt")) {
       prompt = _json["prompt"];
@@ -14216,7 +14239,8 @@ class LiveStreamHealthStatus {
     if (_json.containsKey("configurationIssues")) {
       configurationIssues = _json["configurationIssues"]
           .map((value) => new LiveStreamConfigurationIssue.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LiveStreamConfigurationIssue>();
     }
     if (_json.containsKey("lastUpdateTimeSeconds")) {
       lastUpdateTimeSeconds = _json["lastUpdateTimeSeconds"];
@@ -14282,7 +14306,8 @@ class LiveStreamListResponse {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new LiveStream.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LiveStream>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -14454,7 +14479,8 @@ class LocalizedProperty {
     if (_json.containsKey("localized")) {
       localized = _json["localized"]
           .map((value) => new LocalizedString.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LocalizedString>();
     }
   }
 
@@ -14979,7 +15005,8 @@ class PlaylistItemListResponse {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new PlaylistItem.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PlaylistItem>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -15202,8 +15229,10 @@ class PlaylistListResponse {
       eventId = _json["eventId"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Playlist.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Playlist.fromJson(value))
+          .toList()
+          .cast<Playlist>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -15682,7 +15711,8 @@ class SearchListResponse {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new SearchResult.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SearchResult>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -15978,8 +16008,10 @@ class SponsorListResponse {
       eventId = _json["eventId"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Sponsor.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Sponsor.fromJson(value))
+          .toList()
+          .cast<Sponsor>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -16231,7 +16263,8 @@ class SubscriptionListResponse {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new Subscription.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Subscription>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -16507,7 +16540,8 @@ class SuperChatEventListResponse {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new SuperChatEvent.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SuperChatEvent>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -16795,7 +16829,8 @@ class ThumbnailSetResponse {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new ThumbnailDetails.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ThumbnailDetails>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -17197,7 +17232,8 @@ class VideoAbuseReportReasonListResponse {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new VideoAbuseReportReason.fromJson(value))
-          .toList();
+          .toList()
+          .cast<VideoAbuseReportReason>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -17247,7 +17283,8 @@ class VideoAbuseReportReasonSnippet {
     if (_json.containsKey("secondaryReasons")) {
       secondaryReasons = _json["secondaryReasons"]
           .map((value) => new VideoAbuseReportSecondaryReason.fromJson(value))
-          .toList();
+          .toList()
+          .cast<VideoAbuseReportSecondaryReason>();
     }
   }
 
@@ -17440,7 +17477,8 @@ class VideoCategoryListResponse {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new VideoCategory.fromJson(value))
-          .toList();
+          .toList()
+          .cast<VideoCategory>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -17762,7 +17800,8 @@ class VideoFileDetails {
     if (_json.containsKey("audioStreams")) {
       audioStreams = _json["audioStreams"]
           .map((value) => new VideoFileDetailsAudioStream.fromJson(value))
-          .toList();
+          .toList()
+          .cast<VideoFileDetailsAudioStream>();
     }
     if (_json.containsKey("bitrateBps")) {
       bitrateBps = _json["bitrateBps"];
@@ -17788,7 +17827,8 @@ class VideoFileDetails {
     if (_json.containsKey("videoStreams")) {
       videoStreams = _json["videoStreams"]
           .map((value) => new VideoFileDetailsVideoStream.fromJson(value))
-          .toList();
+          .toList()
+          .cast<VideoFileDetailsVideoStream>();
     }
   }
 
@@ -18004,7 +18044,8 @@ class VideoGetRatingResponse {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new VideoRating.fromJson(value))
-          .toList();
+          .toList()
+          .cast<VideoRating>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -18073,7 +18114,10 @@ class VideoListResponse {
       eventId = _json["eventId"];
     }
     if (_json.containsKey("items")) {
-      items = _json["items"].map((value) => new Video.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Video.fromJson(value))
+          .toList()
+          .cast<Video>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -18947,7 +18991,8 @@ class VideoSuggestions {
     if (_json.containsKey("tagSuggestions")) {
       tagSuggestions = _json["tagSuggestions"]
           .map((value) => new VideoSuggestionsTagSuggestion.fromJson(value))
-          .toList();
+          .toList()
+          .cast<VideoSuggestionsTagSuggestion>();
     }
   }
 

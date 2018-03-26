@@ -6836,7 +6836,10 @@ class Asps {
       etag = _json["etag"];
     }
     if (_json.containsKey("items")) {
-      items = _json["items"].map((value) => new Asp.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Asp.fromJson(value))
+          .toList()
+          .cast<Asp>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -6994,7 +6997,8 @@ class Buildings {
     if (_json.containsKey("buildings")) {
       buildings = _json["buildings"]
           .map((value) => new Building.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Building>();
     }
     if (_json.containsKey("etag")) {
       etag = _json["etag"];
@@ -7208,7 +7212,8 @@ class CalendarResources {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new CalendarResource.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CalendarResource>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -7603,7 +7608,8 @@ class ChromeOsDevice {
     if (_json.containsKey("activeTimeRanges")) {
       activeTimeRanges = _json["activeTimeRanges"]
           .map((value) => new ChromeOsDeviceActiveTimeRanges.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ChromeOsDeviceActiveTimeRanges>();
     }
     if (_json.containsKey("annotatedAssetId")) {
       annotatedAssetId = _json["annotatedAssetId"];
@@ -7620,7 +7626,8 @@ class ChromeOsDevice {
     if (_json.containsKey("deviceFiles")) {
       deviceFiles = _json["deviceFiles"]
           .map((value) => new ChromeOsDeviceDeviceFiles.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ChromeOsDeviceDeviceFiles>();
     }
     if (_json.containsKey("deviceId")) {
       deviceId = _json["deviceId"];
@@ -7670,7 +7677,8 @@ class ChromeOsDevice {
     if (_json.containsKey("recentUsers")) {
       recentUsers = _json["recentUsers"]
           .map((value) => new ChromeOsDeviceRecentUsers.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ChromeOsDeviceRecentUsers>();
     }
     if (_json.containsKey("serialNumber")) {
       serialNumber = _json["serialNumber"];
@@ -7833,7 +7841,8 @@ class ChromeOsDevices {
     if (_json.containsKey("chromeosdevices")) {
       chromeosdevices = _json["chromeosdevices"]
           .map((value) => new ChromeOsDevice.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ChromeOsDevice>();
     }
     if (_json.containsKey("etag")) {
       etag = _json["etag"];
@@ -8175,7 +8184,8 @@ class DomainAliases {
     if (_json.containsKey("domainAliases")) {
       domainAliases = _json["domainAliases"]
           .map((value) => new DomainAlias.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DomainAlias>();
     }
     if (_json.containsKey("etag")) {
       etag = _json["etag"];
@@ -8234,7 +8244,8 @@ class Domains {
     if (_json.containsKey("domainAliases")) {
       domainAliases = _json["domainAliases"]
           .map((value) => new DomainAlias.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DomainAlias>();
     }
     if (_json.containsKey("domainName")) {
       domainName = _json["domainName"];
@@ -8297,8 +8308,10 @@ class Domains2 {
 
   Domains2.fromJson(core.Map _json) {
     if (_json.containsKey("domains")) {
-      domains =
-          _json["domains"].map((value) => new Domains.fromJson(value)).toList();
+      domains = _json["domains"]
+          .map((value) => new Domains.fromJson(value))
+          .toList()
+          .cast<Domains>();
     }
     if (_json.containsKey("etag")) {
       etag = _json["etag"];
@@ -8434,7 +8447,8 @@ class Features {
     if (_json.containsKey("features")) {
       features = _json["features"]
           .map((value) => new Feature.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Feature>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -8588,8 +8602,10 @@ class Groups {
       etag = _json["etag"];
     }
     if (_json.containsKey("groups")) {
-      groups =
-          _json["groups"].map((value) => new Group.fromJson(value)).toList();
+      groups = _json["groups"]
+          .map((value) => new Group.fromJson(value))
+          .toList()
+          .cast<Group>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -8720,8 +8736,10 @@ class Members {
       kind = _json["kind"];
     }
     if (_json.containsKey("members")) {
-      members =
-          _json["members"].map((value) => new Member.fromJson(value)).toList();
+      members = _json["members"]
+          .map((value) => new Member.fromJson(value))
+          .toList()
+          .cast<Member>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -8962,7 +8980,8 @@ class MobileDevice {
     if (_json.containsKey("applications")) {
       applications = _json["applications"]
           .map((value) => new MobileDeviceApplications.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MobileDeviceApplications>();
     }
     if (_json.containsKey("basebandVersion")) {
       basebandVersion = _json["basebandVersion"];
@@ -9258,7 +9277,8 @@ class MobileDevices {
     if (_json.containsKey("mobiledevices")) {
       mobiledevices = _json["mobiledevices"]
           .map((value) => new MobileDevice.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MobileDevice>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -9395,7 +9415,8 @@ class Notifications {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new Notification.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Notification>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -9549,7 +9570,8 @@ class OrgUnits {
     if (_json.containsKey("organizationUnits")) {
       organizationUnits = _json["organizationUnits"]
           .map((value) => new OrgUnit.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrgUnit>();
     }
   }
 
@@ -9601,7 +9623,8 @@ class Privilege {
     if (_json.containsKey("childPrivileges")) {
       childPrivileges = _json["childPrivileges"]
           .map((value) => new Privilege.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Privilege>();
     }
     if (_json.containsKey("etag")) {
       etag = _json["etag"];
@@ -9670,8 +9693,10 @@ class Privileges {
       etag = _json["etag"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Privilege.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Privilege.fromJson(value))
+          .toList()
+          .cast<Privilege>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -9778,7 +9803,8 @@ class Role {
     if (_json.containsKey("rolePrivileges")) {
       rolePrivileges = _json["rolePrivileges"]
           .map((value) => new RoleRolePrivileges.fromJson(value))
-          .toList();
+          .toList()
+          .cast<RoleRolePrivileges>();
     }
   }
 
@@ -9917,7 +9943,8 @@ class RoleAssignments {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new RoleAssignment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<RoleAssignment>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -9965,7 +9992,10 @@ class Roles {
       etag = _json["etag"];
     }
     if (_json.containsKey("items")) {
-      items = _json["items"].map((value) => new Role.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Role.fromJson(value))
+          .toList()
+          .cast<Role>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -10020,7 +10050,8 @@ class Schema {
     if (_json.containsKey("fields")) {
       fields = _json["fields"]
           .map((value) => new SchemaFieldSpec.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SchemaFieldSpec>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -10213,8 +10244,10 @@ class Schemas {
       kind = _json["kind"];
     }
     if (_json.containsKey("schemas")) {
-      schemas =
-          _json["schemas"].map((value) => new Schema.fromJson(value)).toList();
+      schemas = _json["schemas"]
+          .map((value) => new Schema.fromJson(value))
+          .toList()
+          .cast<Schema>();
     }
   }
 
@@ -10340,7 +10373,10 @@ class Tokens {
       etag = _json["etag"];
     }
     if (_json.containsKey("items")) {
-      items = _json["items"].map((value) => new Token.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Token.fromJson(value))
+          .toList()
+          .cast<Token>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -10447,7 +10483,8 @@ class TrustedApps {
     if (_json.containsKey("trustedApps")) {
       trustedApps = _json["trustedApps"]
           .map((value) => new TrustedAppId.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TrustedAppId>();
     }
   }
 
@@ -12132,7 +12169,10 @@ class Users {
       triggerEvent = _json["trigger_event"];
     }
     if (_json.containsKey("users")) {
-      users = _json["users"].map((value) => new User.fromJson(value)).toList();
+      users = _json["users"]
+          .map((value) => new User.fromJson(value))
+          .toList()
+          .cast<User>();
     }
   }
 
@@ -12231,7 +12271,8 @@ class VerificationCodes {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new VerificationCode.fromJson(value))
-          .toList();
+          .toList()
+          .cast<VerificationCode>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];

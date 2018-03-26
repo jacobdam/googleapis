@@ -1310,7 +1310,8 @@ class GdataMedia {
     if (_json.containsKey("compositeMedia")) {
       compositeMedia = _json["compositeMedia"]
           .map((value) => new GdataCompositeMedia.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GdataCompositeMedia>();
     }
     if (_json.containsKey("contentType")) {
       contentType = _json["contentType"];
@@ -1622,7 +1623,10 @@ class ListJobsResponse {
 
   ListJobsResponse.fromJson(core.Map _json) {
     if (_json.containsKey("jobs")) {
-      jobs = _json["jobs"].map((value) => new Job.fromJson(value)).toList();
+      jobs = _json["jobs"]
+          .map((value) => new Job.fromJson(value))
+          .toList()
+          .cast<Job>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -1664,7 +1668,8 @@ class ListReportTypesResponse {
     if (_json.containsKey("reportTypes")) {
       reportTypes = _json["reportTypes"]
           .map((value) => new ReportType.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ReportType>();
     }
   }
 
@@ -1701,8 +1706,10 @@ class ListReportsResponse {
       nextPageToken = _json["nextPageToken"];
     }
     if (_json.containsKey("reports")) {
-      reports =
-          _json["reports"].map((value) => new Report.fromJson(value)).toList();
+      reports = _json["reports"]
+          .map((value) => new Report.fromJson(value))
+          .toList()
+          .cast<Report>();
     }
   }
 

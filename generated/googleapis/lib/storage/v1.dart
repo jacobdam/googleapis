@@ -4224,7 +4224,8 @@ class BucketLifecycle {
     if (_json.containsKey("rule")) {
       rule = _json["rule"]
           .map((value) => new BucketLifecycleRule.fromJson(value))
-          .toList();
+          .toList()
+          .cast<BucketLifecycleRule>();
     }
   }
 
@@ -4529,14 +4530,17 @@ class Bucket {
     if (_json.containsKey("acl")) {
       acl = _json["acl"]
           .map((value) => new BucketAccessControl.fromJson(value))
-          .toList();
+          .toList()
+          .cast<BucketAccessControl>();
     }
     if (_json.containsKey("billing")) {
       billing = new BucketBilling.fromJson(_json["billing"]);
     }
     if (_json.containsKey("cors")) {
-      cors =
-          _json["cors"].map((value) => new BucketCors.fromJson(value)).toList();
+      cors = _json["cors"]
+          .map((value) => new BucketCors.fromJson(value))
+          .toList()
+          .cast<BucketCors>();
     }
     if (_json.containsKey("defaultEventBasedHold")) {
       defaultEventBasedHold = _json["defaultEventBasedHold"];
@@ -4544,7 +4548,8 @@ class Bucket {
     if (_json.containsKey("defaultObjectAcl")) {
       defaultObjectAcl = _json["defaultObjectAcl"]
           .map((value) => new ObjectAccessControl.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ObjectAccessControl>();
     }
     if (_json.containsKey("encryption")) {
       encryption = new BucketEncryption.fromJson(_json["encryption"]);
@@ -4861,7 +4866,8 @@ class BucketAccessControls {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new BucketAccessControl.fromJson(value))
-          .toList();
+          .toList()
+          .cast<BucketAccessControl>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -4898,8 +4904,10 @@ class Buckets {
 
   Buckets.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Bucket.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Bucket.fromJson(value))
+          .toList()
+          .cast<Bucket>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -5124,7 +5132,8 @@ class ComposeRequest {
     if (_json.containsKey("sourceObjects")) {
       sourceObjects = _json["sourceObjects"]
           .map((value) => new ComposeRequestSourceObjects.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ComposeRequestSourceObjects>();
     }
   }
 
@@ -5260,7 +5269,8 @@ class Notifications {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new Notification.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Notification>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -5478,7 +5488,8 @@ class Object {
     if (_json.containsKey("acl")) {
       acl = _json["acl"]
           .map((value) => new ObjectAccessControl.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ObjectAccessControl>();
     }
     if (_json.containsKey("bucket")) {
       bucket = _json["bucket"];
@@ -5870,7 +5881,8 @@ class ObjectAccessControls {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new ObjectAccessControl.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ObjectAccessControl>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -5911,8 +5923,10 @@ class Objects {
 
   Objects.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Object.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Object.fromJson(value))
+          .toList()
+          .cast<Object>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -6067,7 +6081,8 @@ class Policy {
     if (_json.containsKey("bindings")) {
       bindings = _json["bindings"]
           .map((value) => new PolicyBindings.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PolicyBindings>();
     }
     if (_json.containsKey("etag")) {
       etag = _json["etag"];

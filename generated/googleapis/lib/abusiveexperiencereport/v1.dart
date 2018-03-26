@@ -230,7 +230,8 @@ class ViolatingSitesResponse {
     if (_json.containsKey("violatingSites")) {
       violatingSites = _json["violatingSites"]
           .map((value) => new SiteSummaryResponse.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SiteSummaryResponse>();
     }
   }
 

@@ -1135,8 +1135,10 @@ class ArrayValue {
 
   ArrayValue.fromJson(core.Map _json) {
     if (_json.containsKey("values")) {
-      values =
-          _json["values"].map((value) => new Value.fromJson(value)).toList();
+      values = _json["values"]
+          .map((value) => new Value.fromJson(value))
+          .toList()
+          .cast<Value>();
     }
   }
 
@@ -1408,8 +1410,10 @@ class CommitRequest {
       transaction = _json["transaction"];
     }
     if (_json.containsKey("writes")) {
-      writes =
-          _json["writes"].map((value) => new Write.fromJson(value)).toList();
+      writes = _json["writes"]
+          .map((value) => new Write.fromJson(value))
+          .toList()
+          .cast<Write>();
     }
   }
 
@@ -1446,7 +1450,8 @@ class CommitResponse {
     if (_json.containsKey("writeResults")) {
       writeResults = _json["writeResults"]
           .map((value) => new WriteResult.fromJson(value))
-          .toList();
+          .toList()
+          .cast<WriteResult>();
     }
   }
 
@@ -1481,8 +1486,10 @@ class CompositeFilter {
 
   CompositeFilter.fromJson(core.Map _json) {
     if (_json.containsKey("filters")) {
-      filters =
-          _json["filters"].map((value) => new Filter.fromJson(value)).toList();
+      filters = _json["filters"]
+          .map((value) => new Filter.fromJson(value))
+          .toList()
+          .cast<Filter>();
     }
     if (_json.containsKey("op")) {
       op = _json["op"];
@@ -1521,8 +1528,10 @@ class Cursor {
       before = _json["before"];
     }
     if (_json.containsKey("values")) {
-      values =
-          _json["values"].map((value) => new Value.fromJson(value)).toList();
+      values = _json["values"]
+          .map((value) => new Value.fromJson(value))
+          .toList()
+          .cast<Value>();
     }
   }
 
@@ -1824,7 +1833,8 @@ class DocumentTransform {
     if (_json.containsKey("fieldTransforms")) {
       fieldTransforms = _json["fieldTransforms"]
           .map((value) => new FieldTransform.fromJson(value))
-          .toList();
+          .toList()
+          .cast<FieldTransform>();
     }
   }
 
@@ -2117,7 +2127,8 @@ class Index {
     if (_json.containsKey("fields")) {
       fields = _json["fields"]
           .map((value) => new IndexField.fromJson(value))
-          .toList();
+          .toList()
+          .cast<IndexField>();
     }
     if (_json.containsKey("name")) {
       name = _json["name"];
@@ -2305,7 +2316,8 @@ class ListDocumentsResponse {
     if (_json.containsKey("documents")) {
       documents = _json["documents"]
           .map((value) => new Document.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Document>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -2337,8 +2349,10 @@ class ListIndexesResponse {
 
   ListIndexesResponse.fromJson(core.Map _json) {
     if (_json.containsKey("indexes")) {
-      indexes =
-          _json["indexes"].map((value) => new Index.fromJson(value)).toList();
+      indexes = _json["indexes"]
+          .map((value) => new Index.fromJson(value))
+          .toList()
+          .cast<Index>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -2662,7 +2676,8 @@ class Projection {
     if (_json.containsKey("fields")) {
       fields = _json["fields"]
           .map((value) => new FieldReference.fromJson(value))
-          .toList();
+          .toList()
+          .cast<FieldReference>();
     }
   }
 
@@ -3090,7 +3105,8 @@ class StructuredQuery {
     if (_json.containsKey("from")) {
       from = _json["from"]
           .map((value) => new CollectionSelector.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CollectionSelector>();
     }
     if (_json.containsKey("limit")) {
       limit = _json["limit"];
@@ -3099,8 +3115,10 @@ class StructuredQuery {
       offset = _json["offset"];
     }
     if (_json.containsKey("orderBy")) {
-      orderBy =
-          _json["orderBy"].map((value) => new Order.fromJson(value)).toList();
+      orderBy = _json["orderBy"]
+          .map((value) => new Order.fromJson(value))
+          .toList()
+          .cast<Order>();
     }
     if (_json.containsKey("select")) {
       select = new Projection.fromJson(_json["select"]);
@@ -3683,8 +3701,10 @@ class WriteRequest {
       streamToken = _json["streamToken"];
     }
     if (_json.containsKey("writes")) {
-      writes =
-          _json["writes"].map((value) => new Write.fromJson(value)).toList();
+      writes = _json["writes"]
+          .map((value) => new Write.fromJson(value))
+          .toList()
+          .cast<Write>();
     }
   }
 
@@ -3751,7 +3771,8 @@ class WriteResponse {
     if (_json.containsKey("writeResults")) {
       writeResults = _json["writeResults"]
           .map((value) => new WriteResult.fromJson(value))
-          .toList();
+          .toList()
+          .cast<WriteResult>();
     }
   }
 
@@ -3794,7 +3815,8 @@ class WriteResult {
     if (_json.containsKey("transformResults")) {
       transformResults = _json["transformResults"]
           .map((value) => new Value.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Value>();
     }
     if (_json.containsKey("updateTime")) {
       updateTime = _json["updateTime"];

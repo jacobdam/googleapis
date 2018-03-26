@@ -3404,7 +3404,8 @@ class AchievementDefinitionsListResponse {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new AchievementDefinition.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AchievementDefinition>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -3605,7 +3606,8 @@ class AchievementUpdateMultipleRequest {
     if (_json.containsKey("updates")) {
       updates = _json["updates"]
           .map((value) => new AchievementUpdateRequest.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AchievementUpdateRequest>();
     }
   }
 
@@ -3640,7 +3642,8 @@ class AchievementUpdateMultipleResponse {
     if (_json.containsKey("updatedAchievements")) {
       updatedAchievements = _json["updatedAchievements"]
           .map((value) => new AchievementUpdateResponse.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AchievementUpdateResponse>();
     }
   }
 
@@ -3958,7 +3961,8 @@ class Application {
     if (_json.containsKey("assets")) {
       assets = _json["assets"]
           .map((value) => new ImageAsset.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ImageAsset>();
     }
     if (_json.containsKey("author")) {
       author = _json["author"];
@@ -3978,7 +3982,8 @@ class Application {
     if (_json.containsKey("instances")) {
       instances = _json["instances"]
           .map((value) => new Instance.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Instance>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -4187,8 +4192,10 @@ class CategoryListResponse {
 
   CategoryListResponse.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Category.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Category.fromJson(value))
+          .toList()
+          .cast<Category>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -4340,7 +4347,8 @@ class EventDefinition {
     if (_json.containsKey("childEvents")) {
       childEvents = _json["childEvents"]
           .map((value) => new EventChild.fromJson(value))
-          .toList();
+          .toList()
+          .cast<EventChild>();
     }
     if (_json.containsKey("description")) {
       description = _json["description"];
@@ -4415,7 +4423,8 @@ class EventDefinitionListResponse {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new EventDefinition.fromJson(value))
-          .toList();
+          .toList()
+          .cast<EventDefinition>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -4509,7 +4518,8 @@ class EventPeriodUpdate {
     if (_json.containsKey("updates")) {
       updates = _json["updates"]
           .map((value) => new EventUpdateRequest.fromJson(value))
-          .toList();
+          .toList()
+          .cast<EventUpdateRequest>();
     }
   }
 
@@ -4606,7 +4616,8 @@ class EventRecordRequest {
     if (_json.containsKey("timePeriods")) {
       timePeriods = _json["timePeriods"]
           .map((value) => new EventPeriodUpdate.fromJson(value))
-          .toList();
+          .toList()
+          .cast<EventPeriodUpdate>();
     }
   }
 
@@ -4693,12 +4704,14 @@ class EventUpdateResponse {
     if (_json.containsKey("batchFailures")) {
       batchFailures = _json["batchFailures"]
           .map((value) => new EventBatchRecordFailure.fromJson(value))
-          .toList();
+          .toList()
+          .cast<EventBatchRecordFailure>();
     }
     if (_json.containsKey("eventFailures")) {
       eventFailures = _json["eventFailures"]
           .map((value) => new EventRecordFailure.fromJson(value))
-          .toList();
+          .toList()
+          .cast<EventRecordFailure>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -4706,7 +4719,8 @@ class EventUpdateResponse {
     if (_json.containsKey("playerEvents")) {
       playerEvents = _json["playerEvents"]
           .map((value) => new PlayerEvent.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PlayerEvent>();
     }
   }
 
@@ -5338,7 +5352,8 @@ class LeaderboardListResponse {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new Leaderboard.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Leaderboard>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -5455,7 +5470,8 @@ class LeaderboardScores {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new LeaderboardEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LeaderboardEntry>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -5524,7 +5540,8 @@ class MetagameConfig {
     if (_json.containsKey("playerLevels")) {
       playerLevels = _json["playerLevels"]
           .map((value) => new PlayerLevel.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PlayerLevel>();
     }
   }
 
@@ -6155,7 +6172,8 @@ class PlayerAchievementListResponse {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new PlayerAchievement.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PlayerAchievement>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -6261,7 +6279,8 @@ class PlayerEventListResponse {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new PlayerEvent.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PlayerEvent>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -6473,7 +6492,8 @@ class PlayerLeaderboardScoreListResponse {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new PlayerLeaderboardScore.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PlayerLeaderboardScore>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -6572,8 +6592,10 @@ class PlayerListResponse {
 
   PlayerListResponse.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Player.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Player.fromJson(value))
+          .toList()
+          .cast<Player>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -6682,7 +6704,8 @@ class PlayerScoreListResponse {
     if (_json.containsKey("submittedScores")) {
       submittedScores = _json["submittedScores"]
           .map((value) => new PlayerScoreResponse.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PlayerScoreResponse>();
     }
   }
 
@@ -6750,7 +6773,8 @@ class PlayerScoreResponse {
     if (_json.containsKey("unbeatenScores")) {
       unbeatenScores = _json["unbeatenScores"]
           .map((value) => new PlayerScore.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PlayerScore>();
     }
   }
 
@@ -6798,7 +6822,8 @@ class PlayerScoreSubmissionList {
     if (_json.containsKey("scores")) {
       scores = _json["scores"]
           .map((value) => new ScoreSubmission.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ScoreSubmission>();
     }
   }
 
@@ -7087,7 +7112,8 @@ class Quest {
     if (_json.containsKey("milestones")) {
       milestones = _json["milestones"]
           .map((value) => new QuestMilestone.fromJson(value))
-          .toList();
+          .toList()
+          .cast<QuestMilestone>();
     }
     if (_json.containsKey("name")) {
       name = _json["name"];
@@ -7291,7 +7317,10 @@ class QuestListResponse {
 
   QuestListResponse.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items = _json["items"].map((value) => new Quest.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Quest.fromJson(value))
+          .toList()
+          .cast<Quest>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -7361,7 +7390,8 @@ class QuestMilestone {
     if (_json.containsKey("criteria")) {
       criteria = _json["criteria"]
           .map((value) => new QuestCriterion.fromJson(value))
-          .toList();
+          .toList()
+          .cast<QuestCriterion>();
     }
     if (_json.containsKey("id")) {
       id = _json["id"];
@@ -7538,7 +7568,8 @@ class Room {
     if (_json.containsKey("participants")) {
       participants = _json["participants"]
           .map((value) => new RoomParticipant.fromJson(value))
-          .toList();
+          .toList()
+          .cast<RoomParticipant>();
     }
     if (_json.containsKey("roomId")) {
       roomId = _json["roomId"];
@@ -7926,7 +7957,8 @@ class RoomLeaveDiagnostics {
     if (_json.containsKey("peerSession")) {
       peerSession = _json["peerSession"]
           .map((value) => new PeerSessionDiagnostics.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PeerSessionDiagnostics>();
     }
     if (_json.containsKey("socketsUsed")) {
       socketsUsed = _json["socketsUsed"];
@@ -8045,7 +8077,10 @@ class RoomList {
 
   RoomList.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items = _json["items"].map((value) => new Room.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Room.fromJson(value))
+          .toList()
+          .cast<Room>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -8226,7 +8261,8 @@ class RoomP2PStatuses {
     if (_json.containsKey("updates")) {
       updates = _json["updates"]
           .map((value) => new RoomP2PStatus.fromJson(value))
-          .toList();
+          .toList()
+          .cast<RoomP2PStatus>();
     }
   }
 
@@ -8422,7 +8458,8 @@ class RoomStatus {
     if (_json.containsKey("participants")) {
       participants = _json["participants"]
           .map((value) => new RoomParticipant.fromJson(value))
-          .toList();
+          .toList()
+          .cast<RoomParticipant>();
     }
     if (_json.containsKey("roomId")) {
       roomId = _json["roomId"];
@@ -8721,8 +8758,10 @@ class SnapshotListResponse {
 
   SnapshotListResponse.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Snapshot.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Snapshot.fromJson(value))
+          .toList()
+          .cast<Snapshot>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -8936,7 +8975,8 @@ class TurnBasedMatch {
     if (_json.containsKey("participants")) {
       participants = _json["participants"]
           .map((value) => new TurnBasedMatchParticipant.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TurnBasedMatchParticipant>();
     }
     if (_json.containsKey("pendingParticipantId")) {
       pendingParticipantId = _json["pendingParticipantId"];
@@ -8951,7 +8991,8 @@ class TurnBasedMatch {
     if (_json.containsKey("results")) {
       results = _json["results"]
           .map((value) => new ParticipantResult.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ParticipantResult>();
     }
     if (_json.containsKey("status")) {
       status = _json["status"];
@@ -9211,7 +9252,8 @@ class TurnBasedMatchList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new TurnBasedMatch.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TurnBasedMatch>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -9442,7 +9484,8 @@ class TurnBasedMatchResults {
     if (_json.containsKey("results")) {
       results = _json["results"]
           .map((value) => new ParticipantResult.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ParticipantResult>();
     }
   }
 
@@ -9488,7 +9531,8 @@ class TurnBasedMatchSync {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new TurnBasedMatch.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TurnBasedMatch>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -9561,7 +9605,8 @@ class TurnBasedMatchTurn {
     if (_json.containsKey("results")) {
       results = _json["results"]
           .map((value) => new ParticipantResult.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ParticipantResult>();
     }
   }
 

@@ -588,7 +588,8 @@ class FetchThreatListUpdatesRequest {
     if (_json.containsKey("listUpdateRequests")) {
       listUpdateRequests = _json["listUpdateRequests"]
           .map((value) => new ListUpdateRequest.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ListUpdateRequest>();
     }
   }
 
@@ -620,7 +621,8 @@ class FetchThreatListUpdatesResponse {
     if (_json.containsKey("listUpdateResponses")) {
       listUpdateResponses = _json["listUpdateResponses"]
           .map((value) => new ListUpdateResponse.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ListUpdateResponse>();
     }
     if (_json.containsKey("minimumWaitDuration")) {
       minimumWaitDuration = _json["minimumWaitDuration"];
@@ -711,7 +713,8 @@ class FindFullHashesResponse {
     if (_json.containsKey("matches")) {
       matches = _json["matches"]
           .map((value) => new ThreatMatch.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ThreatMatch>();
     }
     if (_json.containsKey("minimumWaitDuration")) {
       minimumWaitDuration = _json["minimumWaitDuration"];
@@ -779,7 +782,8 @@ class FindThreatMatchesResponse {
     if (_json.containsKey("matches")) {
       matches = _json["matches"]
           .map((value) => new ThreatMatch.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ThreatMatch>();
     }
   }
 
@@ -803,7 +807,8 @@ class ListThreatListsResponse {
     if (_json.containsKey("threatLists")) {
       threatLists = _json["threatLists"]
           .map((value) => new ThreatListDescriptor.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ThreatListDescriptor>();
     }
   }
 
@@ -1021,7 +1026,8 @@ class ListUpdateResponse {
     if (_json.containsKey("additions")) {
       additions = _json["additions"]
           .map((value) => new ThreatEntrySet.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ThreatEntrySet>();
     }
     if (_json.containsKey("checksum")) {
       checksum = new Checksum.fromJson(_json["checksum"]);
@@ -1035,7 +1041,8 @@ class ListUpdateResponse {
     if (_json.containsKey("removals")) {
       removals = _json["removals"]
           .map((value) => new ThreatEntrySet.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ThreatEntrySet>();
     }
     if (_json.containsKey("responseType")) {
       responseType = _json["responseType"];
@@ -1339,7 +1346,8 @@ class ThreatEntryMetadata {
     if (_json.containsKey("entries")) {
       entries = _json["entries"]
           .map((value) => new MetadataEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MetadataEntry>();
     }
   }
 
@@ -1489,7 +1497,8 @@ class ThreatHit {
     if (_json.containsKey("resources")) {
       resources = _json["resources"]
           .map((value) => new ThreatSource.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ThreatSource>();
     }
     if (_json.containsKey("threatType")) {
       threatType = _json["threatType"];
@@ -1548,7 +1557,8 @@ class ThreatInfo {
     if (_json.containsKey("threatEntries")) {
       threatEntries = _json["threatEntries"]
           .map((value) => new ThreatEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ThreatEntry>();
     }
     if (_json.containsKey("threatEntryTypes")) {
       threatEntryTypes = _json["threatEntryTypes"];

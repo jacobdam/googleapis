@@ -784,7 +784,8 @@ class AuditConfig {
     if (_json.containsKey("auditLogConfigs")) {
       auditLogConfigs = _json["auditLogConfigs"]
           .map((value) => new AuditLogConfig.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AuditLogConfig>();
     }
     if (_json.containsKey("service")) {
       service = _json["service"];
@@ -1125,8 +1126,10 @@ class ListFoldersResponse {
 
   ListFoldersResponse.fromJson(core.Map _json) {
     if (_json.containsKey("folders")) {
-      folders =
-          _json["folders"].map((value) => new Folder.fromJson(value)).toList();
+      folders = _json["folders"]
+          .map((value) => new Folder.fromJson(value))
+          .toList()
+          .cast<Folder>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -1323,12 +1326,14 @@ class Policy {
     if (_json.containsKey("auditConfigs")) {
       auditConfigs = _json["auditConfigs"]
           .map((value) => new AuditConfig.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AuditConfig>();
     }
     if (_json.containsKey("bindings")) {
       bindings = _json["bindings"]
           .map((value) => new Binding.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Binding>();
     }
     if (_json.containsKey("etag")) {
       etag = _json["etag"];
@@ -1479,8 +1484,10 @@ class SearchFoldersResponse {
 
   SearchFoldersResponse.fromJson(core.Map _json) {
     if (_json.containsKey("folders")) {
-      folders =
-          _json["folders"].map((value) => new Folder.fromJson(value)).toList();
+      folders = _json["folders"]
+          .map((value) => new Folder.fromJson(value))
+          .toList()
+          .cast<Folder>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];

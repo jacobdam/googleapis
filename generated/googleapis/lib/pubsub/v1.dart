@@ -1945,7 +1945,8 @@ class ListSnapshotsResponse {
     if (_json.containsKey("snapshots")) {
       snapshots = _json["snapshots"]
           .map((value) => new Snapshot.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Snapshot>();
     }
   }
 
@@ -1981,7 +1982,8 @@ class ListSubscriptionsResponse {
     if (_json.containsKey("subscriptions")) {
       subscriptions = _json["subscriptions"]
           .map((value) => new Subscription.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Subscription>();
     }
   }
 
@@ -2083,8 +2085,10 @@ class ListTopicsResponse {
       nextPageToken = _json["nextPageToken"];
     }
     if (_json.containsKey("topics")) {
-      topics =
-          _json["topics"].map((value) => new Topic.fromJson(value)).toList();
+      topics = _json["topics"]
+          .map((value) => new Topic.fromJson(value))
+          .toList()
+          .cast<Topic>();
     }
   }
 
@@ -2235,7 +2239,8 @@ class Policy {
     if (_json.containsKey("bindings")) {
       bindings = _json["bindings"]
           .map((value) => new Binding.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Binding>();
     }
     if (_json.containsKey("etag")) {
       etag = _json["etag"];
@@ -2272,7 +2277,8 @@ class PublishRequest {
     if (_json.containsKey("messages")) {
       messages = _json["messages"]
           .map((value) => new PubsubMessage.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PubsubMessage>();
     }
   }
 
@@ -2427,7 +2433,8 @@ class PullResponse {
     if (_json.containsKey("receivedMessages")) {
       receivedMessages = _json["receivedMessages"]
           .map((value) => new ReceivedMessage.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ReceivedMessage>();
     }
   }
 

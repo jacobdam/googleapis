@@ -1242,8 +1242,10 @@ class AdClients {
       etag = _json["etag"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new AdClient.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new AdClient.fromJson(value))
+          .toList()
+          .cast<AdClient>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -1360,8 +1362,10 @@ class AdUnits {
       etag = _json["etag"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new AdUnit.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new AdUnit.fromJson(value))
+          .toList()
+          .cast<AdUnit>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -1462,7 +1466,10 @@ class Alerts {
 
   Alerts.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items = _json["items"].map((value) => new Alert.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Alert.fromJson(value))
+          .toList()
+          .cast<Alert>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -1620,7 +1627,8 @@ class CustomChannels {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new CustomChannel.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CustomChannel>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -1661,7 +1669,8 @@ class Metadata {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new ReportingMetadataEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ReportingMetadataEntry>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -1786,7 +1795,8 @@ class PreferredDeals {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new PreferredDeal.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PreferredDeal>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -1887,7 +1897,8 @@ class Report {
     if (_json.containsKey("headers")) {
       headers = _json["headers"]
           .map((value) => new ReportHeaders.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ReportHeaders>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -2085,7 +2096,8 @@ class SavedReports {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new SavedReport.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SavedReport>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -2179,7 +2191,8 @@ class UrlChannels {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new UrlChannel.fromJson(value))
-          .toList();
+          .toList()
+          .cast<UrlChannel>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];

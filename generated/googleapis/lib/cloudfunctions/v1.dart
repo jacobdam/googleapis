@@ -1171,7 +1171,8 @@ class ListFunctionsResponse {
     if (_json.containsKey("functions")) {
       functions = _json["functions"]
           .map((value) => new CloudFunction.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CloudFunction>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -1205,7 +1206,8 @@ class ListLocationsResponse {
     if (_json.containsKey("locations")) {
       locations = _json["locations"]
           .map((value) => new Location.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Location>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -1242,7 +1244,8 @@ class ListOperationsResponse {
     if (_json.containsKey("operations")) {
       operations = _json["operations"]
           .map((value) => new Operation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Operation>();
     }
   }
 

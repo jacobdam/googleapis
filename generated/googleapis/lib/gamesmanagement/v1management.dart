@@ -1300,7 +1300,8 @@ class AchievementResetAllResponse {
     if (_json.containsKey("results")) {
       results = _json["results"]
           .map((value) => new AchievementResetResponse.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AchievementResetResponse>();
     }
   }
 
@@ -1627,7 +1628,8 @@ class HiddenPlayerList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new HiddenPlayer.fromJson(value))
-          .toList();
+          .toList()
+          .cast<HiddenPlayer>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -1838,7 +1840,8 @@ class PlayerScoreResetAllResponse {
     if (_json.containsKey("results")) {
       results = _json["results"]
           .map((value) => new PlayerScoreResetResponse.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PlayerScoreResetResponse>();
     }
   }
 

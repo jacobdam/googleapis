@@ -955,7 +955,8 @@ class ListLocationsResponse {
     if (_json.containsKey("locations")) {
       locations = _json["locations"]
           .map((value) => new Location.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Location>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -990,7 +991,10 @@ class ListNodesResponse {
       nextPageToken = _json["nextPageToken"];
     }
     if (_json.containsKey("nodes")) {
-      nodes = _json["nodes"].map((value) => new Node.fromJson(value)).toList();
+      nodes = _json["nodes"]
+          .map((value) => new Node.fromJson(value))
+          .toList()
+          .cast<Node>();
     }
   }
 
@@ -1024,7 +1028,8 @@ class ListOperationsResponse {
     if (_json.containsKey("operations")) {
       operations = _json["operations"]
           .map((value) => new Operation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Operation>();
     }
   }
 
@@ -1059,7 +1064,8 @@ class ListTensorFlowVersionsResponse {
     if (_json.containsKey("tensorflowVersions")) {
       tensorflowVersions = _json["tensorflowVersions"]
           .map((value) => new TensorFlowVersion.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TensorFlowVersion>();
     }
   }
 
@@ -1296,7 +1302,8 @@ class Node {
     if (_json.containsKey("networkEndpoints")) {
       networkEndpoints = _json["networkEndpoints"]
           .map((value) => new NetworkEndpoint.fromJson(value))
-          .toList();
+          .toList()
+          .cast<NetworkEndpoint>();
     }
     if (_json.containsKey("port")) {
       port = _json["port"];

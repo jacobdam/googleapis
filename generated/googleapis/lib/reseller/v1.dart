@@ -1939,7 +1939,8 @@ class Subscriptions {
     if (_json.containsKey("subscriptions")) {
       subscriptions = _json["subscriptions"]
           .map((value) => new Subscription.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Subscription>();
     }
   }
 

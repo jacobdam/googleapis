@@ -761,19 +761,25 @@ class Api {
 
   Api.fromJson(core.Map _json) {
     if (_json.containsKey("methods")) {
-      methods =
-          _json["methods"].map((value) => new Method.fromJson(value)).toList();
+      methods = _json["methods"]
+          .map((value) => new Method.fromJson(value))
+          .toList()
+          .cast<Method>();
     }
     if (_json.containsKey("mixins")) {
-      mixins =
-          _json["mixins"].map((value) => new Mixin.fromJson(value)).toList();
+      mixins = _json["mixins"]
+          .map((value) => new Mixin.fromJson(value))
+          .toList()
+          .cast<Mixin>();
     }
     if (_json.containsKey("name")) {
       name = _json["name"];
     }
     if (_json.containsKey("options")) {
-      options =
-          _json["options"].map((value) => new Option.fromJson(value)).toList();
+      options = _json["options"]
+          .map((value) => new Option.fromJson(value))
+          .toList()
+          .cast<Option>();
     }
     if (_json.containsKey("sourceContext")) {
       sourceContext = new SourceContext.fromJson(_json["sourceContext"]);
@@ -989,12 +995,14 @@ class Authentication {
     if (_json.containsKey("providers")) {
       providers = _json["providers"]
           .map((value) => new AuthProvider.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AuthProvider>();
     }
     if (_json.containsKey("rules")) {
       rules = _json["rules"]
           .map((value) => new AuthenticationRule.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AuthenticationRule>();
     }
   }
 
@@ -1060,7 +1068,8 @@ class AuthenticationRule {
     if (_json.containsKey("requirements")) {
       requirements = _json["requirements"]
           .map((value) => new AuthRequirement.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AuthRequirement>();
     }
     if (_json.containsKey("selector")) {
       selector = _json["selector"];
@@ -1192,7 +1201,8 @@ class Backend {
     if (_json.containsKey("rules")) {
       rules = _json["rules"]
           .map((value) => new BackendRule.fromJson(value))
-          .toList();
+          .toList()
+          .cast<BackendRule>();
     }
   }
 
@@ -1296,7 +1306,8 @@ class Billing {
     if (_json.containsKey("consumerDestinations")) {
       consumerDestinations = _json["consumerDestinations"]
           .map((value) => new BillingDestination.fromJson(value))
-          .toList();
+          .toList()
+          .cast<BillingDestination>();
     }
   }
 
@@ -1432,7 +1443,8 @@ class Context {
     if (_json.containsKey("rules")) {
       rules = _json["rules"]
           .map((value) => new ContextRule.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ContextRule>();
     }
   }
 
@@ -1615,7 +1627,8 @@ class CustomError {
     if (_json.containsKey("rules")) {
       rules = _json["rules"]
           .map((value) => new CustomErrorRule.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CustomErrorRule>();
     }
     if (_json.containsKey("types")) {
       types = _json["types"];
@@ -1800,12 +1813,16 @@ class Documentation {
       overview = _json["overview"];
     }
     if (_json.containsKey("pages")) {
-      pages = _json["pages"].map((value) => new Page.fromJson(value)).toList();
+      pages = _json["pages"]
+          .map((value) => new Page.fromJson(value))
+          .toList()
+          .cast<Page>();
     }
     if (_json.containsKey("rules")) {
       rules = _json["rules"]
           .map((value) => new DocumentationRule.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DocumentationRule>();
     }
     if (_json.containsKey("summary")) {
       summary = _json["summary"];
@@ -2018,14 +2035,17 @@ class Enum {
     if (_json.containsKey("enumvalue")) {
       enumvalue = _json["enumvalue"]
           .map((value) => new EnumValue.fromJson(value))
-          .toList();
+          .toList()
+          .cast<EnumValue>();
     }
     if (_json.containsKey("name")) {
       name = _json["name"];
     }
     if (_json.containsKey("options")) {
-      options =
-          _json["options"].map((value) => new Option.fromJson(value)).toList();
+      options = _json["options"]
+          .map((value) => new Option.fromJson(value))
+          .toList()
+          .cast<Option>();
     }
     if (_json.containsKey("sourceContext")) {
       sourceContext = new SourceContext.fromJson(_json["sourceContext"]);
@@ -2078,8 +2098,10 @@ class EnumValue {
       number = _json["number"];
     }
     if (_json.containsKey("options")) {
-      options =
-          _json["options"].map((value) => new Option.fromJson(value)).toList();
+      options = _json["options"]
+          .map((value) => new Option.fromJson(value))
+          .toList()
+          .cast<Option>();
     }
   }
 
@@ -2207,8 +2229,10 @@ class Field {
       oneofIndex = _json["oneofIndex"];
     }
     if (_json.containsKey("options")) {
-      options =
-          _json["options"].map((value) => new Option.fromJson(value)).toList();
+      options = _json["options"]
+          .map((value) => new Option.fromJson(value))
+          .toList()
+          .cast<Option>();
     }
     if (_json.containsKey("packed")) {
       packed = _json["packed"];
@@ -2280,8 +2304,10 @@ class Http {
       fullyDecodeReservedExpansion = _json["fullyDecodeReservedExpansion"];
     }
     if (_json.containsKey("rules")) {
-      rules =
-          _json["rules"].map((value) => new HttpRule.fromJson(value)).toList();
+      rules = _json["rules"]
+          .map((value) => new HttpRule.fromJson(value))
+          .toList()
+          .cast<HttpRule>();
     }
   }
 
@@ -2625,12 +2651,14 @@ class HttpRule {
     if (_json.containsKey("additionalBindings")) {
       additionalBindings = _json["additionalBindings"]
           .map((value) => new HttpRule.fromJson(value))
-          .toList();
+          .toList()
+          .cast<HttpRule>();
     }
     if (_json.containsKey("authorizations")) {
       authorizations = _json["authorizations"]
           .map((value) => new AuthorizationRule.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AuthorizationRule>();
     }
     if (_json.containsKey("body")) {
       body = _json["body"];
@@ -2783,7 +2811,8 @@ class ListOperationsResponse {
     if (_json.containsKey("operations")) {
       operations = _json["operations"]
           .map((value) => new Operation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Operation>();
     }
   }
 
@@ -2818,7 +2847,8 @@ class ListTenancyUnitsResponse {
     if (_json.containsKey("tenancyUnits")) {
       tenancyUnits = _json["tenancyUnits"]
           .map((value) => new TenancyUnit.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TenancyUnit>();
     }
   }
 
@@ -2876,7 +2906,8 @@ class LogDescriptor {
     if (_json.containsKey("labels")) {
       labels = _json["labels"]
           .map((value) => new LabelDescriptor.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LabelDescriptor>();
     }
     if (_json.containsKey("name")) {
       name = _json["name"];
@@ -2950,12 +2981,14 @@ class Logging {
     if (_json.containsKey("consumerDestinations")) {
       consumerDestinations = _json["consumerDestinations"]
           .map((value) => new LoggingDestination.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LoggingDestination>();
     }
     if (_json.containsKey("producerDestinations")) {
       producerDestinations = _json["producerDestinations"]
           .map((value) => new LoggingDestination.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LoggingDestination>();
     }
   }
 
@@ -3215,8 +3248,10 @@ class Method {
       name = _json["name"];
     }
     if (_json.containsKey("options")) {
-      options =
-          _json["options"].map((value) => new Option.fromJson(value)).toList();
+      options = _json["options"]
+          .map((value) => new Option.fromJson(value))
+          .toList()
+          .cast<Option>();
     }
     if (_json.containsKey("requestStreaming")) {
       requestStreaming = _json["requestStreaming"];
@@ -3404,7 +3439,8 @@ class MetricDescriptor {
     if (_json.containsKey("labels")) {
       labels = _json["labels"]
           .map((value) => new LabelDescriptor.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LabelDescriptor>();
     }
     if (_json.containsKey("metricKind")) {
       metricKind = _json["metricKind"];
@@ -3655,7 +3691,8 @@ class MonitoredResourceDescriptor {
     if (_json.containsKey("labels")) {
       labels = _json["labels"]
           .map((value) => new LabelDescriptor.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LabelDescriptor>();
     }
     if (_json.containsKey("name")) {
       name = _json["name"];
@@ -3743,12 +3780,14 @@ class Monitoring {
     if (_json.containsKey("consumerDestinations")) {
       consumerDestinations = _json["consumerDestinations"]
           .map((value) => new MonitoringDestination.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MonitoringDestination>();
     }
     if (_json.containsKey("producerDestinations")) {
       producerDestinations = _json["producerDestinations"]
           .map((value) => new MonitoringDestination.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MonitoringDestination>();
     }
   }
 
@@ -4009,8 +4048,10 @@ class Page {
       name = _json["name"];
     }
     if (_json.containsKey("subpages")) {
-      subpages =
-          _json["subpages"].map((value) => new Page.fromJson(value)).toList();
+      subpages = _json["subpages"]
+          .map((value) => new Page.fromJson(value))
+          .toList()
+          .cast<Page>();
     }
   }
 
@@ -4128,12 +4169,14 @@ class Quota {
     if (_json.containsKey("limits")) {
       limits = _json["limits"]
           .map((value) => new QuotaLimit.fromJson(value))
-          .toList();
+          .toList()
+          .cast<QuotaLimit>();
     }
     if (_json.containsKey("metricRules")) {
       metricRules = _json["metricRules"]
           .map((value) => new MetricRule.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MetricRule>();
     }
   }
 
@@ -4349,7 +4392,8 @@ class SearchTenancyUnitsResponse {
     if (_json.containsKey("tenancyUnits")) {
       tenancyUnits = _json["tenancyUnits"]
           .map((value) => new TenancyUnit.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TenancyUnit>();
     }
   }
 
@@ -4514,7 +4558,10 @@ class Service {
 
   Service.fromJson(core.Map _json) {
     if (_json.containsKey("apis")) {
-      apis = _json["apis"].map((value) => new Api.fromJson(value)).toList();
+      apis = _json["apis"]
+          .map((value) => new Api.fromJson(value))
+          .toList()
+          .cast<Api>();
     }
     if (_json.containsKey("authentication")) {
       authentication = new Authentication.fromJson(_json["authentication"]);
@@ -4543,10 +4590,14 @@ class Service {
     if (_json.containsKey("endpoints")) {
       endpoints = _json["endpoints"]
           .map((value) => new Endpoint.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Endpoint>();
     }
     if (_json.containsKey("enums")) {
-      enums = _json["enums"].map((value) => new Enum.fromJson(value)).toList();
+      enums = _json["enums"]
+          .map((value) => new Enum.fromJson(value))
+          .toList()
+          .cast<Enum>();
     }
     if (_json.containsKey("experimental")) {
       experimental = new Experimental.fromJson(_json["experimental"]);
@@ -4563,17 +4614,20 @@ class Service {
     if (_json.containsKey("logs")) {
       logs = _json["logs"]
           .map((value) => new LogDescriptor.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LogDescriptor>();
     }
     if (_json.containsKey("metrics")) {
       metrics = _json["metrics"]
           .map((value) => new MetricDescriptor.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MetricDescriptor>();
     }
     if (_json.containsKey("monitoredResources")) {
       monitoredResources = _json["monitoredResources"]
           .map((value) => new MonitoredResourceDescriptor.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MonitoredResourceDescriptor>();
     }
     if (_json.containsKey("monitoring")) {
       monitoring = new Monitoring.fromJson(_json["monitoring"]);
@@ -4597,13 +4651,17 @@ class Service {
     if (_json.containsKey("systemTypes")) {
       systemTypes = _json["systemTypes"]
           .map((value) => new Type.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Type>();
     }
     if (_json.containsKey("title")) {
       title = _json["title"];
     }
     if (_json.containsKey("types")) {
-      types = _json["types"].map((value) => new Type.fromJson(value)).toList();
+      types = _json["types"]
+          .map((value) => new Type.fromJson(value))
+          .toList()
+          .cast<Type>();
     }
     if (_json.containsKey("usage")) {
       usage = new Usage.fromJson(_json["usage"]);
@@ -4967,7 +5025,8 @@ class SystemParameterRule {
     if (_json.containsKey("parameters")) {
       parameters = _json["parameters"]
           .map((value) => new SystemParameter.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SystemParameter>();
     }
     if (_json.containsKey("selector")) {
       selector = _json["selector"];
@@ -5032,7 +5091,8 @@ class SystemParameters {
     if (_json.containsKey("rules")) {
       rules = _json["rules"]
           .map((value) => new SystemParameterRule.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SystemParameterRule>();
     }
   }
 
@@ -5085,7 +5145,8 @@ class TenancyUnit {
     if (_json.containsKey("tenantResources")) {
       tenantResources = _json["tenantResources"]
           .map((value) => new TenantResource.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TenantResource>();
     }
   }
 
@@ -5212,7 +5273,8 @@ class TenantProjectPolicy {
     if (_json.containsKey("policyBindings")) {
       policyBindings = _json["policyBindings"]
           .map((value) => new PolicyBinding.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PolicyBinding>();
     }
   }
 
@@ -5303,8 +5365,10 @@ class Type {
 
   Type.fromJson(core.Map _json) {
     if (_json.containsKey("fields")) {
-      fields =
-          _json["fields"].map((value) => new Field.fromJson(value)).toList();
+      fields = _json["fields"]
+          .map((value) => new Field.fromJson(value))
+          .toList()
+          .cast<Field>();
     }
     if (_json.containsKey("name")) {
       name = _json["name"];
@@ -5313,8 +5377,10 @@ class Type {
       oneofs = _json["oneofs"];
     }
     if (_json.containsKey("options")) {
-      options =
-          _json["options"].map((value) => new Option.fromJson(value)).toList();
+      options = _json["options"]
+          .map((value) => new Option.fromJson(value))
+          .toList()
+          .cast<Option>();
     }
     if (_json.containsKey("sourceContext")) {
       sourceContext = new SourceContext.fromJson(_json["sourceContext"]);
@@ -5381,8 +5447,10 @@ class Usage {
       requirements = _json["requirements"];
     }
     if (_json.containsKey("rules")) {
-      rules =
-          _json["rules"].map((value) => new UsageRule.fromJson(value)).toList();
+      rules = _json["rules"]
+          .map((value) => new UsageRule.fromJson(value))
+          .toList()
+          .cast<UsageRule>();
     }
   }
 
@@ -5509,7 +5577,8 @@ class Visibility {
     if (_json.containsKey("rules")) {
       rules = _json["rules"]
           .map((value) => new VisibilityRule.fromJson(value))
-          .toList();
+          .toList()
+          .cast<VisibilityRule>();
     }
   }
 

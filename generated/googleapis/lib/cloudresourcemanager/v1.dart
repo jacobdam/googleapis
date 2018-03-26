@@ -2270,7 +2270,8 @@ class AuditConfig {
     if (_json.containsKey("auditLogConfigs")) {
       auditLogConfigs = _json["auditLogConfigs"]
           .map((value) => new AuditLogConfig.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AuditLogConfig>();
     }
     if (_json.containsKey("service")) {
       service = _json["service"];
@@ -2784,7 +2785,8 @@ class GetAncestryResponse {
     if (_json.containsKey("ancestor")) {
       ancestor = _json["ancestor"]
           .map((value) => new Ancestor.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Ancestor>();
     }
   }
 
@@ -2997,7 +2999,8 @@ class ListAvailableOrgPolicyConstraintsResponse {
     if (_json.containsKey("constraints")) {
       constraints = _json["constraints"]
           .map((value) => new Constraint.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Constraint>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -3056,7 +3059,10 @@ class ListLiensResponse {
 
   ListLiensResponse.fromJson(core.Map _json) {
     if (_json.containsKey("liens")) {
-      liens = _json["liens"].map((value) => new Lien.fromJson(value)).toList();
+      liens = _json["liens"]
+          .map((value) => new Lien.fromJson(value))
+          .toList()
+          .cast<Lien>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -3131,7 +3137,8 @@ class ListOrgPoliciesResponse {
     if (_json.containsKey("policies")) {
       policies = _json["policies"]
           .map((value) => new OrgPolicy.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrgPolicy>();
     }
   }
 
@@ -3343,7 +3350,8 @@ class ListProjectsResponse {
     if (_json.containsKey("projects")) {
       projects = _json["projects"]
           .map((value) => new Project.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Project>();
     }
   }
 
@@ -3724,12 +3732,14 @@ class Policy {
     if (_json.containsKey("auditConfigs")) {
       auditConfigs = _json["auditConfigs"]
           .map((value) => new AuditConfig.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AuditConfig>();
     }
     if (_json.containsKey("bindings")) {
       bindings = _json["bindings"]
           .map((value) => new Binding.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Binding>();
     }
     if (_json.containsKey("etag")) {
       etag = _json["etag"];
@@ -4079,7 +4089,8 @@ class SearchOrganizationsResponse {
     if (_json.containsKey("organizations")) {
       organizations = _json["organizations"]
           .map((value) => new Organization.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Organization>();
     }
   }
 

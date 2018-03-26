@@ -677,7 +677,8 @@ class ListResponse {
     if (_json.containsKey("statements")) {
       statements = _json["statements"]
           .map((value) => new Statement.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Statement>();
     }
   }
 

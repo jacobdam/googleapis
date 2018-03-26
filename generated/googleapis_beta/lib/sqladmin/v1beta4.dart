@@ -2717,8 +2717,10 @@ class BackupRunsListResponse {
 
   BackupRunsListResponse.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new BackupRun.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new BackupRun.fromJson(value))
+          .toList()
+          .cast<BackupRun>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -3147,7 +3149,8 @@ class DatabaseInstance {
     if (_json.containsKey("ipAddresses")) {
       ipAddresses = _json["ipAddresses"]
           .map((value) => new IpMapping.fromJson(value))
-          .toList();
+          .toList()
+          .cast<IpMapping>();
     }
     if (_json.containsKey("ipv6Address")) {
       ipv6Address = _json["ipv6Address"];
@@ -3296,8 +3299,10 @@ class DatabasesListResponse {
 
   DatabasesListResponse.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Database.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Database.fromJson(value))
+          .toList()
+          .cast<Database>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -3742,7 +3747,10 @@ class FlagsListResponse {
 
   FlagsListResponse.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items = _json["items"].map((value) => new Flag.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Flag.fromJson(value))
+          .toList()
+          .cast<Flag>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -4006,7 +4014,8 @@ class InstancesListResponse {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new DatabaseInstance.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DatabaseInstance>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -4099,7 +4108,8 @@ class IpConfiguration {
     if (_json.containsKey("authorizedNetworks")) {
       authorizedNetworks = _json["authorizedNetworks"]
           .map((value) => new AclEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AclEntry>();
     }
     if (_json.containsKey("ipv4Enabled")) {
       ipv4Enabled = _json["ipv4Enabled"];
@@ -4636,7 +4646,8 @@ class OperationErrors {
     if (_json.containsKey("errors")) {
       errors = _json["errors"]
           .map((value) => new OperationError.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OperationError>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -4672,8 +4683,10 @@ class OperationsListResponse {
 
   OperationsListResponse.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Operation.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Operation.fromJson(value))
+          .toList()
+          .cast<Operation>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -4921,7 +4934,8 @@ class Settings {
     if (_json.containsKey("databaseFlags")) {
       databaseFlags = _json["databaseFlags"]
           .map((value) => new DatabaseFlags.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DatabaseFlags>();
     }
     if (_json.containsKey("databaseReplicationEnabled")) {
       databaseReplicationEnabled = _json["databaseReplicationEnabled"];
@@ -5275,8 +5289,10 @@ class SslCertsListResponse {
 
   SslCertsListResponse.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new SslCert.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new SslCert.fromJson(value))
+          .toList()
+          .cast<SslCert>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -5368,7 +5384,10 @@ class TiersListResponse {
 
   TiersListResponse.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items = _json["items"].map((value) => new Tier.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Tier.fromJson(value))
+          .toList()
+          .cast<Tier>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -5521,7 +5540,10 @@ class UsersListResponse {
 
   UsersListResponse.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items = _json["items"].map((value) => new User.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new User.fromJson(value))
+          .toList()
+          .cast<User>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];

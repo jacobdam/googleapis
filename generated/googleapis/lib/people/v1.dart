@@ -1168,7 +1168,8 @@ class BatchGetContactGroupsResponse {
     if (_json.containsKey("responses")) {
       responses = _json["responses"]
           .map((value) => new ContactGroupResponse.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ContactGroupResponse>();
     }
   }
 
@@ -1889,7 +1890,8 @@ class GetPeopleResponse {
     if (_json.containsKey("responses")) {
       responses = _json["responses"]
           .map((value) => new PersonResponse.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PersonResponse>();
     }
   }
 
@@ -2044,7 +2046,8 @@ class ListConnectionsResponse {
     if (_json.containsKey("connections")) {
       connections = _json["connections"]
           .map((value) => new Person.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Person>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -2104,7 +2107,8 @@ class ListContactGroupsResponse {
     if (_json.containsKey("contactGroups")) {
       contactGroups = _json["contactGroups"]
           .map((value) => new ContactGroup.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ContactGroup>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -2760,7 +2764,8 @@ class Person {
     if (_json.containsKey("addresses")) {
       addresses = _json["addresses"]
           .map((value) => new Address.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Address>();
     }
     if (_json.containsKey("ageRange")) {
       ageRange = _json["ageRange"];
@@ -2768,132 +2773,167 @@ class Person {
     if (_json.containsKey("ageRanges")) {
       ageRanges = _json["ageRanges"]
           .map((value) => new AgeRangeType.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AgeRangeType>();
     }
     if (_json.containsKey("biographies")) {
       biographies = _json["biographies"]
           .map((value) => new Biography.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Biography>();
     }
     if (_json.containsKey("birthdays")) {
       birthdays = _json["birthdays"]
           .map((value) => new Birthday.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Birthday>();
     }
     if (_json.containsKey("braggingRights")) {
       braggingRights = _json["braggingRights"]
           .map((value) => new BraggingRights.fromJson(value))
-          .toList();
+          .toList()
+          .cast<BraggingRights>();
     }
     if (_json.containsKey("coverPhotos")) {
       coverPhotos = _json["coverPhotos"]
           .map((value) => new CoverPhoto.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CoverPhoto>();
     }
     if (_json.containsKey("emailAddresses")) {
       emailAddresses = _json["emailAddresses"]
           .map((value) => new EmailAddress.fromJson(value))
-          .toList();
+          .toList()
+          .cast<EmailAddress>();
     }
     if (_json.containsKey("etag")) {
       etag = _json["etag"];
     }
     if (_json.containsKey("events")) {
-      events =
-          _json["events"].map((value) => new Event.fromJson(value)).toList();
+      events = _json["events"]
+          .map((value) => new Event.fromJson(value))
+          .toList()
+          .cast<Event>();
     }
     if (_json.containsKey("genders")) {
-      genders =
-          _json["genders"].map((value) => new Gender.fromJson(value)).toList();
+      genders = _json["genders"]
+          .map((value) => new Gender.fromJson(value))
+          .toList()
+          .cast<Gender>();
     }
     if (_json.containsKey("imClients")) {
       imClients = _json["imClients"]
           .map((value) => new ImClient.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ImClient>();
     }
     if (_json.containsKey("interests")) {
       interests = _json["interests"]
           .map((value) => new Interest.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Interest>();
     }
     if (_json.containsKey("locales")) {
-      locales =
-          _json["locales"].map((value) => new Locale.fromJson(value)).toList();
+      locales = _json["locales"]
+          .map((value) => new Locale.fromJson(value))
+          .toList()
+          .cast<Locale>();
     }
     if (_json.containsKey("memberships")) {
       memberships = _json["memberships"]
           .map((value) => new Membership.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Membership>();
     }
     if (_json.containsKey("metadata")) {
       metadata = new PersonMetadata.fromJson(_json["metadata"]);
     }
     if (_json.containsKey("names")) {
-      names = _json["names"].map((value) => new Name.fromJson(value)).toList();
+      names = _json["names"]
+          .map((value) => new Name.fromJson(value))
+          .toList()
+          .cast<Name>();
     }
     if (_json.containsKey("nicknames")) {
       nicknames = _json["nicknames"]
           .map((value) => new Nickname.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Nickname>();
     }
     if (_json.containsKey("occupations")) {
       occupations = _json["occupations"]
           .map((value) => new Occupation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Occupation>();
     }
     if (_json.containsKey("organizations")) {
       organizations = _json["organizations"]
           .map((value) => new Organization.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Organization>();
     }
     if (_json.containsKey("phoneNumbers")) {
       phoneNumbers = _json["phoneNumbers"]
           .map((value) => new PhoneNumber.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PhoneNumber>();
     }
     if (_json.containsKey("photos")) {
-      photos =
-          _json["photos"].map((value) => new Photo.fromJson(value)).toList();
+      photos = _json["photos"]
+          .map((value) => new Photo.fromJson(value))
+          .toList()
+          .cast<Photo>();
     }
     if (_json.containsKey("relations")) {
       relations = _json["relations"]
           .map((value) => new Relation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Relation>();
     }
     if (_json.containsKey("relationshipInterests")) {
       relationshipInterests = _json["relationshipInterests"]
           .map((value) => new RelationshipInterest.fromJson(value))
-          .toList();
+          .toList()
+          .cast<RelationshipInterest>();
     }
     if (_json.containsKey("relationshipStatuses")) {
       relationshipStatuses = _json["relationshipStatuses"]
           .map((value) => new RelationshipStatus.fromJson(value))
-          .toList();
+          .toList()
+          .cast<RelationshipStatus>();
     }
     if (_json.containsKey("residences")) {
       residences = _json["residences"]
           .map((value) => new Residence.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Residence>();
     }
     if (_json.containsKey("resourceName")) {
       resourceName = _json["resourceName"];
     }
     if (_json.containsKey("skills")) {
-      skills =
-          _json["skills"].map((value) => new Skill.fromJson(value)).toList();
+      skills = _json["skills"]
+          .map((value) => new Skill.fromJson(value))
+          .toList()
+          .cast<Skill>();
     }
     if (_json.containsKey("taglines")) {
       taglines = _json["taglines"]
           .map((value) => new Tagline.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Tagline>();
     }
     if (_json.containsKey("urls")) {
-      urls = _json["urls"].map((value) => new Url.fromJson(value)).toList();
+      urls = _json["urls"]
+          .map((value) => new Url.fromJson(value))
+          .toList()
+          .cast<Url>();
     }
     if (_json.containsKey("userDefined")) {
       userDefined = _json["userDefined"]
           .map((value) => new UserDefined.fromJson(value))
-          .toList();
+          .toList()
+          .cast<UserDefined>();
     }
   }
 
@@ -3057,8 +3097,10 @@ class PersonMetadata {
       previousResourceNames = _json["previousResourceNames"];
     }
     if (_json.containsKey("sources")) {
-      sources =
-          _json["sources"].map((value) => new Source.fromJson(value)).toList();
+      sources = _json["sources"]
+          .map((value) => new Source.fromJson(value))
+          .toList()
+          .cast<Source>();
     }
   }
 

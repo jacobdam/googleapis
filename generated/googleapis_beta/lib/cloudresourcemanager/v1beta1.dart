@@ -1134,7 +1134,8 @@ class AuditConfig {
     if (_json.containsKey("auditLogConfigs")) {
       auditLogConfigs = _json["auditLogConfigs"]
           .map((value) => new AuditLogConfig.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AuditLogConfig>();
     }
     if (_json.containsKey("service")) {
       service = _json["service"];
@@ -1418,7 +1419,8 @@ class GetAncestryResponse {
     if (_json.containsKey("ancestor")) {
       ancestor = _json["ancestor"]
           .map((value) => new Ancestor.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Ancestor>();
     }
   }
 
@@ -1467,7 +1469,8 @@ class ListOrganizationsResponse {
     if (_json.containsKey("organizations")) {
       organizations = _json["organizations"]
           .map((value) => new Organization.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Organization>();
     }
   }
 
@@ -1519,7 +1522,8 @@ class ListProjectsResponse {
     if (_json.containsKey("projects")) {
       projects = _json["projects"]
           .map((value) => new Project.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Project>();
     }
   }
 
@@ -1721,12 +1725,14 @@ class Policy {
     if (_json.containsKey("auditConfigs")) {
       auditConfigs = _json["auditConfigs"]
           .map((value) => new AuditConfig.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AuditConfig>();
     }
     if (_json.containsKey("bindings")) {
       bindings = _json["bindings"]
           .map((value) => new Binding.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Binding>();
     }
     if (_json.containsKey("etag")) {
       etag = _json["etag"];

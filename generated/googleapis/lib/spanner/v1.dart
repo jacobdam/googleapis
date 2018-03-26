@@ -2638,7 +2638,8 @@ class CommitRequest {
     if (_json.containsKey("mutations")) {
       mutations = _json["mutations"]
           .map((value) => new Mutation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Mutation>();
     }
     if (_json.containsKey("singleUseTransaction")) {
       singleUseTransaction =
@@ -3510,8 +3511,10 @@ class KeySet {
       keys = _json["keys"];
     }
     if (_json.containsKey("ranges")) {
-      ranges =
-          _json["ranges"].map((value) => new KeyRange.fromJson(value)).toList();
+      ranges = _json["ranges"]
+          .map((value) => new KeyRange.fromJson(value))
+          .toList()
+          .cast<KeyRange>();
     }
   }
 
@@ -3547,7 +3550,8 @@ class ListDatabasesResponse {
     if (_json.containsKey("databases")) {
       databases = _json["databases"]
           .map((value) => new Database.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Database>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -3583,7 +3587,8 @@ class ListInstanceConfigsResponse {
     if (_json.containsKey("instanceConfigs")) {
       instanceConfigs = _json["instanceConfigs"]
           .map((value) => new InstanceConfig.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InstanceConfig>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -3620,7 +3625,8 @@ class ListInstancesResponse {
     if (_json.containsKey("instances")) {
       instances = _json["instances"]
           .map((value) => new Instance.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Instance>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -3657,7 +3663,8 @@ class ListOperationsResponse {
     if (_json.containsKey("operations")) {
       operations = _json["operations"]
           .map((value) => new Operation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Operation>();
     }
   }
 
@@ -3694,7 +3701,8 @@ class ListSessionsResponse {
     if (_json.containsKey("sessions")) {
       sessions = _json["sessions"]
           .map((value) => new Session.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Session>();
     }
   }
 
@@ -4276,7 +4284,8 @@ class PartitionResponse {
     if (_json.containsKey("partitions")) {
       partitions = _json["partitions"]
           .map((value) => new Partition.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Partition>();
     }
     if (_json.containsKey("transaction")) {
       transaction = new Transaction.fromJson(_json["transaction"]);
@@ -4357,7 +4366,8 @@ class PlanNode {
     if (_json.containsKey("childLinks")) {
       childLinks = _json["childLinks"]
           .map((value) => new ChildLink.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ChildLink>();
     }
     if (_json.containsKey("displayName")) {
       displayName = _json["displayName"];
@@ -4477,7 +4487,8 @@ class Policy {
     if (_json.containsKey("bindings")) {
       bindings = _json["bindings"]
           .map((value) => new Binding.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Binding>();
     }
     if (_json.containsKey("etag")) {
       etag = _json["etag"];
@@ -4516,7 +4527,8 @@ class QueryPlan {
     if (_json.containsKey("planNodes")) {
       planNodes = _json["planNodes"]
           .map((value) => new PlanNode.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PlanNode>();
     }
   }
 
@@ -5190,8 +5202,10 @@ class StructType {
 
   StructType.fromJson(core.Map _json) {
     if (_json.containsKey("fields")) {
-      fields =
-          _json["fields"].map((value) => new Field.fromJson(value)).toList();
+      fields = _json["fields"]
+          .map((value) => new Field.fromJson(value))
+          .toList()
+          .cast<Field>();
     }
   }
 

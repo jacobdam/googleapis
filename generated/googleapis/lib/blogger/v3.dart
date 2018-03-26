@@ -2422,7 +2422,10 @@ class BlogPosts {
 
   BlogPosts.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items = _json["items"].map((value) => new Post.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Post.fromJson(value))
+          .toList()
+          .cast<Post>();
     }
     if (_json.containsKey("selfLink")) {
       selfLink = _json["selfLink"];
@@ -2594,10 +2597,14 @@ class BlogList {
     if (_json.containsKey("blogUserInfos")) {
       blogUserInfos = _json["blogUserInfos"]
           .map((value) => new BlogUserInfo.fromJson(value))
-          .toList();
+          .toList()
+          .cast<BlogUserInfo>();
     }
     if (_json.containsKey("items")) {
-      items = _json["items"].map((value) => new Blog.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Blog.fromJson(value))
+          .toList()
+          .cast<Blog>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -3006,8 +3013,10 @@ class CommentList {
       etag = _json["etag"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Comment.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Comment.fromJson(value))
+          .toList()
+          .cast<Comment>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -3280,7 +3289,10 @@ class PageList {
       etag = _json["etag"];
     }
     if (_json.containsKey("items")) {
-      items = _json["items"].map((value) => new Page.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Page.fromJson(value))
+          .toList()
+          .cast<Page>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -3359,7 +3371,8 @@ class Pageviews {
     if (_json.containsKey("counts")) {
       counts = _json["counts"]
           .map((value) => new PageviewsCounts.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PageviewsCounts>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -3564,8 +3577,10 @@ class PostReplies {
 
   PostReplies.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Comment.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Comment.fromJson(value))
+          .toList()
+          .cast<Comment>();
     }
     if (_json.containsKey("selfLink")) {
       selfLink = _json["selfLink"];
@@ -3673,7 +3688,8 @@ class Post {
     if (_json.containsKey("images")) {
       images = _json["images"]
           .map((value) => new PostImages.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PostImages>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -3797,7 +3813,10 @@ class PostList {
       etag = _json["etag"];
     }
     if (_json.containsKey("items")) {
-      items = _json["items"].map((value) => new Post.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Post.fromJson(value))
+          .toList()
+          .cast<Post>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -3940,7 +3959,8 @@ class PostUserInfosList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new PostUserInfo.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PostUserInfo>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];

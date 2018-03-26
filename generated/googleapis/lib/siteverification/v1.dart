@@ -479,7 +479,8 @@ class SiteVerificationWebResourceListResponse {
       items = _json["items"]
           .map((value) =>
               new SiteVerificationWebResourceResource.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SiteVerificationWebResourceResource>();
     }
   }
 

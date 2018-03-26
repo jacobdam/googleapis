@@ -346,7 +346,8 @@ class CreateShortDynamicLinkResponse {
     if (_json.containsKey("warning")) {
       warning = _json["warning"]
           .map((value) => new DynamicLinkWarning.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DynamicLinkWarning>();
     }
   }
 
@@ -646,7 +647,8 @@ class DynamicLinkStats {
     if (_json.containsKey("linkEventStats")) {
       linkEventStats = _json["linkEventStats"]
           .map((value) => new DynamicLinkEventStat.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DynamicLinkEventStat>();
     }
   }
 

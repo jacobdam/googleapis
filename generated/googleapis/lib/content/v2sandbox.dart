@@ -1307,8 +1307,10 @@ class Errors {
       code = _json["code"];
     }
     if (_json.containsKey("errors")) {
-      errors =
-          _json["errors"].map((value) => new Error.fromJson(value)).toList();
+      errors = _json["errors"]
+          .map((value) => new Error.fromJson(value))
+          .toList()
+          .cast<Error>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -1419,7 +1421,8 @@ class Order {
     if (_json.containsKey("lineItems")) {
       lineItems = _json["lineItems"]
           .map((value) => new OrderLineItem.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrderLineItem>();
     }
     if (_json.containsKey("merchantId")) {
       merchantId = _json["merchantId"];
@@ -1442,17 +1445,20 @@ class Order {
     if (_json.containsKey("promotions")) {
       promotions = _json["promotions"]
           .map((value) => new OrderPromotion.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrderPromotion>();
     }
     if (_json.containsKey("refunds")) {
       refunds = _json["refunds"]
           .map((value) => new OrderRefund.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrderRefund>();
     }
     if (_json.containsKey("shipments")) {
       shipments = _json["shipments"]
           .map((value) => new OrderShipment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrderShipment>();
     }
     if (_json.containsKey("shippingCost")) {
       shippingCost = new Price.fromJson(_json["shippingCost"]);
@@ -1817,12 +1823,14 @@ class OrderLineItem {
     if (_json.containsKey("annotations")) {
       annotations = _json["annotations"]
           .map((value) => new OrderMerchantProvidedAnnotation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrderMerchantProvidedAnnotation>();
     }
     if (_json.containsKey("cancellations")) {
       cancellations = _json["cancellations"]
           .map((value) => new OrderCancellation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrderCancellation>();
     }
     if (_json.containsKey("id")) {
       id = _json["id"];
@@ -1857,7 +1865,8 @@ class OrderLineItem {
     if (_json.containsKey("returns")) {
       returns = _json["returns"]
           .map((value) => new OrderReturn.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrderReturn>();
     }
     if (_json.containsKey("shippingDetails")) {
       shippingDetails =
@@ -2019,7 +2028,8 @@ class OrderLineItemProduct {
       variantAttributes = _json["variantAttributes"]
           .map((value) =>
               new OrderLineItemProductVariantAttribute.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrderLineItemProductVariantAttribute>();
     }
   }
 
@@ -2382,7 +2392,8 @@ class OrderPromotion {
     if (_json.containsKey("benefits")) {
       benefits = _json["benefits"]
           .map((value) => new OrderPromotionBenefit.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrderPromotionBenefit>();
     }
     if (_json.containsKey("effectiveDates")) {
       effectiveDates = _json["effectiveDates"];
@@ -2668,7 +2679,8 @@ class OrderShipment {
     if (_json.containsKey("lineItems")) {
       lineItems = _json["lineItems"]
           .map((value) => new OrderShipmentLineItemShipment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrderShipmentLineItemShipment>();
     }
     if (_json.containsKey("status")) {
       status = _json["status"];
@@ -3104,7 +3116,8 @@ class OrdersCustomBatchRequest {
     if (_json.containsKey("entries")) {
       entries = _json["entries"]
           .map((value) => new OrdersCustomBatchRequestEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrdersCustomBatchRequestEntry>();
     }
   }
 
@@ -3779,7 +3792,8 @@ class OrdersCustomBatchRequestEntrySetLineItemMetadata {
     if (_json.containsKey("annotations")) {
       annotations = _json["annotations"]
           .map((value) => new OrderMerchantProvidedAnnotation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrderMerchantProvidedAnnotation>();
     }
     if (_json.containsKey("lineItemId")) {
       lineItemId = _json["lineItemId"];
@@ -3836,7 +3850,8 @@ class OrdersCustomBatchRequestEntryShipLineItems {
     if (_json.containsKey("lineItems")) {
       lineItems = _json["lineItems"]
           .map((value) => new OrderShipmentLineItemShipment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrderShipmentLineItemShipment>();
     }
     if (_json.containsKey("shipmentId")) {
       shipmentId = _json["shipmentId"];
@@ -3846,7 +3861,8 @@ class OrdersCustomBatchRequestEntryShipLineItems {
           .map((value) =>
               new OrdersCustomBatchRequestEntryShipLineItemsShipmentInfo
                   .fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrdersCustomBatchRequestEntryShipLineItemsShipmentInfo>();
     }
     if (_json.containsKey("trackingId")) {
       trackingId = _json["trackingId"];
@@ -4037,7 +4053,8 @@ class OrdersCustomBatchResponse {
     if (_json.containsKey("entries")) {
       entries = _json["entries"]
           .map((value) => new OrdersCustomBatchResponseEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrdersCustomBatchResponseEntry>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -4320,8 +4337,10 @@ class OrdersListResponse {
       nextPageToken = _json["nextPageToken"];
     }
     if (_json.containsKey("resources")) {
-      resources =
-          _json["resources"].map((value) => new Order.fromJson(value)).toList();
+      resources = _json["resources"]
+          .map((value) => new Order.fromJson(value))
+          .toList()
+          .cast<Order>();
     }
   }
 
@@ -4783,7 +4802,8 @@ class OrdersSetLineItemMetadataRequest {
     if (_json.containsKey("annotations")) {
       annotations = _json["annotations"]
           .map((value) => new OrderMerchantProvidedAnnotation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrderMerchantProvidedAnnotation>();
     }
     if (_json.containsKey("lineItemId")) {
       lineItemId = _json["lineItemId"];
@@ -4881,7 +4901,8 @@ class OrdersShipLineItemsRequest {
     if (_json.containsKey("lineItems")) {
       lineItems = _json["lineItems"]
           .map((value) => new OrderShipmentLineItemShipment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrderShipmentLineItemShipment>();
     }
     if (_json.containsKey("operationId")) {
       operationId = _json["operationId"];
@@ -4894,7 +4915,8 @@ class OrdersShipLineItemsRequest {
           .map((value) =>
               new OrdersCustomBatchRequestEntryShipLineItemsShipmentInfo
                   .fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrdersCustomBatchRequestEntryShipLineItemsShipmentInfo>();
     }
     if (_json.containsKey("trackingId")) {
       trackingId = _json["trackingId"];
@@ -5286,7 +5308,8 @@ class TestOrder {
     if (_json.containsKey("lineItems")) {
       lineItems = _json["lineItems"]
           .map((value) => new TestOrderLineItem.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TestOrderLineItem>();
     }
     if (_json.containsKey("notificationMode")) {
       notificationMode = _json["notificationMode"];
@@ -5301,7 +5324,8 @@ class TestOrder {
     if (_json.containsKey("promotions")) {
       promotions = _json["promotions"]
           .map((value) => new OrderPromotion.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrderPromotion>();
     }
     if (_json.containsKey("shippingCost")) {
       shippingCost = new Price.fromJson(_json["shippingCost"]);
@@ -5538,7 +5562,8 @@ class TestOrderLineItemProduct {
       variantAttributes = _json["variantAttributes"]
           .map((value) =>
               new OrderLineItemProductVariantAttribute.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrderLineItemProductVariantAttribute>();
     }
   }
 

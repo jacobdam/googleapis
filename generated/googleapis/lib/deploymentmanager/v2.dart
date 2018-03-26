@@ -1509,7 +1509,8 @@ class AuditConfig {
     if (_json.containsKey("auditLogConfigs")) {
       auditLogConfigs = _json["auditLogConfigs"]
           .map((value) => new AuditLogConfig.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AuditLogConfig>();
     }
     if (_json.containsKey("exemptedMembers")) {
       exemptedMembers = _json["exemptedMembers"];
@@ -1841,7 +1842,8 @@ class Deployment {
     if (_json.containsKey("labels")) {
       labels = _json["labels"]
           .map((value) => new DeploymentLabelEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DeploymentLabelEntry>();
     }
     if (_json.containsKey("manifest")) {
       manifest = _json["manifest"];
@@ -1957,7 +1959,8 @@ class DeploymentUpdate {
     if (_json.containsKey("labels")) {
       labels = _json["labels"]
           .map((value) => new DeploymentUpdateLabelEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DeploymentUpdateLabelEntry>();
     }
     if (_json.containsKey("manifest")) {
       manifest = _json["manifest"];
@@ -2062,7 +2065,8 @@ class DeploymentsListResponse {
     if (_json.containsKey("deployments")) {
       deployments = _json["deployments"]
           .map((value) => new Deployment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Deployment>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -2407,7 +2411,8 @@ class Manifest {
     if (_json.containsKey("imports")) {
       imports = _json["imports"]
           .map((value) => new ImportFile.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ImportFile>();
     }
     if (_json.containsKey("insertTime")) {
       insertTime = _json["insertTime"];
@@ -2469,7 +2474,8 @@ class ManifestsListResponse {
     if (_json.containsKey("manifests")) {
       manifests = _json["manifests"]
           .map((value) => new Manifest.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Manifest>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -2543,7 +2549,8 @@ class OperationError {
     if (_json.containsKey("errors")) {
       errors = _json["errors"]
           .map((value) => new OperationErrorErrors.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OperationErrorErrors>();
     }
   }
 
@@ -2616,7 +2623,8 @@ class OperationWarnings {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new OperationWarningsData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OperationWarningsData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -2811,7 +2819,8 @@ class Operation {
     if (_json.containsKey("warnings")) {
       warnings = _json["warnings"]
           .map((value) => new OperationWarnings.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OperationWarnings>();
     }
     if (_json.containsKey("zone")) {
       zone = _json["zone"];
@@ -2912,7 +2921,8 @@ class OperationsListResponse {
     if (_json.containsKey("operations")) {
       operations = _json["operations"]
           .map((value) => new Operation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Operation>();
     }
   }
 
@@ -2998,12 +3008,14 @@ class Policy {
     if (_json.containsKey("auditConfigs")) {
       auditConfigs = _json["auditConfigs"]
           .map((value) => new AuditConfig.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AuditConfig>();
     }
     if (_json.containsKey("bindings")) {
       bindings = _json["bindings"]
           .map((value) => new Binding.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Binding>();
     }
     if (_json.containsKey("etag")) {
       etag = _json["etag"];
@@ -3012,7 +3024,10 @@ class Policy {
       iamOwned = _json["iamOwned"];
     }
     if (_json.containsKey("rules")) {
-      rules = _json["rules"].map((value) => new Rule.fromJson(value)).toList();
+      rules = _json["rules"]
+          .map((value) => new Rule.fromJson(value))
+          .toList()
+          .cast<Rule>();
     }
     if (_json.containsKey("version")) {
       version = _json["version"];
@@ -3104,7 +3119,8 @@ class ResourceWarnings {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new ResourceWarningsData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ResourceWarningsData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -3212,7 +3228,8 @@ class Resource {
     if (_json.containsKey("warnings")) {
       warnings = _json["warnings"]
           .map((value) => new ResourceWarnings.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ResourceWarnings>();
     }
   }
 
@@ -3336,7 +3353,8 @@ class ResourceUpdateError {
     if (_json.containsKey("errors")) {
       errors = _json["errors"]
           .map((value) => new ResourceUpdateErrorErrors.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ResourceUpdateErrorErrors>();
     }
   }
 
@@ -3409,7 +3427,8 @@ class ResourceUpdateWarnings {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new ResourceUpdateWarningsData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ResourceUpdateWarningsData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -3491,7 +3510,8 @@ class ResourceUpdate {
     if (_json.containsKey("warnings")) {
       warnings = _json["warnings"]
           .map((value) => new ResourceUpdateWarnings.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ResourceUpdateWarnings>();
     }
   }
 
@@ -3544,7 +3564,8 @@ class ResourcesListResponse {
     if (_json.containsKey("resources")) {
       resources = _json["resources"]
           .map((value) => new Resource.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Resource>();
     }
   }
 
@@ -3599,7 +3620,8 @@ class Rule {
     if (_json.containsKey("conditions")) {
       conditions = _json["conditions"]
           .map((value) => new Condition.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Condition>();
     }
     if (_json.containsKey("description")) {
       description = _json["description"];
@@ -3610,7 +3632,8 @@ class Rule {
     if (_json.containsKey("logConfigs")) {
       logConfigs = _json["logConfigs"]
           .map((value) => new LogConfig.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LogConfig>();
     }
     if (_json.containsKey("notIns")) {
       notIns = _json["notIns"];
@@ -3668,7 +3691,8 @@ class TargetConfiguration {
     if (_json.containsKey("imports")) {
       imports = _json["imports"]
           .map((value) => new ImportFile.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ImportFile>();
     }
   }
 
@@ -3806,7 +3830,10 @@ class TypesListResponse {
       nextPageToken = _json["nextPageToken"];
     }
     if (_json.containsKey("types")) {
-      types = _json["types"].map((value) => new Type.fromJson(value)).toList();
+      types = _json["types"]
+          .map((value) => new Type.fromJson(value))
+          .toList()
+          .cast<Type>();
     }
   }
 

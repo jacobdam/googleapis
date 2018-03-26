@@ -205,7 +205,8 @@ class RemoteConfig {
     if (_json.containsKey("conditions")) {
       conditions = _json["conditions"]
           .map((value) => new RemoteConfigCondition.fromJson(value))
-          .toList();
+          .toList()
+          .cast<RemoteConfigCondition>();
     }
     if (_json.containsKey("parameters")) {
       parameters = commons

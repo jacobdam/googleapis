@@ -493,8 +493,10 @@ class Asset {
       displayName = _json["displayName"];
     }
     if (_json.containsKey("formats")) {
-      formats =
-          _json["formats"].map((value) => new Format.fromJson(value)).toList();
+      formats = _json["formats"]
+          .map((value) => new Format.fromJson(value))
+          .toList()
+          .cast<Format>();
     }
     if (_json.containsKey("isCurated")) {
       isCurated = _json["isCurated"];
@@ -653,8 +655,10 @@ class Format {
       formatType = _json["formatType"];
     }
     if (_json.containsKey("resources")) {
-      resources =
-          _json["resources"].map((value) => new File.fromJson(value)).toList();
+      resources = _json["resources"]
+          .map((value) => new File.fromJson(value))
+          .toList()
+          .cast<File>();
     }
     if (_json.containsKey("root")) {
       root = new File.fromJson(_json["root"]);
@@ -734,8 +738,10 @@ class ListAssetsResponse {
 
   ListAssetsResponse.fromJson(core.Map _json) {
     if (_json.containsKey("assets")) {
-      assets =
-          _json["assets"].map((value) => new Asset.fromJson(value)).toList();
+      assets = _json["assets"]
+          .map((value) => new Asset.fromJson(value))
+          .toList()
+          .cast<Asset>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -779,8 +785,10 @@ class ListLikedAssetsResponse {
 
   ListLikedAssetsResponse.fromJson(core.Map _json) {
     if (_json.containsKey("assets")) {
-      assets =
-          _json["assets"].map((value) => new Asset.fromJson(value)).toList();
+      assets = _json["assets"]
+          .map((value) => new Asset.fromJson(value))
+          .toList()
+          .cast<Asset>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -832,7 +840,8 @@ class ListUserAssetsResponse {
     if (_json.containsKey("userAssets")) {
       userAssets = _json["userAssets"]
           .map((value) => new UserAsset.fromJson(value))
-          .toList();
+          .toList()
+          .cast<UserAsset>();
     }
   }
 

@@ -3207,7 +3207,8 @@ class Condition {
     if (_json.containsKey("parameter")) {
       parameter = _json["parameter"]
           .map((value) => new Parameter.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Parameter>();
     }
     if (_json.containsKey("type")) {
       type = _json["type"];
@@ -3447,11 +3448,16 @@ class ContainerVersion {
       fingerprint = _json["fingerprint"];
     }
     if (_json.containsKey("folder")) {
-      folder =
-          _json["folder"].map((value) => new Folder.fromJson(value)).toList();
+      folder = _json["folder"]
+          .map((value) => new Folder.fromJson(value))
+          .toList()
+          .cast<Folder>();
     }
     if (_json.containsKey("macro")) {
-      macro = _json["macro"].map((value) => new Macro.fromJson(value)).toList();
+      macro = _json["macro"]
+          .map((value) => new Macro.fromJson(value))
+          .toList()
+          .cast<Macro>();
     }
     if (_json.containsKey("name")) {
       name = _json["name"];
@@ -3460,19 +3466,28 @@ class ContainerVersion {
       notes = _json["notes"];
     }
     if (_json.containsKey("rule")) {
-      rule = _json["rule"].map((value) => new Rule.fromJson(value)).toList();
+      rule = _json["rule"]
+          .map((value) => new Rule.fromJson(value))
+          .toList()
+          .cast<Rule>();
     }
     if (_json.containsKey("tag")) {
-      tag = _json["tag"].map((value) => new Tag.fromJson(value)).toList();
+      tag = _json["tag"]
+          .map((value) => new Tag.fromJson(value))
+          .toList()
+          .cast<Tag>();
     }
     if (_json.containsKey("trigger")) {
-      trigger =
-          _json["trigger"].map((value) => new Trigger.fromJson(value)).toList();
+      trigger = _json["trigger"]
+          .map((value) => new Trigger.fromJson(value))
+          .toList()
+          .cast<Trigger>();
     }
     if (_json.containsKey("variable")) {
       variable = _json["variable"]
           .map((value) => new Variable.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Variable>();
     }
   }
 
@@ -3909,16 +3924,22 @@ class FolderEntities {
 
   FolderEntities.fromJson(core.Map _json) {
     if (_json.containsKey("tag")) {
-      tag = _json["tag"].map((value) => new Tag.fromJson(value)).toList();
+      tag = _json["tag"]
+          .map((value) => new Tag.fromJson(value))
+          .toList()
+          .cast<Tag>();
     }
     if (_json.containsKey("trigger")) {
-      trigger =
-          _json["trigger"].map((value) => new Trigger.fromJson(value)).toList();
+      trigger = _json["trigger"]
+          .map((value) => new Trigger.fromJson(value))
+          .toList()
+          .cast<Trigger>();
     }
     if (_json.containsKey("variable")) {
       variable = _json["variable"]
           .map((value) => new Variable.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Variable>();
     }
   }
 
@@ -3949,7 +3970,8 @@ class ListAccountUsersResponse {
     if (_json.containsKey("userAccess")) {
       userAccess = _json["userAccess"]
           .map((value) => new UserAccess.fromJson(value))
-          .toList();
+          .toList()
+          .cast<UserAccess>();
     }
   }
 
@@ -3975,7 +3997,8 @@ class ListAccountsResponse {
     if (_json.containsKey("accounts")) {
       accounts = _json["accounts"]
           .map((value) => new Account.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Account>();
     }
   }
 
@@ -4003,12 +4026,14 @@ class ListContainerVersionsResponse {
     if (_json.containsKey("containerVersion")) {
       containerVersion = _json["containerVersion"]
           .map((value) => new ContainerVersion.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ContainerVersion>();
     }
     if (_json.containsKey("containerVersionHeader")) {
       containerVersionHeader = _json["containerVersionHeader"]
           .map((value) => new ContainerVersionHeader.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ContainerVersionHeader>();
     }
   }
 
@@ -4038,7 +4063,8 @@ class ListContainersResponse {
     if (_json.containsKey("containers")) {
       containers = _json["containers"]
           .map((value) => new Container.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Container>();
     }
   }
 
@@ -4064,7 +4090,8 @@ class ListEnvironmentsResponse {
     if (_json.containsKey("environments")) {
       environments = _json["environments"]
           .map((value) => new Environment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Environment>();
     }
   }
 
@@ -4088,8 +4115,10 @@ class ListFoldersResponse {
 
   ListFoldersResponse.fromJson(core.Map _json) {
     if (_json.containsKey("folders")) {
-      folders =
-          _json["folders"].map((value) => new Folder.fromJson(value)).toList();
+      folders = _json["folders"]
+          .map((value) => new Folder.fromJson(value))
+          .toList()
+          .cast<Folder>();
     }
   }
 
@@ -4112,7 +4141,10 @@ class ListTagsResponse {
 
   ListTagsResponse.fromJson(core.Map _json) {
     if (_json.containsKey("tags")) {
-      tags = _json["tags"].map((value) => new Tag.fromJson(value)).toList();
+      tags = _json["tags"]
+          .map((value) => new Tag.fromJson(value))
+          .toList()
+          .cast<Tag>();
     }
   }
 
@@ -4137,7 +4169,8 @@ class ListTriggersResponse {
     if (_json.containsKey("triggers")) {
       triggers = _json["triggers"]
           .map((value) => new Trigger.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Trigger>();
     }
   }
 
@@ -4162,7 +4195,8 @@ class ListVariablesResponse {
     if (_json.containsKey("variables")) {
       variables = _json["variables"]
           .map((value) => new Variable.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Variable>();
     }
   }
 
@@ -4252,7 +4286,8 @@ class Macro {
     if (_json.containsKey("parameter")) {
       parameter = _json["parameter"]
           .map((value) => new Parameter.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Parameter>();
     }
     if (_json.containsKey("parentFolderId")) {
       parentFolderId = _json["parentFolderId"];
@@ -4353,11 +4388,16 @@ class Parameter {
       key = _json["key"];
     }
     if (_json.containsKey("list")) {
-      list =
-          _json["list"].map((value) => new Parameter.fromJson(value)).toList();
+      list = _json["list"]
+          .map((value) => new Parameter.fromJson(value))
+          .toList()
+          .cast<Parameter>();
     }
     if (_json.containsKey("map")) {
-      map = _json["map"].map((value) => new Parameter.fromJson(value)).toList();
+      map = _json["map"]
+          .map((value) => new Parameter.fromJson(value))
+          .toList()
+          .cast<Parameter>();
     }
     if (_json.containsKey("type")) {
       type = _json["type"];
@@ -4455,7 +4495,8 @@ class Rule {
     if (_json.containsKey("condition")) {
       condition = _json["condition"]
           .map((value) => new Condition.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Condition>();
     }
     if (_json.containsKey("containerId")) {
       containerId = _json["containerId"];
@@ -4648,7 +4689,8 @@ class Tag {
     if (_json.containsKey("parameter")) {
       parameter = _json["parameter"]
           .map((value) => new Parameter.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Parameter>();
     }
     if (_json.containsKey("parentFolderId")) {
       parentFolderId = _json["parentFolderId"];
@@ -4668,7 +4710,8 @@ class Tag {
     if (_json.containsKey("setupTag")) {
       setupTag = _json["setupTag"]
           .map((value) => new SetupTag.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SetupTag>();
     }
     if (_json.containsKey("tagFiringOption")) {
       tagFiringOption = _json["tagFiringOption"];
@@ -4679,7 +4722,8 @@ class Tag {
     if (_json.containsKey("teardownTag")) {
       teardownTag = _json["teardownTag"]
           .map((value) => new TeardownTag.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TeardownTag>();
     }
     if (_json.containsKey("type")) {
       type = _json["type"];
@@ -4933,7 +4977,8 @@ class Trigger {
     if (_json.containsKey("autoEventFilter")) {
       autoEventFilter = _json["autoEventFilter"]
           .map((value) => new Condition.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Condition>();
     }
     if (_json.containsKey("checkValidation")) {
       checkValidation = new Parameter.fromJson(_json["checkValidation"]);
@@ -4948,7 +4993,8 @@ class Trigger {
     if (_json.containsKey("customEventFilter")) {
       customEventFilter = _json["customEventFilter"]
           .map((value) => new Condition.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Condition>();
     }
     if (_json.containsKey("eventName")) {
       eventName = new Parameter.fromJson(_json["eventName"]);
@@ -4956,7 +5002,8 @@ class Trigger {
     if (_json.containsKey("filter")) {
       filter = _json["filter"]
           .map((value) => new Condition.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Condition>();
     }
     if (_json.containsKey("fingerprint")) {
       fingerprint = _json["fingerprint"];
@@ -4984,7 +5031,8 @@ class Trigger {
     if (_json.containsKey("parameter")) {
       parameter = _json["parameter"]
           .map((value) => new Parameter.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Parameter>();
     }
     if (_json.containsKey("parentFolderId")) {
       parentFolderId = _json["parentFolderId"];
@@ -5153,7 +5201,8 @@ class UserAccess {
     if (_json.containsKey("containerAccess")) {
       containerAccess = _json["containerAccess"]
           .map((value) => new ContainerAccess.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ContainerAccess>();
     }
     if (_json.containsKey("emailAddress")) {
       emailAddress = _json["emailAddress"];
@@ -5260,7 +5309,8 @@ class Variable {
     if (_json.containsKey("parameter")) {
       parameter = _json["parameter"]
           .map((value) => new Parameter.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Parameter>();
     }
     if (_json.containsKey("parentFolderId")) {
       parentFolderId = _json["parentFolderId"];

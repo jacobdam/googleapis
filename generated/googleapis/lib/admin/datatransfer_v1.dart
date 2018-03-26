@@ -351,7 +351,8 @@ class Application {
     if (_json.containsKey("transferParams")) {
       transferParams = _json["transferParams"]
           .map((value) => new ApplicationTransferParam.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ApplicationTransferParam>();
     }
   }
 
@@ -399,7 +400,8 @@ class ApplicationDataTransfer {
     if (_json.containsKey("applicationTransferParams")) {
       applicationTransferParams = _json["applicationTransferParams"]
           .map((value) => new ApplicationTransferParam.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ApplicationTransferParam>();
     }
     if (_json.containsKey("applicationTransferStatus")) {
       applicationTransferStatus = _json["applicationTransferStatus"];
@@ -477,7 +479,8 @@ class ApplicationsListResponse {
     if (_json.containsKey("applications")) {
       applications = _json["applications"]
           .map((value) => new Application.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Application>();
     }
     if (_json.containsKey("etag")) {
       etag = _json["etag"];
@@ -545,7 +548,8 @@ class DataTransfer {
     if (_json.containsKey("applicationDataTransfers")) {
       applicationDataTransfers = _json["applicationDataTransfers"]
           .map((value) => new ApplicationDataTransfer.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ApplicationDataTransfer>();
     }
     if (_json.containsKey("etag")) {
       etag = _json["etag"];
@@ -622,7 +626,8 @@ class DataTransfersListResponse {
     if (_json.containsKey("dataTransfers")) {
       dataTransfers = _json["dataTransfers"]
           .map((value) => new DataTransfer.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DataTransfer>();
     }
     if (_json.containsKey("etag")) {
       etag = _json["etag"];

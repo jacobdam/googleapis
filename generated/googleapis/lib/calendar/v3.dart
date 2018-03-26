@@ -2812,8 +2812,10 @@ class Acl {
       etag = _json["etag"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new AclRule.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new AclRule.fromJson(value))
+          .toList()
+          .cast<AclRule>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -3072,7 +3074,8 @@ class CalendarList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new CalendarListEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CalendarListEntry>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -3119,7 +3122,8 @@ class CalendarListEntryNotificationSettings {
     if (_json.containsKey("notifications")) {
       notifications = _json["notifications"]
           .map((value) => new CalendarNotification.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CalendarNotification>();
     }
   }
 
@@ -3238,7 +3242,8 @@ class CalendarListEntry {
     if (_json.containsKey("defaultReminders")) {
       defaultReminders = _json["defaultReminders"]
           .map((value) => new EventReminder.fromJson(value))
-          .toList();
+          .toList()
+          .cast<EventReminder>();
     }
     if (_json.containsKey("deleted")) {
       deleted = _json["deleted"];
@@ -3661,7 +3666,8 @@ class ConferenceData {
     if (_json.containsKey("entryPoints")) {
       entryPoints = _json["entryPoints"]
           .map((value) => new EntryPoint.fromJson(value))
-          .toList();
+          .toList()
+          .cast<EntryPoint>();
     }
     if (_json.containsKey("notes")) {
       notes = _json["notes"];
@@ -4339,7 +4345,8 @@ class EventReminders {
     if (_json.containsKey("overrides")) {
       overrides = _json["overrides"]
           .map((value) => new EventReminder.fromJson(value))
-          .toList();
+          .toList()
+          .cast<EventReminder>();
     }
     if (_json.containsKey("useDefault")) {
       useDefault = _json["useDefault"];
@@ -4593,12 +4600,14 @@ class Event {
     if (_json.containsKey("attachments")) {
       attachments = _json["attachments"]
           .map((value) => new EventAttachment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<EventAttachment>();
     }
     if (_json.containsKey("attendees")) {
       attendees = _json["attendees"]
           .map((value) => new EventAttendee.fromJson(value))
-          .toList();
+          .toList()
+          .cast<EventAttendee>();
     }
     if (_json.containsKey("attendeesOmitted")) {
       attendeesOmitted = _json["attendeesOmitted"];
@@ -5147,7 +5156,8 @@ class Events {
     if (_json.containsKey("defaultReminders")) {
       defaultReminders = _json["defaultReminders"]
           .map((value) => new EventReminder.fromJson(value))
-          .toList();
+          .toList()
+          .cast<EventReminder>();
     }
     if (_json.containsKey("description")) {
       description = _json["description"];
@@ -5156,7 +5166,10 @@ class Events {
       etag = _json["etag"];
     }
     if (_json.containsKey("items")) {
-      items = _json["items"].map((value) => new Event.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Event.fromJson(value))
+          .toList()
+          .cast<Event>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -5230,12 +5243,16 @@ class FreeBusyCalendar {
 
   FreeBusyCalendar.fromJson(core.Map _json) {
     if (_json.containsKey("busy")) {
-      busy =
-          _json["busy"].map((value) => new TimePeriod.fromJson(value)).toList();
+      busy = _json["busy"]
+          .map((value) => new TimePeriod.fromJson(value))
+          .toList()
+          .cast<TimePeriod>();
     }
     if (_json.containsKey("errors")) {
-      errors =
-          _json["errors"].map((value) => new Error.fromJson(value)).toList();
+      errors = _json["errors"]
+          .map((value) => new Error.fromJson(value))
+          .toList()
+          .cast<Error>();
     }
   }
 
@@ -5266,8 +5283,10 @@ class FreeBusyGroup {
       calendars = _json["calendars"];
     }
     if (_json.containsKey("errors")) {
-      errors =
-          _json["errors"].map((value) => new Error.fromJson(value)).toList();
+      errors = _json["errors"]
+          .map((value) => new Error.fromJson(value))
+          .toList()
+          .cast<Error>();
     }
   }
 
@@ -5318,7 +5337,8 @@ class FreeBusyRequest {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new FreeBusyRequestItem.fromJson(value))
-          .toList();
+          .toList()
+          .cast<FreeBusyRequestItem>();
     }
     if (_json.containsKey("timeMax")) {
       timeMax = core.DateTime.parse(_json["timeMax"]);
@@ -5525,8 +5545,10 @@ class Settings {
       etag = _json["etag"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Setting.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Setting.fromJson(value))
+          .toList()
+          .cast<Setting>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];

@@ -2153,7 +2153,8 @@ class GooglePrivacyDlpV2beta1AuxiliaryTable {
       quasiIds = _json["quasiIds"]
           .map((value) =>
               new GooglePrivacyDlpV2beta1QuasiIdField.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta1QuasiIdField>();
     }
     if (_json.containsKey("relativeFrequency")) {
       relativeFrequency = new GooglePrivacyDlpV2beta1FieldId.fromJson(
@@ -2195,7 +2196,8 @@ class GooglePrivacyDlpV2beta1BigQueryOptions {
     if (_json.containsKey("identifyingFields")) {
       identifyingFields = _json["identifyingFields"]
           .map((value) => new GooglePrivacyDlpV2beta1FieldId.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta1FieldId>();
     }
     if (_json.containsKey("tableReference")) {
       tableReference = new GooglePrivacyDlpV2beta1BigQueryTable.fromJson(
@@ -2316,7 +2318,8 @@ class GooglePrivacyDlpV2beta1CategoricalStatsHistogramBucket {
       bucketValues = _json["bucketValues"]
           .map((value) =>
               new GooglePrivacyDlpV2beta1ValueFrequency.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta1ValueFrequency>();
     }
     if (_json.containsKey("valueFrequencyLowerBound")) {
       valueFrequencyLowerBound = _json["valueFrequencyLowerBound"];
@@ -2360,7 +2363,8 @@ class GooglePrivacyDlpV2beta1CategoricalStatsResult {
           .map((value) =>
               new GooglePrivacyDlpV2beta1CategoricalStatsHistogramBucket
                   .fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta1CategoricalStatsHistogramBucket>();
     }
   }
 
@@ -2494,7 +2498,8 @@ class GooglePrivacyDlpV2beta1DatastoreOptions {
     if (_json.containsKey("projection")) {
       projection = _json["projection"]
           .map((value) => new GooglePrivacyDlpV2beta1Projection.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta1Projection>();
     }
   }
 
@@ -2768,7 +2773,8 @@ class GooglePrivacyDlpV2beta1InspectConfig {
       customInfoTypes = _json["customInfoTypes"]
           .map((value) =>
               new GooglePrivacyDlpV2beta1CustomInfoType.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta1CustomInfoType>();
     }
     if (_json.containsKey("excludeTypes")) {
       excludeTypes = _json["excludeTypes"];
@@ -2780,12 +2786,14 @@ class GooglePrivacyDlpV2beta1InspectConfig {
       infoTypeLimits = _json["infoTypeLimits"]
           .map((value) =>
               new GooglePrivacyDlpV2beta1InfoTypeLimit.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta1InfoTypeLimit>();
     }
     if (_json.containsKey("infoTypes")) {
       infoTypes = _json["infoTypes"]
           .map((value) => new GooglePrivacyDlpV2beta1InfoType.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta1InfoType>();
     }
     if (_json.containsKey("maxFindings")) {
       maxFindings = _json["maxFindings"];
@@ -2856,7 +2864,8 @@ class GooglePrivacyDlpV2beta1InspectOperationMetadata {
       infoTypeStats = _json["infoTypeStats"]
           .map((value) =>
               new GooglePrivacyDlpV2beta1InfoTypeStatistics.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta1InfoTypeStatistics>();
     }
     if (_json.containsKey("processedBytes")) {
       processedBytes = _json["processedBytes"];
@@ -2966,7 +2975,8 @@ class GooglePrivacyDlpV2beta1KAnonymityConfig {
     if (_json.containsKey("quasiIds")) {
       quasiIds = _json["quasiIds"]
           .map((value) => new GooglePrivacyDlpV2beta1FieldId.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta1FieldId>();
     }
   }
 
@@ -3003,7 +3013,8 @@ class GooglePrivacyDlpV2beta1KAnonymityEquivalenceClass {
     if (_json.containsKey("quasiIdsValues")) {
       quasiIdsValues = _json["quasiIdsValues"]
           .map((value) => new GooglePrivacyDlpV2beta1Value.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta1Value>();
     }
   }
 
@@ -3047,7 +3058,8 @@ class GooglePrivacyDlpV2beta1KAnonymityHistogramBucket {
           .map((value) =>
               new GooglePrivacyDlpV2beta1KAnonymityEquivalenceClass.fromJson(
                   value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta1KAnonymityEquivalenceClass>();
     }
     if (_json.containsKey("equivalenceClassSizeLowerBound")) {
       equivalenceClassSizeLowerBound = _json["equivalenceClassSizeLowerBound"];
@@ -3092,7 +3104,8 @@ class GooglePrivacyDlpV2beta1KAnonymityResult {
               .map((value) =>
                   new GooglePrivacyDlpV2beta1KAnonymityHistogramBucket.fromJson(
                       value))
-              .toList();
+              .toList()
+              .cast<GooglePrivacyDlpV2beta1KAnonymityHistogramBucket>();
     }
   }
 
@@ -3137,13 +3150,15 @@ class GooglePrivacyDlpV2beta1KMapEstimationConfig {
       auxiliaryTables = _json["auxiliaryTables"]
           .map((value) =>
               new GooglePrivacyDlpV2beta1AuxiliaryTable.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta1AuxiliaryTable>();
     }
     if (_json.containsKey("quasiIds")) {
       quasiIds = _json["quasiIds"]
           .map(
               (value) => new GooglePrivacyDlpV2beta1TaggedField.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta1TaggedField>();
     }
     if (_json.containsKey("regionCode")) {
       regionCode = _json["regionCode"];
@@ -3201,7 +3216,8 @@ class GooglePrivacyDlpV2beta1KMapEstimationHistogramBucket {
           .map((value) =>
               new GooglePrivacyDlpV2beta1KMapEstimationQuasiIdValues.fromJson(
                   value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta1KMapEstimationQuasiIdValues>();
     }
     if (_json.containsKey("maxAnonymity")) {
       maxAnonymity = _json["maxAnonymity"];
@@ -3248,7 +3264,8 @@ class GooglePrivacyDlpV2beta1KMapEstimationQuasiIdValues {
     if (_json.containsKey("quasiIdsValues")) {
       quasiIdsValues = _json["quasiIdsValues"]
           .map((value) => new GooglePrivacyDlpV2beta1Value.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta1Value>();
     }
   }
 
@@ -3288,7 +3305,8 @@ class GooglePrivacyDlpV2beta1KMapEstimationResult {
           .map((value) =>
               new GooglePrivacyDlpV2beta1KMapEstimationHistogramBucket.fromJson(
                   value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta1KMapEstimationHistogramBucket>();
     }
   }
 
@@ -3342,7 +3360,8 @@ class GooglePrivacyDlpV2beta1LDiversityConfig {
     if (_json.containsKey("quasiIds")) {
       quasiIds = _json["quasiIds"]
           .map((value) => new GooglePrivacyDlpV2beta1FieldId.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta1FieldId>();
     }
     if (_json.containsKey("sensitiveAttribute")) {
       sensitiveAttribute = new GooglePrivacyDlpV2beta1FieldId.fromJson(
@@ -3390,13 +3409,15 @@ class GooglePrivacyDlpV2beta1LDiversityEquivalenceClass {
     if (_json.containsKey("quasiIdsValues")) {
       quasiIdsValues = _json["quasiIdsValues"]
           .map((value) => new GooglePrivacyDlpV2beta1Value.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta1Value>();
     }
     if (_json.containsKey("topSensitiveValues")) {
       topSensitiveValues = _json["topSensitiveValues"]
           .map((value) =>
               new GooglePrivacyDlpV2beta1ValueFrequency.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta1ValueFrequency>();
     }
   }
 
@@ -3449,7 +3470,8 @@ class GooglePrivacyDlpV2beta1LDiversityHistogramBucket {
           .map((value) =>
               new GooglePrivacyDlpV2beta1LDiversityEquivalenceClass.fromJson(
                   value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta1LDiversityEquivalenceClass>();
     }
     if (_json.containsKey("sensitiveValueFrequencyLowerBound")) {
       sensitiveValueFrequencyLowerBound =
@@ -3498,7 +3520,8 @@ class GooglePrivacyDlpV2beta1LDiversityResult {
               .map((value) =>
                   new GooglePrivacyDlpV2beta1LDiversityHistogramBucket.fromJson(
                       value))
-              .toList();
+              .toList()
+              .cast<GooglePrivacyDlpV2beta1LDiversityHistogramBucket>();
     }
   }
 
@@ -3564,7 +3587,8 @@ class GooglePrivacyDlpV2beta1NumericalStatsResult {
     if (_json.containsKey("quantileValues")) {
       quantileValues = _json["quantileValues"]
           .map((value) => new GooglePrivacyDlpV2beta1Value.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta1Value>();
     }
   }
 
@@ -4359,7 +4383,8 @@ class GooglePrivacyDlpV2beta2AuxiliaryTable {
       quasiIds = _json["quasiIds"]
           .map((value) =>
               new GooglePrivacyDlpV2beta2QuasiIdField.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2QuasiIdField>();
     }
     if (_json.containsKey("relativeFrequency")) {
       relativeFrequency = new GooglePrivacyDlpV2beta2FieldId.fromJson(
@@ -4401,7 +4426,8 @@ class GooglePrivacyDlpV2beta2BigQueryOptions {
     if (_json.containsKey("identifyingFields")) {
       identifyingFields = _json["identifyingFields"]
           .map((value) => new GooglePrivacyDlpV2beta2FieldId.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2FieldId>();
     }
     if (_json.containsKey("tableReference")) {
       tableReference = new GooglePrivacyDlpV2beta2BigQueryTable.fromJson(
@@ -4533,7 +4559,8 @@ class GooglePrivacyDlpV2beta2BucketingConfig {
     if (_json.containsKey("buckets")) {
       buckets = _json["buckets"]
           .map((value) => new GooglePrivacyDlpV2beta2Bucket.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2Bucket>();
     }
   }
 
@@ -4612,7 +4639,8 @@ class GooglePrivacyDlpV2beta2CategoricalStatsHistogramBucket {
       bucketValues = _json["bucketValues"]
           .map((value) =>
               new GooglePrivacyDlpV2beta2ValueFrequency.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2ValueFrequency>();
     }
     if (_json.containsKey("valueFrequencyLowerBound")) {
       valueFrequencyLowerBound = _json["valueFrequencyLowerBound"];
@@ -4656,7 +4684,8 @@ class GooglePrivacyDlpV2beta2CategoricalStatsResult {
           .map((value) =>
               new GooglePrivacyDlpV2beta2CategoricalStatsHistogramBucket
                   .fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2CategoricalStatsHistogramBucket>();
     }
   }
 
@@ -4709,7 +4738,8 @@ class GooglePrivacyDlpV2beta2CharacterMaskConfig {
       charactersToIgnore = _json["charactersToIgnore"]
           .map((value) =>
               new GooglePrivacyDlpV2beta2CharsToIgnore.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2CharsToIgnore>();
     }
     if (_json.containsKey("maskingCharacter")) {
       maskingCharacter = _json["maskingCharacter"];
@@ -4965,7 +4995,8 @@ class GooglePrivacyDlpV2beta2Conditions {
     if (_json.containsKey("conditions")) {
       conditions = _json["conditions"]
           .map((value) => new GooglePrivacyDlpV2beta2Condition.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2Condition>();
     }
   }
 
@@ -5398,7 +5429,8 @@ class GooglePrivacyDlpV2beta2CustomInfoType {
       detectionRules = _json["detectionRules"]
           .map((value) =>
               new GooglePrivacyDlpV2beta2DetectionRule.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2DetectionRule>();
     }
     if (_json.containsKey("dictionary")) {
       dictionary =
@@ -5847,7 +5879,8 @@ class GooglePrivacyDlpV2beta2DlpJob {
     if (_json.containsKey("errorResults")) {
       errorResults = _json["errorResults"]
           .map((value) => new GoogleRpcStatus.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GoogleRpcStatus>();
     }
     if (_json.containsKey("inspectDetails")) {
       inspectDetails =
@@ -6064,7 +6097,8 @@ class GooglePrivacyDlpV2beta2FieldTransformation {
     if (_json.containsKey("fields")) {
       fields = _json["fields"]
           .map((value) => new GooglePrivacyDlpV2beta2FieldId.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2FieldId>();
     }
     if (_json.containsKey("infoTypeTransformations")) {
       infoTypeTransformations =
@@ -6212,7 +6246,8 @@ class GooglePrivacyDlpV2beta2FindingLimits {
       maxFindingsPerInfoType = _json["maxFindingsPerInfoType"]
           .map((value) =>
               new GooglePrivacyDlpV2beta2InfoTypeLimit.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2InfoTypeLimit>();
     }
     if (_json.containsKey("maxFindingsPerItem")) {
       maxFindingsPerItem = _json["maxFindingsPerItem"];
@@ -6600,7 +6635,8 @@ class GooglePrivacyDlpV2beta2InfoTypeTransformation {
     if (_json.containsKey("infoTypes")) {
       infoTypes = _json["infoTypes"]
           .map((value) => new GooglePrivacyDlpV2beta2InfoType.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2InfoType>();
     }
     if (_json.containsKey("primitiveTransformation")) {
       primitiveTransformation =
@@ -6638,7 +6674,8 @@ class GooglePrivacyDlpV2beta2InfoTypeTransformations {
       transformations = _json["transformations"]
           .map((value) =>
               new GooglePrivacyDlpV2beta2InfoTypeTransformation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2InfoTypeTransformation>();
     }
   }
 
@@ -6693,7 +6730,8 @@ class GooglePrivacyDlpV2beta2InspectConfig {
       customInfoTypes = _json["customInfoTypes"]
           .map((value) =>
               new GooglePrivacyDlpV2beta2CustomInfoType.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2CustomInfoType>();
     }
     if (_json.containsKey("excludeInfoTypes")) {
       excludeInfoTypes = _json["excludeInfoTypes"];
@@ -6704,7 +6742,8 @@ class GooglePrivacyDlpV2beta2InspectConfig {
     if (_json.containsKey("infoTypes")) {
       infoTypes = _json["infoTypes"]
           .map((value) => new GooglePrivacyDlpV2beta2InfoType.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2InfoType>();
     }
     if (_json.containsKey("limits")) {
       limits =
@@ -6910,7 +6949,8 @@ class GooglePrivacyDlpV2beta2InspectJobConfig {
     if (_json.containsKey("actions")) {
       actions = _json["actions"]
           .map((value) => new GooglePrivacyDlpV2beta2Action.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2Action>();
     }
     if (_json.containsKey("inspectConfig")) {
       inspectConfig = new GooglePrivacyDlpV2beta2InspectConfig.fromJson(
@@ -6970,7 +7010,8 @@ class GooglePrivacyDlpV2beta2InspectResult {
     if (_json.containsKey("findings")) {
       findings = _json["findings"]
           .map((value) => new GooglePrivacyDlpV2beta2Finding.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2Finding>();
     }
     if (_json.containsKey("findingsTruncated")) {
       findingsTruncated = _json["findingsTruncated"];
@@ -7123,7 +7164,8 @@ class GooglePrivacyDlpV2beta2JobTrigger {
     if (_json.containsKey("errors")) {
       errors = _json["errors"]
           .map((value) => new GooglePrivacyDlpV2beta2Error.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2Error>();
     }
     if (_json.containsKey("inspectJob")) {
       inspectJob = new GooglePrivacyDlpV2beta2InspectJobConfig.fromJson(
@@ -7141,7 +7183,8 @@ class GooglePrivacyDlpV2beta2JobTrigger {
     if (_json.containsKey("triggers")) {
       triggers = _json["triggers"]
           .map((value) => new GooglePrivacyDlpV2beta2Trigger.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2Trigger>();
     }
     if (_json.containsKey("updateTime")) {
       updateTime = _json["updateTime"];
@@ -7217,7 +7260,8 @@ class GooglePrivacyDlpV2beta2KAnonymityConfig {
     if (_json.containsKey("quasiIds")) {
       quasiIds = _json["quasiIds"]
           .map((value) => new GooglePrivacyDlpV2beta2FieldId.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2FieldId>();
     }
   }
 
@@ -7254,7 +7298,8 @@ class GooglePrivacyDlpV2beta2KAnonymityEquivalenceClass {
     if (_json.containsKey("quasiIdsValues")) {
       quasiIdsValues = _json["quasiIdsValues"]
           .map((value) => new GooglePrivacyDlpV2beta2Value.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2Value>();
     }
   }
 
@@ -7297,7 +7342,8 @@ class GooglePrivacyDlpV2beta2KAnonymityHistogramBucket {
           .map((value) =>
               new GooglePrivacyDlpV2beta2KAnonymityEquivalenceClass.fromJson(
                   value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2KAnonymityEquivalenceClass>();
     }
     if (_json.containsKey("equivalenceClassSizeLowerBound")) {
       equivalenceClassSizeLowerBound = _json["equivalenceClassSizeLowerBound"];
@@ -7342,7 +7388,8 @@ class GooglePrivacyDlpV2beta2KAnonymityResult {
               .map((value) =>
                   new GooglePrivacyDlpV2beta2KAnonymityHistogramBucket.fromJson(
                       value))
-              .toList();
+              .toList()
+              .cast<GooglePrivacyDlpV2beta2KAnonymityHistogramBucket>();
     }
   }
 
@@ -7387,13 +7434,15 @@ class GooglePrivacyDlpV2beta2KMapEstimationConfig {
       auxiliaryTables = _json["auxiliaryTables"]
           .map((value) =>
               new GooglePrivacyDlpV2beta2AuxiliaryTable.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2AuxiliaryTable>();
     }
     if (_json.containsKey("quasiIds")) {
       quasiIds = _json["quasiIds"]
           .map(
               (value) => new GooglePrivacyDlpV2beta2TaggedField.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2TaggedField>();
     }
     if (_json.containsKey("regionCode")) {
       regionCode = _json["regionCode"];
@@ -7451,7 +7500,8 @@ class GooglePrivacyDlpV2beta2KMapEstimationHistogramBucket {
           .map((value) =>
               new GooglePrivacyDlpV2beta2KMapEstimationQuasiIdValues.fromJson(
                   value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2KMapEstimationQuasiIdValues>();
     }
     if (_json.containsKey("maxAnonymity")) {
       maxAnonymity = _json["maxAnonymity"];
@@ -7498,7 +7548,8 @@ class GooglePrivacyDlpV2beta2KMapEstimationQuasiIdValues {
     if (_json.containsKey("quasiIdsValues")) {
       quasiIdsValues = _json["quasiIdsValues"]
           .map((value) => new GooglePrivacyDlpV2beta2Value.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2Value>();
     }
   }
 
@@ -7538,7 +7589,8 @@ class GooglePrivacyDlpV2beta2KMapEstimationResult {
           .map((value) =>
               new GooglePrivacyDlpV2beta2KMapEstimationHistogramBucket.fromJson(
                   value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2KMapEstimationHistogramBucket>();
     }
   }
 
@@ -7585,7 +7637,8 @@ class GooglePrivacyDlpV2beta2Key {
       path = _json["path"]
           .map(
               (value) => new GooglePrivacyDlpV2beta2PathElement.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2PathElement>();
     }
   }
 
@@ -7684,7 +7737,8 @@ class GooglePrivacyDlpV2beta2LDiversityConfig {
     if (_json.containsKey("quasiIds")) {
       quasiIds = _json["quasiIds"]
           .map((value) => new GooglePrivacyDlpV2beta2FieldId.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2FieldId>();
     }
     if (_json.containsKey("sensitiveAttribute")) {
       sensitiveAttribute = new GooglePrivacyDlpV2beta2FieldId.fromJson(
@@ -7732,13 +7786,15 @@ class GooglePrivacyDlpV2beta2LDiversityEquivalenceClass {
     if (_json.containsKey("quasiIdsValues")) {
       quasiIdsValues = _json["quasiIdsValues"]
           .map((value) => new GooglePrivacyDlpV2beta2Value.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2Value>();
     }
     if (_json.containsKey("topSensitiveValues")) {
       topSensitiveValues = _json["topSensitiveValues"]
           .map((value) =>
               new GooglePrivacyDlpV2beta2ValueFrequency.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2ValueFrequency>();
     }
   }
 
@@ -7790,7 +7846,8 @@ class GooglePrivacyDlpV2beta2LDiversityHistogramBucket {
           .map((value) =>
               new GooglePrivacyDlpV2beta2LDiversityEquivalenceClass.fromJson(
                   value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2LDiversityEquivalenceClass>();
     }
     if (_json.containsKey("sensitiveValueFrequencyLowerBound")) {
       sensitiveValueFrequencyLowerBound =
@@ -7839,7 +7896,8 @@ class GooglePrivacyDlpV2beta2LDiversityResult {
               .map((value) =>
                   new GooglePrivacyDlpV2beta2LDiversityHistogramBucket.fromJson(
                       value))
-              .toList();
+              .toList()
+              .cast<GooglePrivacyDlpV2beta2LDiversityHistogramBucket>();
     }
   }
 
@@ -7922,7 +7980,8 @@ class GooglePrivacyDlpV2beta2ListDeidentifyTemplatesResponse {
       deidentifyTemplates = _json["deidentifyTemplates"]
           .map((value) =>
               new GooglePrivacyDlpV2beta2DeidentifyTemplate.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2DeidentifyTemplate>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -7957,7 +8016,8 @@ class GooglePrivacyDlpV2beta2ListDlpJobsResponse {
     if (_json.containsKey("jobs")) {
       jobs = _json["jobs"]
           .map((value) => new GooglePrivacyDlpV2beta2DlpJob.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2DlpJob>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -7989,7 +8049,8 @@ class GooglePrivacyDlpV2beta2ListInfoTypesResponse {
       infoTypes = _json["infoTypes"]
           .map((value) =>
               new GooglePrivacyDlpV2beta2InfoTypeDescription.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2InfoTypeDescription>();
     }
   }
 
@@ -8019,7 +8080,8 @@ class GooglePrivacyDlpV2beta2ListInspectTemplatesResponse {
       inspectTemplates = _json["inspectTemplates"]
           .map((value) =>
               new GooglePrivacyDlpV2beta2InspectTemplate.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2InspectTemplate>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -8055,7 +8117,8 @@ class GooglePrivacyDlpV2beta2ListJobTriggersResponse {
     if (_json.containsKey("jobTriggers")) {
       jobTriggers = _json["jobTriggers"]
           .map((value) => new GooglePrivacyDlpV2beta2JobTrigger.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2JobTrigger>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -8126,7 +8189,8 @@ class GooglePrivacyDlpV2beta2Location {
       imageBoxes = _json["imageBoxes"]
           .map((value) =>
               new GooglePrivacyDlpV2beta2ImageLocation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2ImageLocation>();
     }
     if (_json.containsKey("recordKey")) {
       recordKey =
@@ -8213,7 +8277,8 @@ class GooglePrivacyDlpV2beta2NumericalStatsResult {
     if (_json.containsKey("quantileValues")) {
       quantileValues = _json["quantileValues"]
           .map((value) => new GooglePrivacyDlpV2beta2Value.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2Value>();
     }
   }
 
@@ -8719,13 +8784,15 @@ class GooglePrivacyDlpV2beta2RecordTransformations {
       fieldTransformations = _json["fieldTransformations"]
           .map((value) =>
               new GooglePrivacyDlpV2beta2FieldTransformation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2FieldTransformation>();
     }
     if (_json.containsKey("recordSuppressions")) {
       recordSuppressions = _json["recordSuppressions"]
           .map((value) =>
               new GooglePrivacyDlpV2beta2RecordSuppression.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2RecordSuppression>();
     }
   }
 
@@ -8793,7 +8860,8 @@ class GooglePrivacyDlpV2beta2RedactImageRequest {
       imageRedactionConfigs = _json["imageRedactionConfigs"]
           .map((value) =>
               new GooglePrivacyDlpV2beta2ImageRedactionConfig.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2ImageRedactionConfig>();
     }
     if (_json.containsKey("imageType")) {
       imageType = _json["imageType"];
@@ -9090,7 +9158,8 @@ class GooglePrivacyDlpV2beta2Result {
       infoTypeStats = _json["infoTypeStats"]
           .map((value) =>
               new GooglePrivacyDlpV2beta2InfoTypeStatistics.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2InfoTypeStatistics>();
     }
     if (_json.containsKey("processedBytes")) {
       processedBytes = _json["processedBytes"];
@@ -9135,7 +9204,8 @@ class GooglePrivacyDlpV2beta2RiskAnalysisJobConfig {
     if (_json.containsKey("actions")) {
       actions = _json["actions"]
           .map((value) => new GooglePrivacyDlpV2beta2Action.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2Action>();
     }
     if (_json.containsKey("privacyMetric")) {
       privacyMetric = new GooglePrivacyDlpV2beta2PrivacyMetric.fromJson(
@@ -9172,7 +9242,8 @@ class GooglePrivacyDlpV2beta2Row {
     if (_json.containsKey("values")) {
       values = _json["values"]
           .map((value) => new GooglePrivacyDlpV2beta2Value.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2Value>();
     }
   }
 
@@ -9369,12 +9440,14 @@ class GooglePrivacyDlpV2beta2Table {
     if (_json.containsKey("headers")) {
       headers = _json["headers"]
           .map((value) => new GooglePrivacyDlpV2beta2FieldId.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2FieldId>();
     }
     if (_json.containsKey("rows")) {
       rows = _json["rows"]
           .map((value) => new GooglePrivacyDlpV2beta2Row.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2Row>();
     }
   }
 
@@ -9568,7 +9641,8 @@ class GooglePrivacyDlpV2beta2TransformationOverview {
       transformationSummaries = _json["transformationSummaries"]
           .map((value) =>
               new GooglePrivacyDlpV2beta2TransformationSummary.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2TransformationSummary>();
     }
     if (_json.containsKey("transformedBytes")) {
       transformedBytes = _json["transformedBytes"];
@@ -9624,7 +9698,8 @@ class GooglePrivacyDlpV2beta2TransformationSummary {
       fieldTransformations = _json["fieldTransformations"]
           .map((value) =>
               new GooglePrivacyDlpV2beta2FieldTransformation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2FieldTransformation>();
     }
     if (_json.containsKey("infoType")) {
       infoType =
@@ -9638,7 +9713,8 @@ class GooglePrivacyDlpV2beta2TransformationSummary {
       results = _json["results"]
           .map((value) =>
               new GooglePrivacyDlpV2beta2SummaryResult.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GooglePrivacyDlpV2beta2SummaryResult>();
     }
     if (_json.containsKey("transformation")) {
       transformation =

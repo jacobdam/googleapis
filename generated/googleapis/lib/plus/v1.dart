@@ -653,7 +653,8 @@ class Acl {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new PlusAclentryResource.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PlusAclentryResource>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -1339,7 +1340,8 @@ class ActivityObjectAttachments {
       thumbnails = _json["thumbnails"]
           .map((value) =>
               new ActivityObjectAttachmentsThumbnails.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ActivityObjectAttachmentsThumbnails>();
     }
     if (_json.containsKey("url")) {
       url = _json["url"];
@@ -1526,7 +1528,8 @@ class ActivityObject {
     if (_json.containsKey("attachments")) {
       attachments = _json["attachments"]
           .map((value) => new ActivityObjectAttachments.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ActivityObjectAttachments>();
     }
     if (_json.containsKey("content")) {
       content = _json["content"];
@@ -1860,8 +1863,10 @@ class ActivityFeed {
       id = _json["id"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Activity.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Activity.fromJson(value))
+          .toList()
+          .cast<Activity>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -2235,7 +2240,8 @@ class Comment {
     if (_json.containsKey("inReplyTo")) {
       inReplyTo = _json["inReplyTo"]
           .map((value) => new CommentInReplyTo.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CommentInReplyTo>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -2339,8 +2345,10 @@ class CommentFeed {
       id = _json["id"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Comment.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Comment.fromJson(value))
+          .toList()
+          .cast<Comment>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -2426,8 +2434,10 @@ class PeopleFeed {
       etag = _json["etag"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Person.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Person.fromJson(value))
+          .toList()
+          .cast<Person>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -3096,7 +3106,8 @@ class Person {
     if (_json.containsKey("emails")) {
       emails = _json["emails"]
           .map((value) => new PersonEmails.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PersonEmails>();
     }
     if (_json.containsKey("etag")) {
       etag = _json["etag"];
@@ -3134,12 +3145,14 @@ class Person {
     if (_json.containsKey("organizations")) {
       organizations = _json["organizations"]
           .map((value) => new PersonOrganizations.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PersonOrganizations>();
     }
     if (_json.containsKey("placesLived")) {
       placesLived = _json["placesLived"]
           .map((value) => new PersonPlacesLived.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PersonPlacesLived>();
     }
     if (_json.containsKey("plusOneCount")) {
       plusOneCount = _json["plusOneCount"];
@@ -3157,8 +3170,10 @@ class Person {
       url = _json["url"];
     }
     if (_json.containsKey("urls")) {
-      urls =
-          _json["urls"].map((value) => new PersonUrls.fromJson(value)).toList();
+      urls = _json["urls"]
+          .map((value) => new PersonUrls.fromJson(value))
+          .toList()
+          .cast<PersonUrls>();
     }
     if (_json.containsKey("verified")) {
       verified = _json["verified"];

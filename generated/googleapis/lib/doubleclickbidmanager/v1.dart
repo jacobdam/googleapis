@@ -814,8 +814,10 @@ class ListQueriesResponse {
       kind = _json["kind"];
     }
     if (_json.containsKey("queries")) {
-      queries =
-          _json["queries"].map((value) => new Query.fromJson(value)).toList();
+      queries = _json["queries"]
+          .map((value) => new Query.fromJson(value))
+          .toList()
+          .cast<Query>();
     }
   }
 
@@ -848,8 +850,10 @@ class ListReportsResponse {
       kind = _json["kind"];
     }
     if (_json.containsKey("reports")) {
-      reports =
-          _json["reports"].map((value) => new Report.fromJson(value)).toList();
+      reports = _json["reports"]
+          .map((value) => new Report.fromJson(value))
+          .toList()
+          .cast<Report>();
     }
   }
 
@@ -922,7 +926,8 @@ class Parameters {
     if (_json.containsKey("filters")) {
       filters = _json["filters"]
           .map((value) => new FilterPair.fromJson(value))
-          .toList();
+          .toList()
+          .cast<FilterPair>();
     }
     if (_json.containsKey("groupBys")) {
       groupBys = _json["groupBys"];
@@ -1711,7 +1716,8 @@ class UploadStatus {
     if (_json.containsKey("rowStatus")) {
       rowStatus = _json["rowStatus"]
           .map((value) => new RowStatus.fromJson(value))
-          .toList();
+          .toList()
+          .cast<RowStatus>();
     }
   }
 

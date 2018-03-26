@@ -547,7 +547,8 @@ class AllocateQuotaResponse {
     if (_json.containsKey("allocateErrors")) {
       allocateErrors = _json["allocateErrors"]
           .map((value) => new QuotaError.fromJson(value))
-          .toList();
+          .toList()
+          .cast<QuotaError>();
     }
     if (_json.containsKey("allocateInfo")) {
       allocateInfo = new AllocateInfo.fromJson(_json["allocateInfo"]);
@@ -558,7 +559,8 @@ class AllocateQuotaResponse {
     if (_json.containsKey("quotaMetrics")) {
       quotaMetrics = _json["quotaMetrics"]
           .map((value) => new MetricValueSet.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MetricValueSet>();
     }
     if (_json.containsKey("serviceConfigId")) {
       serviceConfigId = _json["serviceConfigId"];
@@ -676,7 +678,8 @@ class AuditLog {
     if (_json.containsKey("authorizationInfo")) {
       authorizationInfo = _json["authorizationInfo"]
           .map((value) => new AuthorizationInfo.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AuthorizationInfo>();
     }
     if (_json.containsKey("metadata")) {
       metadata = _json["metadata"];
@@ -1076,7 +1079,8 @@ class CheckResponse {
     if (_json.containsKey("checkErrors")) {
       checkErrors = _json["checkErrors"]
           .map((value) => new CheckError.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CheckError>();
     }
     if (_json.containsKey("checkInfo")) {
       checkInfo = new CheckInfo.fromJson(_json["checkInfo"]);
@@ -1337,12 +1341,14 @@ class EndReconciliationResponse {
     if (_json.containsKey("quotaMetrics")) {
       quotaMetrics = _json["quotaMetrics"]
           .map((value) => new MetricValueSet.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MetricValueSet>();
     }
     if (_json.containsKey("reconciliationErrors")) {
       reconciliationErrors = _json["reconciliationErrors"]
           .map((value) => new QuotaError.fromJson(value))
-          .toList();
+          .toList()
+          .cast<QuotaError>();
     }
     if (_json.containsKey("serviceConfigId")) {
       serviceConfigId = _json["serviceConfigId"];
@@ -1738,7 +1744,8 @@ class MetricValueSet {
     if (_json.containsKey("metricValues")) {
       metricValues = _json["metricValues"]
           .map((value) => new MetricValue.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MetricValue>();
     }
   }
 
@@ -1925,12 +1932,14 @@ class Operation {
     if (_json.containsKey("logEntries")) {
       logEntries = _json["logEntries"]
           .map((value) => new LogEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LogEntry>();
     }
     if (_json.containsKey("metricValueSets")) {
       metricValueSets = _json["metricValueSets"]
           .map((value) => new MetricValueSet.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MetricValueSet>();
     }
     if (_json.containsKey("operationId")) {
       operationId = _json["operationId"];
@@ -1947,7 +1956,8 @@ class Operation {
     if (_json.containsKey("resources")) {
       resources = _json["resources"]
           .map((value) => new ResourceInfo.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ResourceInfo>();
     }
     if (_json.containsKey("startTime")) {
       startTime = _json["startTime"];
@@ -2127,7 +2137,8 @@ class QuotaInfo {
     if (_json.containsKey("quotaMetrics")) {
       quotaMetrics = _json["quotaMetrics"]
           .map((value) => new MetricValueSet.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MetricValueSet>();
     }
   }
 
@@ -2234,7 +2245,8 @@ class QuotaOperation {
     if (_json.containsKey("quotaMetrics")) {
       quotaMetrics = _json["quotaMetrics"]
           .map((value) => new MetricValueSet.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MetricValueSet>();
     }
     if (_json.containsKey("quotaMode")) {
       quotaMode = _json["quotaMode"];
@@ -2378,12 +2390,14 @@ class ReleaseQuotaResponse {
     if (_json.containsKey("quotaMetrics")) {
       quotaMetrics = _json["quotaMetrics"]
           .map((value) => new MetricValueSet.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MetricValueSet>();
     }
     if (_json.containsKey("releaseErrors")) {
       releaseErrors = _json["releaseErrors"]
           .map((value) => new QuotaError.fromJson(value))
-          .toList();
+          .toList()
+          .cast<QuotaError>();
     }
     if (_json.containsKey("serviceConfigId")) {
       serviceConfigId = _json["serviceConfigId"];
@@ -2502,7 +2516,8 @@ class ReportRequest {
     if (_json.containsKey("operations")) {
       operations = _json["operations"]
           .map((value) => new Operation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Operation>();
     }
     if (_json.containsKey("serviceConfigId")) {
       serviceConfigId = _json["serviceConfigId"];
@@ -2560,12 +2575,14 @@ class ReportResponse {
     if (_json.containsKey("reportErrors")) {
       reportErrors = _json["reportErrors"]
           .map((value) => new ReportError.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ReportError>();
     }
     if (_json.containsKey("reportInfos")) {
       reportInfos = _json["reportInfos"]
           .map((value) => new ReportInfo.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ReportInfo>();
     }
     if (_json.containsKey("serviceConfigId")) {
       serviceConfigId = _json["serviceConfigId"];
@@ -2763,12 +2780,14 @@ class StartReconciliationResponse {
     if (_json.containsKey("quotaMetrics")) {
       quotaMetrics = _json["quotaMetrics"]
           .map((value) => new MetricValueSet.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MetricValueSet>();
     }
     if (_json.containsKey("reconciliationErrors")) {
       reconciliationErrors = _json["reconciliationErrors"]
           .map((value) => new QuotaError.fromJson(value))
-          .toList();
+          .toList()
+          .cast<QuotaError>();
     }
     if (_json.containsKey("serviceConfigId")) {
       serviceConfigId = _json["serviceConfigId"];

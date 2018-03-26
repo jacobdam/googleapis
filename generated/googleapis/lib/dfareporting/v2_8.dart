@@ -14318,7 +14318,8 @@ class AccountPermissionGroupsListResponse {
     if (_json.containsKey("accountPermissionGroups")) {
       accountPermissionGroups = _json["accountPermissionGroups"]
           .map((value) => new AccountPermissionGroup.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AccountPermissionGroup>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -14354,7 +14355,8 @@ class AccountPermissionsListResponse {
     if (_json.containsKey("accountPermissions")) {
       accountPermissions = _json["accountPermissions"]
           .map((value) => new AccountPermission.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AccountPermission>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -14588,7 +14590,8 @@ class AccountUserProfilesListResponse {
     if (_json.containsKey("accountUserProfiles")) {
       accountUserProfiles = _json["accountUserProfiles"]
           .map((value) => new AccountUserProfile.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AccountUserProfile>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -14633,7 +14636,8 @@ class AccountsListResponse {
     if (_json.containsKey("accounts")) {
       accounts = _json["accounts"]
           .map((value) => new Account.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Account>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -14677,7 +14681,8 @@ class Activities {
     if (_json.containsKey("filters")) {
       filters = _json["filters"]
           .map((value) => new DimensionValue.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DimensionValue>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -14931,7 +14936,8 @@ class Ad {
     if (_json.containsKey("creativeGroupAssignments")) {
       creativeGroupAssignments = _json["creativeGroupAssignments"]
           .map((value) => new CreativeGroupAssignment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CreativeGroupAssignment>();
     }
     if (_json.containsKey("creativeRotation")) {
       creativeRotation =
@@ -14959,7 +14965,8 @@ class Ad {
     if (_json.containsKey("eventTagOverrides")) {
       eventTagOverrides = _json["eventTagOverrides"]
           .map((value) => new EventTagOverride.fromJson(value))
-          .toList();
+          .toList()
+          .cast<EventTagOverride>();
     }
     if (_json.containsKey("geoTargeting")) {
       geoTargeting = new GeoTargeting.fromJson(_json["geoTargeting"]);
@@ -14991,7 +14998,8 @@ class Ad {
     if (_json.containsKey("placementAssignments")) {
       placementAssignments = _json["placementAssignments"]
           .map((value) => new PlacementAssignment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PlacementAssignment>();
     }
     if (_json.containsKey("remarketingListExpression")) {
       remarketingListExpression = new ListTargetingExpression.fromJson(
@@ -15329,7 +15337,10 @@ class AdsListResponse {
 
   AdsListResponse.fromJson(core.Map _json) {
     if (_json.containsKey("ads")) {
-      ads = _json["ads"].map((value) => new Ad.fromJson(value)).toList();
+      ads = _json["ads"]
+          .map((value) => new Ad.fromJson(value))
+          .toList()
+          .cast<Ad>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -15607,7 +15618,8 @@ class AdvertiserGroupsListResponse {
     if (_json.containsKey("advertiserGroups")) {
       advertiserGroups = _json["advertiserGroups"]
           .map((value) => new AdvertiserGroup.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AdvertiserGroup>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -15652,7 +15664,8 @@ class AdvertisersListResponse {
     if (_json.containsKey("advertisers")) {
       advertisers = _json["advertisers"]
           .map((value) => new Advertiser.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Advertiser>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -15743,7 +15756,8 @@ class AudienceSegmentGroup {
     if (_json.containsKey("audienceSegments")) {
       audienceSegments = _json["audienceSegments"]
           .map((value) => new AudienceSegment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AudienceSegment>();
     }
     if (_json.containsKey("id")) {
       id = _json["id"];
@@ -15869,7 +15883,8 @@ class BrowsersListResponse {
     if (_json.containsKey("browsers")) {
       browsers = _json["browsers"]
           .map((value) => new Browser.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Browser>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -16009,7 +16024,8 @@ class Campaign {
       additionalCreativeOptimizationConfigurations = _json[
               "additionalCreativeOptimizationConfigurations"]
           .map((value) => new CreativeOptimizationConfiguration.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CreativeOptimizationConfiguration>();
     }
     if (_json.containsKey("advertiserGroupId")) {
       advertiserGroupId = _json["advertiserGroupId"];
@@ -16027,7 +16043,8 @@ class Campaign {
     if (_json.containsKey("audienceSegmentGroups")) {
       audienceSegmentGroups = _json["audienceSegmentGroups"]
           .map((value) => new AudienceSegmentGroup.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AudienceSegmentGroup>();
     }
     if (_json.containsKey("billingInvoiceCode")) {
       billingInvoiceCode = _json["billingInvoiceCode"];
@@ -16062,7 +16079,8 @@ class Campaign {
     if (_json.containsKey("eventTagOverrides")) {
       eventTagOverrides = _json["eventTagOverrides"]
           .map((value) => new EventTagOverride.fromJson(value))
-          .toList();
+          .toList()
+          .cast<EventTagOverride>();
     }
     if (_json.containsKey("externalId")) {
       externalId = _json["externalId"];
@@ -16254,7 +16272,8 @@ class CampaignCreativeAssociationsListResponse {
     if (_json.containsKey("campaignCreativeAssociations")) {
       campaignCreativeAssociations = _json["campaignCreativeAssociations"]
           .map((value) => new CampaignCreativeAssociation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CampaignCreativeAssociation>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -16300,7 +16319,8 @@ class CampaignsListResponse {
     if (_json.containsKey("campaigns")) {
       campaigns = _json["campaigns"]
           .map((value) => new Campaign.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Campaign>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -16488,7 +16508,8 @@ class ChangeLogsListResponse {
     if (_json.containsKey("changeLogs")) {
       changeLogs = _json["changeLogs"]
           .map((value) => new ChangeLog.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ChangeLog>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -16528,8 +16549,10 @@ class CitiesListResponse {
 
   CitiesListResponse.fromJson(core.Map _json) {
     if (_json.containsKey("cities")) {
-      cities =
-          _json["cities"].map((value) => new City.fromJson(value)).toList();
+      cities = _json["cities"]
+          .map((value) => new City.fromJson(value))
+          .toList()
+          .cast<City>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -16842,7 +16865,8 @@ class CompanionSetting {
     if (_json.containsKey("enabledSizes")) {
       enabledSizes = _json["enabledSizes"]
           .map((value) => new Size.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Size>();
     }
     if (_json.containsKey("imageOnly")) {
       imageOnly = _json["imageOnly"];
@@ -17017,7 +17041,8 @@ class ConnectionTypesListResponse {
     if (_json.containsKey("connectionTypes")) {
       connectionTypes = _json["connectionTypes"]
           .map((value) => new ConnectionType.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ConnectionType>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -17056,7 +17081,8 @@ class ContentCategoriesListResponse {
     if (_json.containsKey("contentCategories")) {
       contentCategories = _json["contentCategories"]
           .map((value) => new ContentCategory.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ContentCategory>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -17213,7 +17239,8 @@ class Conversion {
     if (_json.containsKey("customVariables")) {
       customVariables = _json["customVariables"]
           .map((value) => new CustomFloodlightVariable.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CustomFloodlightVariable>();
     }
     if (_json.containsKey("encryptedUserId")) {
       encryptedUserId = _json["encryptedUserId"];
@@ -17373,7 +17400,8 @@ class ConversionStatus {
     if (_json.containsKey("errors")) {
       errors = _json["errors"]
           .map((value) => new ConversionError.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ConversionError>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -17416,7 +17444,8 @@ class ConversionsBatchInsertRequest {
     if (_json.containsKey("conversions")) {
       conversions = _json["conversions"]
           .map((value) => new Conversion.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Conversion>();
     }
     if (_json.containsKey("encryptionInfo")) {
       encryptionInfo = new EncryptionInfo.fromJson(_json["encryptionInfo"]);
@@ -17468,7 +17497,8 @@ class ConversionsBatchInsertResponse {
     if (_json.containsKey("status")) {
       status = _json["status"]
           .map((value) => new ConversionStatus.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ConversionStatus>();
     }
   }
 
@@ -17507,7 +17537,8 @@ class ConversionsBatchUpdateRequest {
     if (_json.containsKey("conversions")) {
       conversions = _json["conversions"]
           .map((value) => new Conversion.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Conversion>();
     }
     if (_json.containsKey("encryptionInfo")) {
       encryptionInfo = new EncryptionInfo.fromJson(_json["encryptionInfo"]);
@@ -17559,7 +17590,8 @@ class ConversionsBatchUpdateResponse {
     if (_json.containsKey("status")) {
       status = _json["status"]
           .map((value) => new ConversionStatus.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ConversionStatus>();
     }
   }
 
@@ -17594,7 +17626,8 @@ class CountriesListResponse {
     if (_json.containsKey("countries")) {
       countries = _json["countries"]
           .map((value) => new Country.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Country>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -18114,7 +18147,8 @@ class Creative {
     if (_json.containsKey("clickTags")) {
       clickTags = _json["clickTags"]
           .map((value) => new ClickTag.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ClickTag>();
     }
     if (_json.containsKey("commercialId")) {
       commercialId = _json["commercialId"];
@@ -18131,7 +18165,8 @@ class Creative {
     if (_json.containsKey("counterCustomEvents")) {
       counterCustomEvents = _json["counterCustomEvents"]
           .map((value) => new CreativeCustomEvent.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CreativeCustomEvent>();
     }
     if (_json.containsKey("creativeAssetSelection")) {
       creativeAssetSelection =
@@ -18140,12 +18175,14 @@ class Creative {
     if (_json.containsKey("creativeAssets")) {
       creativeAssets = _json["creativeAssets"]
           .map((value) => new CreativeAsset.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CreativeAsset>();
     }
     if (_json.containsKey("creativeFieldAssignments")) {
       creativeFieldAssignments = _json["creativeFieldAssignments"]
           .map((value) => new CreativeFieldAssignment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CreativeFieldAssignment>();
     }
     if (_json.containsKey("customKeyValues")) {
       customKeyValues = _json["customKeyValues"];
@@ -18156,7 +18193,8 @@ class Creative {
     if (_json.containsKey("exitCustomEvents")) {
       exitCustomEvents = _json["exitCustomEvents"]
           .map((value) => new CreativeCustomEvent.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CreativeCustomEvent>();
     }
     if (_json.containsKey("fsCommand")) {
       fsCommand = new FsCommand.fromJson(_json["fsCommand"]);
@@ -18246,12 +18284,14 @@ class Creative {
     if (_json.containsKey("thirdPartyUrls")) {
       thirdPartyUrls = _json["thirdPartyUrls"]
           .map((value) => new ThirdPartyTrackingUrl.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ThirdPartyTrackingUrl>();
     }
     if (_json.containsKey("timerCustomEvents")) {
       timerCustomEvents = _json["timerCustomEvents"]
           .map((value) => new CreativeCustomEvent.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CreativeCustomEvent>();
     }
     if (_json.containsKey("totalFileSize")) {
       totalFileSize = _json["totalFileSize"];
@@ -19151,7 +19191,8 @@ class CreativeAssetMetadata {
     if (_json.containsKey("clickTags")) {
       clickTags = _json["clickTags"]
           .map((value) => new ClickTag.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ClickTag>();
     }
     if (_json.containsKey("detectedFeatures")) {
       detectedFeatures = _json["detectedFeatures"];
@@ -19218,7 +19259,10 @@ class CreativeAssetSelection {
       defaultAssetId = _json["defaultAssetId"];
     }
     if (_json.containsKey("rules")) {
-      rules = _json["rules"].map((value) => new Rule.fromJson(value)).toList();
+      rules = _json["rules"]
+          .map((value) => new Rule.fromJson(value))
+          .toList()
+          .cast<Rule>();
     }
   }
 
@@ -19316,12 +19360,14 @@ class CreativeAssignment {
     if (_json.containsKey("companionCreativeOverrides")) {
       companionCreativeOverrides = _json["companionCreativeOverrides"]
           .map((value) => new CompanionClickThroughOverride.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CompanionClickThroughOverride>();
     }
     if (_json.containsKey("creativeGroupAssignments")) {
       creativeGroupAssignments = _json["creativeGroupAssignments"]
           .map((value) => new CreativeGroupAssignment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CreativeGroupAssignment>();
     }
     if (_json.containsKey("creativeId")) {
       creativeId = _json["creativeId"];
@@ -19336,7 +19382,8 @@ class CreativeAssignment {
     if (_json.containsKey("richMediaExitOverrides")) {
       richMediaExitOverrides = _json["richMediaExitOverrides"]
           .map((value) => new RichMediaExitOverride.fromJson(value))
-          .toList();
+          .toList()
+          .cast<RichMediaExitOverride>();
     }
     if (_json.containsKey("sequence")) {
       sequence = _json["sequence"];
@@ -19706,7 +19753,8 @@ class CreativeFieldValuesListResponse {
     if (_json.containsKey("creativeFieldValues")) {
       creativeFieldValues = _json["creativeFieldValues"]
           .map((value) => new CreativeFieldValue.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CreativeFieldValue>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -19751,7 +19799,8 @@ class CreativeFieldsListResponse {
     if (_json.containsKey("creativeFields")) {
       creativeFields = _json["creativeFields"]
           .map((value) => new CreativeField.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CreativeField>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -19929,7 +19978,8 @@ class CreativeGroupsListResponse {
     if (_json.containsKey("creativeGroups")) {
       creativeGroups = _json["creativeGroups"]
           .map((value) => new CreativeGroup.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CreativeGroup>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -19991,7 +20041,8 @@ class CreativeOptimizationConfiguration {
     if (_json.containsKey("optimizationActivitys")) {
       optimizationActivitys = _json["optimizationActivitys"]
           .map((value) => new OptimizationActivity.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OptimizationActivity>();
     }
     if (_json.containsKey("optimizationModel")) {
       optimizationModel = _json["optimizationModel"];
@@ -20050,7 +20101,8 @@ class CreativeRotation {
     if (_json.containsKey("creativeAssignments")) {
       creativeAssignments = _json["creativeAssignments"]
           .map((value) => new CreativeAssignment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CreativeAssignment>();
     }
     if (_json.containsKey("creativeOptimizationConfigurationId")) {
       creativeOptimizationConfigurationId =
@@ -20137,7 +20189,8 @@ class CreativesListResponse {
     if (_json.containsKey("creatives")) {
       creatives = _json["creatives"]
           .map((value) => new Creative.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Creative>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -20192,24 +20245,29 @@ class CrossDimensionReachReportCompatibleFields {
     if (_json.containsKey("breakdown")) {
       breakdown = _json["breakdown"]
           .map((value) => new Dimension.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Dimension>();
     }
     if (_json.containsKey("dimensionFilters")) {
       dimensionFilters = _json["dimensionFilters"]
           .map((value) => new Dimension.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Dimension>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
     }
     if (_json.containsKey("metrics")) {
-      metrics =
-          _json["metrics"].map((value) => new Metric.fromJson(value)).toList();
+      metrics = _json["metrics"]
+          .map((value) => new Metric.fromJson(value))
+          .toList()
+          .cast<Metric>();
     }
     if (_json.containsKey("overlapMetrics")) {
       overlapMetrics = _json["overlapMetrics"]
           .map((value) => new Metric.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Metric>();
     }
   }
 
@@ -20398,7 +20456,8 @@ class CustomRichMediaEvents {
     if (_json.containsKey("filteredEventIds")) {
       filteredEventIds = _json["filteredEventIds"]
           .map((value) => new DimensionValue.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DimensionValue>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -20892,7 +20951,8 @@ class DimensionValueList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new DimensionValue.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DimensionValue>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -20953,7 +21013,8 @@ class DimensionValueRequest {
     if (_json.containsKey("filters")) {
       filters = _json["filters"]
           .map((value) => new DimensionFilter.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DimensionFilter>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -21105,7 +21166,8 @@ class DirectorySite {
     if (_json.containsKey("contactAssignments")) {
       contactAssignments = _json["contactAssignments"]
           .map((value) => new DirectorySiteContactAssignment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DirectorySiteContactAssignment>();
     }
     if (_json.containsKey("countryId")) {
       countryId = _json["countryId"];
@@ -21366,7 +21428,8 @@ class DirectorySiteContactsListResponse {
     if (_json.containsKey("directorySiteContacts")) {
       directorySiteContacts = _json["directorySiteContacts"]
           .map((value) => new DirectorySiteContact.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DirectorySiteContact>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -21490,7 +21553,8 @@ class DirectorySitesListResponse {
     if (_json.containsKey("directorySites")) {
       directorySites = _json["directorySites"]
           .map((value) => new DirectorySite.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DirectorySite>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -21596,7 +21660,8 @@ class DynamicTargetingKeysListResponse {
     if (_json.containsKey("dynamicTargetingKeys")) {
       dynamicTargetingKeys = _json["dynamicTargetingKeys"]
           .map((value) => new DynamicTargetingKey.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DynamicTargetingKey>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -21939,7 +22004,8 @@ class EventTagsListResponse {
     if (_json.containsKey("eventTags")) {
       eventTags = _json["eventTags"]
           .map((value) => new EventTag.fromJson(value))
-          .toList();
+          .toList()
+          .cast<EventTag>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -22132,7 +22198,10 @@ class FileList {
       etag = _json["etag"];
     }
     if (_json.containsKey("items")) {
-      items = _json["items"].map((value) => new File.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new File.fromJson(value))
+          .toList()
+          .cast<File>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -22265,7 +22334,8 @@ class FloodlightActivitiesListResponse {
     if (_json.containsKey("floodlightActivities")) {
       floodlightActivities = _json["floodlightActivities"]
           .map((value) => new FloodlightActivity.fromJson(value))
-          .toList();
+          .toList()
+          .cast<FloodlightActivity>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -22448,7 +22518,8 @@ class FloodlightActivity {
     if (_json.containsKey("defaultTags")) {
       defaultTags = _json["defaultTags"]
           .map((value) => new FloodlightActivityDynamicTag.fromJson(value))
-          .toList();
+          .toList()
+          .cast<FloodlightActivityDynamicTag>();
     }
     if (_json.containsKey("expectedUrl")) {
       expectedUrl = _json["expectedUrl"];
@@ -22498,7 +22569,8 @@ class FloodlightActivity {
       publisherTags = _json["publisherTags"]
           .map((value) =>
               new FloodlightActivityPublisherDynamicTag.fromJson(value))
-          .toList();
+          .toList()
+          .cast<FloodlightActivityPublisherDynamicTag>();
     }
     if (_json.containsKey("secure")) {
       secure = _json["secure"];
@@ -22826,7 +22898,8 @@ class FloodlightActivityGroupsListResponse {
     if (_json.containsKey("floodlightActivityGroups")) {
       floodlightActivityGroups = _json["floodlightActivityGroups"]
           .map((value) => new FloodlightActivityGroup.fromJson(value))
-          .toList();
+          .toList()
+          .cast<FloodlightActivityGroup>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -23051,13 +23124,15 @@ class FloodlightConfiguration {
     if (_json.containsKey("thirdPartyAuthenticationTokens")) {
       thirdPartyAuthenticationTokens = _json["thirdPartyAuthenticationTokens"]
           .map((value) => new ThirdPartyAuthenticationToken.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ThirdPartyAuthenticationToken>();
     }
     if (_json.containsKey("userDefinedVariableConfigurations")) {
       userDefinedVariableConfigurations = _json[
               "userDefinedVariableConfigurations"]
           .map((value) => new UserDefinedVariableConfiguration.fromJson(value))
-          .toList();
+          .toList()
+          .cast<UserDefinedVariableConfiguration>();
     }
   }
 
@@ -23142,7 +23217,8 @@ class FloodlightConfigurationsListResponse {
     if (_json.containsKey("floodlightConfigurations")) {
       floodlightConfigurations = _json["floodlightConfigurations"]
           .map((value) => new FloodlightConfiguration.fromJson(value))
-          .toList();
+          .toList()
+          .cast<FloodlightConfiguration>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -23188,19 +23264,23 @@ class FloodlightReportCompatibleFields {
     if (_json.containsKey("dimensionFilters")) {
       dimensionFilters = _json["dimensionFilters"]
           .map((value) => new Dimension.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Dimension>();
     }
     if (_json.containsKey("dimensions")) {
       dimensions = _json["dimensions"]
           .map((value) => new Dimension.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Dimension>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
     }
     if (_json.containsKey("metrics")) {
-      metrics =
-          _json["metrics"].map((value) => new Metric.fromJson(value)).toList();
+      metrics = _json["metrics"]
+          .map((value) => new Metric.fromJson(value))
+          .toList()
+          .cast<Metric>();
     }
   }
 
@@ -23363,29 +23443,37 @@ class GeoTargeting {
 
   GeoTargeting.fromJson(core.Map _json) {
     if (_json.containsKey("cities")) {
-      cities =
-          _json["cities"].map((value) => new City.fromJson(value)).toList();
+      cities = _json["cities"]
+          .map((value) => new City.fromJson(value))
+          .toList()
+          .cast<City>();
     }
     if (_json.containsKey("countries")) {
       countries = _json["countries"]
           .map((value) => new Country.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Country>();
     }
     if (_json.containsKey("excludeCountries")) {
       excludeCountries = _json["excludeCountries"];
     }
     if (_json.containsKey("metros")) {
-      metros =
-          _json["metros"].map((value) => new Metro.fromJson(value)).toList();
+      metros = _json["metros"]
+          .map((value) => new Metro.fromJson(value))
+          .toList()
+          .cast<Metro>();
     }
     if (_json.containsKey("postalCodes")) {
       postalCodes = _json["postalCodes"]
           .map((value) => new PostalCode.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PostalCode>();
     }
     if (_json.containsKey("regions")) {
-      regions =
-          _json["regions"].map((value) => new Region.fromJson(value)).toList();
+      regions = _json["regions"]
+          .map((value) => new Region.fromJson(value))
+          .toList()
+          .cast<Region>();
     }
   }
 
@@ -23493,8 +23581,10 @@ class InventoryItem {
       accountId = _json["accountId"];
     }
     if (_json.containsKey("adSlots")) {
-      adSlots =
-          _json["adSlots"].map((value) => new AdSlot.fromJson(value)).toList();
+      adSlots = _json["adSlots"]
+          .map((value) => new AdSlot.fromJson(value))
+          .toList()
+          .cast<AdSlot>();
     }
     if (_json.containsKey("advertiserId")) {
       advertiserId = _json["advertiserId"];
@@ -23638,7 +23728,8 @@ class InventoryItemsListResponse {
     if (_json.containsKey("inventoryItems")) {
       inventoryItems = _json["inventoryItems"]
           .map((value) => new InventoryItem.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InventoryItem>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -23771,7 +23862,8 @@ class LandingPagesListResponse {
     if (_json.containsKey("landingPages")) {
       landingPages = _json["landingPages"]
           .map((value) => new LandingPage.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LandingPage>();
     }
   }
 
@@ -23856,7 +23948,8 @@ class LanguageTargeting {
     if (_json.containsKey("languages")) {
       languages = _json["languages"]
           .map((value) => new Language.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Language>();
     }
   }
 
@@ -23888,7 +23981,8 @@ class LanguagesListResponse {
     if (_json.containsKey("languages")) {
       languages = _json["languages"]
           .map((value) => new Language.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Language>();
     }
   }
 
@@ -23941,7 +24035,8 @@ class ListPopulationClause {
     if (_json.containsKey("terms")) {
       terms = _json["terms"]
           .map((value) => new ListPopulationTerm.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ListPopulationTerm>();
     }
   }
 
@@ -23982,7 +24077,8 @@ class ListPopulationRule {
     if (_json.containsKey("listPopulationClauses")) {
       listPopulationClauses = _json["listPopulationClauses"]
           .map((value) => new ListPopulationClause.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ListPopulationClause>();
     }
   }
 
@@ -24309,8 +24405,10 @@ class MetrosListResponse {
       kind = _json["kind"];
     }
     if (_json.containsKey("metros")) {
-      metros =
-          _json["metros"].map((value) => new Metro.fromJson(value)).toList();
+      metros = _json["metros"]
+          .map((value) => new Metro.fromJson(value))
+          .toList()
+          .cast<Metro>();
     }
   }
 
@@ -24405,7 +24503,8 @@ class MobileCarriersListResponse {
     if (_json.containsKey("mobileCarriers")) {
       mobileCarriers = _json["mobileCarriers"]
           .map((value) => new MobileCarrier.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MobileCarrier>();
     }
   }
 
@@ -24687,7 +24786,8 @@ class OperatingSystemVersionsListResponse {
     if (_json.containsKey("operatingSystemVersions")) {
       operatingSystemVersions = _json["operatingSystemVersions"]
           .map((value) => new OperatingSystemVersion.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OperatingSystemVersion>();
     }
   }
 
@@ -24723,7 +24823,8 @@ class OperatingSystemsListResponse {
     if (_json.containsKey("operatingSystems")) {
       operatingSystems = _json["operatingSystems"]
           .map((value) => new OperatingSystem.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OperatingSystem>();
     }
   }
 
@@ -24875,7 +24976,8 @@ class Order {
     if (_json.containsKey("contacts")) {
       contacts = _json["contacts"]
           .map((value) => new OrderContact.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrderContact>();
     }
     if (_json.containsKey("id")) {
       id = _json["id"];
@@ -25250,7 +25352,8 @@ class OrderDocumentsListResponse {
     if (_json.containsKey("orderDocuments")) {
       orderDocuments = _json["orderDocuments"]
           .map((value) => new OrderDocument.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OrderDocument>();
     }
   }
 
@@ -25293,8 +25396,10 @@ class OrdersListResponse {
       nextPageToken = _json["nextPageToken"];
     }
     if (_json.containsKey("orders")) {
-      orders =
-          _json["orders"].map((value) => new Order.fromJson(value)).toList();
+      orders = _json["orders"]
+          .map((value) => new Order.fromJson(value))
+          .toList()
+          .cast<Order>();
     }
   }
 
@@ -25343,24 +25448,29 @@ class PathToConversionReportCompatibleFields {
     if (_json.containsKey("conversionDimensions")) {
       conversionDimensions = _json["conversionDimensions"]
           .map((value) => new Dimension.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Dimension>();
     }
     if (_json.containsKey("customFloodlightVariables")) {
       customFloodlightVariables = _json["customFloodlightVariables"]
           .map((value) => new Dimension.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Dimension>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
     }
     if (_json.containsKey("metrics")) {
-      metrics =
-          _json["metrics"].map((value) => new Metric.fromJson(value)).toList();
+      metrics = _json["metrics"]
+          .map((value) => new Metric.fromJson(value))
+          .toList()
+          .cast<Metric>();
     }
     if (_json.containsKey("perInteractionDimensions")) {
       perInteractionDimensions = _json["perInteractionDimensions"]
           .map((value) => new Dimension.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Dimension>();
     }
   }
 
@@ -26224,7 +26334,8 @@ class PlacementGroupsListResponse {
     if (_json.containsKey("placementGroups")) {
       placementGroups = _json["placementGroups"]
           .map((value) => new PlacementGroup.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PlacementGroup>();
     }
   }
 
@@ -26269,7 +26380,8 @@ class PlacementStrategiesListResponse {
     if (_json.containsKey("placementStrategies")) {
       placementStrategies = _json["placementStrategies"]
           .map((value) => new PlacementStrategy.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PlacementStrategy>();
     }
   }
 
@@ -26361,7 +26473,8 @@ class PlacementTag {
     if (_json.containsKey("tagDatas")) {
       tagDatas = _json["tagDatas"]
           .map((value) => new TagData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TagData>();
     }
   }
 
@@ -26396,7 +26509,8 @@ class PlacementsGenerateTagsResponse {
     if (_json.containsKey("placementTags")) {
       placementTags = _json["placementTags"]
           .map((value) => new PlacementTag.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PlacementTag>();
     }
   }
 
@@ -26438,7 +26552,8 @@ class PlacementsListResponse {
     if (_json.containsKey("placements")) {
       placements = _json["placements"]
           .map((value) => new Placement.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Placement>();
     }
   }
 
@@ -26519,7 +26634,8 @@ class PlatformTypesListResponse {
     if (_json.containsKey("platformTypes")) {
       platformTypes = _json["platformTypes"]
           .map((value) => new PlatformType.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PlatformType>();
     }
   }
 
@@ -26715,7 +26831,8 @@ class PostalCodesListResponse {
     if (_json.containsKey("postalCodes")) {
       postalCodes = _json["postalCodes"]
           .map((value) => new PostalCode.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PostalCode>();
     }
   }
 
@@ -26788,8 +26905,10 @@ class Pricing {
       endDate = core.DateTime.parse(_json["endDate"]);
     }
     if (_json.containsKey("flights")) {
-      flights =
-          _json["flights"].map((value) => new Flight.fromJson(value)).toList();
+      flights = _json["flights"]
+          .map((value) => new Flight.fromJson(value))
+          .toList()
+          .cast<Flight>();
     }
     if (_json.containsKey("groupType")) {
       groupType = _json["groupType"];
@@ -26901,7 +27020,8 @@ class PricingSchedule {
     if (_json.containsKey("pricingPeriods")) {
       pricingPeriods = _json["pricingPeriods"]
           .map((value) => new PricingSchedulePricingPeriod.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PricingSchedulePricingPeriod>();
     }
     if (_json.containsKey("pricingType")) {
       pricingType = _json["pricingType"];
@@ -27277,7 +27397,8 @@ class ProjectsListResponse {
     if (_json.containsKey("projects")) {
       projects = _json["projects"]
           .map((value) => new Project.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Project>();
     }
   }
 
@@ -27330,29 +27451,35 @@ class ReachReportCompatibleFields {
     if (_json.containsKey("dimensionFilters")) {
       dimensionFilters = _json["dimensionFilters"]
           .map((value) => new Dimension.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Dimension>();
     }
     if (_json.containsKey("dimensions")) {
       dimensions = _json["dimensions"]
           .map((value) => new Dimension.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Dimension>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
     }
     if (_json.containsKey("metrics")) {
-      metrics =
-          _json["metrics"].map((value) => new Metric.fromJson(value)).toList();
+      metrics = _json["metrics"]
+          .map((value) => new Metric.fromJson(value))
+          .toList()
+          .cast<Metric>();
     }
     if (_json.containsKey("pivotedActivityMetrics")) {
       pivotedActivityMetrics = _json["pivotedActivityMetrics"]
           .map((value) => new Metric.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Metric>();
     }
     if (_json.containsKey("reachByFrequencyMetrics")) {
       reachByFrequencyMetrics = _json["reachByFrequencyMetrics"]
           .map((value) => new Metric.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Metric>();
     }
   }
 
@@ -27514,8 +27641,10 @@ class RegionsListResponse {
       kind = _json["kind"];
     }
     if (_json.containsKey("regions")) {
-      regions =
-          _json["regions"].map((value) => new Region.fromJson(value)).toList();
+      regions = _json["regions"]
+          .map((value) => new Region.fromJson(value))
+          .toList()
+          .cast<Region>();
     }
   }
 
@@ -27768,7 +27897,8 @@ class RemarketingListsListResponse {
     if (_json.containsKey("remarketingLists")) {
       remarketingLists = _json["remarketingLists"]
           .map((value) => new RemarketingList.fromJson(value))
-          .toList();
+          .toList()
+          .cast<RemarketingList>();
     }
   }
 
@@ -27827,12 +27957,14 @@ class ReportCriteria {
     if (_json.containsKey("dimensionFilters")) {
       dimensionFilters = _json["dimensionFilters"]
           .map((value) => new DimensionValue.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DimensionValue>();
     }
     if (_json.containsKey("dimensions")) {
       dimensions = _json["dimensions"]
           .map((value) => new SortedDimension.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SortedDimension>();
     }
     if (_json.containsKey("metricNames")) {
       metricNames = _json["metricNames"];
@@ -27900,7 +28032,8 @@ class ReportCrossDimensionReachCriteria {
     if (_json.containsKey("breakdown")) {
       breakdown = _json["breakdown"]
           .map((value) => new SortedDimension.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SortedDimension>();
     }
     if (_json.containsKey("dateRange")) {
       dateRange = new DateRange.fromJson(_json["dateRange"]);
@@ -27911,7 +28044,8 @@ class ReportCrossDimensionReachCriteria {
     if (_json.containsKey("dimensionFilters")) {
       dimensionFilters = _json["dimensionFilters"]
           .map((value) => new DimensionValue.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DimensionValue>();
     }
     if (_json.containsKey("metricNames")) {
       metricNames = _json["metricNames"];
@@ -27985,7 +28119,8 @@ class ReportDelivery {
     if (_json.containsKey("recipients")) {
       recipients = _json["recipients"]
           .map((value) => new Recipient.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Recipient>();
     }
   }
 
@@ -28092,7 +28227,8 @@ class ReportFloodlightCriteria {
     if (_json.containsKey("customRichMediaEvents")) {
       customRichMediaEvents = _json["customRichMediaEvents"]
           .map((value) => new DimensionValue.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DimensionValue>();
     }
     if (_json.containsKey("dateRange")) {
       dateRange = new DateRange.fromJson(_json["dateRange"]);
@@ -28100,12 +28236,14 @@ class ReportFloodlightCriteria {
     if (_json.containsKey("dimensionFilters")) {
       dimensionFilters = _json["dimensionFilters"]
           .map((value) => new DimensionValue.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DimensionValue>();
     }
     if (_json.containsKey("dimensions")) {
       dimensions = _json["dimensions"]
           .map((value) => new SortedDimension.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SortedDimension>();
     }
     if (_json.containsKey("floodlightConfigId")) {
       floodlightConfigId =
@@ -28304,22 +28442,26 @@ class ReportPathToConversionCriteria {
     if (_json.containsKey("activityFilters")) {
       activityFilters = _json["activityFilters"]
           .map((value) => new DimensionValue.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DimensionValue>();
     }
     if (_json.containsKey("conversionDimensions")) {
       conversionDimensions = _json["conversionDimensions"]
           .map((value) => new SortedDimension.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SortedDimension>();
     }
     if (_json.containsKey("customFloodlightVariables")) {
       customFloodlightVariables = _json["customFloodlightVariables"]
           .map((value) => new SortedDimension.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SortedDimension>();
     }
     if (_json.containsKey("customRichMediaEvents")) {
       customRichMediaEvents = _json["customRichMediaEvents"]
           .map((value) => new DimensionValue.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DimensionValue>();
     }
     if (_json.containsKey("dateRange")) {
       dateRange = new DateRange.fromJson(_json["dateRange"]);
@@ -28334,7 +28476,8 @@ class ReportPathToConversionCriteria {
     if (_json.containsKey("perInteractionDimensions")) {
       perInteractionDimensions = _json["perInteractionDimensions"]
           .map((value) => new SortedDimension.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SortedDimension>();
     }
     if (_json.containsKey("reportProperties")) {
       reportProperties =
@@ -28429,12 +28572,14 @@ class ReportReachCriteria {
     if (_json.containsKey("dimensionFilters")) {
       dimensionFilters = _json["dimensionFilters"]
           .map((value) => new DimensionValue.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DimensionValue>();
     }
     if (_json.containsKey("dimensions")) {
       dimensions = _json["dimensions"]
           .map((value) => new SortedDimension.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SortedDimension>();
     }
     if (_json.containsKey("enableAllDimensionCombinations")) {
       enableAllDimensionCombinations = _json["enableAllDimensionCombinations"];
@@ -28798,24 +28943,29 @@ class ReportCompatibleFields {
     if (_json.containsKey("dimensionFilters")) {
       dimensionFilters = _json["dimensionFilters"]
           .map((value) => new Dimension.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Dimension>();
     }
     if (_json.containsKey("dimensions")) {
       dimensions = _json["dimensions"]
           .map((value) => new Dimension.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Dimension>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
     }
     if (_json.containsKey("metrics")) {
-      metrics =
-          _json["metrics"].map((value) => new Metric.fromJson(value)).toList();
+      metrics = _json["metrics"]
+          .map((value) => new Metric.fromJson(value))
+          .toList()
+          .cast<Metric>();
     }
     if (_json.containsKey("pivotedActivityMetrics")) {
       pivotedActivityMetrics = _json["pivotedActivityMetrics"]
           .map((value) => new Metric.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Metric>();
     }
   }
 
@@ -28868,8 +29018,10 @@ class ReportList {
       etag = _json["etag"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Report.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Report.fromJson(value))
+          .toList()
+          .cast<Report>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -29127,7 +29279,8 @@ class Site {
     if (_json.containsKey("siteContacts")) {
       siteContacts = _json["siteContacts"]
           .map((value) => new SiteContact.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SiteContact>();
     }
     if (_json.containsKey("siteSettings")) {
       siteSettings = new SiteSettings.fromJson(_json["siteSettings"]);
@@ -29401,7 +29554,10 @@ class SitesListResponse {
       nextPageToken = _json["nextPageToken"];
     }
     if (_json.containsKey("sites")) {
-      sites = _json["sites"].map((value) => new Site.fromJson(value)).toList();
+      sites = _json["sites"]
+          .map((value) => new Site.fromJson(value))
+          .toList()
+          .cast<Site>();
     }
   }
 
@@ -29497,7 +29653,10 @@ class SizesListResponse {
       kind = _json["kind"];
     }
     if (_json.containsKey("sizes")) {
-      sizes = _json["sizes"].map((value) => new Size.fromJson(value)).toList();
+      sizes = _json["sizes"]
+          .map((value) => new Size.fromJson(value))
+          .toList()
+          .cast<Size>();
     }
   }
 
@@ -29697,7 +29856,8 @@ class SubaccountsListResponse {
     if (_json.containsKey("subaccounts")) {
       subaccounts = _json["subaccounts"]
           .map((value) => new Subaccount.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Subaccount>();
     }
   }
 
@@ -30102,7 +30262,8 @@ class TargetableRemarketingListsListResponse {
     if (_json.containsKey("targetableRemarketingLists")) {
       targetableRemarketingLists = _json["targetableRemarketingLists"]
           .map((value) => new TargetableRemarketingList.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TargetableRemarketingList>();
     }
   }
 
@@ -30293,7 +30454,8 @@ class TargetingTemplatesListResponse {
     if (_json.containsKey("targetingTemplates")) {
       targetingTemplates = _json["targetingTemplates"]
           .map((value) => new TargetingTemplate.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TargetingTemplate>();
     }
   }
 
@@ -30358,32 +30520,38 @@ class TechnologyTargeting {
     if (_json.containsKey("browsers")) {
       browsers = _json["browsers"]
           .map((value) => new Browser.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Browser>();
     }
     if (_json.containsKey("connectionTypes")) {
       connectionTypes = _json["connectionTypes"]
           .map((value) => new ConnectionType.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ConnectionType>();
     }
     if (_json.containsKey("mobileCarriers")) {
       mobileCarriers = _json["mobileCarriers"]
           .map((value) => new MobileCarrier.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MobileCarrier>();
     }
     if (_json.containsKey("operatingSystemVersions")) {
       operatingSystemVersions = _json["operatingSystemVersions"]
           .map((value) => new OperatingSystemVersion.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OperatingSystemVersion>();
     }
     if (_json.containsKey("operatingSystems")) {
       operatingSystems = _json["operatingSystems"]
           .map((value) => new OperatingSystem.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OperatingSystem>();
     }
     if (_json.containsKey("platformTypes")) {
       platformTypes = _json["platformTypes"]
           .map((value) => new PlatformType.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PlatformType>();
     }
   }
 
@@ -30829,7 +30997,8 @@ class UserProfileList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new UserProfile.fromJson(value))
-          .toList();
+          .toList()
+          .cast<UserProfile>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -30912,7 +31081,8 @@ class UserRole {
     if (_json.containsKey("permissions")) {
       permissions = _json["permissions"]
           .map((value) => new UserRolePermission.fromJson(value))
-          .toList();
+          .toList()
+          .cast<UserRolePermission>();
     }
     if (_json.containsKey("subaccountId")) {
       subaccountId = _json["subaccountId"];
@@ -31077,7 +31247,8 @@ class UserRolePermissionGroupsListResponse {
     if (_json.containsKey("userRolePermissionGroups")) {
       userRolePermissionGroups = _json["userRolePermissionGroups"]
           .map((value) => new UserRolePermissionGroup.fromJson(value))
-          .toList();
+          .toList()
+          .cast<UserRolePermissionGroup>();
     }
   }
 
@@ -31113,7 +31284,8 @@ class UserRolePermissionsListResponse {
     if (_json.containsKey("userRolePermissions")) {
       userRolePermissions = _json["userRolePermissions"]
           .map((value) => new UserRolePermission.fromJson(value))
-          .toList();
+          .toList()
+          .cast<UserRolePermission>();
     }
   }
 
@@ -31155,7 +31327,8 @@ class UserRolesListResponse {
     if (_json.containsKey("userRoles")) {
       userRoles = _json["userRoles"]
           .map((value) => new UserRole.fromJson(value))
-          .toList();
+          .toList()
+          .cast<UserRole>();
     }
   }
 
@@ -31259,7 +31432,8 @@ class VideoFormatsListResponse {
     if (_json.containsKey("videoFormats")) {
       videoFormats = _json["videoFormats"]
           .map((value) => new VideoFormat.fromJson(value))
-          .toList();
+          .toList()
+          .cast<VideoFormat>();
     }
   }
 

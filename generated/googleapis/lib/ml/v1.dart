@@ -2022,7 +2022,8 @@ class GoogleCloudMlV1HyperparameterOutput {
           .map((value) =>
               new GoogleCloudMlV1HyperparameterOutputHyperparameterMetric
                   .fromJson(value))
-          .toList();
+          .toList()
+          .cast<GoogleCloudMlV1HyperparameterOutputHyperparameterMetric>();
     }
     if (_json.containsKey("finalMetric")) {
       finalMetric =
@@ -2135,7 +2136,8 @@ class GoogleCloudMlV1HyperparameterSpec {
     if (_json.containsKey("params")) {
       params = _json["params"]
           .map((value) => new GoogleCloudMlV1ParameterSpec.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GoogleCloudMlV1ParameterSpec>();
     }
     if (_json.containsKey("resumePreviousJobId")) {
       resumePreviousJobId = _json["resumePreviousJobId"];
@@ -2306,7 +2308,8 @@ class GoogleCloudMlV1ListJobsResponse {
     if (_json.containsKey("jobs")) {
       jobs = _json["jobs"]
           .map((value) => new GoogleCloudMlV1Job.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GoogleCloudMlV1Job>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -2340,7 +2343,8 @@ class GoogleCloudMlV1ListLocationsResponse {
     if (_json.containsKey("locations")) {
       locations = _json["locations"]
           .map((value) => new GoogleCloudMlV1Location.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GoogleCloudMlV1Location>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -2375,7 +2379,8 @@ class GoogleCloudMlV1ListModelsResponse {
     if (_json.containsKey("models")) {
       models = _json["models"]
           .map((value) => new GoogleCloudMlV1Model.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GoogleCloudMlV1Model>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -2413,7 +2418,8 @@ class GoogleCloudMlV1ListVersionsResponse {
     if (_json.containsKey("versions")) {
       versions = _json["versions"]
           .map((value) => new GoogleCloudMlV1Version.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GoogleCloudMlV1Version>();
     }
   }
 
@@ -2441,7 +2447,8 @@ class GoogleCloudMlV1Location {
     if (_json.containsKey("capabilities")) {
       capabilities = _json["capabilities"]
           .map((value) => new GoogleCloudMlV1Capability.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GoogleCloudMlV1Capability>();
     }
     if (_json.containsKey("name")) {
       name = _json["name"];
@@ -3328,7 +3335,8 @@ class GoogleCloudMlV1TrainingOutput {
       trials = _json["trials"]
           .map((value) =>
               new GoogleCloudMlV1HyperparameterOutput.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GoogleCloudMlV1HyperparameterOutput>();
     }
   }
 
@@ -3636,7 +3644,8 @@ class GoogleIamV1Policy {
     if (_json.containsKey("bindings")) {
       bindings = _json["bindings"]
           .map((value) => new GoogleIamV1Binding.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GoogleIamV1Binding>();
     }
     if (_json.containsKey("etag")) {
       etag = _json["etag"];
@@ -3755,7 +3764,8 @@ class GoogleLongrunningListOperationsResponse {
     if (_json.containsKey("operations")) {
       operations = _json["operations"]
           .map((value) => new GoogleLongrunningOperation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GoogleLongrunningOperation>();
     }
   }
 

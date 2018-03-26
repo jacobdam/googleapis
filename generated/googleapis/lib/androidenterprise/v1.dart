@@ -5192,7 +5192,8 @@ class AppRestrictionsSchema {
     if (_json.containsKey("restrictions")) {
       restrictions = _json["restrictions"]
           .map((value) => new AppRestrictionsSchemaRestriction.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AppRestrictionsSchemaRestriction>();
     }
   }
 
@@ -5295,7 +5296,8 @@ class AppRestrictionsSchemaRestriction {
     if (_json.containsKey("nestedRestriction")) {
       nestedRestriction = _json["nestedRestriction"]
           .map((value) => new AppRestrictionsSchemaRestriction.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AppRestrictionsSchemaRestriction>();
     }
     if (_json.containsKey("restrictionType")) {
       restrictionType = _json["restrictionType"];
@@ -5566,7 +5568,8 @@ class ConfigurationVariables {
     if (_json.containsKey("variableSet")) {
       variableSet = _json["variableSet"]
           .map((value) => new VariableSet.fromJson(value))
-          .toList();
+          .toList()
+          .cast<VariableSet>();
     }
   }
 
@@ -5702,8 +5705,10 @@ class DevicesListResponse {
 
   DevicesListResponse.fromJson(core.Map _json) {
     if (_json.containsKey("device")) {
-      device =
-          _json["device"].map((value) => new Device.fromJson(value)).toList();
+      device = _json["device"]
+          .map((value) => new Device.fromJson(value))
+          .toList()
+          .cast<Device>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -5760,7 +5765,8 @@ class Enterprise {
     if (_json.containsKey("administrator")) {
       administrator = _json["administrator"]
           .map((value) => new Administrator.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Administrator>();
     }
     if (_json.containsKey("id")) {
       id = _json["id"];
@@ -5848,7 +5854,8 @@ class EnterprisesListResponse {
     if (_json.containsKey("enterprise")) {
       enterprise = _json["enterprise"]
           .map((value) => new Enterprise.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Enterprise>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -5986,7 +5993,8 @@ class EntitlementsListResponse {
     if (_json.containsKey("entitlement")) {
       entitlement = _json["entitlement"]
           .map((value) => new Entitlement.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Entitlement>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -6137,7 +6145,10 @@ class GroupLicenseUsersListResponse {
       kind = _json["kind"];
     }
     if (_json.containsKey("user")) {
-      user = _json["user"].map((value) => new User.fromJson(value)).toList();
+      user = _json["user"]
+          .map((value) => new User.fromJson(value))
+          .toList()
+          .cast<User>();
     }
   }
 
@@ -6169,7 +6180,8 @@ class GroupLicensesListResponse {
     if (_json.containsKey("groupLicense")) {
       groupLicense = _json["groupLicense"]
           .map((value) => new GroupLicense.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GroupLicense>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -6345,8 +6357,10 @@ class InstallsListResponse {
 
   InstallsListResponse.fromJson(core.Map _json) {
     if (_json.containsKey("install")) {
-      install =
-          _json["install"].map((value) => new Install.fromJson(value)).toList();
+      install = _json["install"]
+          .map((value) => new Install.fromJson(value))
+          .toList()
+          .cast<Install>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -6430,7 +6444,8 @@ class ManagedConfiguration {
     if (_json.containsKey("managedProperty")) {
       managedProperty = _json["managedProperty"]
           .map((value) => new ManagedProperty.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ManagedProperty>();
     }
     if (_json.containsKey("productId")) {
       productId = _json["productId"];
@@ -6475,7 +6490,8 @@ class ManagedConfigurationsForDeviceListResponse {
     if (_json.containsKey("managedConfigurationForDevice")) {
       managedConfigurationForDevice = _json["managedConfigurationForDevice"]
           .map((value) => new ManagedConfiguration.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ManagedConfiguration>();
     }
   }
 
@@ -6512,7 +6528,8 @@ class ManagedConfigurationsForUserListResponse {
     if (_json.containsKey("managedConfigurationForUser")) {
       managedConfigurationForUser = _json["managedConfigurationForUser"]
           .map((value) => new ManagedConfiguration.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ManagedConfiguration>();
     }
   }
 
@@ -6564,7 +6581,8 @@ class ManagedConfigurationsSettings {
     if (_json.containsKey("managedProperty")) {
       managedProperty = _json["managedProperty"]
           .map((value) => new ManagedProperty.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ManagedProperty>();
     }
     if (_json.containsKey("mcmId")) {
       mcmId = _json["mcmId"];
@@ -6616,7 +6634,8 @@ class ManagedConfigurationsSettingsListResponse {
     if (_json.containsKey("managedConfigurationsSettings")) {
       managedConfigurationsSettings = _json["managedConfigurationsSettings"]
           .map((value) => new ManagedConfigurationsSettings.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ManagedConfigurationsSettings>();
     }
   }
 
@@ -6682,7 +6701,8 @@ class ManagedProperty {
     if (_json.containsKey("valueBundleArray")) {
       valueBundleArray = _json["valueBundleArray"]
           .map((value) => new ManagedPropertyBundle.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ManagedPropertyBundle>();
     }
     if (_json.containsKey("valueInteger")) {
       valueInteger = _json["valueInteger"];
@@ -6735,7 +6755,8 @@ class ManagedPropertyBundle {
     if (_json.containsKey("managedProperty")) {
       managedProperty = _json["managedProperty"]
           .map((value) => new ManagedProperty.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ManagedProperty>();
     }
   }
 
@@ -6991,7 +7012,8 @@ class NotificationSet {
     if (_json.containsKey("notification")) {
       notification = _json["notification"]
           .map((value) => new Notification.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Notification>();
     }
     if (_json.containsKey("notificationSetId")) {
       notificationSetId = _json["notificationSetId"];
@@ -7134,7 +7156,8 @@ class Policy {
     if (_json.containsKey("productPolicy")) {
       productPolicy = _json["productPolicy"]
           .map((value) => new ProductPolicy.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ProductPolicy>();
     }
   }
 
@@ -7250,7 +7273,8 @@ class Product {
     if (_json.containsKey("appVersion")) {
       appVersion = _json["appVersion"]
           .map((value) => new AppVersion.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AppVersion>();
     }
     if (_json.containsKey("authorName")) {
       authorName = _json["authorName"];
@@ -7291,7 +7315,8 @@ class Product {
     if (_json.containsKey("permissions")) {
       permissions = _json["permissions"]
           .map((value) => new ProductPermission.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ProductPermission>();
     }
     if (_json.containsKey("productId")) {
       productId = _json["productId"];
@@ -7528,7 +7553,8 @@ class ProductPermissions {
     if (_json.containsKey("permission")) {
       permission = _json["permission"]
           .map((value) => new ProductPermission.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ProductPermission>();
     }
     if (_json.containsKey("productId")) {
       productId = _json["productId"];
@@ -7644,7 +7670,8 @@ class ProductSet {
     if (_json.containsKey("productVisibility")) {
       productVisibility = _json["productVisibility"]
           .map((value) => new ProductVisibility.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ProductVisibility>();
     }
   }
 
@@ -7844,8 +7871,10 @@ class ProductsListResponse {
       pageInfo = new PageInfo.fromJson(_json["pageInfo"]);
     }
     if (_json.containsKey("product")) {
-      product =
-          _json["product"].map((value) => new Product.fromJson(value)).toList();
+      product = _json["product"]
+          .map((value) => new Product.fromJson(value))
+          .toList()
+          .cast<Product>();
     }
     if (_json.containsKey("tokenPagination")) {
       tokenPagination = new TokenPagination.fromJson(_json["tokenPagination"]);
@@ -7991,7 +8020,8 @@ class ServiceAccountKeysListResponse {
     if (_json.containsKey("serviceAccountKey")) {
       serviceAccountKey = _json["serviceAccountKey"]
           .map((value) => new ServiceAccountKey.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ServiceAccountKey>();
     }
   }
 
@@ -8092,7 +8122,8 @@ class StoreCluster {
     if (_json.containsKey("name")) {
       name = _json["name"]
           .map((value) => new LocalizedText.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LocalizedText>();
     }
     if (_json.containsKey("orderInPage")) {
       orderInPage = _json["orderInPage"];
@@ -8189,7 +8220,8 @@ class StoreLayoutClustersListResponse {
     if (_json.containsKey("cluster")) {
       cluster = _json["cluster"]
           .map((value) => new StoreCluster.fromJson(value))
-          .toList();
+          .toList()
+          .cast<StoreCluster>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -8225,8 +8257,10 @@ class StoreLayoutPagesListResponse {
       kind = _json["kind"];
     }
     if (_json.containsKey("page")) {
-      page =
-          _json["page"].map((value) => new StorePage.fromJson(value)).toList();
+      page = _json["page"]
+          .map((value) => new StorePage.fromJson(value))
+          .toList()
+          .cast<StorePage>();
     }
   }
 
@@ -8284,7 +8318,8 @@ class StorePage {
     if (_json.containsKey("name")) {
       name = _json["name"]
           .map((value) => new LocalizedText.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LocalizedText>();
     }
   }
 
@@ -8497,7 +8532,10 @@ class UsersListResponse {
       kind = _json["kind"];
     }
     if (_json.containsKey("user")) {
-      user = _json["user"].map((value) => new User.fromJson(value)).toList();
+      user = _json["user"]
+          .map((value) => new User.fromJson(value))
+          .toList()
+          .cast<User>();
     }
   }
 

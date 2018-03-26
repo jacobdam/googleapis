@@ -642,7 +642,10 @@ class AllocateIdsRequest {
 
   AllocateIdsRequest.fromJson(core.Map _json) {
     if (_json.containsKey("keys")) {
-      keys = _json["keys"].map((value) => new Key.fromJson(value)).toList();
+      keys = _json["keys"]
+          .map((value) => new Key.fromJson(value))
+          .toList()
+          .cast<Key>();
     }
   }
 
@@ -666,7 +669,10 @@ class AllocateIdsResponse {
 
   AllocateIdsResponse.fromJson(core.Map _json) {
     if (_json.containsKey("keys")) {
-      keys = _json["keys"].map((value) => new Key.fromJson(value)).toList();
+      keys = _json["keys"]
+          .map((value) => new Key.fromJson(value))
+          .toList()
+          .cast<Key>();
     }
   }
 
@@ -691,8 +697,10 @@ class ArrayValue {
 
   ArrayValue.fromJson(core.Map _json) {
     if (_json.containsKey("values")) {
-      values =
-          _json["values"].map((value) => new Value.fromJson(value)).toList();
+      values = _json["values"]
+          .map((value) => new Value.fromJson(value))
+          .toList()
+          .cast<Value>();
     }
   }
 
@@ -811,7 +819,8 @@ class CommitRequest {
     if (_json.containsKey("mutations")) {
       mutations = _json["mutations"]
           .map((value) => new Mutation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Mutation>();
     }
     if (_json.containsKey("transaction")) {
       transaction = _json["transaction"];
@@ -854,7 +863,8 @@ class CommitResponse {
     if (_json.containsKey("mutationResults")) {
       mutationResults = _json["mutationResults"]
           .map((value) => new MutationResult.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MutationResult>();
     }
   }
 
@@ -889,8 +899,10 @@ class CompositeFilter {
 
   CompositeFilter.fromJson(core.Map _json) {
     if (_json.containsKey("filters")) {
-      filters =
-          _json["filters"].map((value) => new Filter.fromJson(value)).toList();
+      filters = _json["filters"]
+          .map((value) => new Filter.fromJson(value))
+          .toList()
+          .cast<Filter>();
     }
     if (_json.containsKey("op")) {
       op = _json["op"];
@@ -1418,7 +1430,8 @@ class GoogleLongrunningListOperationsResponse {
     if (_json.containsKey("operations")) {
       operations = _json["operations"]
           .map((value) => new GoogleLongrunningOperation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GoogleLongrunningOperation>();
     }
   }
 
@@ -1562,7 +1575,8 @@ class GqlQuery {
     if (_json.containsKey("positionalBindings")) {
       positionalBindings = _json["positionalBindings"]
           .map((value) => new GqlQueryParameter.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GqlQueryParameter>();
     }
     if (_json.containsKey("queryString")) {
       queryString = _json["queryString"];
@@ -1669,7 +1683,8 @@ class Key {
     if (_json.containsKey("path")) {
       path = _json["path"]
           .map((value) => new PathElement.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PathElement>();
     }
   }
 
@@ -1758,7 +1773,10 @@ class LookupRequest {
 
   LookupRequest.fromJson(core.Map _json) {
     if (_json.containsKey("keys")) {
-      keys = _json["keys"].map((value) => new Key.fromJson(value)).toList();
+      keys = _json["keys"]
+          .map((value) => new Key.fromJson(value))
+          .toList()
+          .cast<Key>();
     }
     if (_json.containsKey("readOptions")) {
       readOptions = new ReadOptions.fromJson(_json["readOptions"]);
@@ -1799,18 +1817,22 @@ class LookupResponse {
 
   LookupResponse.fromJson(core.Map _json) {
     if (_json.containsKey("deferred")) {
-      deferred =
-          _json["deferred"].map((value) => new Key.fromJson(value)).toList();
+      deferred = _json["deferred"]
+          .map((value) => new Key.fromJson(value))
+          .toList()
+          .cast<Key>();
     }
     if (_json.containsKey("found")) {
       found = _json["found"]
           .map((value) => new EntityResult.fromJson(value))
-          .toList();
+          .toList()
+          .cast<EntityResult>();
     }
     if (_json.containsKey("missing")) {
       missing = _json["missing"]
           .map((value) => new EntityResult.fromJson(value))
-          .toList();
+          .toList()
+          .cast<EntityResult>();
     }
   }
 
@@ -2241,7 +2263,8 @@ class Query {
     if (_json.containsKey("distinctOn")) {
       distinctOn = _json["distinctOn"]
           .map((value) => new PropertyReference.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PropertyReference>();
     }
     if (_json.containsKey("endCursor")) {
       endCursor = _json["endCursor"];
@@ -2252,7 +2275,8 @@ class Query {
     if (_json.containsKey("kind")) {
       kind = _json["kind"]
           .map((value) => new KindExpression.fromJson(value))
-          .toList();
+          .toList()
+          .cast<KindExpression>();
     }
     if (_json.containsKey("limit")) {
       limit = _json["limit"];
@@ -2263,12 +2287,14 @@ class Query {
     if (_json.containsKey("order")) {
       order = _json["order"]
           .map((value) => new PropertyOrder.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PropertyOrder>();
     }
     if (_json.containsKey("projection")) {
       projection = _json["projection"]
           .map((value) => new Projection.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Projection>();
     }
     if (_json.containsKey("startCursor")) {
       startCursor = _json["startCursor"];
@@ -2389,7 +2415,8 @@ class QueryResultBatch {
     if (_json.containsKey("entityResults")) {
       entityResults = _json["entityResults"]
           .map((value) => new EntityResult.fromJson(value))
-          .toList();
+          .toList()
+          .cast<EntityResult>();
     }
     if (_json.containsKey("moreResults")) {
       moreResults = _json["moreResults"];
@@ -2542,7 +2569,10 @@ class ReserveIdsRequest {
       databaseId = _json["databaseId"];
     }
     if (_json.containsKey("keys")) {
-      keys = _json["keys"].map((value) => new Key.fromJson(value)).toList();
+      keys = _json["keys"]
+          .map((value) => new Key.fromJson(value))
+          .toList()
+          .cast<Key>();
     }
   }
 

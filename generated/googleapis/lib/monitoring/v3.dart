@@ -1635,7 +1635,8 @@ class CollectdPayload {
     if (_json.containsKey("values")) {
       values = _json["values"]
           .map((value) => new CollectdValue.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CollectdValue>();
     }
   }
 
@@ -1698,7 +1699,8 @@ class CollectdPayloadError {
     if (_json.containsKey("valueErrors")) {
       valueErrors = _json["valueErrors"]
           .map((value) => new CollectdValueError.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CollectdValueError>();
     }
   }
 
@@ -1850,7 +1852,8 @@ class CreateCollectdTimeSeriesRequest {
     if (_json.containsKey("collectdPayloads")) {
       collectdPayloads = _json["collectdPayloads"]
           .map((value) => new CollectdPayload.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CollectdPayload>();
     }
     if (_json.containsKey("collectdVersion")) {
       collectdVersion = _json["collectdVersion"];
@@ -1890,7 +1893,8 @@ class CreateCollectdTimeSeriesResponse {
     if (_json.containsKey("payloadErrors")) {
       payloadErrors = _json["payloadErrors"]
           .map((value) => new CollectdPayloadError.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CollectdPayloadError>();
     }
   }
 
@@ -1920,7 +1924,8 @@ class CreateTimeSeriesRequest {
     if (_json.containsKey("timeSeries")) {
       timeSeries = _json["timeSeries"]
           .map((value) => new TimeSeries.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TimeSeries>();
     }
   }
 
@@ -2208,8 +2213,10 @@ class Field {
       oneofIndex = _json["oneofIndex"];
     }
     if (_json.containsKey("options")) {
-      options =
-          _json["options"].map((value) => new Option.fromJson(value)).toList();
+      options = _json["options"]
+          .map((value) => new Option.fromJson(value))
+          .toList()
+          .cast<Option>();
     }
     if (_json.containsKey("packed")) {
       packed = _json["packed"];
@@ -2598,7 +2605,8 @@ class ListGroupMembersResponse {
     if (_json.containsKey("members")) {
       members = _json["members"]
           .map((value) => new MonitoredResource.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MonitoredResource>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -2638,7 +2646,10 @@ class ListGroupsResponse {
 
   ListGroupsResponse.fromJson(core.Map _json) {
     if (_json.containsKey("group")) {
-      group = _json["group"].map((value) => new Group.fromJson(value)).toList();
+      group = _json["group"]
+          .map((value) => new Group.fromJson(value))
+          .toList()
+          .cast<Group>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -2675,7 +2686,8 @@ class ListMetricDescriptorsResponse {
     if (_json.containsKey("metricDescriptors")) {
       metricDescriptors = _json["metricDescriptors"]
           .map((value) => new MetricDescriptor.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MetricDescriptor>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -2716,7 +2728,8 @@ class ListMonitoredResourceDescriptorsResponse {
     if (_json.containsKey("resourceDescriptors")) {
       resourceDescriptors = _json["resourceDescriptors"]
           .map((value) => new MonitoredResourceDescriptor.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MonitoredResourceDescriptor>();
     }
   }
 
@@ -2753,7 +2766,8 @@ class ListTimeSeriesResponse {
     if (_json.containsKey("timeSeries")) {
       timeSeries = _json["timeSeries"]
           .map((value) => new TimeSeries.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TimeSeries>();
     }
   }
 
@@ -2799,7 +2813,8 @@ class ListUptimeCheckConfigsResponse {
     if (_json.containsKey("uptimeCheckConfigs")) {
       uptimeCheckConfigs = _json["uptimeCheckConfigs"]
           .map((value) => new UptimeCheckConfig.fromJson(value))
-          .toList();
+          .toList()
+          .cast<UptimeCheckConfig>();
     }
   }
 
@@ -2843,7 +2858,8 @@ class ListUptimeCheckIpsResponse {
     if (_json.containsKey("uptimeCheckIps")) {
       uptimeCheckIps = _json["uptimeCheckIps"]
           .map((value) => new UptimeCheckIp.fromJson(value))
-          .toList();
+          .toList()
+          .cast<UptimeCheckIp>();
     }
   }
 
@@ -2972,7 +2988,8 @@ class MetricDescriptor {
     if (_json.containsKey("labels")) {
       labels = _json["labels"]
           .map((value) => new LabelDescriptor.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LabelDescriptor>();
     }
     if (_json.containsKey("metricKind")) {
       metricKind = _json["metricKind"];
@@ -3117,7 +3134,8 @@ class MonitoredResourceDescriptor {
     if (_json.containsKey("labels")) {
       labels = _json["labels"]
           .map((value) => new LabelDescriptor.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LabelDescriptor>();
     }
     if (_json.containsKey("name")) {
       name = _json["name"];
@@ -3591,8 +3609,10 @@ class TimeSeries {
       metricKind = _json["metricKind"];
     }
     if (_json.containsKey("points")) {
-      points =
-          _json["points"].map((value) => new Point.fromJson(value)).toList();
+      points = _json["points"]
+          .map((value) => new Point.fromJson(value))
+          .toList()
+          .cast<Point>();
     }
     if (_json.containsKey("resource")) {
       resource = new MonitoredResource.fromJson(_json["resource"]);
@@ -3654,8 +3674,10 @@ class Type {
 
   Type.fromJson(core.Map _json) {
     if (_json.containsKey("fields")) {
-      fields =
-          _json["fields"].map((value) => new Field.fromJson(value)).toList();
+      fields = _json["fields"]
+          .map((value) => new Field.fromJson(value))
+          .toList()
+          .cast<Field>();
     }
     if (_json.containsKey("name")) {
       name = _json["name"];
@@ -3664,8 +3686,10 @@ class Type {
       oneofs = _json["oneofs"];
     }
     if (_json.containsKey("options")) {
-      options =
-          _json["options"].map((value) => new Option.fromJson(value)).toList();
+      options = _json["options"]
+          .map((value) => new Option.fromJson(value))
+          .toList()
+          .cast<Option>();
     }
     if (_json.containsKey("sourceContext")) {
       sourceContext = new SourceContext.fromJson(_json["sourceContext"]);
@@ -3826,7 +3850,8 @@ class UptimeCheckConfig {
     if (_json.containsKey("contentMatchers")) {
       contentMatchers = _json["contentMatchers"]
           .map((value) => new ContentMatcher.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ContentMatcher>();
     }
     if (_json.containsKey("displayName")) {
       displayName = _json["displayName"];
@@ -3837,7 +3862,8 @@ class UptimeCheckConfig {
     if (_json.containsKey("internalCheckers")) {
       internalCheckers = _json["internalCheckers"]
           .map((value) => new InternalChecker.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InternalChecker>();
     }
     if (_json.containsKey("isInternal")) {
       isInternal = _json["isInternal"];

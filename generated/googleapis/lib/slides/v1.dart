@@ -522,7 +522,8 @@ class BatchUpdatePresentationRequest {
     if (_json.containsKey("requests")) {
       requests = _json["requests"]
           .map((value) => new Request.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Request>();
     }
     if (_json.containsKey("writeControl")) {
       writeControl = new WriteControl.fromJson(_json["writeControl"]);
@@ -563,7 +564,8 @@ class BatchUpdatePresentationResponse {
     if (_json.containsKey("replies")) {
       replies = _json["replies"]
           .map((value) => new Response.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Response>();
     }
     if (_json.containsKey("writeControl")) {
       writeControl = new WriteControl.fromJson(_json["writeControl"]);
@@ -647,7 +649,8 @@ class ColorScheme {
     if (_json.containsKey("colors")) {
       colors = _json["colors"]
           .map((value) => new ThemeColorPair.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ThemeColorPair>();
     }
   }
 
@@ -1544,7 +1547,8 @@ class CreateSlideRequest {
     if (_json.containsKey("placeholderIdMappings")) {
       placeholderIdMappings = _json["placeholderIdMappings"]
           .map((value) => new LayoutPlaceholderIdMapping.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LayoutPlaceholderIdMapping>();
     }
     if (_json.containsKey("slideLayoutReference")) {
       slideLayoutReference =
@@ -2208,7 +2212,8 @@ class Group {
     if (_json.containsKey("children")) {
       children = _json["children"]
           .map((value) => new PageElement.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PageElement>();
     }
   }
 
@@ -3460,7 +3465,8 @@ class Page {
     if (_json.containsKey("pageElements")) {
       pageElements = _json["pageElements"]
           .map((value) => new PageElement.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PageElement>();
     }
     if (_json.containsKey("pageProperties")) {
       pageProperties = new PageProperties.fromJson(_json["pageProperties"]);
@@ -4116,15 +4122,19 @@ class Presentation {
 
   Presentation.fromJson(core.Map _json) {
     if (_json.containsKey("layouts")) {
-      layouts =
-          _json["layouts"].map((value) => new Page.fromJson(value)).toList();
+      layouts = _json["layouts"]
+          .map((value) => new Page.fromJson(value))
+          .toList()
+          .cast<Page>();
     }
     if (_json.containsKey("locale")) {
       locale = _json["locale"];
     }
     if (_json.containsKey("masters")) {
-      masters =
-          _json["masters"].map((value) => new Page.fromJson(value)).toList();
+      masters = _json["masters"]
+          .map((value) => new Page.fromJson(value))
+          .toList()
+          .cast<Page>();
     }
     if (_json.containsKey("notesMaster")) {
       notesMaster = new Page.fromJson(_json["notesMaster"]);
@@ -4139,8 +4149,10 @@ class Presentation {
       revisionId = _json["revisionId"];
     }
     if (_json.containsKey("slides")) {
-      slides =
-          _json["slides"].map((value) => new Page.fromJson(value)).toList();
+      slides = _json["slides"]
+          .map((value) => new Page.fromJson(value))
+          .toList()
+          .cast<Page>();
     }
     if (_json.containsKey("title")) {
       title = _json["title"];
@@ -4333,7 +4345,8 @@ class Recolor {
     if (_json.containsKey("recolorStops")) {
       recolorStops = _json["recolorStops"]
           .map((value) => new ColorStop.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ColorStop>();
     }
   }
 
@@ -6244,7 +6257,8 @@ class Table {
     if (_json.containsKey("horizontalBorderRows")) {
       horizontalBorderRows = _json["horizontalBorderRows"]
           .map((value) => new TableBorderRow.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TableBorderRow>();
     }
     if (_json.containsKey("rows")) {
       rows = _json["rows"];
@@ -6252,17 +6266,20 @@ class Table {
     if (_json.containsKey("tableColumns")) {
       tableColumns = _json["tableColumns"]
           .map((value) => new TableColumnProperties.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TableColumnProperties>();
     }
     if (_json.containsKey("tableRows")) {
       tableRows = _json["tableRows"]
           .map((value) => new TableRow.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TableRow>();
     }
     if (_json.containsKey("verticalBorderRows")) {
       verticalBorderRows = _json["verticalBorderRows"]
           .map((value) => new TableBorderRow.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TableBorderRow>();
     }
   }
 
@@ -6422,7 +6439,8 @@ class TableBorderRow {
     if (_json.containsKey("tableBorderCells")) {
       tableBorderCells = _json["tableBorderCells"]
           .map((value) => new TableBorderCell.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TableBorderCell>();
     }
   }
 
@@ -6736,7 +6754,8 @@ class TableRow {
     if (_json.containsKey("tableCells")) {
       tableCells = _json["tableCells"]
           .map((value) => new TableCell.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TableCell>();
     }
     if (_json.containsKey("tableRowProperties")) {
       tableRowProperties =
@@ -6808,7 +6827,8 @@ class TextContent {
     if (_json.containsKey("textElements")) {
       textElements = _json["textElements"]
           .map((value) => new TextElement.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TextElement>();
     }
   }
 

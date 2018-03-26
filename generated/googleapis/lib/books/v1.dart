@@ -4181,7 +4181,8 @@ class Annotations {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new Annotation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Annotation>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -4275,7 +4276,8 @@ class AnnotationsSummary {
     if (_json.containsKey("layers")) {
       layers = _json["layers"]
           .map((value) => new AnnotationsSummaryLayers.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AnnotationsSummaryLayers>();
     }
   }
 
@@ -4312,7 +4314,8 @@ class Annotationsdata {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new Annotationdata.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Annotationdata>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -4573,8 +4576,10 @@ class Bookshelves {
 
   Bookshelves.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Bookshelf.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Bookshelf.fromJson(value))
+          .toList()
+          .cast<Bookshelf>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -4642,7 +4647,8 @@ class Category {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new CategoryItems.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CategoryItems>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -5043,7 +5049,8 @@ class DictlayerdataDictWordsSensesDefinitions {
           .map((value) =>
               new DictlayerdataDictWordsSensesDefinitionsExamples.fromJson(
                   value))
-          .toList();
+          .toList()
+          .cast<DictlayerdataDictWordsSensesDefinitionsExamples>();
     }
   }
 
@@ -5162,13 +5169,15 @@ class DictlayerdataDictWordsSenses {
       conjugations = _json["conjugations"]
           .map((value) =>
               new DictlayerdataDictWordsSensesConjugations.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DictlayerdataDictWordsSensesConjugations>();
     }
     if (_json.containsKey("definitions")) {
       definitions = _json["definitions"]
           .map((value) =>
               new DictlayerdataDictWordsSensesDefinitions.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DictlayerdataDictWordsSensesDefinitions>();
     }
     if (_json.containsKey("partOfSpeech")) {
       partOfSpeech = _json["partOfSpeech"];
@@ -5189,7 +5198,8 @@ class DictlayerdataDictWordsSenses {
       synonyms = _json["synonyms"]
           .map((value) =>
               new DictlayerdataDictWordsSensesSynonyms.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DictlayerdataDictWordsSensesSynonyms>();
     }
   }
 
@@ -5271,17 +5281,20 @@ class DictlayerdataDictWords {
     if (_json.containsKey("derivatives")) {
       derivatives = _json["derivatives"]
           .map((value) => new DictlayerdataDictWordsDerivatives.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DictlayerdataDictWordsDerivatives>();
     }
     if (_json.containsKey("examples")) {
       examples = _json["examples"]
           .map((value) => new DictlayerdataDictWordsExamples.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DictlayerdataDictWordsExamples>();
     }
     if (_json.containsKey("senses")) {
       senses = _json["senses"]
           .map((value) => new DictlayerdataDictWordsSenses.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DictlayerdataDictWordsSenses>();
     }
     if (_json.containsKey("source")) {
       source = new DictlayerdataDictWordsSource.fromJson(_json["source"]);
@@ -5322,7 +5335,8 @@ class DictlayerdataDict {
     if (_json.containsKey("words")) {
       words = _json["words"]
           .map((value) => new DictlayerdataDictWords.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DictlayerdataDictWords>();
     }
   }
 
@@ -5460,8 +5474,10 @@ class DiscoveryclustersClusters {
       uid = _json["uid"];
     }
     if (_json.containsKey("volumes")) {
-      volumes =
-          _json["volumes"].map((value) => new Volume.fromJson(value)).toList();
+      volumes = _json["volumes"]
+          .map((value) => new Volume.fromJson(value))
+          .toList()
+          .cast<Volume>();
     }
   }
 
@@ -5504,7 +5520,8 @@ class Discoveryclusters {
     if (_json.containsKey("clusters")) {
       clusters = _json["clusters"]
           .map((value) => new DiscoveryclustersClusters.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DiscoveryclustersClusters>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -5669,7 +5686,8 @@ class DownloadAccesses {
     if (_json.containsKey("downloadAccessList")) {
       downloadAccessList = _json["downloadAccessList"]
           .map((value) => new DownloadAccessRestriction.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DownloadAccessRestriction>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -5989,8 +6007,10 @@ class GeolayerdataGeo {
       boundary = _json["boundary"]
           .map((value) => value
               .map((value) => new GeolayerdataGeoBoundary.fromJson(value))
-              .toList())
-          .toList();
+              .toList()
+              .cast<GeolayerdataGeoBoundary>())
+          .toList()
+          .cast<core.List<GeolayerdataGeoBoundary>>();
     }
     if (_json.containsKey("cachePolicy")) {
       cachePolicy = _json["cachePolicy"];
@@ -6099,7 +6119,8 @@ class Layersummaries {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new Layersummary.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Layersummary>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -6320,7 +6341,8 @@ class Metadata {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new MetadataItems.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MetadataItems>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -6535,7 +6557,8 @@ class OffersItems {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new OffersItemsItems.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OffersItemsItems>();
     }
   }
 
@@ -6571,7 +6594,8 @@ class Offers {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new OffersItems.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OffersItems>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -6944,7 +6968,8 @@ class Series {
     if (_json.containsKey("series")) {
       series = _json["series"]
           .map((value) => new SeriesSeries.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SeriesSeries>();
     }
   }
 
@@ -6974,8 +6999,10 @@ class Seriesmembership {
       kind = _json["kind"];
     }
     if (_json.containsKey("member")) {
-      member =
-          _json["member"].map((value) => new Volume.fromJson(value)).toList();
+      member = _json["member"]
+          .map((value) => new Volume.fromJson(value))
+          .toList()
+          .cast<Volume>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -7514,7 +7541,8 @@ class VolumeLayerInfo {
     if (_json.containsKey("layers")) {
       layers = _json["layers"]
           .map((value) => new VolumeLayerInfoLayers.fromJson(value))
-          .toList();
+          .toList()
+          .cast<VolumeLayerInfoLayers>();
     }
   }
 
@@ -7819,7 +7847,8 @@ class VolumeSaleInfo {
     if (_json.containsKey("offers")) {
       offers = _json["offers"]
           .map((value) => new VolumeSaleInfoOffers.fromJson(value))
-          .toList();
+          .toList()
+          .cast<VolumeSaleInfoOffers>();
     }
     if (_json.containsKey("onSaleDate")) {
       onSaleDate = core.DateTime.parse(_json["onSaleDate"]);
@@ -8529,7 +8558,8 @@ class VolumeVolumeInfo {
       industryIdentifiers = _json["industryIdentifiers"]
           .map((value) =>
               new VolumeVolumeInfoIndustryIdentifiers.fromJson(value))
-          .toList();
+          .toList()
+          .cast<VolumeVolumeInfoIndustryIdentifiers>();
     }
     if (_json.containsKey("infoLink")) {
       infoLink = _json["infoLink"];
@@ -8806,8 +8836,10 @@ class Volume2 {
 
   Volume2.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Volume.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Volume.fromJson(value))
+          .toList()
+          .cast<Volume>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -9050,7 +9082,8 @@ class Volumeannotations {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new Volumeannotation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Volumeannotation>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -9103,8 +9136,10 @@ class Volumes {
 
   Volumes.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Volume.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Volume.fromJson(value))
+          .toList()
+          .cast<Volume>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -9178,7 +9213,8 @@ class VolumeseriesinfoVolumeSeries {
     if (_json.containsKey("issue")) {
       issue = _json["issue"]
           .map((value) => new VolumeseriesinfoVolumeSeriesIssue.fromJson(value))
-          .toList();
+          .toList()
+          .cast<VolumeseriesinfoVolumeSeriesIssue>();
     }
     if (_json.containsKey("orderNumber")) {
       orderNumber = _json["orderNumber"];
@@ -9237,7 +9273,8 @@ class Volumeseriesinfo {
     if (_json.containsKey("volumeSeries")) {
       volumeSeries = _json["volumeSeries"]
           .map((value) => new VolumeseriesinfoVolumeSeries.fromJson(value))
-          .toList();
+          .toList()
+          .cast<VolumeseriesinfoVolumeSeries>();
     }
   }
 

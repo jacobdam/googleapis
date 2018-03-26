@@ -1486,7 +1486,8 @@ class AuditConfig {
     if (_json.containsKey("auditLogConfigs")) {
       auditLogConfigs = _json["auditLogConfigs"]
           .map((value) => new AuditLogConfig.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AuditLogConfig>();
     }
     if (_json.containsKey("service")) {
       service = _json["service"];
@@ -2051,7 +2052,8 @@ class ListCryptoKeyVersionsResponse {
     if (_json.containsKey("cryptoKeyVersions")) {
       cryptoKeyVersions = _json["cryptoKeyVersions"]
           .map((value) => new CryptoKeyVersion.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CryptoKeyVersion>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -2096,7 +2098,8 @@ class ListCryptoKeysResponse {
     if (_json.containsKey("cryptoKeys")) {
       cryptoKeys = _json["cryptoKeys"]
           .map((value) => new CryptoKey.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CryptoKey>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -2141,7 +2144,8 @@ class ListKeyRingsResponse {
     if (_json.containsKey("keyRings")) {
       keyRings = _json["keyRings"]
           .map((value) => new KeyRing.fromJson(value))
-          .toList();
+          .toList()
+          .cast<KeyRing>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -2181,7 +2185,8 @@ class ListLocationsResponse {
     if (_json.containsKey("locations")) {
       locations = _json["locations"]
           .map((value) => new Location.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Location>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -2329,12 +2334,14 @@ class Policy {
     if (_json.containsKey("auditConfigs")) {
       auditConfigs = _json["auditConfigs"]
           .map((value) => new AuditConfig.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AuditConfig>();
     }
     if (_json.containsKey("bindings")) {
       bindings = _json["bindings"]
           .map((value) => new Binding.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Binding>();
     }
     if (_json.containsKey("etag")) {
       etag = _json["etag"];

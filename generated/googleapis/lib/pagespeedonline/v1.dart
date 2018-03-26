@@ -173,7 +173,8 @@ class ResultFormattedResultsRuleResultsValueUrlBlocksHeader {
           .map((value) =>
               new ResultFormattedResultsRuleResultsValueUrlBlocksHeaderArgs
                   .fromJson(value))
-          .toList();
+          .toList()
+          .cast<ResultFormattedResultsRuleResultsValueUrlBlocksHeaderArgs>();
     }
     if (_json.containsKey("format")) {
       format = _json["format"];
@@ -245,7 +246,9 @@ class ResultFormattedResultsRuleResultsValueUrlBlocksUrlsDetails {
           .map((value) =>
               new ResultFormattedResultsRuleResultsValueUrlBlocksUrlsDetailsArgs
                   .fromJson(value))
-          .toList();
+          .toList()
+          .cast<
+              ResultFormattedResultsRuleResultsValueUrlBlocksUrlsDetailsArgs>();
     }
     if (_json.containsKey("format")) {
       format = _json["format"];
@@ -318,7 +321,9 @@ class ResultFormattedResultsRuleResultsValueUrlBlocksUrlsResult {
           .map((value) =>
               new ResultFormattedResultsRuleResultsValueUrlBlocksUrlsResultArgs
                   .fromJson(value))
-          .toList();
+          .toList()
+          .cast<
+              ResultFormattedResultsRuleResultsValueUrlBlocksUrlsResultArgs>();
     }
     if (_json.containsKey("format")) {
       format = _json["format"];
@@ -355,7 +360,8 @@ class ResultFormattedResultsRuleResultsValueUrlBlocksUrls {
           .map((value) =>
               new ResultFormattedResultsRuleResultsValueUrlBlocksUrlsDetails
                   .fromJson(value))
-          .toList();
+          .toList()
+          .cast<ResultFormattedResultsRuleResultsValueUrlBlocksUrlsDetails>();
     }
     if (_json.containsKey("result")) {
       result = new ResultFormattedResultsRuleResultsValueUrlBlocksUrlsResult
@@ -397,7 +403,8 @@ class ResultFormattedResultsRuleResultsValueUrlBlocks {
           .map((value) =>
               new ResultFormattedResultsRuleResultsValueUrlBlocksUrls.fromJson(
                   value))
-          .toList();
+          .toList()
+          .cast<ResultFormattedResultsRuleResultsValueUrlBlocksUrls>();
     }
   }
 
@@ -447,7 +454,8 @@ class ResultFormattedResultsRuleResultsValue {
           .map((value) =>
               new ResultFormattedResultsRuleResultsValueUrlBlocks.fromJson(
                   value))
-          .toList();
+          .toList()
+          .cast<ResultFormattedResultsRuleResultsValueUrlBlocks>();
     }
   }
 

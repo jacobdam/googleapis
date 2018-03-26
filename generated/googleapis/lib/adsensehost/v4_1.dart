@@ -1718,8 +1718,10 @@ class Accounts {
       etag = _json["etag"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Account.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Account.fromJson(value))
+          .toList()
+          .cast<Account>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -1822,8 +1824,10 @@ class AdClients {
       etag = _json["etag"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new AdClient.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new AdClient.fromJson(value))
+          .toList()
+          .cast<AdClient>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -2282,8 +2286,10 @@ class AdUnits {
       etag = _json["etag"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new AdUnit.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new AdUnit.fromJson(value))
+          .toList()
+          .cast<AdUnit>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -2485,7 +2491,8 @@ class CustomChannels {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new CustomChannel.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CustomChannel>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -2595,7 +2602,8 @@ class Report {
     if (_json.containsKey("headers")) {
       headers = _json["headers"]
           .map((value) => new ReportHeaders.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ReportHeaders>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -2707,7 +2715,8 @@ class UrlChannels {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new UrlChannel.fromJson(value))
-          .toList();
+          .toList()
+          .cast<UrlChannel>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];

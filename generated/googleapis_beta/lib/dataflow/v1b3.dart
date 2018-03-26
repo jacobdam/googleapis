@@ -2623,22 +2623,26 @@ class ComputationTopology {
     if (_json.containsKey("inputs")) {
       inputs = _json["inputs"]
           .map((value) => new StreamLocation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<StreamLocation>();
     }
     if (_json.containsKey("keyRanges")) {
       keyRanges = _json["keyRanges"]
           .map((value) => new KeyRangeLocation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<KeyRangeLocation>();
     }
     if (_json.containsKey("outputs")) {
       outputs = _json["outputs"]
           .map((value) => new StreamLocation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<StreamLocation>();
     }
     if (_json.containsKey("stateFamilies")) {
       stateFamilies = _json["stateFamilies"]
           .map((value) => new StateFamilyConfig.fromJson(value))
-          .toList();
+          .toList()
+          .cast<StateFamilyConfig>();
     }
     if (_json.containsKey("systemStageName")) {
       systemStageName = _json["systemStageName"];
@@ -3648,7 +3652,8 @@ class Environment {
     if (_json.containsKey("workerPools")) {
       workerPools = _json["workerPools"]
           .map((value) => new WorkerPool.fromJson(value))
-          .toList();
+          .toList()
+          .cast<WorkerPool>();
     }
   }
 
@@ -3826,12 +3831,14 @@ class ExecutionStageSummary {
     if (_json.containsKey("componentSource")) {
       componentSource = _json["componentSource"]
           .map((value) => new ComponentSource.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ComponentSource>();
     }
     if (_json.containsKey("componentTransform")) {
       componentTransform = _json["componentTransform"]
           .map((value) => new ComponentTransform.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ComponentTransform>();
     }
     if (_json.containsKey("id")) {
       id = _json["id"];
@@ -3839,7 +3846,8 @@ class ExecutionStageSummary {
     if (_json.containsKey("inputSource")) {
       inputSource = _json["inputSource"]
           .map((value) => new StageSource.fromJson(value))
-          .toList();
+          .toList()
+          .cast<StageSource>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -3850,7 +3858,8 @@ class ExecutionStageSummary {
     if (_json.containsKey("outputSource")) {
       outputSource = _json["outputSource"]
           .map((value) => new StageSource.fromJson(value))
-          .toList();
+          .toList()
+          .cast<StageSource>();
     }
   }
 
@@ -3920,7 +3929,8 @@ class FlattenInstruction {
     if (_json.containsKey("inputs")) {
       inputs = _json["inputs"]
           .map((value) => new InstructionInput.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InstructionInput>();
     }
   }
 
@@ -4253,7 +4263,8 @@ class IntegerList {
     if (_json.containsKey("elements")) {
       elements = _json["elements"]
           .map((value) => new SplitInt64.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SplitInt64>();
     }
   }
 
@@ -4591,10 +4602,14 @@ class Job {
     if (_json.containsKey("stageStates")) {
       stageStates = _json["stageStates"]
           .map((value) => new ExecutionStageState.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ExecutionStageState>();
     }
     if (_json.containsKey("steps")) {
-      steps = _json["steps"].map((value) => new Step.fromJson(value)).toList();
+      steps = _json["steps"]
+          .map((value) => new Step.fromJson(value))
+          .toList()
+          .cast<Step>();
     }
     if (_json.containsKey("tempFiles")) {
       tempFiles = _json["tempFiles"];
@@ -4835,7 +4850,8 @@ class JobMetrics {
     if (_json.containsKey("metrics")) {
       metrics = _json["metrics"]
           .map((value) => new MetricUpdate.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MetricUpdate>();
     }
   }
 
@@ -5111,7 +5127,8 @@ class LeaseWorkItemResponse {
     if (_json.containsKey("workItems")) {
       workItems = _json["workItems"]
           .map((value) => new WorkItem.fromJson(value))
-          .toList();
+          .toList()
+          .cast<WorkItem>();
     }
   }
 
@@ -5142,12 +5159,14 @@ class ListJobMessagesResponse {
     if (_json.containsKey("autoscalingEvents")) {
       autoscalingEvents = _json["autoscalingEvents"]
           .map((value) => new AutoscalingEvent.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AutoscalingEvent>();
     }
     if (_json.containsKey("jobMessages")) {
       jobMessages = _json["jobMessages"]
           .map((value) => new JobMessage.fromJson(value))
-          .toList();
+          .toList()
+          .cast<JobMessage>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -5190,10 +5209,14 @@ class ListJobsResponse {
     if (_json.containsKey("failedLocation")) {
       failedLocation = _json["failedLocation"]
           .map((value) => new FailedLocation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<FailedLocation>();
     }
     if (_json.containsKey("jobs")) {
-      jobs = _json["jobs"].map((value) => new Job.fromJson(value)).toList();
+      jobs = _json["jobs"]
+          .map((value) => new Job.fromJson(value))
+          .toList()
+          .cast<Job>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -5241,7 +5264,8 @@ class MapTask {
     if (_json.containsKey("instructions")) {
       instructions = _json["instructions"]
           .map((value) => new ParallelInstruction.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ParallelInstruction>();
     }
     if (_json.containsKey("stageName")) {
       stageName = _json["stageName"];
@@ -5665,7 +5689,8 @@ class ParDoInstruction {
     if (_json.containsKey("multiOutputInfos")) {
       multiOutputInfos = _json["multiOutputInfos"]
           .map((value) => new MultiOutputInfo.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MultiOutputInfo>();
     }
     if (_json.containsKey("numOutputs")) {
       numOutputs = _json["numOutputs"];
@@ -5673,7 +5698,8 @@ class ParDoInstruction {
     if (_json.containsKey("sideInputs")) {
       sideInputs = _json["sideInputs"]
           .map((value) => new SideInputInfo.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SideInputInfo>();
     }
     if (_json.containsKey("userFn")) {
       userFn = _json["userFn"];
@@ -5749,7 +5775,8 @@ class ParallelInstruction {
     if (_json.containsKey("outputs")) {
       outputs = _json["outputs"]
           .map((value) => new InstructionOutput.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InstructionOutput>();
     }
     if (_json.containsKey("parDo")) {
       parDo = new ParDoInstruction.fromJson(_json["parDo"]);
@@ -5945,7 +5972,8 @@ class PartialGroupByKeyInstruction {
     if (_json.containsKey("sideInputs")) {
       sideInputs = _json["sideInputs"]
           .map((value) => new SideInputInfo.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SideInputInfo>();
     }
     if (_json.containsKey("valueCombiningFn")) {
       valueCombiningFn = _json["valueCombiningFn"];
@@ -5999,17 +6027,20 @@ class PipelineDescription {
     if (_json.containsKey("displayData")) {
       displayData = _json["displayData"]
           .map((value) => new DisplayData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DisplayData>();
     }
     if (_json.containsKey("executionPipelineStage")) {
       executionPipelineStage = _json["executionPipelineStage"]
           .map((value) => new ExecutionStageSummary.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ExecutionStageSummary>();
     }
     if (_json.containsKey("originalPipelineTransform")) {
       originalPipelineTransform = _json["originalPipelineTransform"]
           .map((value) => new TransformSummary.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TransformSummary>();
     }
   }
 
@@ -6242,7 +6273,8 @@ class ReportWorkItemStatusRequest {
     if (_json.containsKey("workItemStatuses")) {
       workItemStatuses = _json["workItemStatuses"]
           .map((value) => new WorkItemStatus.fromJson(value))
-          .toList();
+          .toList()
+          .cast<WorkItemStatus>();
     }
     if (_json.containsKey("workerId")) {
       workerId = _json["workerId"];
@@ -6283,7 +6315,8 @@ class ReportWorkItemStatusResponse {
     if (_json.containsKey("workItemServiceStates")) {
       workItemServiceStates = _json["workItemServiceStates"]
           .map((value) => new WorkItemServiceState.fromJson(value))
-          .toList();
+          .toList()
+          .cast<WorkItemServiceState>();
     }
   }
 
@@ -6347,8 +6380,10 @@ class ResourceUtilizationReport {
 
   ResourceUtilizationReport.fromJson(core.Map _json) {
     if (_json.containsKey("cpuTime")) {
-      cpuTime =
-          _json["cpuTime"].map((value) => new CPUTime.fromJson(value)).toList();
+      cpuTime = _json["cpuTime"]
+          .map((value) => new CPUTime.fromJson(value))
+          .toList()
+          .cast<CPUTime>();
     }
   }
 
@@ -6539,7 +6574,8 @@ class SendWorkerMessagesRequest {
     if (_json.containsKey("workerMessages")) {
       workerMessages = _json["workerMessages"]
           .map((value) => new WorkerMessage.fromJson(value))
-          .toList();
+          .toList()
+          .cast<WorkerMessage>();
     }
   }
 
@@ -6568,7 +6604,8 @@ class SendWorkerMessagesResponse {
     if (_json.containsKey("workerMessageResponses")) {
       workerMessageResponses = _json["workerMessageResponses"]
           .map((value) => new WorkerMessageResponse.fromJson(value))
-          .toList();
+          .toList()
+          .cast<WorkerMessageResponse>();
     }
   }
 
@@ -6614,7 +6651,8 @@ class SeqMapTask {
     if (_json.containsKey("inputs")) {
       inputs = _json["inputs"]
           .map((value) => new SideInputInfo.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SideInputInfo>();
     }
     if (_json.containsKey("name")) {
       name = _json["name"];
@@ -6622,7 +6660,8 @@ class SeqMapTask {
     if (_json.containsKey("outputInfos")) {
       outputInfos = _json["outputInfos"]
           .map((value) => new SeqMapTaskOutputInfo.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SeqMapTaskOutputInfo>();
     }
     if (_json.containsKey("stageName")) {
       stageName = _json["stageName"];
@@ -6750,8 +6789,10 @@ class SideInputInfo {
       kind = _json["kind"];
     }
     if (_json.containsKey("sources")) {
-      sources =
-          _json["sources"].map((value) => new Source.fromJson(value)).toList();
+      sources = _json["sources"]
+          .map((value) => new Source.fromJson(value))
+          .toList()
+          .cast<Source>();
     }
     if (_json.containsKey("tag")) {
       tag = _json["tag"];
@@ -7268,7 +7309,8 @@ class SourceSplitResponse {
     if (_json.containsKey("bundles")) {
       bundles = _json["bundles"]
           .map((value) => new DerivedSource.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DerivedSource>();
     }
     if (_json.containsKey("outcome")) {
       outcome = _json["outcome"];
@@ -7276,7 +7318,8 @@ class SourceSplitResponse {
     if (_json.containsKey("shards")) {
       shards = _json["shards"]
           .map((value) => new SourceSplitShard.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SourceSplitShard>();
     }
   }
 
@@ -7704,7 +7747,8 @@ class StreamingComputationConfig {
     if (_json.containsKey("instructions")) {
       instructions = _json["instructions"]
           .map((value) => new ParallelInstruction.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ParallelInstruction>();
     }
     if (_json.containsKey("stageName")) {
       stageName = _json["stageName"];
@@ -7753,7 +7797,8 @@ class StreamingComputationRanges {
     if (_json.containsKey("rangeAssignments")) {
       rangeAssignments = _json["rangeAssignments"]
           .map((value) => new KeyRangeDataDiskAssignment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<KeyRangeDataDiskAssignment>();
     }
   }
 
@@ -7796,12 +7841,14 @@ class StreamingComputationTask {
     if (_json.containsKey("computationRanges")) {
       computationRanges = _json["computationRanges"]
           .map((value) => new StreamingComputationRanges.fromJson(value))
-          .toList();
+          .toList()
+          .cast<StreamingComputationRanges>();
     }
     if (_json.containsKey("dataDisks")) {
       dataDisks = _json["dataDisks"]
           .map((value) => new MountedDataDisk.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MountedDataDisk>();
     }
     if (_json.containsKey("taskType")) {
       taskType = _json["taskType"];
@@ -7849,7 +7896,8 @@ class StreamingConfigTask {
     if (_json.containsKey("streamingComputationConfigs")) {
       streamingComputationConfigs = _json["streamingComputationConfigs"]
           .map((value) => new StreamingComputationConfig.fromJson(value))
-          .toList();
+          .toList()
+          .cast<StreamingComputationConfig>();
     }
     if (_json.containsKey("userStepToStateFamilyNameMap")) {
       userStepToStateFamilyNameMap = _json["userStepToStateFamilyNameMap"];
@@ -8042,7 +8090,8 @@ class StructuredMessage {
     if (_json.containsKey("parameters")) {
       parameters = _json["parameters"]
           .map((value) => new Parameter.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Parameter>();
     }
   }
 
@@ -8298,7 +8347,8 @@ class TemplateMetadata {
     if (_json.containsKey("parameters")) {
       parameters = _json["parameters"]
           .map((value) => new ParameterMetadata.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ParameterMetadata>();
     }
   }
 
@@ -8343,12 +8393,14 @@ class TopologyConfig {
     if (_json.containsKey("computations")) {
       computations = _json["computations"]
           .map((value) => new ComputationTopology.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ComputationTopology>();
     }
     if (_json.containsKey("dataDiskAssignments")) {
       dataDiskAssignments = _json["dataDiskAssignments"]
           .map((value) => new DataDiskAssignment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DataDiskAssignment>();
     }
     if (_json.containsKey("forwardingKeyBits")) {
       forwardingKeyBits = _json["forwardingKeyBits"];
@@ -8423,7 +8475,8 @@ class TransformSummary {
     if (_json.containsKey("displayData")) {
       displayData = _json["displayData"]
           .map((value) => new DisplayData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DisplayData>();
     }
     if (_json.containsKey("id")) {
       id = _json["id"];
@@ -8541,7 +8594,8 @@ class WorkItem {
     if (_json.containsKey("packages")) {
       packages = _json["packages"]
           .map((value) => new Package.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Package>();
     }
     if (_json.containsKey("projectId")) {
       projectId = _json["projectId"];
@@ -8676,7 +8730,8 @@ class WorkItemServiceState {
     if (_json.containsKey("metricShortId")) {
       metricShortId = _json["metricShortId"]
           .map((value) => new MetricShortId.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MetricShortId>();
     }
     if (_json.containsKey("nextReportIndex")) {
       nextReportIndex = _json["nextReportIndex"];
@@ -8826,20 +8881,24 @@ class WorkItemStatus {
     if (_json.containsKey("counterUpdates")) {
       counterUpdates = _json["counterUpdates"]
           .map((value) => new CounterUpdate.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CounterUpdate>();
     }
     if (_json.containsKey("dynamicSourceSplit")) {
       dynamicSourceSplit =
           new DynamicSourceSplit.fromJson(_json["dynamicSourceSplit"]);
     }
     if (_json.containsKey("errors")) {
-      errors =
-          _json["errors"].map((value) => new Status.fromJson(value)).toList();
+      errors = _json["errors"]
+          .map((value) => new Status.fromJson(value))
+          .toList()
+          .cast<Status>();
     }
     if (_json.containsKey("metricUpdates")) {
       metricUpdates = _json["metricUpdates"]
           .map((value) => new MetricUpdate.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MetricUpdate>();
     }
     if (_json.containsKey("progress")) {
       progress = new ApproximateProgress.fromJson(_json["progress"]);
@@ -9410,8 +9469,10 @@ class WorkerPool {
           new AutoscalingSettings.fromJson(_json["autoscalingSettings"]);
     }
     if (_json.containsKey("dataDisks")) {
-      dataDisks =
-          _json["dataDisks"].map((value) => new Disk.fromJson(value)).toList();
+      dataDisks = _json["dataDisks"]
+          .map((value) => new Disk.fromJson(value))
+          .toList()
+          .cast<Disk>();
     }
     if (_json.containsKey("defaultPackageSet")) {
       defaultPackageSet = _json["defaultPackageSet"];
@@ -9452,7 +9513,8 @@ class WorkerPool {
     if (_json.containsKey("packages")) {
       packages = _json["packages"]
           .map((value) => new Package.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Package>();
     }
     if (_json.containsKey("poolArgs")) {
       poolArgs = _json["poolArgs"];

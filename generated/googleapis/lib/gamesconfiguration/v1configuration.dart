@@ -932,7 +932,8 @@ class AchievementConfigurationListResponse {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new AchievementConfiguration.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AchievementConfiguration>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -1313,7 +1314,8 @@ class LeaderboardConfigurationListResponse {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new LeaderboardConfiguration.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LeaderboardConfiguration>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -1399,7 +1401,8 @@ class LocalizedStringBundle {
     if (_json.containsKey("translations")) {
       translations = _json["translations"]
           .map((value) => new LocalizedString.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LocalizedString>();
     }
   }
 

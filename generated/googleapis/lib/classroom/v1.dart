@@ -4228,7 +4228,8 @@ class Announcement {
     if (_json.containsKey("materials")) {
       materials = _json["materials"]
           .map((value) => new Material.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Material>();
     }
     if (_json.containsKey("scheduledTime")) {
       scheduledTime = _json["scheduledTime"];
@@ -4329,7 +4330,8 @@ class AssignmentSubmission {
     if (_json.containsKey("attachments")) {
       attachments = _json["attachments"]
           .map((value) => new Attachment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Attachment>();
     }
   }
 
@@ -4590,7 +4592,8 @@ class Course {
     if (_json.containsKey("courseMaterialSets")) {
       courseMaterialSets = _json["courseMaterialSets"]
           .map((value) => new CourseMaterialSet.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CourseMaterialSet>();
     }
     if (_json.containsKey("courseState")) {
       courseState = _json["courseState"];
@@ -4810,7 +4813,8 @@ class CourseMaterialSet {
     if (_json.containsKey("materials")) {
       materials = _json["materials"]
           .map((value) => new CourseMaterial.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CourseMaterial>();
     }
     if (_json.containsKey("title")) {
       title = _json["title"];
@@ -5036,7 +5040,8 @@ class CourseWork {
     if (_json.containsKey("materials")) {
       materials = _json["materials"]
           .map((value) => new Material.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Material>();
     }
     if (_json.containsKey("maxPoints")) {
       maxPoints = _json["maxPoints"];
@@ -5788,7 +5793,8 @@ class ListAnnouncementsResponse {
     if (_json.containsKey("announcements")) {
       announcements = _json["announcements"]
           .map((value) => new Announcement.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Announcement>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -5824,7 +5830,8 @@ class ListCourseAliasesResponse {
     if (_json.containsKey("aliases")) {
       aliases = _json["aliases"]
           .map((value) => new CourseAlias.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CourseAlias>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -5859,7 +5866,8 @@ class ListCourseWorkResponse {
     if (_json.containsKey("courseWork")) {
       courseWork = _json["courseWork"]
           .map((value) => new CourseWork.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CourseWork>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -5893,8 +5901,10 @@ class ListCoursesResponse {
 
   ListCoursesResponse.fromJson(core.Map _json) {
     if (_json.containsKey("courses")) {
-      courses =
-          _json["courses"].map((value) => new Course.fromJson(value)).toList();
+      courses = _json["courses"]
+          .map((value) => new Course.fromJson(value))
+          .toList()
+          .cast<Course>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -5929,7 +5939,8 @@ class ListGuardianInvitationsResponse {
     if (_json.containsKey("guardianInvitations")) {
       guardianInvitations = _json["guardianInvitations"]
           .map((value) => new GuardianInvitation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GuardianInvitation>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -5966,7 +5977,8 @@ class ListGuardiansResponse {
     if (_json.containsKey("guardians")) {
       guardians = _json["guardians"]
           .map((value) => new Guardian.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Guardian>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -6001,7 +6013,8 @@ class ListInvitationsResponse {
     if (_json.containsKey("invitations")) {
       invitations = _json["invitations"]
           .map((value) => new Invitation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Invitation>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -6040,7 +6053,8 @@ class ListStudentSubmissionsResponse {
     if (_json.containsKey("studentSubmissions")) {
       studentSubmissions = _json["studentSubmissions"]
           .map((value) => new StudentSubmission.fromJson(value))
-          .toList();
+          .toList()
+          .cast<StudentSubmission>();
     }
   }
 
@@ -6076,7 +6090,8 @@ class ListStudentsResponse {
     if (_json.containsKey("students")) {
       students = _json["students"]
           .map((value) => new Student.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Student>();
     }
   }
 
@@ -6111,7 +6126,8 @@ class ListTeachersResponse {
     if (_json.containsKey("teachers")) {
       teachers = _json["teachers"]
           .map((value) => new Teacher.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Teacher>();
     }
   }
 
@@ -6144,7 +6160,10 @@ class ListTopicResponse {
       nextPageToken = _json["nextPageToken"];
     }
     if (_json.containsKey("topic")) {
-      topic = _json["topic"].map((value) => new Topic.fromJson(value)).toList();
+      topic = _json["topic"]
+          .map((value) => new Topic.fromJson(value))
+          .toList()
+          .cast<Topic>();
     }
   }
 
@@ -6270,7 +6289,8 @@ class ModifyAttachmentsRequest {
     if (_json.containsKey("addAttachments")) {
       addAttachments = _json["addAttachments"]
           .map((value) => new Attachment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Attachment>();
     }
   }
 
@@ -6887,7 +6907,8 @@ class StudentSubmission {
     if (_json.containsKey("submissionHistory")) {
       submissionHistory = _json["submissionHistory"]
           .map((value) => new SubmissionHistory.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SubmissionHistory>();
     }
     if (_json.containsKey("updateTime")) {
       updateTime = _json["updateTime"];
@@ -7217,7 +7238,8 @@ class UserProfile {
     if (_json.containsKey("permissions")) {
       permissions = _json["permissions"]
           .map((value) => new GlobalPermission.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GlobalPermission>();
     }
     if (_json.containsKey("photoUrl")) {
       photoUrl = _json["photoUrl"];

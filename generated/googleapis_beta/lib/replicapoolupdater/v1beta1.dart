@@ -771,7 +771,8 @@ class InstanceUpdateError {
     if (_json.containsKey("errors")) {
       errors = _json["errors"]
           .map((value) => new InstanceUpdateErrorErrors.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InstanceUpdateErrorErrors>();
     }
   }
 
@@ -856,7 +857,8 @@ class InstanceUpdateList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new InstanceUpdate.fromJson(value))
-          .toList();
+          .toList()
+          .cast<InstanceUpdate>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -942,7 +944,8 @@ class OperationError {
     if (_json.containsKey("errors")) {
       errors = _json["errors"]
           .map((value) => new OperationErrorErrors.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OperationErrorErrors>();
     }
   }
 
@@ -1006,7 +1009,8 @@ class OperationWarnings {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new OperationWarningsData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OperationWarningsData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -1155,7 +1159,8 @@ class Operation {
     if (_json.containsKey("warnings")) {
       warnings = _json["warnings"]
           .map((value) => new OperationWarnings.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OperationWarnings>();
     }
     if (_json.containsKey("zone")) {
       zone = _json["zone"];
@@ -1260,8 +1265,10 @@ class OperationList {
       id = _json["id"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Operation.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Operation.fromJson(value))
+          .toList()
+          .cast<Operation>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -1349,7 +1356,8 @@ class RollingUpdateError {
     if (_json.containsKey("errors")) {
       errors = _json["errors"]
           .map((value) => new RollingUpdateErrorErrors.fromJson(value))
-          .toList();
+          .toList()
+          .cast<RollingUpdateErrorErrors>();
     }
   }
 
@@ -1637,7 +1645,8 @@ class RollingUpdateList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new RollingUpdate.fromJson(value))
-          .toList();
+          .toList()
+          .cast<RollingUpdate>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];

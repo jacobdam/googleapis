@@ -686,7 +686,8 @@ class ListBillingAccountsResponse {
     if (_json.containsKey("billingAccounts")) {
       billingAccounts = _json["billingAccounts"]
           .map((value) => new BillingAccount.fromJson(value))
-          .toList();
+          .toList()
+          .cast<BillingAccount>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -728,7 +729,8 @@ class ListProjectBillingInfoResponse {
     if (_json.containsKey("projectBillingInfo")) {
       projectBillingInfo = _json["projectBillingInfo"]
           .map((value) => new ProjectBillingInfo.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ProjectBillingInfo>();
     }
   }
 
@@ -765,7 +767,8 @@ class ListServicesResponse {
     if (_json.containsKey("services")) {
       services = _json["services"]
           .map((value) => new Service.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Service>();
     }
   }
 
@@ -799,7 +802,10 @@ class ListSkusResponse {
       nextPageToken = _json["nextPageToken"];
     }
     if (_json.containsKey("skus")) {
-      skus = _json["skus"].map((value) => new Sku.fromJson(value)).toList();
+      skus = _json["skus"]
+          .map((value) => new Sku.fromJson(value))
+          .toList()
+          .cast<Sku>();
     }
   }
 
@@ -931,7 +937,8 @@ class PricingExpression {
     if (_json.containsKey("tieredRates")) {
       tieredRates = _json["tieredRates"]
           .map((value) => new TierRate.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TierRate>();
     }
     if (_json.containsKey("usageUnit")) {
       usageUnit = _json["usageUnit"];
@@ -1191,7 +1198,8 @@ class Sku {
     if (_json.containsKey("pricingInfo")) {
       pricingInfo = _json["pricingInfo"]
           .map((value) => new PricingInfo.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PricingInfo>();
     }
     if (_json.containsKey("serviceProviderName")) {
       serviceProviderName = _json["serviceProviderName"];

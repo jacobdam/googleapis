@@ -1305,7 +1305,8 @@ class Account {
     if (_json.containsKey("authTokens")) {
       authTokens = _json["authTokens"]
           .map((value) => new AuthToken.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AuthToken>();
     }
     if (_json.containsKey("features")) {
       features = _json["features"];
@@ -1316,7 +1317,8 @@ class Account {
     if (_json.containsKey("userData")) {
       userData = _json["userData"]
           .map((value) => new UserData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<UserData>();
     }
   }
 
@@ -1408,7 +1410,8 @@ class AttachmentsListResponse {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new Attachment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Attachment>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -1548,7 +1551,8 @@ class Contact {
     if (_json.containsKey("acceptCommands")) {
       acceptCommands = _json["acceptCommands"]
           .map((value) => new Command.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Command>();
     }
     if (_json.containsKey("acceptTypes")) {
       acceptTypes = _json["acceptTypes"];
@@ -1642,8 +1646,10 @@ class ContactsListResponse {
 
   ContactsListResponse.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Contact.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Contact.fromJson(value))
+          .toList()
+          .cast<Contact>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -1764,8 +1770,10 @@ class LocationsListResponse {
 
   LocationsListResponse.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Location.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Location.fromJson(value))
+          .toList()
+          .cast<Location>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -1876,7 +1884,8 @@ class MenuItem {
     if (_json.containsKey("values")) {
       values = _json["values"]
           .map((value) => new MenuValue.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MenuValue>();
     }
   }
 
@@ -1990,7 +1999,8 @@ class Notification {
     if (_json.containsKey("userActions")) {
       userActions = _json["userActions"]
           .map((value) => new UserAction.fromJson(value))
-          .toList();
+          .toList()
+          .cast<UserAction>();
     }
     if (_json.containsKey("userToken")) {
       userToken = _json["userToken"];
@@ -2230,7 +2240,8 @@ class SubscriptionsListResponse {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new Subscription.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Subscription>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -2411,7 +2422,8 @@ class TimelineItem {
     if (_json.containsKey("attachments")) {
       attachments = _json["attachments"]
           .map((value) => new Attachment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Attachment>();
     }
     if (_json.containsKey("bundleId")) {
       bundleId = _json["bundleId"];
@@ -2458,7 +2470,8 @@ class TimelineItem {
     if (_json.containsKey("menuItems")) {
       menuItems = _json["menuItems"]
           .map((value) => new MenuItem.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MenuItem>();
     }
     if (_json.containsKey("notification")) {
       notification = new NotificationConfig.fromJson(_json["notification"]);
@@ -2469,7 +2482,8 @@ class TimelineItem {
     if (_json.containsKey("recipients")) {
       recipients = _json["recipients"]
           .map((value) => new Contact.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Contact>();
     }
     if (_json.containsKey("selfLink")) {
       selfLink = _json["selfLink"];
@@ -2600,7 +2614,8 @@ class TimelineListResponse {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new TimelineItem.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TimelineItem>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];

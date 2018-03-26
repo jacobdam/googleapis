@@ -6209,7 +6209,8 @@ class AccountSummaries {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new AccountSummary.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AccountSummary>();
     }
     if (_json.containsKey("itemsPerPage")) {
       itemsPerPage = _json["itemsPerPage"];
@@ -6301,7 +6302,8 @@ class AccountSummary {
     if (_json.containsKey("webProperties")) {
       webProperties = _json["webProperties"]
           .map((value) => new WebPropertySummary.fromJson(value))
-          .toList();
+          .toList()
+          .cast<WebPropertySummary>();
     }
   }
 
@@ -6679,8 +6681,10 @@ class Accounts {
 
   Accounts.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Account.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Account.fromJson(value))
+          .toList()
+          .cast<Account>();
     }
     if (_json.containsKey("itemsPerPage")) {
       itemsPerPage = _json["itemsPerPage"];
@@ -6870,8 +6874,10 @@ class Columns {
       etag = _json["etag"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Column.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Column.fromJson(value))
+          .toList()
+          .cast<Column>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -7163,7 +7169,8 @@ class CustomDataSources {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new CustomDataSource.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CustomDataSource>();
     }
     if (_json.containsKey("itemsPerPage")) {
       itemsPerPage = _json["itemsPerPage"];
@@ -7415,7 +7422,8 @@ class CustomDimensions {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new CustomDimension.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CustomDimension>();
     }
     if (_json.containsKey("itemsPerPage")) {
       itemsPerPage = _json["itemsPerPage"];
@@ -7694,7 +7702,8 @@ class CustomMetrics {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new CustomMetric.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CustomMetric>();
     }
     if (_json.containsKey("itemsPerPage")) {
       itemsPerPage = _json["itemsPerPage"];
@@ -7802,7 +7811,8 @@ class EntityAdWordsLink {
     if (_json.containsKey("adWordsAccounts")) {
       adWordsAccounts = _json["adWordsAccounts"]
           .map((value) => new AdWordsAccount.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AdWordsAccount>();
     }
     if (_json.containsKey("entity")) {
       entity = new EntityAdWordsLinkEntity.fromJson(_json["entity"]);
@@ -7888,7 +7898,8 @@ class EntityAdWordsLinks {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new EntityAdWordsLink.fromJson(value))
-          .toList();
+          .toList()
+          .cast<EntityAdWordsLink>();
     }
     if (_json.containsKey("itemsPerPage")) {
       itemsPerPage = _json["itemsPerPage"];
@@ -8123,7 +8134,8 @@ class EntityUserLinks {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new EntityUserLink.fromJson(value))
-          .toList();
+          .toList()
+          .cast<EntityUserLink>();
     }
     if (_json.containsKey("itemsPerPage")) {
       itemsPerPage = _json["itemsPerPage"];
@@ -8488,7 +8500,8 @@ class Experiment {
     if (_json.containsKey("variations")) {
       variations = _json["variations"]
           .map((value) => new ExperimentVariations.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ExperimentVariations>();
     }
     if (_json.containsKey("webPropertyId")) {
       webPropertyId = _json["webPropertyId"];
@@ -8632,7 +8645,8 @@ class Experiments {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new Experiment.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Experiment>();
     }
     if (_json.containsKey("itemsPerPage")) {
       itemsPerPage = _json["itemsPerPage"];
@@ -9390,8 +9404,10 @@ class Filters {
 
   Filters.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Filter.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Filter.fromJson(value))
+          .toList()
+          .cast<Filter>();
     }
     if (_json.containsKey("itemsPerPage")) {
       itemsPerPage = _json["itemsPerPage"];
@@ -9554,7 +9570,8 @@ class GaDataDataTableRows {
     if (_json.containsKey("c")) {
       c = _json["c"]
           .map((value) => new GaDataDataTableRowsC.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GaDataDataTableRowsC>();
     }
   }
 
@@ -9578,12 +9595,14 @@ class GaDataDataTable {
     if (_json.containsKey("cols")) {
       cols = _json["cols"]
           .map((value) => new GaDataDataTableCols.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GaDataDataTableCols>();
     }
     if (_json.containsKey("rows")) {
       rows = _json["rows"]
           .map((value) => new GaDataDataTableRows.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GaDataDataTableRows>();
     }
   }
 
@@ -9849,7 +9868,8 @@ class GaData {
     if (_json.containsKey("columnHeaders")) {
       columnHeaders = _json["columnHeaders"]
           .map((value) => new GaDataColumnHeaders.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GaDataColumnHeaders>();
     }
     if (_json.containsKey("containsSampledData")) {
       containsSampledData = _json["containsSampledData"];
@@ -10034,7 +10054,8 @@ class GoalEventDetails {
     if (_json.containsKey("eventConditions")) {
       eventConditions = _json["eventConditions"]
           .map((value) => new GoalEventDetailsEventConditions.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GoalEventDetailsEventConditions>();
     }
     if (_json.containsKey("useEventValue")) {
       useEventValue = _json["useEventValue"];
@@ -10161,7 +10182,8 @@ class GoalUrlDestinationDetails {
     if (_json.containsKey("steps")) {
       steps = _json["steps"]
           .map((value) => new GoalUrlDestinationDetailsSteps.fromJson(value))
-          .toList();
+          .toList()
+          .cast<GoalUrlDestinationDetailsSteps>();
     }
     if (_json.containsKey("url")) {
       url = _json["url"];
@@ -10473,7 +10495,10 @@ class Goals {
 
   Goals.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items = _json["items"].map((value) => new Goal.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Goal.fromJson(value))
+          .toList()
+          .cast<Goal>();
     }
     if (_json.containsKey("itemsPerPage")) {
       itemsPerPage = _json["itemsPerPage"];
@@ -10973,7 +10998,8 @@ class McfDataRows {
     if (_json.containsKey("conversionPathValue")) {
       conversionPathValue = _json["conversionPathValue"]
           .map((value) => new McfDataRowsConversionPathValue.fromJson(value))
-          .toList();
+          .toList()
+          .cast<McfDataRowsConversionPathValue>();
     }
     if (_json.containsKey("primitiveValue")) {
       primitiveValue = _json["primitiveValue"];
@@ -11057,7 +11083,8 @@ class McfData {
     if (_json.containsKey("columnHeaders")) {
       columnHeaders = _json["columnHeaders"]
           .map((value) => new McfDataColumnHeaders.fromJson(value))
-          .toList();
+          .toList()
+          .cast<McfDataColumnHeaders>();
     }
     if (_json.containsKey("containsSampledData")) {
       containsSampledData = _json["containsSampledData"];
@@ -11085,9 +11112,12 @@ class McfData {
     }
     if (_json.containsKey("rows")) {
       rows = _json["rows"]
-          .map((value) =>
-              value.map((value) => new McfDataRows.fromJson(value)).toList())
-          .toList();
+          .map((value) => value
+              .map((value) => new McfDataRows.fromJson(value))
+              .toList()
+              .cast<McfDataRows>())
+          .toList()
+          .cast<core.List<McfDataRows>>();
     }
     if (_json.containsKey("sampleSize")) {
       sampleSize = _json["sampleSize"];
@@ -11632,7 +11662,8 @@ class ProfileFilterLinks {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new ProfileFilterLink.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ProfileFilterLink>();
     }
     if (_json.containsKey("itemsPerPage")) {
       itemsPerPage = _json["itemsPerPage"];
@@ -11863,8 +11894,10 @@ class Profiles {
 
   Profiles.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Profile.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Profile.fromJson(value))
+          .toList()
+          .cast<Profile>();
     }
     if (_json.containsKey("itemsPerPage")) {
       itemsPerPage = _json["itemsPerPage"];
@@ -12141,7 +12174,8 @@ class RealtimeData {
     if (_json.containsKey("columnHeaders")) {
       columnHeaders = _json["columnHeaders"]
           .map((value) => new RealtimeDataColumnHeaders.fromJson(value))
-          .toList();
+          .toList()
+          .cast<RealtimeDataColumnHeaders>();
     }
     if (_json.containsKey("id")) {
       id = _json["id"];
@@ -12380,7 +12414,8 @@ class RemarketingAudience {
     if (_json.containsKey("linkedAdAccounts")) {
       linkedAdAccounts = _json["linkedAdAccounts"]
           .map((value) => new LinkedForeignAccount.fromJson(value))
-          .toList();
+          .toList()
+          .cast<LinkedForeignAccount>();
     }
     if (_json.containsKey("linkedViews")) {
       linkedViews = _json["linkedViews"];
@@ -12491,7 +12526,8 @@ class RemarketingAudiences {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new RemarketingAudience.fromJson(value))
-          .toList();
+          .toList()
+          .cast<RemarketingAudience>();
     }
     if (_json.containsKey("itemsPerPage")) {
       itemsPerPage = _json["itemsPerPage"];
@@ -12679,8 +12715,10 @@ class Segments {
 
   Segments.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Segment.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Segment.fromJson(value))
+          .toList()
+          .cast<Segment>();
     }
     if (_json.containsKey("itemsPerPage")) {
       itemsPerPage = _json["itemsPerPage"];
@@ -13025,7 +13063,8 @@ class UnsampledReports {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new UnsampledReport.fromJson(value))
-          .toList();
+          .toList()
+          .cast<UnsampledReport>();
     }
     if (_json.containsKey("itemsPerPage")) {
       itemsPerPage = _json["itemsPerPage"];
@@ -13193,8 +13232,10 @@ class Uploads {
 
   Uploads.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Upload.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Upload.fromJson(value))
+          .toList()
+          .cast<Upload>();
     }
     if (_json.containsKey("itemsPerPage")) {
       itemsPerPage = _json["itemsPerPage"];
@@ -13399,7 +13440,8 @@ class WebPropertySummary {
     if (_json.containsKey("profiles")) {
       profiles = _json["profiles"]
           .map((value) => new ProfileSummary.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ProfileSummary>();
     }
     if (_json.containsKey("starred")) {
       starred = _json["starred"];
@@ -13479,7 +13521,8 @@ class Webproperties {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new Webproperty.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Webproperty>();
     }
     if (_json.containsKey("itemsPerPage")) {
       itemsPerPage = _json["itemsPerPage"];

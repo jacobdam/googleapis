@@ -1382,7 +1382,8 @@ class Hold {
     if (_json.containsKey("accounts")) {
       accounts = _json["accounts"]
           .map((value) => new HeldAccount.fromJson(value))
-          .toList();
+          .toList()
+          .cast<HeldAccount>();
     }
     if (_json.containsKey("corpus")) {
       corpus = _json["corpus"];
@@ -1443,7 +1444,8 @@ class ListHeldAccountsResponse {
     if (_json.containsKey("accounts")) {
       accounts = _json["accounts"]
           .map((value) => new HeldAccount.fromJson(value))
-          .toList();
+          .toList()
+          .cast<HeldAccount>();
     }
   }
 
@@ -1470,7 +1472,10 @@ class ListHoldsResponse {
 
   ListHoldsResponse.fromJson(core.Map _json) {
     if (_json.containsKey("holds")) {
-      holds = _json["holds"].map((value) => new Hold.fromJson(value)).toList();
+      holds = _json["holds"]
+          .map((value) => new Hold.fromJson(value))
+          .toList()
+          .cast<Hold>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -1502,8 +1507,10 @@ class ListMattersResponse {
 
   ListMattersResponse.fromJson(core.Map _json) {
     if (_json.containsKey("matters")) {
-      matters =
-          _json["matters"].map((value) => new Matter.fromJson(value)).toList();
+      matters = _json["matters"]
+          .map((value) => new Matter.fromJson(value))
+          .toList()
+          .cast<Matter>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -1559,7 +1566,8 @@ class Matter {
     if (_json.containsKey("matterPermissions")) {
       matterPermissions = _json["matterPermissions"]
           .map((value) => new MatterPermission.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MatterPermission>();
     }
     if (_json.containsKey("name")) {
       name = _json["name"];

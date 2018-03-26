@@ -286,8 +286,10 @@ class AnalyzeEntitiesResponse {
 
   AnalyzeEntitiesResponse.fromJson(core.Map _json) {
     if (_json.containsKey("entities")) {
-      entities =
-          _json["entities"].map((value) => new Entity.fromJson(value)).toList();
+      entities = _json["entities"]
+          .map((value) => new Entity.fromJson(value))
+          .toList()
+          .cast<Entity>();
     }
     if (_json.containsKey("language")) {
       language = _json["language"];
@@ -381,7 +383,8 @@ class AnalyzeSentimentResponse {
     if (_json.containsKey("sentences")) {
       sentences = _json["sentences"]
           .map((value) => new Sentence.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Sentence>();
     }
   }
 
@@ -471,11 +474,14 @@ class AnalyzeSyntaxResponse {
     if (_json.containsKey("sentences")) {
       sentences = _json["sentences"]
           .map((value) => new Sentence.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Sentence>();
     }
     if (_json.containsKey("tokens")) {
-      tokens =
-          _json["tokens"].map((value) => new Token.fromJson(value)).toList();
+      tokens = _json["tokens"]
+          .map((value) => new Token.fromJson(value))
+          .toList()
+          .cast<Token>();
     }
   }
 
@@ -585,8 +591,10 @@ class AnnotateTextResponse {
       documentSentiment = new Sentiment.fromJson(_json["documentSentiment"]);
     }
     if (_json.containsKey("entities")) {
-      entities =
-          _json["entities"].map((value) => new Entity.fromJson(value)).toList();
+      entities = _json["entities"]
+          .map((value) => new Entity.fromJson(value))
+          .toList()
+          .cast<Entity>();
     }
     if (_json.containsKey("language")) {
       language = _json["language"];
@@ -594,11 +602,14 @@ class AnnotateTextResponse {
     if (_json.containsKey("sentences")) {
       sentences = _json["sentences"]
           .map((value) => new Sentence.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Sentence>();
     }
     if (_json.containsKey("tokens")) {
-      tokens =
-          _json["tokens"].map((value) => new Token.fromJson(value)).toList();
+      tokens = _json["tokens"]
+          .map((value) => new Token.fromJson(value))
+          .toList()
+          .cast<Token>();
     }
   }
 
@@ -856,7 +867,8 @@ class Entity {
     if (_json.containsKey("mentions")) {
       mentions = _json["mentions"]
           .map((value) => new EntityMention.fromJson(value))
-          .toList();
+          .toList()
+          .cast<EntityMention>();
     }
     if (_json.containsKey("metadata")) {
       metadata = _json["metadata"];

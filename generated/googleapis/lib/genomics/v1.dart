@@ -3521,7 +3521,8 @@ class BatchCreateAnnotationsRequest {
     if (_json.containsKey("annotations")) {
       annotations = _json["annotations"]
           .map((value) => new Annotation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Annotation>();
     }
     if (_json.containsKey("requestId")) {
       requestId = _json["requestId"];
@@ -3551,8 +3552,10 @@ class BatchCreateAnnotationsResponse {
 
   BatchCreateAnnotationsResponse.fromJson(core.Map _json) {
     if (_json.containsKey("entries")) {
-      entries =
-          _json["entries"].map((value) => new Entry.fromJson(value)).toList();
+      entries = _json["entries"]
+          .map((value) => new Entry.fromJson(value))
+          .toList()
+          .cast<Entry>();
     }
   }
 
@@ -3828,7 +3831,8 @@ class ClinicalCondition {
     if (_json.containsKey("externalIds")) {
       externalIds = _json["externalIds"]
           .map((value) => new ExternalId.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ExternalId>();
     }
     if (_json.containsKey("names")) {
       names = _json["names"];
@@ -4583,8 +4587,10 @@ class LinearAlignment {
 
   LinearAlignment.fromJson(core.Map _json) {
     if (_json.containsKey("cigar")) {
-      cigar =
-          _json["cigar"].map((value) => new CigarUnit.fromJson(value)).toList();
+      cigar = _json["cigar"]
+          .map((value) => new CigarUnit.fromJson(value))
+          .toList()
+          .cast<CigarUnit>();
     }
     if (_json.containsKey("mappingQuality")) {
       mappingQuality = _json["mappingQuality"];
@@ -4681,7 +4687,8 @@ class ListCoverageBucketsResponse {
     if (_json.containsKey("coverageBuckets")) {
       coverageBuckets = _json["coverageBuckets"]
           .map((value) => new CoverageBucket.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CoverageBucket>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -4721,7 +4728,8 @@ class ListDatasetsResponse {
     if (_json.containsKey("datasets")) {
       datasets = _json["datasets"]
           .map((value) => new Dataset.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Dataset>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -4758,7 +4766,8 @@ class ListOperationsResponse {
     if (_json.containsKey("operations")) {
       operations = _json["operations"]
           .map((value) => new Operation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Operation>();
     }
   }
 
@@ -4799,7 +4808,8 @@ class MergeVariantsRequest {
     if (_json.containsKey("variants")) {
       variants = _json["variants"]
           .map((value) => new Variant.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Variant>();
     }
   }
 
@@ -4991,7 +5001,8 @@ class OperationMetadata {
     if (_json.containsKey("events")) {
       events = _json["events"]
           .map((value) => new OperationEvent.fromJson(value))
-          .toList();
+          .toList()
+          .cast<OperationEvent>();
     }
     if (_json.containsKey("labels")) {
       labels = _json["labels"];
@@ -5112,7 +5123,8 @@ class Policy {
     if (_json.containsKey("bindings")) {
       bindings = _json["bindings"]
           .map((value) => new Binding.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Binding>();
     }
     if (_json.containsKey("etag")) {
       etag = _json["etag"];
@@ -5651,7 +5663,8 @@ class ReadGroup {
     if (_json.containsKey("programs")) {
       programs = _json["programs"]
           .map((value) => new Program.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Program>();
     }
     if (_json.containsKey("referenceSetId")) {
       referenceSetId = _json["referenceSetId"];
@@ -5758,7 +5771,8 @@ class ReadGroupSet {
     if (_json.containsKey("readGroups")) {
       readGroups = _json["readGroups"]
           .map((value) => new ReadGroup.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ReadGroup>();
     }
     if (_json.containsKey("referenceSetId")) {
       referenceSetId = _json["referenceSetId"];
@@ -6134,7 +6148,8 @@ class SearchAnnotationSetsResponse {
     if (_json.containsKey("annotationSets")) {
       annotationSets = _json["annotationSets"]
           .map((value) => new AnnotationSet.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AnnotationSet>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -6259,7 +6274,8 @@ class SearchAnnotationsResponse {
     if (_json.containsKey("annotations")) {
       annotations = _json["annotations"]
           .map((value) => new Annotation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Annotation>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -6352,7 +6368,8 @@ class SearchCallSetsResponse {
     if (_json.containsKey("callSets")) {
       callSets = _json["callSets"]
           .map((value) => new CallSet.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CallSet>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -6447,7 +6464,8 @@ class SearchReadGroupSetsResponse {
     if (_json.containsKey("readGroupSets")) {
       readGroupSets = _json["readGroupSets"]
           .map((value) => new ReadGroupSet.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ReadGroupSet>();
     }
   }
 
@@ -6573,8 +6591,10 @@ class SearchReadsResponse {
 
   SearchReadsResponse.fromJson(core.Map _json) {
     if (_json.containsKey("alignments")) {
-      alignments =
-          _json["alignments"].map((value) => new Read.fromJson(value)).toList();
+      alignments = _json["alignments"]
+          .map((value) => new Read.fromJson(value))
+          .toList()
+          .cast<Read>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -6679,7 +6699,8 @@ class SearchReferenceSetsResponse {
     if (_json.containsKey("referenceSets")) {
       referenceSets = _json["referenceSets"]
           .map((value) => new ReferenceSet.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ReferenceSet>();
     }
   }
 
@@ -6780,7 +6801,8 @@ class SearchReferencesResponse {
     if (_json.containsKey("references")) {
       references = _json["references"]
           .map((value) => new Reference.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Reference>();
     }
   }
 
@@ -6862,7 +6884,8 @@ class SearchVariantSetsResponse {
     if (_json.containsKey("variantSets")) {
       variantSets = _json["variantSets"]
           .map((value) => new VariantSet.fromJson(value))
-          .toList();
+          .toList()
+          .cast<VariantSet>();
     }
   }
 
@@ -7007,7 +7030,8 @@ class SearchVariantsResponse {
     if (_json.containsKey("variants")) {
       variants = _json["variants"]
           .map((value) => new Variant.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Variant>();
     }
   }
 
@@ -7255,7 +7279,10 @@ class Transcript {
       codingSequence = new CodingSequence.fromJson(_json["codingSequence"]);
     }
     if (_json.containsKey("exons")) {
-      exons = _json["exons"].map((value) => new Exon.fromJson(value)).toList();
+      exons = _json["exons"]
+          .map((value) => new Exon.fromJson(value))
+          .toList()
+          .cast<Exon>();
     }
     if (_json.containsKey("geneId")) {
       geneId = _json["geneId"];
@@ -7365,7 +7392,8 @@ class Variant {
     if (_json.containsKey("calls")) {
       calls = _json["calls"]
           .map((value) => new VariantCall.fromJson(value))
-          .toList();
+          .toList()
+          .cast<VariantCall>();
     }
     if (_json.containsKey("created")) {
       created = _json["created"];
@@ -7550,7 +7578,8 @@ class VariantAnnotation {
     if (_json.containsKey("conditions")) {
       conditions = _json["conditions"]
           .map((value) => new ClinicalCondition.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ClinicalCondition>();
     }
     if (_json.containsKey("effect")) {
       effect = _json["effect"];
@@ -7743,7 +7772,8 @@ class VariantSet {
     if (_json.containsKey("metadata")) {
       metadata = _json["metadata"]
           .map((value) => new VariantSetMetadata.fromJson(value))
-          .toList();
+          .toList()
+          .cast<VariantSetMetadata>();
     }
     if (_json.containsKey("name")) {
       name = _json["name"];
@@ -7751,7 +7781,8 @@ class VariantSet {
     if (_json.containsKey("referenceBounds")) {
       referenceBounds = _json["referenceBounds"]
           .map((value) => new ReferenceBound.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ReferenceBound>();
     }
     if (_json.containsKey("referenceSetId")) {
       referenceSetId = _json["referenceSetId"];

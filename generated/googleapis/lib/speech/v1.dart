@@ -455,7 +455,8 @@ class RecognitionConfig {
     if (_json.containsKey("speechContexts")) {
       speechContexts = _json["speechContexts"]
           .map((value) => new SpeechContext.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SpeechContext>();
     }
   }
 
@@ -538,7 +539,8 @@ class RecognizeResponse {
     if (_json.containsKey("results")) {
       results = _json["results"]
           .map((value) => new SpeechRecognitionResult.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SpeechRecognitionResult>();
     }
   }
 
@@ -612,8 +614,10 @@ class SpeechRecognitionAlternative {
       transcript = _json["transcript"];
     }
     if (_json.containsKey("words")) {
-      words =
-          _json["words"].map((value) => new WordInfo.fromJson(value)).toList();
+      words = _json["words"]
+          .map((value) => new WordInfo.fromJson(value))
+          .toList()
+          .cast<WordInfo>();
     }
   }
 
@@ -647,7 +651,8 @@ class SpeechRecognitionResult {
     if (_json.containsKey("alternatives")) {
       alternatives = _json["alternatives"]
           .map((value) => new SpeechRecognitionAlternative.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SpeechRecognitionAlternative>();
     }
   }
 

@@ -974,7 +974,8 @@ class ErrorSummary {
     if (_json.containsKey("errorLogEntries")) {
       errorLogEntries = _json["errorLogEntries"]
           .map((value) => new ErrorLogEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ErrorLogEntry>();
     }
   }
 
@@ -1133,7 +1134,8 @@ class ListOperationsResponse {
     if (_json.containsKey("operations")) {
       operations = _json["operations"]
           .map((value) => new Operation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Operation>();
     }
   }
 
@@ -1168,7 +1170,8 @@ class ListTransferJobsResponse {
     if (_json.containsKey("transferJobs")) {
       transferJobs = _json["transferJobs"]
           .map((value) => new TransferJob.fromJson(value))
-          .toList();
+          .toList()
+          .cast<TransferJob>();
     }
   }
 
@@ -1927,7 +1930,8 @@ class TransferOperation {
     if (_json.containsKey("errorBreakdowns")) {
       errorBreakdowns = _json["errorBreakdowns"]
           .map((value) => new ErrorSummary.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ErrorSummary>();
     }
     if (_json.containsKey("name")) {
       name = _json["name"];

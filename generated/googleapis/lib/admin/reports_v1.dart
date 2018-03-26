@@ -643,8 +643,10 @@ class Activities {
       etag = _json["etag"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Activity.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Activity.fromJson(value))
+          .toList()
+          .cast<Activity>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -809,7 +811,8 @@ class ActivityEvents {
     if (_json.containsKey("parameters")) {
       parameters = _json["parameters"]
           .map((value) => new ActivityEventsParameters.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ActivityEventsParameters>();
     }
     if (_json.containsKey("type")) {
       type = _json["type"];
@@ -918,7 +921,8 @@ class Activity {
     if (_json.containsKey("events")) {
       events = _json["events"]
           .map((value) => new ActivityEvents.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ActivityEvents>();
     }
     if (_json.containsKey("id")) {
       id = new ActivityId.fromJson(_json["id"]);
@@ -1235,7 +1239,8 @@ class UsageReport {
     if (_json.containsKey("parameters")) {
       parameters = _json["parameters"]
           .map((value) => new UsageReportParameters.fromJson(value))
-          .toList();
+          .toList()
+          .cast<UsageReportParameters>();
     }
   }
 
@@ -1314,7 +1319,8 @@ class UsageReportsWarnings {
     if (_json.containsKey("data")) {
       data = _json["data"]
           .map((value) => new UsageReportsWarningsData.fromJson(value))
-          .toList();
+          .toList()
+          .cast<UsageReportsWarningsData>();
     }
     if (_json.containsKey("message")) {
       message = _json["message"];
@@ -1369,12 +1375,14 @@ class UsageReports {
     if (_json.containsKey("usageReports")) {
       usageReports = _json["usageReports"]
           .map((value) => new UsageReport.fromJson(value))
-          .toList();
+          .toList()
+          .cast<UsageReport>();
     }
     if (_json.containsKey("warnings")) {
       warnings = _json["warnings"]
           .map((value) => new UsageReportsWarnings.fromJson(value))
-          .toList();
+          .toList()
+          .cast<UsageReportsWarnings>();
     }
   }
 

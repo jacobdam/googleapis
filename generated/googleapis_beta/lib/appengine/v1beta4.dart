@@ -1548,7 +1548,8 @@ class Application {
     if (_json.containsKey("dispatchRules")) {
       dispatchRules = _json["dispatchRules"]
           .map((value) => new UrlDispatchRule.fromJson(value))
-          .toList();
+          .toList()
+          .cast<UrlDispatchRule>();
     }
     if (_json.containsKey("iap")) {
       iap = new IdentityAwareProxy.fromJson(_json["iap"]);
@@ -1941,7 +1942,8 @@ class Deployment {
     if (_json.containsKey("sourceReferences")) {
       sourceReferences = _json["sourceReferences"]
           .map((value) => new SourceReference.fromJson(value))
-          .toList();
+          .toList()
+          .cast<SourceReference>();
     }
   }
 
@@ -2501,7 +2503,8 @@ class ListInstancesResponse {
     if (_json.containsKey("instances")) {
       instances = _json["instances"]
           .map((value) => new Instance.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Instance>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -2535,7 +2538,8 @@ class ListLocationsResponse {
     if (_json.containsKey("locations")) {
       locations = _json["locations"]
           .map((value) => new Location.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Location>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -2567,8 +2571,10 @@ class ListModulesResponse {
 
   ListModulesResponse.fromJson(core.Map _json) {
     if (_json.containsKey("modules")) {
-      modules =
-          _json["modules"].map((value) => new Module.fromJson(value)).toList();
+      modules = _json["modules"]
+          .map((value) => new Module.fromJson(value))
+          .toList()
+          .cast<Module>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -2605,7 +2611,8 @@ class ListOperationsResponse {
     if (_json.containsKey("operations")) {
       operations = _json["operations"]
           .map((value) => new Operation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Operation>();
     }
   }
 
@@ -2640,7 +2647,8 @@ class ListVersionsResponse {
     if (_json.containsKey("versions")) {
       versions = _json["versions"]
           .map((value) => new Version.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Version>();
     }
   }
 
@@ -3444,8 +3452,10 @@ class Resources {
       memoryGb = _json["memoryGb"];
     }
     if (_json.containsKey("volumes")) {
-      volumes =
-          _json["volumes"].map((value) => new Volume.fromJson(value)).toList();
+      volumes = _json["volumes"]
+          .map((value) => new Volume.fromJson(value))
+          .toList()
+          .cast<Volume>();
     }
   }
 
@@ -4183,11 +4193,14 @@ class Version {
     if (_json.containsKey("errorHandlers")) {
       errorHandlers = _json["errorHandlers"]
           .map((value) => new ErrorHandler.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ErrorHandler>();
     }
     if (_json.containsKey("handlers")) {
-      handlers =
-          _json["handlers"].map((value) => new UrlMap.fromJson(value)).toList();
+      handlers = _json["handlers"]
+          .map((value) => new UrlMap.fromJson(value))
+          .toList()
+          .cast<UrlMap>();
     }
     if (_json.containsKey("healthCheck")) {
       healthCheck = new HealthCheck.fromJson(_json["healthCheck"]);
@@ -4204,7 +4217,8 @@ class Version {
     if (_json.containsKey("libraries")) {
       libraries = _json["libraries"]
           .map((value) => new Library.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Library>();
     }
     if (_json.containsKey("manualScaling")) {
       manualScaling = new ManualScaling.fromJson(_json["manualScaling"]);

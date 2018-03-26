@@ -1079,8 +1079,10 @@ class AggregateBucket {
       activity = _json["activity"];
     }
     if (_json.containsKey("dataset")) {
-      dataset =
-          _json["dataset"].map((value) => new Dataset.fromJson(value)).toList();
+      dataset = _json["dataset"]
+          .map((value) => new Dataset.fromJson(value))
+          .toList()
+          .cast<Dataset>();
     }
     if (_json.containsKey("endTimeMillis")) {
       endTimeMillis = _json["endTimeMillis"];
@@ -1209,7 +1211,8 @@ class AggregateRequest {
     if (_json.containsKey("aggregateBy")) {
       aggregateBy = _json["aggregateBy"]
           .map((value) => new AggregateBy.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AggregateBy>();
     }
     if (_json.containsKey("bucketByActivitySegment")) {
       bucketByActivitySegment =
@@ -1278,7 +1281,8 @@ class AggregateResponse {
     if (_json.containsKey("bucket")) {
       bucket = _json["bucket"]
           .map((value) => new AggregateBucket.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AggregateBucket>();
     }
   }
 
@@ -1551,7 +1555,10 @@ class DataPoint {
       startTimeNanos = _json["startTimeNanos"];
     }
     if (_json.containsKey("value")) {
-      value = _json["value"].map((value) => new Value.fromJson(value)).toList();
+      value = _json["value"]
+          .map((value) => new Value.fromJson(value))
+          .toList()
+          .cast<Value>();
     }
   }
 
@@ -1740,7 +1747,8 @@ class DataType {
     if (_json.containsKey("field")) {
       field = _json["field"]
           .map((value) => new DataTypeField.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DataTypeField>();
     }
     if (_json.containsKey("name")) {
       name = _json["name"];
@@ -1860,8 +1868,10 @@ class Dataset {
       nextPageToken = _json["nextPageToken"];
     }
     if (_json.containsKey("point")) {
-      point =
-          _json["point"].map((value) => new DataPoint.fromJson(value)).toList();
+      point = _json["point"]
+          .map((value) => new DataPoint.fromJson(value))
+          .toList()
+          .cast<DataPoint>();
     }
   }
 
@@ -1993,12 +2003,14 @@ class ListDataPointChangesResponse {
     if (_json.containsKey("deletedDataPoint")) {
       deletedDataPoint = _json["deletedDataPoint"]
           .map((value) => new DataPoint.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DataPoint>();
     }
     if (_json.containsKey("insertedDataPoint")) {
       insertedDataPoint = _json["insertedDataPoint"]
           .map((value) => new DataPoint.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DataPoint>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -2036,7 +2048,8 @@ class ListDataSourcesResponse {
     if (_json.containsKey("dataSource")) {
       dataSource = _json["dataSource"]
           .map((value) => new DataSource.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DataSource>();
     }
   }
 
@@ -2075,7 +2088,8 @@ class ListSessionsResponse {
     if (_json.containsKey("deletedSession")) {
       deletedSession = _json["deletedSession"]
           .map((value) => new Session.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Session>();
     }
     if (_json.containsKey("hasMoreData")) {
       hasMoreData = _json["hasMoreData"];
@@ -2084,8 +2098,10 @@ class ListSessionsResponse {
       nextPageToken = _json["nextPageToken"];
     }
     if (_json.containsKey("session")) {
-      session =
-          _json["session"].map((value) => new Session.fromJson(value)).toList();
+      session = _json["session"]
+          .map((value) => new Session.fromJson(value))
+          .toList()
+          .cast<Session>();
     }
   }
 
@@ -2270,7 +2286,8 @@ class Value {
     if (_json.containsKey("mapVal")) {
       mapVal = _json["mapVal"]
           .map((value) => new ValueMapValEntry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ValueMapValEntry>();
     }
     if (_json.containsKey("stringVal")) {
       stringVal = _json["stringVal"];

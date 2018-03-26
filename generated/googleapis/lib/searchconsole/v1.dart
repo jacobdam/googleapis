@@ -283,12 +283,14 @@ class RunMobileFriendlyTestResponse {
     if (_json.containsKey("mobileFriendlyIssues")) {
       mobileFriendlyIssues = _json["mobileFriendlyIssues"]
           .map((value) => new MobileFriendlyIssue.fromJson(value))
-          .toList();
+          .toList()
+          .cast<MobileFriendlyIssue>();
     }
     if (_json.containsKey("resourceIssues")) {
       resourceIssues = _json["resourceIssues"]
           .map((value) => new ResourceIssue.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ResourceIssue>();
     }
     if (_json.containsKey("screenshot")) {
       screenshot = new Image.fromJson(_json["screenshot"]);

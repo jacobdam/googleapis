@@ -4675,7 +4675,8 @@ class AboutAdditionalRoleInfo {
     if (_json.containsKey("roleSets")) {
       roleSets = _json["roleSets"]
           .map((value) => new AboutAdditionalRoleInfoRoleSets.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AboutAdditionalRoleInfoRoleSets>();
     }
     if (_json.containsKey("type")) {
       type = _json["type"];
@@ -4987,7 +4988,8 @@ class About {
     if (_json.containsKey("additionalRoleInfo")) {
       additionalRoleInfo = _json["additionalRoleInfo"]
           .map((value) => new AboutAdditionalRoleInfo.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AboutAdditionalRoleInfo>();
     }
     if (_json.containsKey("canCreateTeamDrives")) {
       canCreateTeamDrives = _json["canCreateTeamDrives"];
@@ -5001,12 +5003,14 @@ class About {
     if (_json.containsKey("exportFormats")) {
       exportFormats = _json["exportFormats"]
           .map((value) => new AboutExportFormats.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AboutExportFormats>();
     }
     if (_json.containsKey("features")) {
       features = _json["features"]
           .map((value) => new AboutFeatures.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AboutFeatures>();
     }
     if (_json.containsKey("folderColorPalette")) {
       folderColorPalette = _json["folderColorPalette"];
@@ -5014,7 +5018,8 @@ class About {
     if (_json.containsKey("importFormats")) {
       importFormats = _json["importFormats"]
           .map((value) => new AboutImportFormats.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AboutImportFormats>();
     }
     if (_json.containsKey("isCurrentAppInstalled")) {
       isCurrentAppInstalled = _json["isCurrentAppInstalled"];
@@ -5031,7 +5036,8 @@ class About {
     if (_json.containsKey("maxUploadSizes")) {
       maxUploadSizes = _json["maxUploadSizes"]
           .map((value) => new AboutMaxUploadSizes.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AboutMaxUploadSizes>();
     }
     if (_json.containsKey("name")) {
       name = _json["name"];
@@ -5042,7 +5048,8 @@ class About {
     if (_json.containsKey("quotaBytesByService")) {
       quotaBytesByService = _json["quotaBytesByService"]
           .map((value) => new AboutQuotaBytesByService.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AboutQuotaBytesByService>();
     }
     if (_json.containsKey("quotaBytesTotal")) {
       quotaBytesTotal = _json["quotaBytesTotal"];
@@ -5071,7 +5078,8 @@ class About {
     if (_json.containsKey("teamDriveThemes")) {
       teamDriveThemes = _json["teamDriveThemes"]
           .map((value) => new AboutTeamDriveThemes.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AboutTeamDriveThemes>();
     }
     if (_json.containsKey("user")) {
       user = new User.fromJson(_json["user"]);
@@ -5311,8 +5319,10 @@ class App {
       hasDriveWideScope = _json["hasDriveWideScope"];
     }
     if (_json.containsKey("icons")) {
-      icons =
-          _json["icons"].map((value) => new AppIcons.fromJson(value)).toList();
+      icons = _json["icons"]
+          .map((value) => new AppIcons.fromJson(value))
+          .toList()
+          .cast<AppIcons>();
     }
     if (_json.containsKey("id")) {
       id = _json["id"];
@@ -5481,7 +5491,10 @@ class AppList {
       etag = _json["etag"];
     }
     if (_json.containsKey("items")) {
-      items = _json["items"].map((value) => new App.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new App.fromJson(value))
+          .toList()
+          .cast<App>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -5659,8 +5672,10 @@ class ChangeList {
       etag = _json["etag"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Change.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Change.fromJson(value))
+          .toList()
+          .cast<Change>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -5854,7 +5869,8 @@ class ChildList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new ChildReference.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ChildReference>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -6077,7 +6093,8 @@ class Comment {
     if (_json.containsKey("replies")) {
       replies = _json["replies"]
           .map((value) => new CommentReply.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CommentReply>();
     }
     if (_json.containsKey("selfLink")) {
       selfLink = _json["selfLink"];
@@ -6164,8 +6181,10 @@ class CommentList {
 
   CommentList.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Comment.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Comment.fromJson(value))
+          .toList()
+          .cast<Comment>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -6334,7 +6353,8 @@ class CommentReplyList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new CommentReply.fromJson(value))
-          .toList();
+          .toList()
+          .cast<CommentReply>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -7358,13 +7378,16 @@ class File {
       ownerNames = _json["ownerNames"];
     }
     if (_json.containsKey("owners")) {
-      owners =
-          _json["owners"].map((value) => new User.fromJson(value)).toList();
+      owners = _json["owners"]
+          .map((value) => new User.fromJson(value))
+          .toList()
+          .cast<User>();
     }
     if (_json.containsKey("parents")) {
       parents = _json["parents"]
           .map((value) => new ParentReference.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ParentReference>();
     }
     if (_json.containsKey("permissionIds")) {
       permissionIds = _json["permissionIds"];
@@ -7372,12 +7395,14 @@ class File {
     if (_json.containsKey("permissions")) {
       permissions = _json["permissions"]
           .map((value) => new Permission.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Permission>();
     }
     if (_json.containsKey("properties")) {
       properties = _json["properties"]
           .map((value) => new Property.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Property>();
     }
     if (_json.containsKey("quotaBytesUsed")) {
       quotaBytesUsed = _json["quotaBytesUsed"];
@@ -7691,7 +7716,10 @@ class FileList {
       incompleteSearch = _json["incompleteSearch"];
     }
     if (_json.containsKey("items")) {
-      items = _json["items"].map((value) => new File.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new File.fromJson(value))
+          .toList()
+          .cast<File>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -7799,7 +7827,8 @@ class ParentList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new ParentReference.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ParentReference>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -8085,7 +8114,8 @@ class Permission {
       teamDrivePermissionDetails = _json["teamDrivePermissionDetails"]
           .map((value) =>
               new PermissionTeamDrivePermissionDetails.fromJson(value))
-          .toList();
+          .toList()
+          .cast<PermissionTeamDrivePermissionDetails>();
     }
     if (_json.containsKey("type")) {
       type = _json["type"];
@@ -8218,7 +8248,8 @@ class PermissionList {
     if (_json.containsKey("items")) {
       items = _json["items"]
           .map((value) => new Permission.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Permission>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -8350,8 +8381,10 @@ class PropertyList {
       etag = _json["etag"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Property.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Property.fromJson(value))
+          .toList()
+          .cast<Property>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -8595,8 +8628,10 @@ class RevisionList {
       etag = _json["etag"];
     }
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new Revision.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new Revision.fromJson(value))
+          .toList()
+          .cast<Revision>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];
@@ -8995,8 +9030,10 @@ class TeamDriveList {
 
   TeamDriveList.fromJson(core.Map _json) {
     if (_json.containsKey("items")) {
-      items =
-          _json["items"].map((value) => new TeamDrive.fromJson(value)).toList();
+      items = _json["items"]
+          .map((value) => new TeamDrive.fromJson(value))
+          .toList()
+          .cast<TeamDrive>();
     }
     if (_json.containsKey("kind")) {
       kind = _json["kind"];

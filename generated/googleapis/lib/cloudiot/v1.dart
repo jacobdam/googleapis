@@ -1088,7 +1088,8 @@ class AuditConfig {
     if (_json.containsKey("auditLogConfigs")) {
       auditLogConfigs = _json["auditLogConfigs"]
           .map((value) => new AuditLogConfig.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AuditLogConfig>();
     }
     if (_json.containsKey("service")) {
       service = _json["service"];
@@ -1332,7 +1333,8 @@ class Device {
     if (_json.containsKey("credentials")) {
       credentials = _json["credentials"]
           .map((value) => new DeviceCredential.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DeviceCredential>();
     }
     if (_json.containsKey("id")) {
       id = _json["id"];
@@ -1592,12 +1594,14 @@ class DeviceRegistry {
     if (_json.containsKey("credentials")) {
       credentials = _json["credentials"]
           .map((value) => new RegistryCredential.fromJson(value))
-          .toList();
+          .toList()
+          .cast<RegistryCredential>();
     }
     if (_json.containsKey("eventNotificationConfigs")) {
       eventNotificationConfigs = _json["eventNotificationConfigs"]
           .map((value) => new EventNotificationConfig.fromJson(value))
-          .toList();
+          .toList()
+          .cast<EventNotificationConfig>();
     }
     if (_json.containsKey("httpConfig")) {
       httpConfig = new HttpConfig.fromJson(_json["httpConfig"]);
@@ -1796,7 +1800,8 @@ class ListDeviceConfigVersionsResponse {
     if (_json.containsKey("deviceConfigs")) {
       deviceConfigs = _json["deviceConfigs"]
           .map((value) => new DeviceConfig.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DeviceConfig>();
     }
   }
 
@@ -1827,7 +1832,8 @@ class ListDeviceRegistriesResponse {
     if (_json.containsKey("deviceRegistries")) {
       deviceRegistries = _json["deviceRegistries"]
           .map((value) => new DeviceRegistry.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DeviceRegistry>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -1861,7 +1867,8 @@ class ListDeviceStatesResponse {
     if (_json.containsKey("deviceStates")) {
       deviceStates = _json["deviceStates"]
           .map((value) => new DeviceState.fromJson(value))
-          .toList();
+          .toList()
+          .cast<DeviceState>();
     }
   }
 
@@ -1889,8 +1896,10 @@ class ListDevicesResponse {
 
   ListDevicesResponse.fromJson(core.Map _json) {
     if (_json.containsKey("devices")) {
-      devices =
-          _json["devices"].map((value) => new Device.fromJson(value)).toList();
+      devices = _json["devices"]
+          .map((value) => new Device.fromJson(value))
+          .toList()
+          .cast<Device>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -2054,12 +2063,14 @@ class Policy {
     if (_json.containsKey("auditConfigs")) {
       auditConfigs = _json["auditConfigs"]
           .map((value) => new AuditConfig.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AuditConfig>();
     }
     if (_json.containsKey("bindings")) {
       bindings = _json["bindings"]
           .map((value) => new Binding.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Binding>();
     }
     if (_json.containsKey("etag")) {
       etag = _json["etag"];

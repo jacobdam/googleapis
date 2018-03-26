@@ -1285,7 +1285,8 @@ class Cluster {
     if (_json.containsKey("statusHistory")) {
       statusHistory = _json["statusHistory"]
           .map((value) => new ClusterStatus.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ClusterStatus>();
     }
   }
 
@@ -1376,7 +1377,8 @@ class ClusterConfig {
     if (_json.containsKey("initializationActions")) {
       initializationActions = _json["initializationActions"]
           .map((value) => new NodeInitializationAction.fromJson(value))
-          .toList();
+          .toList()
+          .cast<NodeInitializationAction>();
     }
     if (_json.containsKey("masterConfig")) {
       masterConfig = new InstanceGroupConfig.fromJson(_json["masterConfig"]);
@@ -1506,7 +1508,8 @@ class ClusterOperationMetadata {
     if (_json.containsKey("statusHistory")) {
       statusHistory = _json["statusHistory"]
           .map((value) => new ClusterOperationStatus.fromJson(value))
-          .toList();
+          .toList()
+          .cast<ClusterOperationStatus>();
     }
     if (_json.containsKey("warnings")) {
       warnings = _json["warnings"];
@@ -2119,7 +2122,8 @@ class InstanceGroupConfig {
     if (_json.containsKey("accelerators")) {
       accelerators = _json["accelerators"]
           .map((value) => new AcceleratorConfig.fromJson(value))
-          .toList();
+          .toList()
+          .cast<AcceleratorConfig>();
     }
     if (_json.containsKey("diskConfig")) {
       diskConfig = new DiskConfig.fromJson(_json["diskConfig"]);
@@ -2284,12 +2288,14 @@ class Job {
     if (_json.containsKey("statusHistory")) {
       statusHistory = _json["statusHistory"]
           .map((value) => new JobStatus.fromJson(value))
-          .toList();
+          .toList()
+          .cast<JobStatus>();
     }
     if (_json.containsKey("yarnApplications")) {
       yarnApplications = _json["yarnApplications"]
           .map((value) => new YarnApplication.fromJson(value))
-          .toList();
+          .toList()
+          .cast<YarnApplication>();
     }
   }
 
@@ -2538,7 +2544,8 @@ class ListClustersResponse {
     if (_json.containsKey("clusters")) {
       clusters = _json["clusters"]
           .map((value) => new Cluster.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Cluster>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -2572,7 +2579,10 @@ class ListJobsResponse {
 
   ListJobsResponse.fromJson(core.Map _json) {
     if (_json.containsKey("jobs")) {
-      jobs = _json["jobs"].map((value) => new Job.fromJson(value)).toList();
+      jobs = _json["jobs"]
+          .map((value) => new Job.fromJson(value))
+          .toList()
+          .cast<Job>();
     }
     if (_json.containsKey("nextPageToken")) {
       nextPageToken = _json["nextPageToken"];
@@ -2609,7 +2619,8 @@ class ListOperationsResponse {
     if (_json.containsKey("operations")) {
       operations = _json["operations"]
           .map((value) => new Operation.fromJson(value))
-          .toList();
+          .toList()
+          .cast<Operation>();
     }
   }
 
